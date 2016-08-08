@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hotel Summary</title>
+    </head>
+    <body>
+        <table  >
+        <caption>Hotels</caption>
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th># of Reviews</th>
+        </tr>
+
+        {% for summary in summaries %}
+            <tr>
+                <th>{{ summary[0] }}</th>
+                <th>{{ summary[1] }}</th>
+                <th>{{ summary[2] }}</th>
+                <th>{{ summary[3] }}</th>
+            </tr>
+        {% endfor %}
+
+        </table>
+
+    </body>
+</html>
