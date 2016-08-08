@@ -6,7 +6,7 @@ import common
 class Review(object):
     def __init__(self,d):
         self.id = d["ReviewID"]
-        self.title = d["Title"].encode("ascii","ignore")
+        self.title =  d["Title"].encode("ascii","ignore") if "Title" in d else "N/A"
         self.author = d["Author"]
         self.content = d["Content"].encode("ascii","ignore")
         self.date = d["Date"]
@@ -30,8 +30,8 @@ class Hotel(object):
             d = json.load(inputf)
 
         info = d["HotelInfo"]
-        self.name = info["Name"]
         self.id = info["HotelID"]
+        self.name = info.get("Name","Hotel#{}".format(self.id))
         self.price = info["Price"]
 
         self.reviews = [ Review(review_d) for review_d in d["Reviews"]]
