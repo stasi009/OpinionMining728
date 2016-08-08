@@ -10,6 +10,7 @@ AspectOverall = "Overall"
 AspectRoom = "Rooms"
 AspectService = "Service"
 AspectValue = "Value"
+AspectSleep = "Sleep Quality"
 
 def pprint_json(infilename,outfilename):
     with open(infilename,"rt") as inf:
@@ -18,5 +19,6 @@ def pprint_json(infilename,outfilename):
     with open(outfilename,"wt") as outf:
         json.dump(d,outf,indent=4)
 
-def safe_get_rating(ratings_d,key):
-    return float(ratings_d[key]) if key in ratings_d else None
+def normalize_ratings(dest_ratings,dest_label,src_ratings,src_label):
+    if src_label in src_ratings:
+        dest_ratings[dest_label] = float(src_ratings[src_label])

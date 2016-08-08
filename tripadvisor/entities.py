@@ -12,16 +12,17 @@ class Review(object):
         self.date = d["Date"]
 
         self.ratings = {}
-        ratings = d["Ratings"]
+        raw_ratings = d["Ratings"]
 
-        self.ratings[common.AspectBusiness]= common.safe_get_rating(ratings,"Business service (e.g., internet access)")
-        self.ratings[common.AspectCheckin] = common.safe_get_rating(ratings,"Check in / front desk")
-        self.ratings[common.AspectClean] = common.safe_get_rating(ratings,"Cleanliness")
-        self.ratings[common.AspectLocation] = common.safe_get_rating(ratings,"Location")
-        self.ratings[common.AspectOverall] = common.safe_get_rating(ratings,"Overall")
-        self.ratings[common.AspectRoom] = common.safe_get_rating(ratings,"Rooms")
-        self.ratings[common.AspectService] = common.safe_get_rating(ratings,"Service")
-        self.ratings[common.AspectValue] = common.safe_get_rating(ratings,"Value")
+        common.normalize_ratings(self.ratings,common.AspectBusiness,raw_ratings,"Business service (e.g., internet access)")
+        common.normalize_ratings(self.ratings,common.AspectCheckin ,raw_ratings,"Check in / front desk")
+        common.normalize_ratings(self.ratings,common.AspectClean ,raw_ratings,common.AspectClean)
+        common.normalize_ratings(self.ratings,common.AspectLocation ,raw_ratings,common.AspectLocation)
+        common.normalize_ratings(self.ratings,common.AspectOverall ,raw_ratings,common.AspectOverall)
+        common.normalize_ratings(self.ratings,common.AspectRoom ,raw_ratings,common.AspectRoom)
+        common.normalize_ratings(self.ratings,common.AspectService ,raw_ratings,common.AspectService)
+        common.normalize_ratings(self.ratings,common.AspectValue ,raw_ratings,common.AspectValue)
+        common.normalize_ratings(self.ratings,common.AspectSleep ,raw_ratings,common.AspectSleep)
 
 class Hotel(object):
     def __init__(self,filename):
@@ -36,7 +37,7 @@ class Hotel(object):
         self.reviews = [ Review(review_d) for review_d in d["Reviews"]]
 
 if __name__ == "__main__":
-    path = "data/2514303.json"
+    path = "data/262451.json"
     h = Hotel(path)
     print "Hotel-{}:{}".format(h.id,h.name)
 
