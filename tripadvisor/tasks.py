@@ -2,22 +2,61 @@
 
 import os.path
 import glob
+import json
 from tqdm import tqdm
 from entities import Hotel
 
 def generate_summary(datafolder):
+    """
+    webapp need some summary information, which has no need to iterate all hotels each time I need them
+    so a better solution is iterate just once, retrieve those summaries, and save them into file for future usage
+
+    since the content has a lot of commas, so I cannot use CSV format
+    but since it has a lot of files to process, I cannot save them into one big container and dump once
+    so I have to write my dump-to-json codes, generate json and dump to file side by side
+    """
     json_files = glob.glob( os.path.join(  datafolder,"*.json") )
-    dest_filename = os.path.join(datafolder,"summary.csv")
+    total_files = len(json_files)
+    dest_filename = "summary.json"
 
     with open(dest_filename,"wt") as outf:
-        for jsfile in tqdm(json_files):
+        outf.write("[\n")
+
+        for index,jsfile in enumerate( tqdm(json_files) ):
             try:
                 hotel = Hotel(jsfile)
             except Exception:
                 print "!!! Failed to process file <{}>".format(jsfile)
                 raise
 
-            outf.write("{},{},{},{}\n".format(hotel.id,hotel.name,hotel.price, len(hotel.reviews)))
+            txt = json.dumps({"Id":hotel.id,"Name":hotel.name,"Price":hotel.price,"NumReviews":len(hotel.reviews)})
+            separator = "\n" if index+1 == total_files else ",\n"
+            outf.write(txt+ separator )
+
+        outf.write("]\n")
+
+def temp_write():
+    json_files = glob.glob( "data/*.json")[:3]
+
+    records = []
+    for jsfile in tqdm(json_files):
+        try:
+            hotel = Hotel(jsfile)
+        except Exception:
+            print "!!! Failed to process file <{}>".format(jsfile)
+            raise
+
+        records.append({"Id":hotel.id,"Name":hotel.name,"Price":hotel.price,"num_reviews":len(hotel.reviews)})
+
+
+    with open("xx.json","wt") as outf:
+        json.dump(records,outf)
+
+def temp_load(filename):
+    with open(filename,"rt") as inf:
+        return json.load(inf)
 
 if __name__ == "__main__":
     generate_summary("data")
+    # temp_load()
+    # temp_write()

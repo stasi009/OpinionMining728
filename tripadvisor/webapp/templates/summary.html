@@ -16,10 +16,10 @@
 
         {% for summary in summaries %}
             <tr>
-                <th>{{ summary[0] }}</th>
-                <th>{{ summary[1] }}</th>
-                <th>{{ summary[2] }}</th>
-                <th>{{ summary[3] }}</th>
+                <th>{{ summary["Id"] }}</th>
+                <th>{{ summary["Name"] }}</th>
+                <th>{{ summary["Price"] }}</th>
+                <th>{{ summary["NumReviews"] }}</th>
             </tr>
         {% endfor %}
 
