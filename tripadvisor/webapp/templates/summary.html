@@ -16,7 +16,7 @@
 
         {% for summary in summaries %}
             <tr>
-                <th>{{ summary["Id"] }}</th>
+                <th><a href="/details/{{ summary["Id"] }}">  {{ summary["Id"] }}   </a>     </th>
                 <th>{{ summary["Name"] }}</th>
                 <th>{{ summary["Price"] }}</th>
                 <th>{{ summary["NumReviews"] }}</th>

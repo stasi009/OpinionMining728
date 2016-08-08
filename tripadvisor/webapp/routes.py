@@ -1,11 +1,11 @@
 
-
-import os.path
 import json
 from flask import Flask,url_for,request,render_template
 from app import app
 
-DataFolder = "../data"
+import os,sys
+sys.path.append(os.path.abspath(".."))
+from entities import Hotel
 
 @app.route('/')
 def summary():
@@ -18,3 +18,9 @@ def summary():
 
     # render the template and return the view
     return render_template("summary.html",summaries = summaries)
+
+@app.route('/details/<hotelId>')
+def details(hotelId):
+    path = "../data/{}.json".format(hotelId)
+    hotel = Hotel(path)
+    return render_template("details.html",hotel=hotel)
