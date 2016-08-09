@@ -17,10 +17,10 @@
 
         {% for summary in summaries %}
             <tr>
-                <th><a href="/details/{{ summary["Id"] }}">  {{ summary["Id"] }}   </a>     </th>
-                <th>{{ summary["Name"] }}</th>
-                <th>{{ summary["Price"] }}</th>
-                <th>{{ summary["NumReviews"] }}</th>
+                <td><a href="/details/{{ summary["Id"] }}">  {{ summary["Id"] }}   </a>     </td>
+                <td>{{ summary["Name"] }}</td>
+                <td>{{ summary["Price"] }}</td>
+                <td>{{ summary["NumReviews"] }}</td>
             </tr>
         {% endfor %}
 
