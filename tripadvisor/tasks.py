@@ -35,28 +35,5 @@ def generate_summary(datafolder):
 
         outf.write("]\n")
 
-def temp_write():
-    json_files = glob.glob( "data/*.json")[:3]
-
-    records = []
-    for jsfile in tqdm(json_files):
-        try:
-            hotel = Hotel(jsfile)
-        except Exception:
-            print "!!! Failed to process file <{}>".format(jsfile)
-            raise
-
-        records.append({"Id":hotel.id,"Name":hotel.name,"Price":hotel.price,"num_reviews":len(hotel.reviews)})
-
-
-    with open("xx.json","wt") as outf:
-        json.dump(records,outf)
-
-def temp_load(filename):
-    with open(filename,"rt") as inf:
-        return json.load(inf)
-
 if __name__ == "__main__":
     generate_summary("data")
-    # temp_load()
-    # temp_write()
