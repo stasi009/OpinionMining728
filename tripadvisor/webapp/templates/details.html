@@ -18,8 +18,17 @@
 
             {% for review in hotel.reviews %}
                 <tr>
-                    <td>NA</td>
-                    <td>{{ review.content}}</td>
+                    <td>
+                        <ul>
+                            {% for k,v in review.ratings.iteritems() %}
+                                <li>{{k}}: {{v}}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <h3>{{review.title}}</h3>
+                        {{ review.content}}
+                    </td>
                 </tr>
             {% endfor %}
 
