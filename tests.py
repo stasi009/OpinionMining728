@@ -42,7 +42,7 @@ def test_aspect_segmentation():
     segmenter.run_once()
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
+    # logging.basicConfig(level=logging.DEBUG)
 
     # test_clean()
     # test_lemmatize_with_pos()
