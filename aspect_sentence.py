@@ -15,7 +15,7 @@ class AspectSentence(object):
 
     def __init__(self,raw_sentence):
         self.raw_sentence = raw_sentence
-        self.aspects_matched = Counter()
+
         # it is possible that one sentence can have two sub-sentences, and each sub-sentence has its own aspect
         # although it possible, but I think's it is rather rare
         # also, even we want to consider such rare case, store multiple possible aspects won't help much in later calculation
@@ -44,17 +44,20 @@ class AspectSentence(object):
         key: a string representing the aspect
         value: a set which contains the key words for that aspect
         """
-        self.aspects_matched.clear()
+        aspects_matched = Counter()
 
-        for w,c in self.words:
-            for aspect,keywords in aspects_keywords:
+        for w,c in self.words.iteritems():
+            for aspect,keywords in aspects_keywords.iteritems():
                 if w in keywords:
-                    self.aspects_matched[aspect] += c
+                    aspects_matched[aspect] += c
 
-        top_aspect,top_match = self.aspects_matched.most_common(1)
-        # if the sentence describes no aspect, then all its matched count is 0
-        # then such sentence's aspect is None
-        self.aspect = top_aspect if top_match >0 else None
+        if len(aspects_matched) == 0: # no match
+            self.aspect = None
+        else:
+
+            top_aspect,top_match = aspects_matched.most_common(1)[0]
+            assert top_match > 0
+            self.aspect = top_aspect
 
 if __name__ == "__main__":
     """
