@@ -1,4 +1,5 @@
 
+from collections import Counter
 import nltk
 from nltk.corpus import stopwords
 from text_cleaner import TextCleaner
@@ -14,6 +15,12 @@ class AspectSentence(object):
 
     def __init__(self,raw_sentence):
         self.raw_sentence = raw_sentence
+        self.aspects_matched = Counter()
+        # it is possible that one sentence can have two sub-sentences, and each sub-sentence has its own aspect
+        # although it possible, but I think's it is rather rare
+        # also, even we want to consider such rare case, store multiple possible aspects won't help much in later calculation
+        self.aspect = None
+
         # clean
         # 1. expand abbrevations and contractions
         # 2. remove non-letters
@@ -27,7 +34,27 @@ class AspectSentence(object):
         words = [w for w in words if w not in AspectSentence.StopWords]
 
         # lemmatize
-        self.words = utility.lemmatize_with_pos(AspectSentence.Lemmatizer,words)
+        words = utility.lemmatize_with_pos(AspectSentence.Lemmatizer,words)
+
+        self.words = Counter(words)
+
+    def match(self,aspects_keywords):
+        """
+        aspects_keywords must be a dictionary
+        key: a string representing the aspect
+        value: a set which contains the key words for that aspect
+        """
+        self.aspects_matched.clear()
+
+        for w,c in self.words:
+            for aspect,keywords in aspects_keywords:
+                if w in keywords:
+                    self.aspects_matched[aspect] += c
+
+        top_aspect,top_match = self.aspects_matched.most_common(1)
+        # if the sentence describes no aspect, then all its matched count is 0
+        # then such sentence's aspect is None
+        self.aspect = top_aspect if top_match >0 else None
 
 if __name__ == "__main__":
     """
