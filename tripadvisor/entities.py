@@ -6,7 +6,7 @@ import common
 class Review(object):
     def __init__(self,d):
         self.id = d["ReviewID"]
-        self.title =  d["Title"].encode("ascii","ignore") if "Title" in d else "N/A"
+        self.title =  d["Title"].encode("ascii","ignore") if "Title" in d else ""
         self.author = d["Author"]
         self.content = d["Content"].encode("ascii","ignore")
         self.date = d["Date"]
