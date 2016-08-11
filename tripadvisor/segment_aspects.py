@@ -27,16 +27,18 @@ def save_result(segmenter):
     pass
 
 if __name__ == "__main__":
-    n_hotels = 30
+    n_hotels = 10
     iter_reviews = select_inputs(n_hotels)
 
     seed_aspect_keywords = {
         "Value": set(["value", "price", "quality", "worth"]),
-        "Room": set(["room", "suite", "view", "bed","spacious"]),
-        "Location": set(["location", "traffic", "minute", "restaurant","shop"]),
+        "Room": set(["room", "suite", "view", "bed","spacious","noisy"]),
+        "Location": set(["location", "traffic", "minute", "restaurant","shop","locate"]),
         "Cleanliness": set(["clean", "dirty", "maintain", "smell"]),
-        "Service": set(["staff", "greet","check", "help","service","helpful","friendly"]),
+        "Service": set(["staff","check", "help","service","helpful","friendly"]),
         "Business service": set(["business", "center", "computer", "internet","wifi"])
     }
-    segmenter = AspectSegmentation(iter_reviews,seed_aspect_keywords)
+
+    extra_stop_words = ["hotel","great"]
+    segmenter = AspectSegmentation(iter_reviews,seed_aspect_keywords,extra_stop_words)
     segmenter.run()
