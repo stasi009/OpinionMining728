@@ -3,7 +3,7 @@ import heapq
 import logging
 from collections import Counter
 import nltk
-from tqdm import tqdm
+# from tqdm import tqdm
 from aspect_sentence import AspectSentence
 # import ipdb
 
@@ -12,12 +12,16 @@ class AspectSegmentation(object):
     # only load once, faster than call 'sent_tokenize' each time
     SentTokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
-    def __init__(self,reviews,seed_aspect_keywords):
+    def __init__(self,reviews,seed_aspect_keywords,extra_stop_words = None):
         """
         seed_aspect_keywords: dictionary
         key: aspect, string
         value: a set which holds the initial seed keywords
         """
+        stop_words = set(stopwords.words("english"))
+        if extra_stop_words is not None:
+            stop_words |= set(extra_stop_words)
+
         self._sentences = []
         self._vocabulary = set()
         self._aspect_keywords = seed_aspect_keywords
@@ -32,7 +36,7 @@ class AspectSegmentation(object):
             sentences = AspectSegmentation.SentTokenizer.tokenize(review)
 
             for sent in tqdm(sentences):
-                aspect_sent = AspectSentence(sent)
+                aspect_sent = AspectSentence(sent,stop_words)
 
                 self._sentences.append(aspect_sent)
                 self.word_total_occurs += aspect_sent.words
@@ -138,7 +142,6 @@ class AspectSegmentation(object):
         # *********************************** CHI-SQUARE
         keywords_updated = False
         for aspect in self._aspect_keywords.iterkeys():
-            print "######################### update keywords for aspect<{}> #########################".format(aspect)
             current_keywords = self._aspect_keywords[aspect]
             top_new_keywords = []
 
@@ -159,7 +162,8 @@ class AspectSegmentation(object):
         return keywords_updated
 
     def run(self,top_k=5,n_iters=10):
-        for index in xrange(n_iters):
+        for index in tqdm(xrange(n_iters)):
             keywords_updated = self.run_once(top_k)
             if not keywords_updated:
+                logging.info("keywords remain the same, pre-exist")
                 break
