@@ -9,11 +9,10 @@ class AspectSentence(object):
     """
     data structure which represents a sentence during the process of 'aspect segmentation'
     """
-    StopWords = frozenset(stopwords.words("english"))# frozenset has better performance
     Cleaner = TextCleaner()
     Lemmatizer = nltk.WordNetLemmatizer()
 
-    def __init__(self,raw_sentence):
+    def __init__(self,raw_sentence,stop_words):
         self.raw_sentence = raw_sentence
 
         # it is possible that one sentence can have two sub-sentences, and each sub-sentence has its own aspect
@@ -31,7 +30,7 @@ class AspectSentence(object):
         words = nltk.word_tokenize( clean_sentence )
 
         # remove stopwords
-        words = [w for w in words if w not in AspectSentence.StopWords]
+        words = [w for w in words if w not in stopWords]
 
         # lemmatize
         words = utility.lemmatize_with_pos(AspectSentence.Lemmatizer,words)
