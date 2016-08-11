@@ -27,22 +27,30 @@ def test_lemmatize_with_pos():
     print utility.lemmatize_with_pos(lemmatizer,words)
 
 def test_aspect_segmentation():
+    # seed_aspect_keywords = {
+    #     "Value": set(["value", "price", "quality", "worth"]),
+    #     "Room": set(["room", "suite", "view", "bed","spacious"]),
+    #     "Location": set(["location", "traffic", "minute", "restaurant","sight"]),
+    #     "Cleanliness": set(["clean", "dirty", "maintain", "smell"]),
+    #     "Service": set(["staff", "greet","check", "help","service"]),
+    #     "Business service": set(["business", "center", "computer", "internet"])
+    # }
     seed_aspect_keywords = {
-        "Value": set(["value", "price", "quality", "worth"]),
-        "Room": set(["room", "suite", "view", "bed"]),
-        "Location": set(["location", "traffic", "minute", "restaurant"]),
-        "Cleanliness": set(["clean", "dirty", "maintain", "smell"]),
-        "Check In":set(["stuff", "check", "help", "reservation"]),
-        "Service": set(["service", "food", "breakfast", "buffet"]),
-        "Business service": set(["business", "center", "computer", "internet"])
+        "Room": set(["room", "suite", "view", "bed","spacious"]),
+        "Location": set(["location", "traffic", "minute", "restaurant","sight"]),
+        "Service": set(["staff", "greet","check", "help","service"]),
     }
-    reviews = ["The location is obviously great and see nice decor as expected for a recently built hotel. The service is slightly better than a big global franchise like a Park Hyatt. They don't have the personal touch of the Peninsula for those who know how good they are. I would guess those from the near east are just waiting for a Jumeriah to open... The rooms are not astounding, I stayed in an \"Atelier\" suite and it felt claustrophobic--surprising--considering what a couple thousand euros a night would get you nearby. You get an inconsistent level of service, an inconsistent level of attentiveness. In general, perhaps it is overpriced for what you get? H\u00f4tel de Crillon, or Ritz Paris, anyone?"]
+    reviews = ["Wonderful facilities, comfortable beds and an excellent location. The staff at the Hotel are extremely friendly and helpful. The ensuite bathroom is modern, spcaious and comfortable. The spa, gym and pool are easily accessible with comfortable changing facilities. There a lots of shops locally and if you are sightseeing, there is easy access via the metro at Concorde to the sights to the north and south as well as being virtually on top of the Louvre and the Musee D'Orsay."]
 
     segmenter =  aspect_segmentation.AspectSegmentation(reviews,seed_aspect_keywords)
     segmenter.run_once()
 
+    # print final aspect keywords
+    for aspect,keywords in segmenter._aspect_keywords.iteritems():
+        print "\nAspect<{}> has keywords: \n{}\n".format(aspect,keywords)
+
 if __name__ == "__main__":
-    # logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG)
 
     # test_clean()
     # test_lemmatize_with_pos()

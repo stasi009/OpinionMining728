@@ -5,6 +5,7 @@ from collections import Counter
 import nltk
 from tqdm import tqdm
 from aspect_sentence import AspectSentence
+# import ipdb
 
 class AspectSegmentation(object):
 
@@ -17,7 +18,6 @@ class AspectSegmentation(object):
         key: aspect, string
         value: a set which holds the initial seed keywords
         """
-
         self._sentences = []
         self._vocabulary = set()
         self._aspect_keywords = seed_aspect_keywords
@@ -46,6 +46,8 @@ class AspectSegmentation(object):
         n_sentences = len(self._sentences)
         for w in self._vocabulary:
             self.word_exclude_sents[w] = n_sentences  - self.word_exclude_sents[w]
+
+        # ipdb.set_trace()
 
     def __count(self):
         # C1 has key <word,aspect>
@@ -79,30 +81,23 @@ class AspectSegmentation(object):
 
         return C1,C3
 
-    def __chi_square(self,w,aspect,C1,C3):
-        print "----------------- word<{}>, aspect<{}>".format(w,aspect)
-
+    def __chi_square(self,w,aspect,C1,C3,debugprint=False):
         # c: word's total number of occurance
         c = self.word_total_occurs[w]
-        print "\t<%s> occur c=%d times"%(w,c)
 
         # c1: number of times of 'word' appear in 'aspect'
         c1 = C1[(w,aspect)]
-        print "\tword<%s> appear in aspect<%s>: c1=%d times"%(w,aspect,c1)
 
         # c2: number of times of 'word' NOT in 'aspect'
         c2 = c - c1
         assert c2 >=0
-        print "\tword<%s> appear out of aspect<%s>: c2=%d times"%(w,aspect,c2)
 
         # c3: number of sentences of 'aspect' NOT contain word 'w'
         c3 = C3[(w,aspect)]
-        print "\t#sentence in aspect<%s> NOT contain word<%s>: c3=%d"%(aspect,w,c3)
 
         # c4: number of sentences NOT of 'aspect' NOT contain word 'w'
         c4 = self.word_exclude_sents[w] - c3
         assert c4 >=0
-        print "\t#sentence NOT in aspect<%s> NOT contain word<%s>: c4=%d"%(aspect,w,c4)
 
         #
         temp = c1 * c4 - c2*c3
@@ -112,13 +107,29 @@ class AspectSegmentation(object):
         # since all c* are >=0, so if denominator==0
         # normally (without prove), nominator is also 0
         # so we can return 0 directly without doing the division
-        return 0 if nominator == 0 else float(nominator)/denominator
+        chisquare = 0 if nominator == 0 else float(nominator)/denominator
 
-    def run_once(self,top_k=5):
+        if debugprint:
+            print "----------------- word<{}>, aspect<{}>".format(w,aspect)
+            print "\t<%s> occur c=%d times"%(w,c)
+            print "\tword<%s> appear in aspect<%s>: c1=%d times"%(w,aspect,c1)
+            print "\tword<%s> appear out of aspect<%s>: c2=%d times"%(w,aspect,c2)
+            print "\t#sentence in aspect<%s> NOT contain word<%s>: c3=%d"%(aspect,w,c3)
+            print "\t#sentence NOT in aspect<%s> NOT contain word<%s>: c4=%d"%(aspect,w,c4)
+            print "\t<{},{}> has chi-square: {}".format(w,aspect,chisquare)
+
+        return chisquare
+
+    def run_once(self,top_k=5,watchlist=None):
         # *********************************** MATCH
         for sent in tqdm(self._sentences):
             sent.match(self._aspect_keywords)
         logging.info("all sentences re-matched, begin counting")
+
+        ################# for debug
+        # for index,sent in enumerate(self._sentences):
+        #     print "{}th <{}> {}".format(index+1,sent.aspect,sent.raw_sentence)
+        ################# end debug
 
         # *********************************** COUNT
         C1,C3 = self.__count()
@@ -127,11 +138,13 @@ class AspectSegmentation(object):
         # *********************************** CHI-SQUARE
         keywords_updated = False
         for aspect in self._aspect_keywords.iterkeys():
+            print "######################### update keywords for aspect<{}> #########################".format(aspect)
             current_keywords = self._aspect_keywords[aspect]
             top_new_keywords = []
 
             for w in self._vocabulary:
-                chisquare = self.__chi_square(w,aspect,C1,C3)
+                debugprint = False if watchlist is None else (w,aspect) in watchlist
+                chisquare = self.__chi_square(w,aspect,C1,C3,debugprint)
 
                 heapq.heappush(top_new_keywords,(chisquare,w))
                 if len(top_new_keywords) > top_k:
