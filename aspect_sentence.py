@@ -12,7 +12,7 @@ class AspectSentence(object):
     Lemmatizer = nltk.WordNetLemmatizer()
 
     def __init__(self,raw_sentence,stop_words):
-        self.raw_sentence = raw_sentence
+        self.raw = raw_sentence
 
         # it is possible that one sentence can have two sub-sentences, and each sub-sentence has its own aspect
         # although it possible, but I think's it is rather rare

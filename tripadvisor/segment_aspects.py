@@ -7,6 +7,7 @@ import glob
 import os,sys
 sys.path.append(os.path.abspath(".."))
 
+import nltk
 from entities import Hotel
 from aspect_segmentation import AspectSegmentation
 
@@ -21,12 +22,13 @@ def select_inputs(n_hotels):
     for hfile in selected_hotels:
         hotel = Hotel(hfile)
         for review in hotel.reviews:
-            yield review.title + ". " + review.content
+            if len(review.title) >0: yield review.title + ". " + review.content
+            else: yield review.content
 
 def save_result(segmenter):
     pass
 
-if __name__ == "__main__":
+def main():
     n_hotels = 10
     iter_reviews = select_inputs(n_hotels)
 
@@ -42,3 +44,6 @@ if __name__ == "__main__":
     extra_stop_words = ["hotel","great"]
     segmenter = AspectSegmentation(iter_reviews,seed_aspect_keywords,extra_stop_words)
     segmenter.run()
+
+if __name__ == "__main__":
+    main()
