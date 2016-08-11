@@ -1,7 +1,6 @@
 
 from collections import Counter
 import nltk
-from nltk.corpus import stopwords
 from text_cleaner import TextCleaner
 import utility
 
@@ -30,7 +29,7 @@ class AspectSentence(object):
         words = nltk.word_tokenize( clean_sentence )
 
         # remove stopwords
-        words = [w for w in words if w not in stopWords]
+        words = [w for w in words if w not in stop_words]
 
         # lemmatize
         words = utility.lemmatize_with_pos(AspectSentence.Lemmatizer,words)

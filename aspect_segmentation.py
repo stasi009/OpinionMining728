@@ -1,8 +1,8 @@
 
 import heapq
-import logging
 from collections import Counter
 import nltk
+from nltk.corpus import stopwords
 # from tqdm import tqdm
 from aspect_sentence import AspectSentence
 # import ipdb
@@ -32,20 +32,19 @@ class AspectSegmentation(object):
         # number of sentences which NOT contain word 'w'
         self.word_exclude_sents = Counter()
 
-        for review in tqdm(reviews):
-            sentences = AspectSegmentation.SentTokenizer.tokenize(review)
+        iter_sentences = (sent for review in reviews for sent in AspectSegmentation.SentTokenizer.tokenize(review))
+        for index, sent in enumerate(iter_sentences):
+            aspect_sent = AspectSentence(sent,stop_words)
+            self._sentences.append(aspect_sent)
+            self.word_total_occurs += aspect_sent.words
 
-            for sent in tqdm(sentences):
-                aspect_sent = AspectSentence(sent,stop_words)
+            self._vocabulary.update(aspect_sent.words.elements())
+            for w in aspect_sent.words.iterkeys():
+                ##### this is a temporary step, now actually we are using 'word_exclude_sents' as 'word_include_sents'
+                ##### count the number of sentence which include word 'w'
+                self.word_exclude_sents[w] +=1
 
-                self._sentences.append(aspect_sent)
-                self.word_total_occurs += aspect_sent.words
-
-                self._vocabulary.update(aspect_sent.words.elements())
-                for w in aspect_sent.words.iterkeys():
-                    ##### this is a temporary step, now actually we are using 'word_exclude_sents' as 'word_include_sents'
-                    ##### count the number of sentence which include word 'w'
-                    self.word_exclude_sents[w] +=1
+            print "{}-th sentence finish preprocessing".format(index+1)
 
         n_sentences = len(self._sentences)
         for w in self._vocabulary:
@@ -126,9 +125,9 @@ class AspectSegmentation(object):
 
     def run_once(self,top_k=5,watchlist=None):
         # *********************************** MATCH
-        for sent in tqdm(self._sentences):
+        for sent in self._sentences:
             sent.match(self._aspect_keywords)
-        logging.info("all sentences re-matched, begin counting")
+        print "all sentences re-matched, begin counting"
 
         ################# for debug
         # for index,sent in enumerate(self._sentences):
@@ -137,7 +136,7 @@ class AspectSegmentation(object):
 
         # *********************************** COUNT
         C1,C3 = self.__count()
-        logging.info("finish counting")
+        print "finish counting"
 
         # *********************************** CHI-SQUARE
         keywords_updated = False
@@ -156,14 +155,16 @@ class AspectSegmentation(object):
             for score,new_keyword in top_new_keywords:
                 if new_keyword not in current_keywords:
                     current_keywords.add(new_keyword)
-                    logging.info("new keyword '%s' added into aspect '%s'",new_keyword,aspect )
+                    print "new keyword '%s' added into aspect '%s'"%(new_keyword,aspect )
                     keywords_updated = True
 
         return keywords_updated
 
     def run(self,top_k=5,n_iters=10):
-        for index in tqdm(xrange(n_iters)):
+        for index in xrange(n_iters):
+            print "start {}-th iteration, ......".format(index+1)
+
             keywords_updated = self.run_once(top_k)
             if not keywords_updated:
-                logging.info("keywords remain the same, pre-exist")
+                print "keywords remain the same, pre-exist"
                 break
