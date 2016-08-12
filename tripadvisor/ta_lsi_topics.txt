@@ -1,900 +1,1004 @@
 
-####################### TOPIC 0 #######################
-0.127*"great" + 0.115*"nice" + 0.114*"good" + 0.103*"get" + 0.102*"location" + 0.101*"hotel" + 0.099*"would" + 0.098*"u" + 0.095*"night" + 0.093*"clean" + 0.093*"place" + 0.093*"go" + 0.092*"one" + 0.092*"service" + 0.091*"stay" + 0.090*"time" + 0.090*"pool" + 0.090*"breakfast" + 0.088*"walk" + 0.087*"staff"
+############# TOPIC 0 #############
+0.113*"nice" + 0.112*"good" + 0.105*"get" + 0.100*"location" + 0.100*"would" + 0.097*"u" + 0.096*"pool" + 0.095*"go" + 0.094*"night" + 0.093*"room"
 
-####################### TOPIC 1 #######################
--0.817*"showreview" + -0.547*"full" + -0.171*"x" + -0.016*"trs" + -0.016*"wieder" + -0.015*"gerne" + -0.014*"un" + -0.013*"bien" + -0.010*"muy" + -0.008*"htel" + -0.008*"ottimo" + -0.008*"sehr" + -0.008*"palace" + -0.007*"posizione" + -0.007*"bon" + -0.006*"la" + -0.006*"waikiki" + -0.006*"en" + -0.006*"est" + -0.006*"excelente"
+############# TOPIC 1 #############
+-0.843*"showreview" + -0.536*"full" + -0.012*"trs" + -0.011*"bien" + -0.010*"un" + -0.009*"wieder" + -0.009*"htel" + -0.008*"gerne" + -0.007*"muy" + -0.007*"bon"
 
-####################### TOPIC 2 #######################
--0.215*"resort" + 0.198*"location" + 0.184*"excellent" + -0.172*"beach" + 0.163*"great" + 0.146*"paris" + 0.139*"helpful" + 0.133*"friendly" + 0.124*"good" + 0.122*"station" + 0.120*"value" + 0.118*"comfortable" + 0.118*"metro" + 0.114*"walk" + 0.109*"rome" + 0.107*"clean" + 0.105*"breakfast" + -0.100*"tell" + -0.097*"say" + 0.093*"staff"
+############# TOPIC 2 #############
+-0.365*"resort" + -0.293*"beach" + 0.177*"location" + -0.172*"pool" + 0.143*"station" + 0.139*"paris" + 0.129*"metro" + 0.124*"good" + 0.123*"breakfast" + 0.120*"excellent"
 
-####################### TOPIC 3 #######################
-0.327*"resort" + 0.266*"beach" + 0.198*"pool" + 0.187*"beautiful" + 0.159*"great" + 0.149*"wonderful" + 0.148*"love" + 0.125*"lahaina" + 0.125*"view" + 0.111*"royal" + 0.105*"ocean" + 0.101*"excellent" + 0.095*"food" + -0.092*"bad" + 0.087*"relax" + 0.085*"enjoy" + 0.084*"perfect" + -0.084*"airport" + 0.081*"service" + 0.078*"best"
+############# TOPIC 3 #############
+0.217*"resort" + 0.190*"excellent" + 0.147*"beach" + 0.146*"pool" + 0.142*"wonderful" + 0.142*"love" + 0.129*"beautiful" + 0.126*"perfect" + 0.126*"friendly" + -0.120*"check"
 
-####################### TOPIC 4 #######################
-0.432*"airport" + 0.390*"shuttle" + 0.186*"free" + -0.185*"paris" + 0.149*"park" + 0.141*"cruise" + 0.126*"car" + 0.121*"mall" + 0.120*"pool" + -0.114*"york" + -0.103*"location" + 0.099*"flight" + -0.097*"new" + 0.093*"lax" + 0.089*"florida" + -0.087*"small" + 0.084*"conference" + -0.084*"roosevelt" + -0.083*"central" + -0.082*"lovely"
+############# TOPIC 4 #############
+0.240*"park" + 0.225*"disney" + 0.187*"shuttle" + -0.184*"beach" + -0.175*"paris" + 0.170*"airport" + 0.170*"bedroom" + 0.147*"floridays" + 0.144*"orlando" + 0.142*"pool"
 
-####################### TOPIC 5 #######################
--0.303*"beach" + 0.209*"florida" + 0.203*"mall" + 0.187*"conference" + -0.180*"lahaina" + -0.173*"resort" + 0.167*"service" + -0.154*"royal" + -0.135*"ocean" + 0.128*"excellent" + -0.128*"rome" + -0.120*"metro" + -0.115*"station" + 0.115*"business" + -0.110*"walk" + -0.110*"bus" + 0.102*"orlando" + -0.101*"airport" + 0.097*"experience" + -0.097*"maui"
+############# TOPIC 5 #############
+0.329*"beach" + -0.151*"service" + 0.149*"resort" + -0.148*"wonderful" + -0.141*"vdara" + 0.141*"good" + 0.137*"station" + -0.133*"new" + 0.132*"airport" + 0.129*"bus"
 
-####################### TOPIC 6 #######################
-0.216*"pool" + -0.201*"rome" + 0.199*"west" + 0.199*"nice" + -0.186*"airport" + 0.182*"key" + -0.171*"shuttle" + -0.169*"paris" + -0.150*"u" + -0.135*"excellent" + 0.124*"park" + -0.115*"service" + 0.109*"area" + -0.109*"metro" + -0.108*"bus" + -0.106*"wonderful" + 0.099*"bed" + 0.094*"bathroom" + 0.090*"inn" + 0.085*"place"
+############# TOPIC 6 #############
+-0.361*"airport" + -0.339*"shuttle" + -0.150*"service" + 0.134*"vdara" + 0.134*"small" + -0.130*"cruise" + -0.125*"u" + 0.117*"strip" + 0.116*"bathroom" + -0.110*"excellent"
 
-####################### TOPIC 7 #######################
--0.310*"west" + -0.305*"key" + 0.277*"view" + 0.178*"lahaina" + -0.174*"pool" + 0.156*"royal" + -0.155*"paris" + 0.148*"excellent" + 0.130*"ocean" + 0.128*"good" + 0.127*"beach" + -0.125*"rome" + 0.118*"location" + 0.112*"service" + -0.109*"inn" + -0.102*"duval" + 0.095*"great" + -0.094*"suite" + 0.090*"maui" + -0.089*"bedroom"
+############# TOPIC 7 #############
+0.349*"view" + -0.209*"disney" + -0.205*"floridays" + -0.198*"paris" + -0.180*"resort" + 0.177*"beach" + -0.170*"orlando" + -0.167*"family" + 0.148*"vdara" + 0.126*"seattle"
 
-####################### TOPIC 8 #######################
-0.240*"resort" + -0.223*"west" + -0.212*"key" + 0.200*"conference" + 0.186*"mall" + 0.181*"florida" + -0.171*"shuttle" + -0.170*"view" + -0.161*"great" + -0.158*"airport" + -0.127*"york" + -0.118*"new" + 0.118*"business" + -0.116*"cruise" + -0.116*"inn" + -0.107*"perfect" + 0.106*"orlando" + 0.103*"excellent" + -0.102*"love" + 0.102*"paris"
+############# TOPIC 8 #############
+0.282*"vdara" + 0.218*"strip" + 0.195*"paris" + 0.186*"bellagio" + 0.177*"casino" + 0.170*"vega" + -0.169*"good" + -0.160*"excellent" + 0.150*"metro" + -0.144*"location"
 
-####################### TOPIC 9 #######################
--0.310*"view" + -0.155*"fairmont" + 0.154*"value" + 0.151*"resort" + 0.151*"florida" + 0.149*"place" + 0.145*"clean" + -0.125*"floor" + 0.124*"good" + 0.123*"mall" + -0.122*"paris" + -0.121*"seattle" + 0.117*"rome" + 0.116*"bad" + 0.113*"money" + 0.104*"price" + 0.101*"orlando" + 0.099*"beach" + -0.097*"suite" + 0.094*"friendly"
+############# TOPIC 9 #############
+-0.358*"excellent" + -0.201*"service" + -0.192*"vdara" + -0.168*"good" + -0.165*"value" + -0.151*"resort" + 0.150*"park" + 0.146*"love" + 0.145*"street" + 0.131*"block"
 
-####################### TOPIC 10 #######################
--0.352*"excellent" + 0.312*"mall" + 0.286*"florida" + -0.200*"service" + -0.173*"good" + 0.163*"conference" + 0.158*"park" + -0.156*"value" + 0.140*"walk" + 0.138*"shop" + 0.135*"paris" + 0.132*"orlando" + 0.129*"center" + 0.121*"lahaina" + 0.109*"royal" + 0.109*"street" + -0.108*"pool" + 0.095*"block" + 0.093*"distance" + 0.086*"right"
+############# TOPIC 10 #############
+-0.372*"view" + 0.157*"place" + -0.154*"floor" + -0.147*"paris" + 0.144*"vdara" + -0.142*"ocean" + 0.142*"new" + 0.139*"casino" + -0.136*"bedroom" + 0.134*"strip"
 
-####################### TOPIC 11 #######################
--0.428*"paris" + 0.214*"rome" + 0.192*"york" + 0.161*"new" + -0.156*"excellent" + 0.148*"city" + -0.147*"lahaina" + -0.142*"royal" + 0.133*"palace" + 0.133*"roosevelt" + 0.127*"station" + 0.127*"central" + -0.118*"desk" + 0.117*"square" + -0.116*"front" + -0.104*"value" + 0.104*"walk" + -0.100*"de" + 0.100*"bus" + 0.096*"grand"
+############# TOPIC 11 #############
+-0.232*"view" + -0.189*"value" + 0.172*"pool" + -0.164*"vdara" + -0.142*"location" + -0.129*"money" + 0.127*"area" + -0.125*"lahaina" + 0.123*"bar" + -0.123*"ocean"
 
-####################### TOPIC 12 #######################
-0.334*"key" + 0.328*"west" + -0.192*"resort" + 0.191*"rome" + 0.188*"excellent" + -0.183*"airport" + -0.164*"shuttle" + 0.153*"view" + -0.145*"paris" + -0.124*"disney" + -0.118*"love" + -0.118*"new" + -0.116*"bedroom" + 0.115*"conference" + -0.114*"perfect" + -0.113*"bed" + 0.112*"inn" + 0.110*"florida" + 0.108*"beach" + 0.108*"mall"
+############# TOPIC 12 #############
+0.471*"paris" + -0.280*"venice" + 0.158*"park" + 0.156*"resort" + 0.142*"metro" + -0.138*"rome" + 0.115*"french" + 0.111*"beach" + 0.104*"front" + 0.102*"desk"
 
-####################### TOPIC 13 #######################
-0.244*"nice" + -0.210*"excellent" + -0.204*"resort" + 0.179*"place" + -0.175*"bedroom" + -0.168*"value" + -0.152*"disney" + -0.152*"park" + 0.148*"paris" + -0.143*"family" + 0.141*"really" + -0.137*"suite" + -0.123*"york" + -0.112*"lahaina" + 0.109*"food" + -0.107*"roosevelt" + -0.104*"royal" + -0.102*"new" + 0.102*"airport" + 0.102*"bad"
+############# TOPIC 13 #############
+-0.269*"nice" + -0.199*"paris" + -0.181*"airport" + -0.161*"shuttle" + 0.151*"city" + -0.147*"clean" + 0.143*"singapore" + -0.138*"friendly" + 0.134*"mall" + 0.133*"walk"
 
-####################### TOPIC 14 #######################
-0.307*"paris" + -0.278*"rome" + 0.170*"new" + 0.154*"york" + 0.153*"west" + -0.152*"nice" + -0.146*"view" + 0.143*"resort" + 0.140*"key" + -0.120*"friendly" + -0.120*"bed" + -0.114*"helpful" + 0.112*"business" + -0.108*"clean" + 0.102*"roosevelt" + -0.100*"love" + -0.099*"bedroom" + -0.099*"comfortable" + 0.097*"service" + 0.094*"price"
+############# TOPIC 14 #############
+-0.269*"resort" + -0.253*"venice" + -0.206*"shuttle" + -0.190*"new" + -0.167*"airport" + 0.154*"mall" + 0.144*"excellent" + -0.142*"orleans" + -0.128*"star" + 0.128*"beach"
 
-####################### TOPIC 15 #######################
-0.244*"excellent" + -0.216*"park" + 0.186*"airport" + 0.183*"mall" + 0.177*"beach" + 0.174*"florida" + -0.173*"rome" + 0.144*"shuttle" + -0.136*"downtown" + 0.133*"key" + 0.127*"west" + 0.127*"bed" + 0.123*"paris" + 0.116*"york" + -0.115*"charge" + 0.114*"floor" + -0.112*"price" + -0.110*"seattle" + -0.107*"place" + 0.106*"th"
+############# TOPIC 15 #############
+-0.298*"excellent" + -0.270*"new" + 0.207*"paris" + -0.207*"orleans" + -0.174*"resort" + 0.171*"place" + -0.163*"quarter" + -0.153*"york" + 0.139*"best" + -0.135*"french"
 
-####################### TOPIC 16 #######################
-0.212*"beach" + -0.198*"view" + -0.164*"airport" + 0.151*"nice" + 0.147*"desk" + 0.138*"excellent" + 0.131*"front" + -0.130*"city" + -0.128*"fairmont" + -0.125*"best" + -0.122*"rome" + -0.116*"seattle" + -0.115*"old" + -0.113*"shuttle" + 0.111*"great" + 0.104*"riu" + -0.100*"star" + 0.099*"palace" + -0.099*"resort" + 0.097*"check"
+############# TOPIC 16 #############
+0.387*"resort" + 0.260*"rome" + -0.228*"excellent" + -0.208*"value" + 0.180*"nice" + -0.171*"park" + -0.161*"paris" + 0.146*"conference" + 0.133*"wonderful" + -0.132*"beach"
 
-####################### TOPIC 17 #######################
--0.257*"resort" + 0.192*"excellent" + -0.186*"nice" + 0.162*"value" + 0.160*"beach" + -0.159*"beautiful" + -0.148*"conference" + -0.136*"roosevelt" + -0.131*"comfortable" + -0.131*"desk" + 0.129*"disney" + 0.127*"love" + -0.122*"lahaina" + 0.121*"family" + 0.121*"perfect" + 0.120*"park" + -0.120*"helpful" + 0.120*"best" + -0.118*"royal" + 0.117*"money"
+############# TOPIC 17 #############
+-0.278*"west" + -0.273*"key" + 0.261*"airport" + 0.224*"paris" + -0.211*"rome" + 0.170*"shuttle" + -0.162*"value" + 0.159*"love" + -0.140*"inn" + -0.132*"venice"
 
-####################### TOPIC 18 #######################
-0.317*"excellent" + 0.315*"resort" + -0.175*"free" + 0.171*"nice" + -0.170*"beach" + 0.154*"view" + -0.144*"lahaina" + -0.126*"royal" + -0.124*"business" + 0.122*"beautiful" + 0.121*"pool" + -0.116*"internet" + -0.112*"always" + -0.112*"comfortable" + -0.108*"breakfast" + 0.105*"location" + -0.103*"coffee" + 0.103*"walk" + 0.099*"close" + 0.092*"paris"
+############# TOPIC 18 #############
+-0.499*"excellent" + -0.149*"rome" + 0.143*"nice" + 0.140*"check" + 0.137*"singapore" + 0.132*"resort" + 0.116*"good" + -0.107*"place" + -0.106*"best" + 0.105*"quay"
 
-####################### TOPIC 19 #######################
--0.341*"excellent" + 0.215*"nice" + 0.185*"view" + 0.170*"pool" + 0.164*"paris" + 0.142*"great" + -0.142*"beach" + -0.127*"seattle" + -0.119*"walk" + 0.118*"book" + -0.113*"street" + -0.112*"san" + -0.106*"distance" + -0.105*"block" + 0.104*"lovely" + -0.103*"downtown" + 0.101*"really" + 0.101*"good" + -0.096*"within" + 0.093*"mall"
+############# TOPIC 19 #############
+0.339*"nice" + 0.239*"venice" + 0.223*"excellent" + -0.175*"beach" + -0.150*"comfortable" + 0.147*"pool" + 0.139*"quarter" + -0.138*"seattle" + -0.130*"bed" + -0.126*"value"
 
-####################### TOPIC 20 #######################
--0.295*"rome" + -0.255*"new" + -0.252*"excellent" + -0.230*"love" + -0.199*"free" + -0.171*"nice" + -0.158*"york" + -0.142*"orleans" + -0.142*"internet" + -0.141*"park" + 0.137*"venice" + 0.131*"value" + -0.119*"wonderful" + 0.107*"good" + -0.106*"paris" + 0.106*"cruise" + 0.106*"location" + 0.105*"resort" + 0.098*"u" + 0.096*"beach"
+############# TOPIC 20 #############
+-0.339*"rome" + 0.274*"west" + 0.267*"key" + -0.255*"love" + -0.183*"park" + 0.156*"paris" + 0.151*"venice" + -0.150*"wonderful" + -0.149*"free" + 0.132*"airport"
 
-####################### TOPIC 21 #######################
-0.311*"excellent" + -0.192*"palace" + -0.181*"view" + -0.166*"riu" + -0.156*"great" + 0.149*"lovely" + -0.147*"value" + 0.141*"really" + 0.140*"lahaina" + -0.136*"beach" + -0.127*"best" + -0.122*"wonderful" + 0.121*"royal" + -0.121*"new" + 0.116*"napa" + -0.113*"desk" + -0.112*"punta" + -0.112*"cana" + 0.110*"love" + 0.109*"perfect"
+############# TOPIC 21 #############
+0.408*"venice" + -0.229*"pool" + -0.225*"rome" + -0.207*"west" + -0.198*"key" + -0.155*"airport" + 0.150*"san" + -0.150*"singapore" + 0.134*"beach" + 0.121*"florida"
 
-####################### TOPIC 22 #######################
--0.282*"nice" + 0.256*"wonderful" + 0.207*"great" + -0.196*"business" + 0.189*"free" + 0.150*"value" + -0.147*"family" + -0.141*"city" + 0.135*"beautiful" + 0.115*"resort" + -0.113*"excellent" + -0.111*"new" + -0.109*"suite" + 0.109*"mall" + -0.106*"view" + 0.101*"money" + 0.099*"shower" + 0.097*"water" + 0.097*"coffee" + -0.096*"venice"
+############# TOPIC 22 #############
+-0.317*"seattle" + -0.251*"resort" + 0.199*"mall" + -0.198*"downtown" + 0.192*"florida" + 0.184*"beach" + -0.173*"excellent" + 0.158*"business" + 0.151*"ocean" + 0.149*"conference"
 
-####################### TOPIC 23 #######################
--0.380*"perfect" + 0.206*"palace" + 0.190*"park" + 0.177*"lovely" + 0.175*"riu" + -0.167*"business" + 0.163*"cruise" + -0.160*"service" + -0.155*"beach" + -0.143*"location" + -0.140*"great" + 0.122*"seattle" + -0.120*"internet" + -0.120*"station" + 0.118*"wonderful" + -0.117*"suite" + 0.116*"punta" + 0.116*"cana" + 0.100*"venice" + 0.089*"excellent"
+############# TOPIC 23 #############
+0.228*"key" + 0.227*"west" + 0.215*"perfect" + 0.211*"free" + -0.197*"family" + -0.164*"value" + 0.157*"internet" + 0.157*"resort" + -0.147*"kid" + 0.146*"excellent"
 
-####################### TOPIC 24 #######################
--0.290*"perfect" + 0.275*"value" + -0.245*"wonderful" + -0.181*"cruise" + 0.176*"great" + 0.172*"love" + -0.148*"beach" + 0.143*"new" + -0.138*"internet" + -0.136*"nice" + 0.125*"best" + -0.123*"charge" + 0.118*"lahaina" + -0.117*"business" + 0.106*"pool" + 0.106*"napa" + -0.105*"free" + 0.105*"royal" + -0.105*"resort" + -0.103*"place"
+############# TOPIC 24 #############
+-0.502*"perfect" + 0.289*"value" + -0.186*"nice" + 0.161*"lovely" + 0.158*"money" + -0.156*"rome" + -0.152*"suite" + -0.138*"business" + 0.136*"wonderful" + -0.135*"beach"
 
-####################### TOPIC 25 #######################
-0.356*"fairmont" + 0.270*"singapore" + 0.220*"love" + -0.202*"wonderful" + -0.192*"view" + 0.171*"resort" + -0.171*"conference" + -0.164*"perfect" + -0.164*"park" + -0.138*"florida" + 0.127*"seattle" + 0.123*"raffle" + 0.122*"cruise" + 0.110*"free" + 0.106*"business" + 0.106*"internet" + -0.105*"car" + 0.094*"inn" + 0.090*"year" + -0.089*"napa"
+############# TOPIC 25 #############
+0.423*"perfect" + -0.239*"excellent" + 0.214*"value" + -0.178*"york" + 0.157*"location" + -0.150*"rome" + -0.147*"nice" + -0.147*"new" + 0.146*"singapore" + 0.137*"wonderful"
 
-####################### TOPIC 26 #######################
-0.306*"perfect" + -0.294*"love" + 0.256*"cruise" + 0.214*"new" + 0.205*"nice" + 0.166*"orleans" + -0.143*"business" + 0.119*"fairmont" + 0.118*"quarter" + 0.114*"casino" + -0.113*"great" + 0.113*"breakfast" + 0.112*"singapore" + 0.110*"french" + 0.104*"napa" + 0.104*"best" + 0.104*"york" + 0.098*"harrah" + -0.096*"seattle" + 0.094*"place"
+############# TOPIC 26 #############
+-0.290*"value" + -0.257*"love" + 0.206*"lovely" + 0.203*"park" + -0.153*"view" + -0.146*"desk" + -0.142*"money" + 0.138*"recommend" + 0.133*"perfect" + 0.130*"car"
 
-####################### TOPIC 27 #######################
-0.328*"wonderful" + -0.323*"perfect" + 0.218*"beach" + -0.217*"resort" + -0.214*"view" + 0.180*"fairmont" + 0.175*"singapore" + -0.159*"inn" + -0.159*"value" + 0.152*"pool" + -0.128*"conference" + 0.111*"suite" + -0.111*"seattle" + -0.105*"palace" + -0.104*"love" + -0.103*"water" + -0.094*"riu" + -0.094*"downtown" + 0.092*"raffle" + -0.092*"free"
+############# TOPIC 27 #############
+-0.352*"wonderful" + -0.246*"perfect" + 0.200*"love" + -0.182*"view" + 0.150*"opus" + -0.146*"conference" + -0.139*"floor" + -0.133*"center" + 0.125*"service" + -0.121*"family"
 
-####################### TOPIC 28 #######################
-0.250*"wonderful" + 0.213*"perfect" + -0.202*"suite" + -0.187*"nice" + 0.159*"pool" + 0.148*"lovely" + -0.138*"bed" + -0.136*"rome" + -0.136*"cruise" + -0.132*"best" + -0.121*"napa" + -0.106*"palace" + -0.101*"distance" + -0.101*"love" + 0.095*"venice" + -0.095*"book" + 0.093*"park" + -0.093*"seattle" + 0.093*"friendly" + -0.091*"bardessono"
+############# TOPIC 28 #############
+-0.430*"love" + -0.198*"kid" + 0.184*"perfect" + 0.183*"nice" + -0.182*"wonderful" + 0.177*"value" + 0.169*"best" + 0.160*"view" + -0.154*"family" + 0.151*"orlando"
 
-####################### TOPIC 29 #######################
--0.305*"cruise" + -0.234*"wonderful" + 0.231*"park" + 0.215*"perfect" + 0.208*"comfortable" + 0.173*"bed" + 0.171*"fairmont" + 0.165*"singapore" + -0.154*"conference" + 0.143*"best" + 0.118*"resort" + -0.114*"family" + 0.113*"car" + -0.112*"miami" + -0.111*"port" + -0.110*"place" + 0.102*"riu" + -0.102*"breakfast" + 0.101*"fantastic" + 0.098*"rome"
+############# TOPIC 29 #############
+0.428*"wonderful" + -0.328*"perfect" + -0.170*"business" + 0.142*"distance" + -0.141*"resort" + 0.132*"star" + -0.131*"love" + 0.128*"beach" + -0.125*"noise" + -0.124*"value"
 
-####################### TOPIC 30 #######################
-0.232*"venice" + -0.222*"perfect" + -0.217*"rome" + 0.155*"free" + 0.146*"internet" + 0.143*"resort" + 0.135*"view" + -0.134*"wonderful" + 0.123*"fantastic" + 0.117*"place" + 0.110*"modern" + 0.110*"san" + -0.109*"night" + 0.105*"lovely" + 0.103*"suite" + -0.101*"family" + -0.099*"kid" + 0.099*"apartment" + -0.093*"seattle" + -0.093*"time"
+############# TOPIC 30 #############
+-0.252*"wonderful" + 0.216*"resort" + -0.189*"fantastic" + 0.178*"cruise" + -0.177*"park" + 0.165*"singapore" + -0.155*"pool" + -0.153*"service" + 0.151*"excellent" + 0.151*"nice"
 
-####################### TOPIC 31 #######################
--0.946*"x" + 0.122*"showreview" + 0.106*"full" + 0.084*"perfect" + 0.059*"fairmont" + -0.052*"comfortable" + -0.050*"value" + 0.046*"singapore" + -0.044*"money" + -0.040*"bed" + -0.040*"view" + 0.038*"location" + -0.035*"best" + 0.035*"really" + -0.035*"beach" + 0.032*"property" + 0.032*"lahaina" + 0.031*"royal" + -0.030*"wonderful" + 0.029*"cruise"
+############# TOPIC 31 #############
+0.295*"value" + -0.274*"best" + 0.217*"money" + 0.215*"conference" + -0.158*"disney" + 0.152*"love" + -0.147*"floor" + 0.137*"center" + 0.136*"lovely" + -0.136*"park"
 
-####################### TOPIC 32 #######################
--0.345*"value" + -0.293*"wonderful" + 0.210*"recommend" + -0.194*"seattle" + -0.191*"nice" + -0.187*"money" + 0.160*"highly" + 0.139*"great" + 0.131*"definitely" + -0.117*"good" + 0.117*"fantastic" + 0.117*"palace" + 0.110*"san" + 0.108*"price" + 0.106*"would" + 0.103*"riu" + -0.097*"city" + 0.095*"rome" + -0.092*"home" + 0.090*"location"
+############# TOPIC 32 #############
+0.383*"wonderful" + -0.227*"fantastic" + -0.165*"lovely" + -0.154*"recommend" + -0.144*"star" + -0.142*"quarter" + 0.135*"nice" + 0.127*"excellent" + -0.120*"friendly" + -0.119*"internet"
 
-####################### TOPIC 33 #######################
--0.280*"conference" + 0.240*"wonderful" + 0.203*"palace" + -0.195*"beach" + 0.182*"riu" + 0.158*"mall" + 0.137*"good" + -0.137*"cruise" + -0.134*"comfortable" + -0.132*"lovely" + 0.127*"lahaina" + -0.125*"new" + 0.124*"punta" + 0.123*"royal" + 0.122*"cana" + -0.121*"center" + 0.119*"perfect" + -0.118*"bed" + -0.115*"value" + 0.114*"close"
+############# TOPIC 33 #############
+0.276*"love" + 0.221*"rome" + -0.220*"place" + -0.180*"wonderful" + 0.177*"mall" + 0.172*"star" + 0.170*"florida" + -0.163*"business" + -0.143*"free" + -0.140*"internet"
 
-####################### TOPIC 34 #######################
--0.211*"lovely" + -0.196*"perfect" + 0.196*"best" + 0.174*"resort" + -0.153*"seattle" + 0.150*"san" + -0.149*"distance" + -0.148*"conference" + 0.141*"street" + 0.140*"wonderful" + -0.134*"palace" + 0.130*"floor" + 0.125*"nice" + 0.124*"mall" + 0.123*"th" + -0.122*"fantastic" + -0.120*"walk" + -0.117*"within" + 0.116*"venice" + -0.115*"riu"
+############# TOPIC 34 #############
+0.238*"seattle" + -0.211*"street" + -0.175*"opus" + 0.174*"lovely" + 0.167*"old" + -0.148*"noise" + -0.133*"highly" + -0.132*"vancouver" + -0.132*"recommend" + -0.121*"suite"
 
-####################### TOPIC 35 #######################
--0.300*"love" + 0.259*"inn" + -0.226*"value" + -0.201*"venice" + 0.192*"best" + 0.161*"holiday" + -0.136*"perfect" + -0.132*"cruise" + 0.126*"ever" + -0.124*"street" + -0.118*"conference" + -0.115*"rome" + -0.113*"fairmont" + 0.111*"downtown" + 0.109*"chicago" + -0.106*"money" + 0.105*"park" + -0.103*"quiet" + 0.102*"fantastic" + -0.101*"orleans"
+############# TOPIC 35 #############
+-0.228*"park" + 0.215*"price" + -0.209*"bed" + -0.201*"comfortable" + 0.200*"cruise" + -0.197*"singapore" + -0.166*"venice" + 0.151*"place" + -0.140*"value" + 0.139*"restaurant"
 
-####################### TOPIC 36 #######################
--0.280*"wonderful" + 0.223*"cruise" + 0.209*"rome" + -0.146*"palace" + -0.143*"bed" + -0.142*"business" + -0.133*"value" + -0.132*"riu" + 0.130*"small" + 0.129*"park" + 0.125*"friendly" + -0.119*"center" + -0.115*"napa" + 0.114*"roosevelt" + 0.110*"service" + -0.107*"city" + -0.107*"comfortable" + 0.107*"always" + 0.101*"seattle" + -0.101*"marriott"
+############# TOPIC 36 #############
+0.237*"recommend" + -0.206*"suite" + 0.197*"highly" + -0.188*"love" + 0.160*"pool" + -0.159*"west" + -0.153*"key" + -0.148*"wonderful" + 0.146*"property" + -0.136*"good"
 
-####################### TOPIC 37 #######################
--0.195*"great" + -0.190*"conference" + 0.182*"value" + -0.179*"suite" + 0.167*"pool" + 0.153*"lobby" + -0.151*"really" + -0.147*"resort" + 0.144*"money" + -0.140*"service" + 0.132*"beautiful" + 0.122*"place" + -0.121*"center" + 0.119*"locate" + -0.117*"location" + -0.115*"fantastic" + 0.109*"area" + 0.104*"perfect" + 0.101*"mall" + 0.099*"cruise"
+############# TOPIC 37 #############
+0.243*"san" + -0.221*"seattle" + 0.199*"diego" + 0.183*"distance" + -0.180*"recommend" + -0.170*"fantastic" + 0.157*"beautiful" + -0.140*"highly" + 0.139*"within" + 0.133*"area"
 
-####################### TOPIC 38 #######################
--0.294*"love" + 0.251*"business" + -0.230*"price" + 0.215*"rome" + 0.206*"value" + 0.161*"cruise" + -0.144*"conference" + -0.136*"venice" + 0.131*"bar" + -0.130*"beach" + 0.127*"area" + -0.123*"friendly" + 0.123*"really" + -0.119*"star" + 0.116*"san" + 0.099*"lovely" + 0.098*"trip" + 0.094*"diego" + -0.093*"pay" + 0.092*"money"
+############# TOPIC 38 #############
+0.349*"rome" + -0.185*"city" + 0.174*"value" + -0.169*"best" + 0.149*"cruise" + -0.139*"station" + 0.138*"nice" + -0.126*"pool" + 0.113*"money" + -0.110*"view"
 
-####################### TOPIC 39 #######################
-0.243*"great" + -0.240*"love" + -0.228*"best" + -0.218*"cruise" + 0.211*"place" + 0.166*"seattle" + -0.151*"suite" + 0.143*"rome" + -0.136*"ever" + 0.136*"venice" + -0.135*"good" + -0.124*"miami" + 0.119*"recommend" + 0.115*"inn" + 0.108*"price" + -0.108*"park" + -0.107*"friendly" + 0.104*"water" + -0.102*"beautiful" + 0.102*"new"
+############# TOPIC 39 #############
+-0.358*"disney" + -0.222*"business" + 0.213*"place" + 0.184*"park" + 0.170*"friendly" + -0.159*"downtown" + 0.154*"best" + -0.148*"recommend" + -0.147*"wonderful" + 0.137*"suite"
 
-####################### TOPIC 40 #######################
--0.389*"best" + -0.185*"pool" + -0.167*"ever" + -0.158*"venice" + -0.156*"san" + -0.134*"recommend" + 0.127*"really" + -0.126*"highly" + -0.118*"perfect" + 0.113*"place" + 0.112*"inn" + 0.108*"resort" + 0.107*"suite" + -0.107*"desk" + -0.103*"roosevelt" + 0.103*"napa" + -0.103*"front" + -0.094*"area" + 0.092*"make" + -0.090*"hot"
+############# TOPIC 40 #############
+-0.245*"fantastic" + -0.233*"suite" + 0.208*"cruise" + 0.197*"star" + -0.173*"business" + -0.152*"best" + 0.149*"view" + 0.144*"vancouver" + 0.141*"city" + 0.134*"opus"
 
-####################### TOPIC 41 #######################
-0.253*"inn" + -0.196*"conference" + 0.184*"bed" + -0.173*"place" + 0.171*"love" + 0.165*"holiday" + 0.163*"san" + 0.162*"lovely" + 0.155*"perfect" + 0.141*"comfortable" + 0.137*"mall" + -0.121*"fairmont" + -0.117*"th" + -0.117*"floor" + 0.112*"diego" + 0.107*"adagio" + 0.104*"wonderful" + 0.103*"good" + -0.102*"central" + 0.100*"new"
+############# TOPIC 41 #############
+0.431*"lovely" + 0.225*"best" + -0.194*"park" + -0.154*"water" + -0.148*"shower" + -0.139*"recommend" + 0.131*"bed" + 0.129*"street" + 0.127*"seattle" + -0.122*"distance"
 
-####################### TOPIC 42 #######################
-0.242*"lovely" + 0.211*"nice" + 0.204*"recommend" + 0.189*"love" + 0.177*"seattle" + 0.173*"highly" + -0.161*"great" + -0.145*"city" + -0.139*"view" + 0.139*"inn" + 0.131*"fantastic" + -0.129*"san" + 0.129*"beach" + 0.119*"good" + -0.117*"friendly" + 0.110*"th" + -0.110*"pool" + -0.110*"cruise" + 0.104*"place" + 0.101*"suite"
+############# TOPIC 42 #############
+0.208*"park" + 0.196*"opus" + 0.187*"vancouver" + 0.186*"nice" + 0.183*"lovely" + -0.166*"really" + 0.151*"cruise" + -0.148*"free" + -0.148*"property" + 0.136*"service"
 
-####################### TOPIC 43 #######################
-0.311*"place" + 0.259*"comfortable" + 0.190*"bed" + -0.171*"san" + 0.159*"quiet" + -0.146*"beach" + -0.145*"nice" + -0.141*"value" + -0.127*"property" + 0.121*"food" + -0.120*"really" + 0.114*"restaurant" + 0.113*"bar" + -0.113*"adagio" + -0.113*"recommend" + -0.111*"diego" + 0.108*"service" + -0.103*"hot" + -0.102*"shower" + -0.101*"water"
+############# TOPIC 43 #############
+-0.242*"property" + -0.236*"star" + 0.195*"comfortable" + -0.189*"nice" + 0.177*"bed" + 0.169*"business" + 0.166*"family" + 0.164*"kid" + 0.154*"opus" + -0.137*"station"
 
-####################### TOPIC 44 #######################
-0.221*"front" + 0.215*"desk" + 0.209*"fantastic" + 0.180*"inn" + -0.168*"water" + 0.154*"really" + -0.154*"park" + 0.146*"street" + 0.134*"best" + -0.132*"time" + -0.130*"year" + -0.122*"nice" + -0.120*"shower" + 0.111*"property" + 0.107*"holiday" + 0.105*"lovely" + -0.104*"san" + -0.104*"great" + 0.103*"free" + -0.103*"visit"
+############# TOPIC 44 #############
+0.266*"front" + 0.259*"desk" + -0.238*"opus" + -0.202*"nice" + -0.194*"vancouver" + -0.160*"distance" + 0.152*"rome" + 0.150*"city" + 0.148*"price" + -0.136*"station"
 
-####################### TOPIC 45 #######################
--0.277*"lovely" + 0.246*"recommend" + -0.199*"great" + 0.190*"highly" + -0.171*"property" + 0.171*"good" + -0.155*"distance" + 0.148*"price" + 0.143*"place" + -0.141*"best" + -0.139*"really" + -0.134*"nice" + -0.128*"free" + 0.127*"front" + -0.126*"venice" + 0.124*"desk" + -0.118*"within" + -0.113*"location" + 0.113*"city" + 0.108*"bar"
+############# TOPIC 45 #############
+-0.354*"place" + 0.262*"really" + 0.201*"star" + 0.194*"fantastic" + 0.169*"san" + 0.155*"free" + 0.152*"family" + -0.148*"property" + 0.146*"old" + 0.142*"inn"
 
-####################### TOPIC 46 #######################
-0.268*"seattle" + -0.180*"business" + 0.163*"bar" + 0.158*"free" + -0.157*"park" + -0.151*"service" + -0.140*"property" + -0.134*"inn" + -0.133*"love" + 0.129*"suite" + 0.129*"friendly" + 0.126*"perfect" + 0.125*"u" + -0.124*"beautiful" + 0.123*"pool" + -0.115*"place" + -0.111*"cruise" + 0.109*"edgewater" + -0.109*"venice" + -0.102*"marriott"
+############# TOPIC 46 #############
+-0.336*"cruise" + -0.223*"property" + 0.173*"service" + 0.163*"place" + 0.162*"home" + -0.150*"really" + -0.150*"best" + -0.138*"helpful" + 0.135*"san" + 0.135*"bar"
 
-####################### TOPIC 47 #######################
-0.290*"business" + -0.196*"conference" + -0.184*"service" + 0.178*"best" + -0.163*"nice" + -0.161*"floor" + -0.157*"th" + -0.148*"san" + -0.136*"fantastic" + 0.127*"property" + -0.125*"bad" + -0.122*"dirty" + 0.121*"water" + 0.121*"istanbul" + -0.115*"suite" + 0.110*"seattle" + 0.099*"hot" + 0.098*"excellent" + -0.094*"fairmont" + -0.092*"park"
+############# TOPIC 47 #############
+0.315*"best" + 0.190*"pool" + -0.169*"beautiful" + -0.169*"comfortable" + -0.168*"property" + -0.158*"disney" + -0.144*"fantastic" + -0.142*"bus" + -0.138*"bed" + -0.136*"year"
 
-####################### TOPIC 48 #######################
-0.271*"recommend" + -0.269*"place" + 0.262*"highly" + -0.193*"san" + 0.185*"istanbul" + -0.161*"york" + 0.157*"old" + -0.129*"new" + 0.127*"business" + -0.125*"price" + -0.125*"diego" + 0.123*"nice" + -0.123*"best" + -0.122*"conference" + 0.114*"feel" + 0.111*"home" + -0.110*"quiet" + 0.105*"family" + 0.103*"value" + -0.102*"lovely"
+############# TOPIC 48 #############
+-0.257*"cruise" + -0.252*"beautiful" + -0.166*"central" + -0.152*"business" + 0.150*"price" + -0.147*"place" + 0.146*"bus" + 0.145*"year" + -0.139*"station" + 0.135*"suite"
 
-####################### TOPIC 49 #######################
-0.217*"venice" + 0.171*"napa" + 0.161*"fantastic" + 0.158*"good" + 0.143*"city" + -0.141*"place" + 0.133*"family" + -0.128*"star" + -0.119*"always" + 0.115*"free" + -0.114*"bar" + 0.108*"wine" + -0.105*"th" + 0.103*"york" + -0.103*"price" + -0.101*"within" + -0.097*"coffee" + 0.095*"marriott" + -0.094*"check" + -0.094*"need"
+############# TOPIC 49 #############
+-0.360*"fantastic" + -0.253*"san" + 0.234*"recommend" + -0.206*"diego" + 0.192*"highly" + -0.147*"year" + 0.144*"family" + -0.132*"time" + 0.120*"beautiful" + -0.109*"rome"
 
-####################### TOPIC 50 #######################
-0.252*"lovely" + -0.243*"close" + -0.236*"beautiful" + -0.186*"station" + 0.157*"front" + 0.157*"desk" + -0.140*"train" + 0.138*"price" + 0.127*"shuttle" + -0.125*"everything" + -0.122*"great" + 0.121*"bus" + -0.120*"inn" + -0.118*"new" + 0.117*"helpful" + -0.110*"experience" + 0.109*"year" + 0.106*"resort" + 0.103*"time" + -0.101*"check"
+############# TOPIC 50 #############
+0.469*"fantastic" + -0.381*"lovely" + 0.132*"close" + 0.132*"beautiful" + 0.126*"review" + 0.113*"place" + 0.108*"station" + -0.108*"awesome" + -0.105*"best" + -0.105*"service"
 
-####################### TOPIC 51 #######################
--0.238*"venice" + -0.192*"fantastic" + -0.186*"suite" + 0.183*"lovely" + -0.181*"business" + 0.181*"istanbul" + 0.174*"city" + -0.166*"beautiful" + 0.139*"great" + -0.123*"really" + 0.108*"cruise" + -0.107*"distance" + -0.104*"pool" + 0.104*"conference" + 0.103*"nice" + -0.103*"walk" + 0.103*"napa" + 0.097*"palace" + 0.093*"u" + -0.093*"locanda"
+############# TOPIC 51 #############
+0.242*"fantastic" + 0.194*"star" + 0.186*"nice" + -0.179*"suite" + 0.178*"love" + 0.170*"distance" + -0.160*"station" + 0.144*"property" + 0.143*"within" + -0.140*"cruise"
 
-####################### TOPIC 52 #######################
-0.479*"fantastic" + -0.298*"really" + -0.214*"beautiful" + -0.190*"lovely" + 0.156*"nice" + 0.140*"cruise" + 0.138*"wonderful" + -0.136*"bad" + -0.133*"enjoy" + -0.116*"definitely" + -0.112*"front" + -0.107*"convenient" + -0.102*"desk" + 0.098*"always" + -0.092*"city" + 0.089*"venice" + 0.089*"small" + -0.087*"disney" + -0.086*"roosevelt" + 0.085*"best"
+############# TOPIC 52 #############
+-0.260*"star" + 0.239*"small" + -0.235*"cruise" + -0.197*"service" + -0.157*"comfortable" + 0.150*"location" + -0.145*"th" + -0.140*"floor" + 0.136*"u" + 0.133*"old"
 
-####################### TOPIC 53 #######################
--0.203*"service" + 0.200*"suite" + -0.198*"distance" + 0.182*"beautiful" + -0.173*"within" + -0.160*"walk" + -0.154*"minute" + 0.144*"city" + 0.127*"u" + -0.125*"really" + -0.123*"good" + -0.122*"internet" + 0.119*"close" + 0.115*"old" + 0.110*"great" + -0.109*"york" + -0.105*"star" + -0.105*"recommend" + 0.100*"dirty" + 0.100*"center"
+############# TOPIC 53 #############
+-0.248*"city" + 0.229*"station" + 0.212*"business" + 0.206*"train" + 0.201*"lovely" + 0.152*"desk" + 0.143*"front" + -0.141*"beach" + -0.139*"service" + -0.121*"noise"
 
-####################### TOPIC 54 #######################
--0.262*"property" + -0.249*"station" + 0.208*"rome" + 0.206*"distance" + -0.203*"really" + -0.198*"train" + -0.180*"lovely" + 0.164*"small" + 0.162*"within" + -0.160*"near" + -0.160*"metro" + 0.143*"city" + 0.139*"center" + -0.138*"bus" + 0.123*"definitely" + 0.111*"inn" + 0.111*"shuttle" + 0.111*"singapore" + 0.107*"u" + 0.105*"everything"
+############# TOPIC 54 #############
+-0.383*"star" + -0.228*"beautiful" + -0.206*"place" + 0.178*"property" + -0.177*"opus" + 0.175*"cruise" + 0.164*"love" + -0.142*"business" + -0.141*"disney" + -0.135*"vancouver"
 
-####################### TOPIC 55 #######################
-0.223*"close" + -0.205*"place" + 0.176*"pool" + 0.160*"love" + 0.154*"quiet" + -0.148*"check" + 0.147*"experience" + -0.145*"back" + -0.121*"old" + 0.120*"review" + 0.119*"block" + -0.115*"family" + -0.112*"free" + -0.109*"year" + -0.108*"good" + 0.108*"fantastic" + -0.107*"best" + 0.105*"bad" + -0.104*"marriott" + -0.102*"property"
+############# TOPIC 55 #############
+-0.198*"really" + -0.189*"new" + -0.183*"lovely" + 0.170*"th" + -0.164*"enjoy" + 0.140*"business" + 0.139*"floor" + 0.139*"floridays" + -0.137*"water" + 0.133*"home"
 
-####################### TOPIC 56 #######################
--0.435*"fantastic" + 0.201*"best" + -0.195*"beautiful" + 0.189*"inn" + -0.155*"old" + 0.149*"venice" + 0.138*"holiday" + 0.131*"really" + 0.116*"th" + 0.113*"floor" + 0.113*"great" + -0.110*"year" + -0.106*"disney" + 0.105*"love" + 0.103*"charge" + 0.103*"shower" + 0.101*"place" + -0.100*"seattle" + 0.096*"lovely" + -0.091*"business"
+############# TOPIC 56 #############
+-0.259*"year" + 0.197*"floor" + 0.186*"th" + -0.182*"back" + -0.159*"amaze" + 0.158*"place" + 0.157*"love" + -0.157*"old" + 0.150*"inn" + 0.135*"u"
 
-####################### TOPIC 57 #######################
-0.288*"love" + -0.195*"beautiful" + -0.181*"price" + -0.166*"back" + 0.159*"place" + 0.140*"fantastic" + -0.139*"comfortable" + 0.138*"review" + -0.137*"suite" + 0.136*"u" + 0.134*"conference" + 0.127*"really" + 0.123*"bad" + 0.102*"park" + 0.102*"good" + 0.098*"resort" + -0.098*"next" + -0.098*"go" + 0.093*"desk" + 0.092*"lax"
+############# TOPIC 57 #############
+0.272*"place" + -0.172*"close" + 0.165*"good" + -0.161*"beautiful" + -0.150*"price" + 0.149*"recommend" + 0.142*"wonderful" + 0.134*"highly" + -0.128*"center" + -0.118*"block"
 
-####################### TOPIC 58 #######################
-0.280*"really" + -0.178*"review" + -0.153*"bad" + -0.152*"venice" + 0.151*"distance" + 0.150*"fantastic" + 0.143*"airport" + -0.141*"area" + 0.137*"place" + -0.129*"bar" + -0.127*"back" + -0.120*"free" + 0.118*"istanbul" + 0.116*"within" + 0.113*"enjoy" + 0.113*"beautiful" + 0.111*"charge" + -0.110*"convenient" + -0.108*"experience" + 0.107*"biltmore"
+############# TOPIC 58 #############
+0.308*"everything" + 0.261*"close" + -0.212*"really" + 0.175*"new" + 0.164*"downtown" + 0.159*"opus" + -0.144*"enjoy" + 0.142*"need" + 0.141*"vancouver" + 0.132*"star"
 
-####################### TOPIC 59 #######################
--0.287*"lovely" + 0.230*"star" + -0.180*"price" + 0.175*"beautiful" + 0.166*"city" + -0.151*"home" + -0.143*"station" + -0.140*"train" + -0.140*"close" + -0.130*"everything" + -0.120*"pool" + -0.119*"good" + -0.116*"ok" + 0.116*"bus" + -0.115*"feel" + 0.114*"place" + -0.107*"conference" + 0.103*"great" + -0.101*"view" + 0.100*"nice"
+############# TOPIC 59 #############
+0.293*"star" + 0.212*"business" + -0.209*"beautiful" + -0.178*"price" + -0.161*"everything" + 0.161*"friendly" + 0.155*"helpful" + -0.149*"floor" + -0.148*"really" + -0.141*"front"
 
-####################### TOPIC 60 #######################
-0.240*"beautiful" + -0.189*"old" + -0.159*"check" + -0.155*"istanbul" + 0.139*"adagio" + -0.131*"city" + -0.127*"suite" + 0.118*"fairmont" + -0.112*"place" + -0.111*"front" + -0.109*"great" + -0.109*"quiet" + -0.108*"park" + 0.106*"card" + 0.105*"helpful" + 0.102*"family" + -0.101*"resort" + 0.100*"friendly" + 0.099*"two" + 0.097*"location"
+############# TOPIC 60 #############
+0.343*"really" + 0.322*"close" + 0.198*"enjoy" + -0.148*"little" + 0.132*"location" + -0.125*"train" + -0.118*"new" + -0.117*"locate" + 0.117*"two" + -0.116*"inn"
 
-####################### TOPIC 61 #######################
-0.212*"property" + 0.177*"good" + -0.170*"business" + -0.156*"awesome" + -0.156*"family" + 0.154*"th" + 0.153*"floor" + -0.152*"small" + 0.151*"really" + -0.144*"star" + -0.134*"convenient" + 0.131*"beautiful" + -0.130*"train" + -0.121*"view" + -0.120*"station" + 0.116*"downtown" + -0.116*"roosevelt" + 0.112*"internet" + 0.103*"rome" + 0.099*"check"
+############# TOPIC 61 #############
+0.259*"beautiful" + -0.191*"everything" + 0.172*"property" + -0.169*"place" + -0.168*"old" + 0.157*"friendly" + -0.156*"close" + 0.153*"really" + 0.148*"san" + -0.142*"u"
 
-####################### TOPIC 62 #######################
--0.255*"year" + 0.223*"locate" + 0.208*"business" + 0.200*"family" + -0.192*"lax" + -0.167*"everything" + -0.149*"close" + -0.143*"old" + -0.129*"bar" + -0.124*"city" + 0.120*"friendly" + 0.113*"th" + 0.111*"away" + -0.107*"food" + 0.099*"star" + 0.097*"place" + -0.097*"suite" + 0.092*"floor" + -0.091*"front" + -0.090*"marriott"
+############# TOPIC 62 #############
+-0.255*"price" + 0.202*"inn" + -0.164*"home" + 0.154*"holiday" + -0.151*"family" + 0.143*"small" + -0.136*"business" + 0.135*"opus" + -0.128*"water" + -0.123*"shower"
 
-####################### TOPIC 63 #######################
--0.179*"istanbul" + 0.173*"u" + 0.157*"th" + -0.154*"check" + -0.145*"fantastic" + 0.144*"floor" + 0.143*"everything" + 0.140*"bus" + 0.139*"old" + 0.134*"business" + 0.131*"beautiful" + -0.117*"inn" + -0.117*"station" + -0.115*"time" + -0.113*"water" + -0.112*"square" + -0.109*"close" + -0.102*"paris" + 0.100*"great" + 0.096*"trip"
+############# TOPIC 63 #############
+0.200*"old" + 0.178*"check" + 0.167*"floridays" + 0.147*"everything" + 0.137*"property" + 0.132*"ok" + -0.131*"home" + 0.130*"really" + -0.128*"price" + 0.127*"palace"
 
-####################### TOPIC 64 #######################
-0.229*"really" + 0.194*"center" + 0.184*"bar" + 0.164*"price" + -0.154*"review" + 0.153*"lax" + -0.151*"year" + -0.146*"place" + -0.137*"beautiful" + 0.127*"disney" + -0.120*"little" + 0.118*"close" + -0.115*"mall" + 0.112*"dirty" + -0.103*"suite" + -0.100*"read" + -0.097*"good" + -0.097*"biltmore" + -0.097*"problem" + -0.097*"highly"
+############# TOPIC 64 #############
+-0.184*"home" + 0.184*"everything" + -0.183*"floridays" + 0.175*"old" + -0.164*"property" + 0.151*"beautiful" + -0.147*"really" + 0.145*"review" + 0.142*"year" + 0.140*"service"
 
-####################### TOPIC 65 #######################
--0.193*"city" + 0.192*"definitely" + -0.169*"central" + 0.159*"small" + 0.149*"istanbul" + -0.147*"make" + 0.142*"back" + -0.130*"good" + -0.125*"price" + -0.122*"hot" + 0.122*"close" + -0.121*"lovely" + -0.116*"free" + 0.114*"old" + -0.110*"air" + 0.106*"money" + 0.104*"little" + -0.104*"feel" + -0.103*"roosevelt" + 0.100*"everything"
+############# TOPIC 65 #############
+0.259*"beautiful" + 0.162*"good" + -0.158*"really" + -0.156*"check" + 0.148*"floridays" + -0.139*"boardwalk" + -0.137*"bar" + -0.126*"disney" + 0.121*"free" + 0.120*"u"
 
-####################### TOPIC 66 #######################
-0.406*"star" + -0.178*"locate" + -0.174*"price" + -0.156*"street" + 0.154*"ok" + 0.133*"close" + -0.124*"little" + 0.123*"basic" + -0.122*"well" + 0.121*"two" + 0.120*"block" + 0.112*"four" + -0.106*"across" + -0.105*"review" + -0.105*"conference" + -0.101*"bad" + -0.099*"inn" + -0.093*"modern" + 0.091*"suite" + 0.090*"pool"
+############# TOPIC 66 #############
+-0.195*"conference" + 0.194*"inn" + 0.168*"business" + 0.162*"beautiful" + -0.158*"away" + 0.156*"nice" + 0.153*"holiday" + 0.148*"price" + -0.140*"center" + -0.137*"palace"
 
-####################### TOPIC 67 #######################
-0.184*"service" + -0.168*"really" + 0.160*"lovely" + 0.154*"nice" + -0.149*"modern" + 0.142*"u" + -0.135*"back" + 0.128*"everything" + -0.125*"home" + 0.124*"need" + -0.113*"bar" + -0.111*"central" + 0.111*"family" + -0.109*"desk" + -0.107*"front" + 0.105*"suite" + 0.100*"highly" + 0.099*"easy" + 0.098*"check" + -0.097*"experience"
+############# TOPIC 67 #############
+0.235*"city" + 0.212*"check" + -0.174*"business" + 0.169*"good" + -0.166*"ok" + 0.135*"always" + -0.128*"small" + -0.127*"quay" + 0.126*"free" + -0.124*"trip"
 
-####################### TOPIC 68 #######################
-0.293*"close" + 0.192*"lovely" + -0.180*"great" + 0.166*"star" + 0.140*"awesome" + -0.135*"price" + -0.132*"area" + 0.131*"water" + -0.126*"home" + -0.118*"suite" + 0.117*"san" + 0.117*"place" + 0.116*"back" + -0.116*"york" + 0.115*"roosevelt" + 0.108*"definitely" + -0.106*"feel" + 0.106*"everything" + 0.103*"casino" + 0.103*"family"
+############# TOPIC 68 #############
+-0.297*"awesome" + 0.244*"suite" + -0.239*"locate" + -0.184*"really" + 0.163*"ok" + 0.139*"beautiful" + 0.136*"convenient" + 0.134*"home" + -0.133*"apartment" + -0.122*"well"
 
-####################### TOPIC 69 #######################
--0.361*"convenient" + 0.246*"locate" + 0.176*"close" + 0.145*"always" + -0.141*"block" + 0.131*"great" + -0.121*"really" + 0.115*"price" + 0.111*"star" + -0.105*"fantastic" + 0.105*"bed" + 0.103*"go" + -0.101*"best" + -0.101*"place" + 0.096*"back" + -0.094*"charge" + -0.092*"location" + -0.089*"make" + -0.087*"check" + -0.085*"air"
+############# TOPIC 69 #############
+-0.330*"awesome" + 0.217*"locate" + -0.204*"central" + -0.151*"floridays" + -0.141*"bar" + 0.139*"back" + 0.136*"price" + 0.130*"palace" + 0.129*"downtown" + 0.122*"family"
 
-####################### TOPIC 70 #######################
-0.348*"property" + -0.201*"family" + 0.187*"star" + -0.174*"beautiful" + -0.170*"always" + 0.153*"biltmore" + 0.133*"awesome" + -0.125*"check" + -0.120*"really" + 0.114*"paris" + 0.112*"venice" + -0.111*"best" + -0.111*"quiet" + -0.108*"marriott" + -0.105*"napa" + -0.105*"service" + -0.104*"ok" + -0.103*"lax" + 0.096*"york" + -0.096*"minute"
+############# TOPIC 70 #############
+0.308*"property" + 0.230*"family" + -0.210*"pool" + 0.195*"awesome" + 0.168*"definitely" + 0.168*"close" + 0.153*"little" + -0.148*"u" + 0.133*"bar" + -0.129*"central"
 
-####################### TOPIC 71 #######################
--0.251*"property" + 0.187*"definitely" + 0.168*"back" + 0.145*"lax" + 0.145*"locate" + -0.142*"ok" + 0.141*"convenient" + 0.139*"large" + 0.137*"chicago" + -0.132*"small" + -0.120*"little" + 0.118*"area" + -0.118*"minute" + 0.118*"beautiful" + 0.117*"four" + 0.116*"really" + 0.110*"hot" + 0.109*"wyndham" + 0.106*"come" + 0.106*"near"
+############# TOPIC 71 #############
+-0.236*"locate" + -0.212*"floridays" + 0.171*"convenient" + -0.160*"downtown" + -0.149*"water" + 0.141*"venice" + 0.140*"floor" + 0.122*"definitely" + 0.121*"pool" + -0.117*"well"
 
-####################### TOPIC 72 #######################
--0.316*"locate" + -0.209*"ok" + -0.192*"city" + -0.180*"near" + -0.166*"property" + 0.161*"business" + 0.155*"close" + 0.154*"price" + -0.152*"lax" + 0.142*"star" + -0.140*"marriott" + -0.138*"definitely" + -0.120*"awesome" + -0.117*"charge" + 0.113*"always" + -0.108*"well" + -0.104*"card" + 0.104*"inn" + 0.102*"u" + -0.097*"centrally"
+############# TOPIC 72 #############
+0.263*"awesome" + -0.242*"floridays" + 0.198*"locate" + 0.190*"really" + 0.169*"inn" + -0.154*"palace" + -0.144*"riu" + -0.134*"price" + -0.132*"quay" + -0.128*"city"
 
-####################### TOPIC 73 #######################
-0.237*"family" + -0.209*"locate" + 0.159*"definitely" + -0.155*"street" + 0.150*"city" + -0.149*"pool" + 0.147*"weekend" + -0.145*"downtown" + -0.143*"awesome" + -0.130*"really" + -0.126*"air" + -0.117*"inn" + -0.109*"everything" + 0.106*"floor" + -0.106*"well" + 0.106*"key" + 0.106*"biltmore" + -0.099*"old" + -0.099*"u" + 0.097*"close"
+############# TOPIC 73 #############
+0.231*"close" + 0.200*"amaze" + -0.180*"convenient" + -0.158*"conference" + -0.139*"little" + -0.137*"awesome" + -0.131*"apartment" + -0.128*"best" + 0.125*"small" + 0.125*"locate"
 
-####################### TOPIC 74 #######################
--0.232*"trip" + 0.196*"back" + -0.186*"awesome" + 0.173*"comfortable" + -0.166*"locate" + 0.164*"quiet" + 0.137*"go" + -0.137*"return" + -0.134*"night" + -0.134*"bar" + -0.116*"spend" + 0.111*"really" + 0.109*"come" + -0.107*"front" + -0.102*"desk" + 0.101*"convenient" + -0.095*"business" + -0.095*"two" + 0.092*"card" + -0.092*"lovely"
+############# TOPIC 74 #############
+-0.280*"palace" + -0.242*"riu" + -0.216*"definitely" + -0.179*"central" + 0.175*"experience" + -0.162*"punta" + -0.161*"cana" + -0.156*"convenient" + 0.153*"locate" + 0.134*"ok"
 
-####################### TOPIC 75 #######################
-0.210*"awesome" + -0.188*"service" + 0.166*"check" + -0.153*"pool" + 0.138*"experience" + -0.132*"price" + 0.127*"property" + 0.125*"away" + -0.119*"train" + -0.112*"small" + -0.108*"quarter" + 0.107*"family" + -0.107*"next" + 0.107*"lax" + -0.105*"station" + -0.102*"comfortable" + 0.101*"water" + -0.100*"french" + -0.100*"central" + -0.100*"locate"
+############# TOPIC 75 #############
+-0.272*"amaze" + -0.177*"palace" + 0.173*"convenient" + 0.167*"comfortable" + -0.165*"two" + 0.161*"central" + -0.156*"awesome" + 0.146*"back" + -0.129*"riu" + 0.123*"go"
 
-####################### TOPIC 76 #######################
--0.307*"istanbul" + -0.229*"convenient" + -0.151*"downtown" + 0.145*"star" + 0.144*"old" + -0.144*"awesome" + 0.134*"city" + -0.131*"hilton" + -0.115*"marriott" + 0.113*"year" + -0.112*"area" + -0.112*"visit" + 0.109*"little" + 0.109*"locate" + 0.107*"biltmore" + 0.107*"enjoy" + -0.104*"bus" + 0.103*"business" + 0.101*"best" + -0.094*"ritz"
+############# TOPIC 76 #############
+-0.217*"convenient" + 0.202*"inn" + 0.188*"close" + 0.187*"old" + 0.170*"holiday" + -0.167*"awesome" + 0.164*"experience" + 0.152*"back" + 0.149*"modern" + -0.141*"city"
 
-####################### TOPIC 77 #######################
--0.225*"small" + -0.219*"quiet" + -0.213*"awesome" + -0.169*"property" + 0.160*"front" + 0.142*"desk" + 0.134*"facility" + -0.132*"center" + 0.128*"comfortable" + 0.124*"central" + 0.124*"star" + -0.121*"price" + -0.117*"two" + 0.115*"need" + 0.114*"coffee" + 0.112*"conference" + -0.109*"minute" + 0.105*"casino" + 0.103*"ok" + 0.103*"family"
+############# TOPIC 77 #############
+0.247*"locate" + -0.206*"floridays" + -0.205*"awesome" + -0.168*"quiet" + 0.152*"old" + 0.136*"well" + -0.123*"always" + 0.116*"air" + -0.114*"new" + -0.112*"modern"
 
-####################### TOPIC 78 #######################
--0.204*"property" + -0.203*"u" + -0.167*"comfortable" + 0.165*"good" + -0.159*"work" + -0.146*"air" + 0.145*"beautiful" + -0.141*"price" + -0.119*"definitely" + -0.115*"food" + 0.111*"size" + 0.110*"awesome" + -0.106*"conference" + 0.104*"coffee" + -0.103*"area" + 0.099*"wyndham" + 0.099*"friendly" + -0.098*"hot" + 0.097*"spa" + -0.096*"ok"
+############# TOPIC 78 #############
+0.257*"awesome" + 0.228*"little" + -0.203*"everything" + -0.196*"amaze" + -0.163*"quay" + -0.152*"clarke" + -0.145*"convenient" + -0.132*"bus" + 0.132*"airport" + -0.132*"weekend"
 
-####################### TOPIC 79 #######################
-0.218*"convenient" + 0.183*"experience" + -0.169*"definitely" + -0.168*"good" + 0.161*"little" + -0.139*"seattle" + -0.138*"look" + 0.137*"chicago" + -0.134*"service" + -0.126*"trip" + -0.121*"review" + 0.116*"year" + -0.115*"amaze" + -0.111*"bus" + 0.110*"always" + 0.107*"city" + 0.105*"locate" + 0.100*"problem" + 0.098*"star" + 0.095*"downtown"
+############# TOPIC 79 #############
+0.265*"amaze" + -0.227*"definitely" + -0.223*"awesome" + 0.222*"convenient" + -0.212*"area" + -0.160*"back" + -0.158*"price" + -0.153*"u" + -0.152*"close" + -0.148*"always"
 
-####################### TOPIC 80 #######################
--0.310*"awesome" + -0.178*"city" + -0.173*"seattle" + -0.160*"everything" + 0.152*"chicago" + -0.141*"experience" + -0.138*"th" + -0.131*"star" + -0.126*"work" + -0.125*"enjoy" + 0.124*"place" + -0.124*"convenient" + 0.121*"wyndham" + -0.120*"well" + 0.119*"definitely" + -0.115*"adagio" + -0.110*"good" + 0.102*"away" + -0.101*"easy" + -0.100*"floor"
+############# TOPIC 80 #############
+-0.186*"fairmont" + -0.185*"experience" + 0.184*"awesome" + 0.182*"always" + 0.165*"ok" + 0.157*"city" + -0.139*"central" + 0.138*"quay" + 0.136*"inn" + -0.135*"amaze"
 
-####################### TOPIC 81 #######################
--0.183*"awesome" + 0.181*"lax" + -0.163*"comfortable" + -0.152*"chicago" + -0.148*"block" + -0.138*"spacious" + 0.134*"weekend" + 0.133*"small" + -0.130*"time" + -0.123*"quite" + 0.122*"back" + 0.121*"biltmore" + -0.120*"lobby" + 0.112*"th" + -0.110*"wyndham" + -0.107*"square" + 0.105*"experience" + 0.105*"size" + -0.102*"door" + 0.101*"bug"
+############# TOPIC 81 #############
+-0.197*"ok" + 0.196*"close" + -0.190*"quiet" + 0.165*"always" + -0.150*"bar" + 0.148*"time" + -0.137*"fairmont" + 0.133*"little" + -0.124*"singapore" + -0.123*"area"
 
-####################### TOPIC 82 #######################
--0.251*"experience" + -0.247*"ok" + 0.243*"little" + -0.200*"amaze" + 0.187*"enjoy" + -0.160*"large" + -0.144*"year" + -0.140*"convenient" + 0.137*"good" + 0.131*"smell" + -0.128*"old" + 0.126*"home" + 0.121*"conference" + 0.120*"awesome" + -0.114*"center" + -0.112*"really" + 0.106*"la" + -0.104*"pleasant" + 0.103*"area" + -0.100*"easy"
+############# TOPIC 82 #############
+-0.152*"definitely" + 0.148*"quiet" + 0.144*"awesome" + -0.143*"really" + 0.142*"enjoy" + -0.139*"chicago" + -0.137*"next" + -0.135*"easy" + -0.134*"year" + -0.128*"place"
 
-####################### TOPIC 83 #######################
--0.310*"always" + -0.188*"definitely" + 0.187*"little" + 0.167*"star" + -0.146*"spacious" + 0.141*"experience" + 0.137*"price" + -0.133*"quiet" + 0.129*"comfortable" + -0.122*"city" + -0.113*"service" + 0.113*"door" + -0.111*"adagio" + -0.109*"street" + 0.108*"roosevelt" + 0.107*"th" + 0.092*"la" + 0.091*"highly" + -0.090*"large" + 0.088*"small"
+############# TOPIC 83 #############
+-0.269*"amaze" + -0.257*"definitely" + 0.239*"experience" + 0.217*"everything" + 0.205*"awesome" + -0.184*"always" + 0.173*"enjoy" + 0.129*"family" + -0.122*"property" + -0.115*"service"
 
-####################### TOPIC 84 #######################
-0.258*"experience" + 0.199*"awesome" + 0.186*"biltmore" + -0.182*"convenient" + -0.157*"apartment" + -0.156*"beautiful" + 0.155*"roosevelt" + -0.140*"conference" + 0.133*"enjoy" + 0.126*"downtown" + -0.117*"istanbul" + -0.114*"floor" + -0.111*"sydney" + 0.111*"bus" + -0.109*"pool" + -0.107*"water" + 0.104*"view" + -0.102*"star" + -0.100*"food" + -0.098*"th"
+############# TOPIC 84 #############
+-0.252*"quiet" + -0.218*"experience" + -0.191*"little" + -0.165*"inn" + 0.144*"home" + -0.143*"smoke" + -0.134*"small" + -0.130*"property" + 0.130*"visit" + 0.129*"ok"
 
-####################### TOPIC 85 #######################
--0.196*"lax" + -0.175*"experience" + 0.164*"bar" + 0.162*"easy" + -0.149*"everything" + -0.142*"comfortable" + 0.130*"ok" + 0.122*"star" + 0.119*"home" + 0.117*"quiet" + 0.117*"airport" + 0.111*"street" + -0.105*"definitely" + 0.104*"expect" + 0.104*"large" + 0.099*"back" + -0.097*"minute" + -0.094*"close" + 0.091*"train" + -0.089*"first"
+############# TOPIC 85 #############
+0.288*"experience" + -0.186*"amaze" + 0.172*"ok" + -0.153*"suite" + 0.150*"everything" + 0.146*"city" + -0.146*"area" + 0.136*"smoke" + 0.126*"always" + -0.118*"location"
 
-####################### TOPIC 86 #######################
-0.209*"convenient" + -0.177*"easy" + 0.167*"free" + -0.149*"adagio" + -0.140*"definitely" + 0.136*"quite" + 0.135*"awesome" + -0.134*"old" + -0.133*"experience" + -0.125*"access" + 0.121*"downtown" + -0.121*"night" + 0.118*"close" + 0.114*"street" + 0.111*"book" + 0.108*"family" + 0.096*"across" + 0.093*"well" + 0.093*"locate" + -0.089*"get"
+############# TOPIC 86 #############
+-0.269*"small" + -0.191*"price" + 0.180*"rate" + -0.147*"hilton" + 0.135*"central" + -0.132*"floor" + 0.130*"ok" + -0.128*"floridays" + 0.123*"always" + 0.117*"amaze"
 
-####################### TOPIC 87 #######################
--0.326*"everything" + 0.324*"awesome" + -0.213*"large" + -0.208*"quiet" + 0.151*"close" + -0.141*"ok" + -0.136*"need" + -0.130*"roosevelt" + 0.118*"comfortable" + -0.117*"minute" + 0.113*"easy" + 0.112*"center" + 0.112*"service" + 0.111*"little" + -0.110*"weekend" + 0.108*"lax" + -0.107*"near" + -0.098*"shuttle" + -0.098*"great" + -0.094*"bus"
+############# TOPIC 87 #############
+-0.213*"ok" + 0.212*"good" + -0.211*"amaze" + -0.192*"large" + -0.179*"convenient" + 0.176*"definitely" + -0.171*"experience" + -0.161*"quite" + 0.138*"near" + -0.132*"awesome"
 
-####################### TOPIC 88 #######################
-0.178*"property" + 0.174*"amaze" + 0.164*"u" + 0.157*"good" + -0.149*"apartment" + 0.137*"experience" + -0.134*"biltmore" + 0.134*"quiet" + -0.132*"air" + -0.131*"ok" + -0.126*"work" + 0.122*"charge" + -0.121*"awesome" + 0.118*"definitely" + -0.115*"two" + -0.113*"large" + -0.108*"enjoy" + -0.101*"home" + 0.098*"conference" + 0.097*"year"
+############# TOPIC 88 #############
+-0.216*"fairmont" + 0.214*"istanbul" + -0.166*"little" + -0.150*"ok" + 0.149*"access" + -0.144*"singapore" + 0.143*"easy" + 0.142*"city" + -0.141*"bar" + -0.126*"free"
 
-####################### TOPIC 89 #######################
--0.211*"food" + -0.178*"bad" + 0.166*"ok" + 0.166*"area" + 0.162*"quiet" + -0.148*"downtown" + -0.147*"motel" + -0.126*"amaze" + 0.126*"shuttle" + 0.118*"adagio" + 0.118*"lobby" + -0.113*"roosevelt" + 0.113*"enjoy" + -0.110*"well" + -0.110*"home" + -0.109*"access" + -0.109*"easy" + -0.108*"diego" + -0.106*"u" + 0.105*"rate"
+############# TOPIC 89 #############
+0.216*"price" + 0.192*"amaze" + -0.157*"large" + -0.145*"easy" + -0.139*"conference" + -0.138*"room" + 0.129*"awesome" + 0.124*"year" + 0.118*"minute" + 0.115*"property"
 
-####################### TOPIC 90 #######################
--0.213*"spacious" + -0.213*"apartment" + -0.208*"center" + -0.166*"minute" + -0.152*"u" + 0.149*"friendly" + -0.139*"convention" + 0.135*"service" + 0.133*"conference" + -0.128*"comfortable" + 0.116*"visit" + -0.115*"always" + 0.114*"everything" + -0.110*"quite" + -0.107*"lobby" + 0.104*"though" + -0.100*"hot" + 0.096*"central" + -0.095*"roosevelt" + 0.095*"little"
+############# TOPIC 90 #############
+-0.193*"block" + -0.168*"service" + 0.167*"always" + 0.162*"street" + 0.160*"area" + -0.154*"away" + 0.152*"good" + 0.145*"conference" + 0.142*"family" + 0.133*"near"
 
-####################### TOPIC 91 #######################
--0.175*"amaze" + 0.158*"ok" + -0.153*"work" + 0.152*"average" + 0.144*"large" + 0.135*"motel" + -0.134*"center" + -0.120*"definitely" + -0.120*"reception" + -0.119*"everything" + 0.118*"bus" + 0.117*"comfortable" + 0.117*"u" + -0.114*"need" + 0.107*"trip" + 0.103*"conference" + -0.103*"rate" + 0.103*"smoke" + -0.102*"block" + -0.101*"area"
+############# TOPIC 91 #############
+0.206*"smoke" + 0.156*"suite" + 0.154*"home" + 0.149*"air" + -0.147*"u" + 0.134*"non" + 0.131*"back" + -0.129*"quiet" + -0.128*"spacious" + -0.127*"modern"
 
-####################### TOPIC 92 #######################
-0.302*"convenient" + 0.143*"adagio" + 0.142*"center" + -0.138*"central" + -0.135*"marriott" + 0.127*"air" + -0.125*"experience" + -0.121*"paris" + -0.114*"sydney" + -0.112*"everything" + 0.108*"la" + -0.107*"weekend" + 0.107*"biltmore" + -0.106*"street" + -0.106*"pleasant" + 0.104*"de" + -0.103*"harbour" + -0.102*"bad" + 0.096*"review" + -0.094*"enjoy"
+############# TOPIC 92 #############
+0.208*"rate" + 0.200*"quiet" + 0.180*"little" + 0.153*"service" + -0.147*"minute" + -0.140*"modern" + 0.134*"bus" + -0.134*"vdara" + -0.131*"center" + -0.128*"well"
 
-####################### TOPIC 93 #######################
--0.195*"easy" + 0.172*"bar" + 0.167*"minute" + 0.145*"enjoy" + -0.139*"ok" + 0.133*"miami" + -0.124*"quite" + -0.124*"amaze" + 0.113*"want" + -0.112*"central" + 0.111*"smoke" + 0.110*"u" + -0.109*"access" + -0.108*"dirty" + -0.108*"home" + 0.107*"people" + 0.103*"downtown" + 0.102*"th" + 0.100*"drink" + -0.099*"bit"
+############# TOPIC 93 #############
+-0.174*"small" + -0.165*"easy" + 0.156*"apartment" + 0.150*"near" + -0.137*"well" + 0.134*"experience" + 0.123*"istanbul" + 0.121*"min" + -0.119*"always" + 0.116*"old"
 
-####################### TOPIC 94 #######################
--0.222*"price" + 0.190*"rate" + 0.149*"well" + -0.132*"everything" + -0.132*"paris" + 0.128*"close" + -0.117*"awesome" + 0.114*"small" + -0.112*"pleasant" + -0.110*"always" + 0.107*"much" + -0.107*"central" + -0.104*"food" + 0.103*"bus" + 0.103*"worth" + 0.101*"bad" + 0.099*"service" + -0.095*"enough" + 0.094*"get" + -0.094*"ok"
+############# TOPIC 94 #############
+-0.246*"quiet" + 0.195*"room" + 0.187*"downtown" + 0.163*"chicago" + -0.154*"istanbul" + 0.143*"spacious" + 0.141*"u" + -0.130*"area" + -0.123*"ok" + 0.120*"property"
 
-####################### TOPIC 95 #######################
--0.233*"quiet" + -0.213*"biltmore" + -0.189*"little" + 0.164*"small" + 0.145*"enjoy" + 0.144*"home" + 0.138*"away" + -0.138*"bad" + 0.132*"everything" + -0.120*"visit" + -0.119*"near" + -0.116*"amaze" + -0.113*"four" + -0.112*"arizona" + -0.111*"though" + -0.103*"two" + 0.102*"expect" + -0.101*"downtown" + -0.100*"even" + -0.099*"night"
+############# TOPIC 95 #############
+0.292*"smoke" + -0.257*"convenient" + 0.216*"comfortable" + 0.180*"non" + 0.158*"smell" + -0.148*"min" + -0.146*"center" + -0.131*"floridays" + -0.130*"well" + -0.124*"quiet"
 
-####################### TOPIC 96 #######################
-0.258*"small" + -0.189*"little" + -0.169*"area" + 0.163*"coffee" + 0.161*"quiet" + -0.157*"minute" + 0.154*"chicago" + 0.150*"price" + 0.142*"quite" + 0.138*"facility" + 0.138*"lobby" + 0.125*"bad" + -0.112*"bug" + 0.107*"close" + 0.104*"trip" + 0.103*"bus" + -0.103*"helpful" + 0.102*"back" + 0.098*"downtown" + 0.096*"property"
+############# TOPIC 96 #############
+0.244*"two" + 0.199*"central" + -0.156*"time" + 0.148*"little" + 0.147*"roosevelt" + 0.144*"minute" + -0.139*"convenient" + -0.137*"weekend" + -0.131*"facility" + 0.127*"average"
 
-####################### TOPIC 97 #######################
-0.238*"always" + 0.204*"definitely" + 0.183*"star" + 0.169*"ok" + 0.163*"bad" + 0.145*"small" + -0.143*"min" + -0.136*"lax" + -0.131*"spacious" + 0.127*"easy" + -0.125*"big" + -0.120*"quiet" + 0.113*"comfortable" + -0.111*"quality" + -0.110*"modern" + -0.107*"spend" + 0.105*"area" + 0.103*"bus" + 0.098*"right" + -0.095*"downtown"
+############# TOPIC 97 #############
+-0.235*"quiet" + 0.203*"area" + 0.172*"enjoy" + -0.149*"easy" + -0.142*"door" + 0.133*"everything" + 0.129*"friendly" + -0.127*"next" + 0.122*"first" + -0.121*"always"
 
-####################### TOPIC 98 #######################
-0.226*"quiet" + -0.208*"enjoy" + -0.201*"large" + -0.156*"quite" + 0.154*"car" + 0.143*"weekend" + 0.134*"miami" + 0.132*"return" + 0.131*"awesome" + -0.127*"back" + 0.125*"year" + -0.119*"always" + 0.107*"really" + -0.106*"bit" + 0.104*"water" + -0.101*"disney" + 0.100*"away" + 0.099*"home" + -0.099*"lax" + -0.097*"downtown"
+############# TOPIC 98 #############
+-0.216*"ok" + 0.207*"comfortable" + -0.165*"experience" + -0.147*"quiet" + 0.144*"amaze" + -0.139*"downtown" + -0.118*"kid" + -0.116*"next" + 0.112*"near" + -0.106*"friendly"
 
-####################### TOPIC 99 #######################
-0.204*"amaze" + 0.178*"always" + -0.169*"minute" + 0.167*"star" + 0.163*"experience" + -0.156*"even" + -0.135*"definitely" + 0.126*"awesome" + 0.126*"food" + -0.119*"well" + -0.119*"though" + -0.111*"u" + 0.111*"apartment" + 0.108*"near" + -0.099*"enjoy" + 0.099*"min" + 0.097*"air" + -0.096*"make" + 0.091*"conference" + -0.089*"top"
+############# TOPIC 99 #############
+-0.185*"quiet" + -0.181*"downtown" + -0.177*"minute" + 0.169*"block" + -0.147*"bar" + -0.143*"expect" + -0.126*"condo" + 0.122*"ok" + -0.116*"review" + 0.115*"boardwalk"
 
-####################### TOPIC 100 #######################
--0.222*"little" + 0.149*"night" + 0.144*"old" + -0.142*"adagio" + -0.134*"air" + 0.126*"area" + 0.121*"roosevelt" + -0.115*"near" + -0.113*"back" + 0.112*"modern" + 0.108*"diego" + -0.106*"bit" + 0.105*"property" + 0.104*"san" + 0.102*"many" + 0.097*"around" + -0.094*"miami" + -0.093*"worth" + -0.088*"definitely" + -0.088*"condition"
+############# TOPIC 100 #############
+-0.226*"little" + 0.194*"bus" + 0.179*"ok" + -0.142*"minute" + -0.142*"weekend" + -0.136*"convenient" + 0.131*"hyatt" + 0.131*"suite" + 0.128*"definitely" + 0.124*"min"
 
-####################### TOPIC 101 #######################
--0.196*"everything" + -0.174*"center" + 0.141*"old" + 0.140*"quite" + 0.140*"minute" + 0.137*"weekend" + -0.135*"smoke" + -0.134*"next" + -0.131*"near" + 0.130*"away" + -0.129*"visit" + 0.121*"close" + -0.120*"experience" + -0.110*"little" + 0.103*"make" + 0.102*"marriott" + -0.102*"two" + 0.101*"conference" + -0.097*"across" + -0.095*"property"
+############# TOPIC 101 #############
+-0.246*"minute" + 0.177*"le" + -0.148*"large" + 0.147*"quiet" + 0.146*"easy" + 0.140*"pavillon" + -0.136*"comfortable" + -0.119*"area" + -0.117*"rate" + 0.111*"two"
 
-####################### TOPIC 102 #######################
-0.178*"central" + 0.155*"area" + -0.154*"big" + -0.152*"bar" + -0.152*"return" + -0.140*"always" + -0.128*"little" + 0.128*"food" + -0.125*"car" + -0.120*"miami" + -0.120*"spacious" + 0.120*"minute" + -0.119*"two" + -0.113*"ok" + -0.104*"air" + -0.103*"nothing" + -0.097*"look" + -0.096*"metro" + 0.095*"back" + 0.094*"quiet"
+############# TOPIC 102 #############
+0.187*"near" + 0.149*"istanbul" + 0.144*"small" + 0.144*"ok" + -0.144*"basic" + -0.138*"much" + 0.130*"quiet" + 0.130*"bad" + -0.125*"motel" + -0.122*"food"
 
-####################### TOPIC 103 #######################
-0.213*"weekend" + -0.193*"average" + 0.165*"big" + -0.158*"amaze" + -0.149*"city" + 0.134*"min" + 0.130*"center" + 0.129*"bit" + -0.126*"two" + -0.125*"family" + 0.122*"ok" + 0.121*"quite" + -0.115*"really" + -0.113*"little" + -0.112*"close" + 0.109*"next" + 0.109*"enjoy" + 0.108*"star" + 0.100*"service" + -0.098*"nothing"
+############# TOPIC 103 #############
+-0.201*"convenient" + 0.187*"weekend" + 0.146*"street" + 0.127*"return" + -0.124*"block" + 0.119*"call" + 0.116*"small" + 0.112*"quiet" + -0.112*"night" + 0.111*"trip"
 
-####################### TOPIC 104 #######################
-0.212*"definitely" + 0.207*"ok" + 0.174*"experience" + -0.164*"area" + -0.134*"comfortable" + -0.122*"pleasant" + 0.122*"restaurant" + -0.118*"weekend" + 0.117*"sydney" + 0.116*"shop" + 0.112*"near" + 0.109*"lobby" + 0.106*"apartment" + 0.104*"downtown" + 0.104*"enjoy" + -0.103*"block" + 0.098*"visit" + -0.097*"convenient" + 0.097*"rock" + 0.094*"bus"
+############# TOPIC 104 #############
+0.217*"bad" + 0.181*"visit" + -0.165*"experience" + -0.155*"basic" + 0.141*"coffee" + -0.138*"minute" + 0.135*"apartment" + 0.132*"check" + 0.129*"charge" + 0.127*"bus"
 
-####################### TOPIC 105 #######################
--0.179*"near" + 0.162*"average" + 0.156*"ok" + 0.145*"amaze" + -0.141*"biltmore" + 0.134*"chicago" + 0.128*"u" + 0.127*"little" + 0.116*"cottage" + 0.115*"apartment" + -0.113*"basic" + -0.113*"nyc" + 0.109*"central" + 0.107*"pleasant" + 0.105*"visit" + -0.103*"quite" + 0.101*"wyndham" + 0.100*"adagio" + 0.098*"marriott" + 0.094*"metro"
+############# TOPIC 105 #############
+-0.222*"modern" + -0.185*"convenient" + 0.172*"comfortable" + 0.151*"definitely" + -0.150*"enjoy" + 0.140*"apartment" + -0.119*"roosevelt" + -0.117*"attraction" + 0.116*"minute" + 0.115*"le"
 
-####################### TOPIC 106 #######################
-0.224*"look" + 0.160*"lobby" + -0.152*"large" + -0.147*"block" + 0.143*"minute" + 0.141*"locate" + -0.140*"near" + 0.139*"convenient" + -0.127*"home" + 0.123*"internet" + -0.112*"need" + 0.105*"average" + 0.104*"adagio" + 0.104*"decent" + -0.099*"free" + 0.097*"size" + 0.096*"street" + 0.094*"bit" + 0.093*"area" + -0.091*"people"
+############# TOPIC 106 #############
+0.180*"apartment" + -0.176*"convenient" + -0.171*"well" + 0.166*"enjoy" + -0.161*"big" + -0.159*"every" + -0.156*"smoke" + -0.153*"large" + -0.143*"enough" + 0.140*"always"
 
-####################### TOPIC 107 #######################
--0.168*"amaze" + 0.165*"bus" + -0.165*"internet" + -0.154*"large" + 0.141*"central" + -0.137*"roosevelt" + 0.132*"big" + 0.123*"experience" + 0.120*"well" + -0.120*"visit" + -0.117*"little" + -0.111*"city" + 0.110*"reception" + -0.110*"la" + -0.109*"enjoy" + 0.104*"locate" + 0.103*"home" + 0.103*"book" + 0.102*"like" + -0.101*"car"
+############# TOPIC 107 #############
+-0.211*"spacious" + -0.191*"minute" + 0.191*"definitely" + -0.160*"back" + 0.156*"min" + -0.130*"lobby" + -0.125*"come" + 0.125*"always" + 0.123*"little" + 0.121*"large"
 
-####################### TOPIC 108 #######################
--0.205*"visit" + 0.191*"smoke" + 0.172*"miami" + 0.158*"quite" + -0.135*"motel" + 0.133*"rate" + -0.131*"chicago" + -0.128*"well" + -0.125*"look" + 0.125*"basic" + 0.123*"smell" + -0.116*"star" + 0.113*"smoking" + 0.110*"non" + -0.109*"near" + -0.109*"quiet" + -0.108*"wyndham" + -0.107*"biltmore" + 0.102*"downtown" + -0.102*"bug"
+############# TOPIC 108 #############
+-0.170*"conference" + 0.160*"center" + 0.148*"hilton" + -0.146*"rate" + 0.137*"enjoy" + 0.137*"le" + -0.134*"first" + -0.132*"water" + -0.124*"top" + 0.112*"large"
 
-####################### TOPIC 109 #######################
--0.197*"adagio" + 0.164*"experience" + -0.142*"locate" + -0.139*"large" + 0.139*"book" + -0.128*"bus" + -0.125*"lax" + 0.121*"rate" + 0.118*"small" + 0.118*"lobby" + -0.116*"area" + 0.114*"next" + 0.112*"villa" + 0.111*"airport" + 0.111*"need" + 0.108*"la" + -0.104*"return" + -0.101*"star" + 0.099*"minute" + -0.097*"could"
+############# TOPIC 109 #############
+0.202*"weekend" + -0.165*"downtown" + -0.153*"look" + -0.151*"like" + 0.151*"away" + -0.150*"experience" + 0.145*"nothing" + -0.143*"ok" + -0.133*"two" + 0.124*"bus"
 
-####################### TOPIC 110 #######################
--0.182*"spa" + 0.164*"large" + -0.150*"facility" + -0.133*"street" + -0.120*"work" + -0.118*"station" + -0.110*"amaze" + -0.109*"comfortable" + -0.108*"though" + 0.108*"near" + -0.107*"time" + -0.107*"shuttle" + 0.106*"motel" + 0.106*"could" + 0.105*"well" + -0.105*"space" + -0.101*"lax" + 0.100*"always" + -0.100*"buffet" + 0.099*"every"
+############# TOPIC 110 #############
+0.232*"la" + -0.172*"weekend" + -0.169*"apartment" + -0.152*"fairmont" + 0.150*"near" + 0.146*"city" + -0.137*"book" + 0.127*"quite" + 0.120*"back" + -0.116*"bus"
 
-####################### TOPIC 111 #######################
-0.221*"near" + -0.213*"motel" + -0.180*"well" + 0.176*"big" + -0.160*"min" + -0.152*"bit" + 0.142*"nothing" + 0.124*"de" + 0.122*"internet" + 0.118*"comfortable" + 0.117*"average" + 0.114*"bad" + -0.112*"quite" + -0.111*"town" + -0.105*"lobby" + 0.103*"adagio" + 0.095*"modern" + 0.094*"minute" + -0.092*"first" + -0.090*"paris"
+############# TOPIC 111 #############
+-0.247*"enjoy" + 0.158*"center" + 0.155*"area" + -0.135*"minute" + -0.132*"location" + 0.128*"really" + -0.123*"say" + 0.119*"modern" + 0.117*"quite" + 0.105*"bus"
 
-####################### TOPIC 112 #######################
--0.256*"min" + 0.210*"minute" + -0.151*"work" + -0.149*"town" + 0.148*"area" + 0.131*"apartment" + -0.128*"marriott" + 0.125*"year" + -0.125*"definitely" + -0.123*"visit" + -0.123*"home" + 0.122*"two" + 0.111*"trip" + 0.109*"ok" + 0.109*"basic" + -0.107*"pleasant" + -0.101*"old" + -0.096*"return" + 0.096*"well" + -0.094*"always"
+############# TOPIC 112 #############
+-0.253*"large" + -0.189*"little" + 0.185*"big" + -0.171*"really" + 0.162*"floridays" + 0.155*"boardwalk" + -0.139*"need" + -0.137*"back" + -0.134*"city" + 0.121*"enjoy"
 
-####################### TOPIC 113 #######################
--0.209*"enjoy" + 0.178*"bad" + -0.167*"pleasant" + 0.154*"area" + -0.154*"amaze" + 0.151*"little" + -0.146*"easy" + 0.124*"home" + -0.122*"smoke" + 0.120*"spa" + -0.115*"location" + -0.115*"biltmore" + 0.113*"car" + -0.109*"bit" + -0.107*"marriott" + 0.106*"trip" + -0.105*"choice" + 0.104*"property" + -0.104*"happy" + 0.102*"playa"
+############# TOPIC 113 #############
+0.236*"visit" + -0.204*"le" + 0.193*"well" + -0.188*"pavillon" + 0.159*"large" + 0.146*"lot" + 0.144*"little" + 0.132*"quiet" + -0.128*"square" + -0.127*"small"
 
-####################### TOPIC 114 #######################
--0.189*"de" + 0.176*"modern" + -0.153*"la" + 0.147*"shop" + -0.142*"bus" + 0.141*"rate" + 0.126*"clean" + 0.125*"little" + -0.124*"spacious" + -0.119*"though" + 0.119*"lot" + -0.112*"quiet" + -0.111*"car" + -0.111*"visit" + 0.110*"area" + -0.109*"pleasant" + 0.108*"easy" + -0.107*"ok" + 0.101*"lax" + -0.099*"use"
+############# TOPIC 114 #############
+0.175*"pavillon" + 0.175*"le" + 0.150*"large" + 0.145*"need" + 0.138*"central" + 0.125*"visit" + 0.121*"away" + -0.120*"location" + 0.119*"conference" + -0.115*"bus"
 
-####################### TOPIC 115 #######################
--0.273*"large" + -0.170*"lot" + 0.170*"small" + 0.147*"downtown" + 0.145*"ok" + 0.131*"miami" + -0.127*"weekend" + 0.120*"spacious" + -0.111*"bus" + 0.111*"door" + 0.109*"enjoy" + 0.105*"well" + -0.104*"attraction" + 0.102*"lax" + 0.102*"food" + 0.100*"around" + 0.099*"area" + -0.099*"average" + 0.098*"cottage" + -0.098*"choice"
+############# TOPIC 115 #############
+-0.178*"could" + -0.167*"weekend" + -0.151*"area" + 0.148*"enjoy" + 0.140*"always" + -0.137*"super" + -0.135*"spacious" + 0.123*"coffee" + 0.118*"facility" + 0.117*"everything"
 
-####################### TOPIC 116 #######################
--0.277*"return" + 0.235*"bus" + 0.182*"miami" + -0.176*"worth" + -0.122*"well" + -0.121*"min" + -0.117*"rate" + 0.112*"adagio" + 0.112*"lobby" + 0.111*"extremely" + 0.103*"motel" + 0.101*"weekend" + 0.101*"small" + -0.101*"large" + 0.101*"lot" + 0.100*"however" + -0.098*"san" + 0.094*"modern" + 0.094*"playa" + -0.092*"safe"
+############# TOPIC 116 #############
+-0.340*"quite" + -0.233*"large" + 0.167*"area" + 0.151*"spacious" + -0.141*"look" + 0.132*"always" + -0.131*"time" + 0.130*"right" + -0.129*"like" + 0.126*"pleasant"
 
-####################### TOPIC 117 #######################
--0.174*"rate" + 0.164*"visit" + 0.158*"enjoy" + -0.146*"bug" + -0.146*"spacious" + -0.145*"near" + 0.140*"ok" + 0.139*"look" + 0.132*"book" + -0.131*"min" + 0.119*"internet" + 0.114*"adagio" + 0.112*"worth" + -0.107*"work" + 0.107*"car" + -0.106*"town" + 0.103*"roosevelt" + 0.098*"like" + -0.098*"expect" + 0.095*"could"
+############# TOPIC 117 #############
+-0.190*"central" + -0.153*"weekend" + 0.152*"could" + 0.138*"coffee" + -0.136*"day" + 0.124*"train" + 0.123*"return" + 0.121*"want" + -0.115*"apartment" + -0.115*"lot"
 
-####################### TOPIC 118 #######################
--0.174*"biltmore" + -0.164*"min" + -0.149*"visit" + 0.146*"pleasant" + -0.143*"adagio" + 0.137*"near" + -0.137*"away" + 0.129*"large" + 0.128*"expensive" + -0.127*"food" + 0.123*"motel" + -0.110*"downtown" + -0.103*"lobby" + 0.101*"thing" + 0.097*"time" + -0.093*"friendly" + 0.093*"internet" + 0.091*"like" + 0.091*"facility" + 0.090*"restaurant"
+############# TOPIC 118 #############
+0.227*"choice" + 0.163*"ok" + -0.148*"large" + -0.142*"look" + -0.141*"car" + 0.139*"block" + 0.133*"make" + -0.131*"super" + 0.125*"visit" + 0.123*"people"
 
-####################### TOPIC 119 #######################
-0.282*"average" + -0.180*"ok" + -0.176*"big" + 0.155*"need" + 0.123*"min" + -0.121*"choice" + -0.120*"town" + -0.118*"little" + -0.111*"lot" + 0.111*"modern" + 0.109*"though" + 0.107*"th" + 0.107*"apartment" + 0.106*"bit" + -0.105*"well" + 0.102*"bar" + -0.100*"old" + 0.099*"pretty" + -0.096*"enough" + 0.095*"vancouver"
+############# TOPIC 119 #############
+-0.201*"enjoy" + 0.182*"boardwalk" + -0.168*"well" + 0.164*"villa" + 0.155*"large" + -0.141*"quite" + 0.140*"little" + 0.134*"floridays" + 0.126*"return" + -0.124*"orlando"
 
-####################### TOPIC 120 #######################
-0.183*"rate" + -0.159*"trip" + -0.158*"tower" + 0.154*"average" + 0.148*"facility" + 0.130*"santa" + 0.127*"little" + -0.122*"kid" + 0.121*"maria" + 0.119*"well" + -0.115*"city" + 0.113*"lax" + -0.112*"downtown" + -0.110*"service" + 0.107*"away" + -0.107*"cottage" + -0.104*"super" + 0.101*"u" + -0.100*"price" + -0.100*"chicago"
+############# TOPIC 120 #############
+0.218*"min" + 0.204*"average" + 0.171*"istanbul" + 0.153*"small" + -0.145*"quite" + 0.143*"comfortable" + 0.140*"nothing" + -0.137*"right" + -0.126*"home" + 0.126*"experience"
 
-####################### TOPIC 121 #######################
--0.215*"return" + -0.146*"easy" + 0.131*"weekend" + -0.129*"big" + -0.123*"food" + 0.119*"right" + 0.113*"ok" + -0.112*"spacious" + -0.111*"la" + 0.105*"size" + 0.104*"air" + 0.103*"nyc" + -0.101*"need" + -0.099*"apartment" + -0.096*"villa" + -0.096*"visit" + 0.094*"open" + 0.094*"every" + 0.093*"review" + 0.091*"window"
+############# TOPIC 121 #############
+-0.252*"min" + 0.233*"ok" + 0.223*"modern" + 0.175*"little" + 0.170*"minute" + 0.141*"always" + 0.138*"could" + -0.124*"need" + -0.121*"big" + 0.118*"central"
 
-####################### TOPIC 122 #######################
--0.160*"miami" + 0.147*"vancouver" + -0.145*"expensive" + -0.145*"singapore" + 0.139*"amaze" + -0.127*"choice" + -0.113*"everything" + 0.111*"lobby" + -0.103*"nyc" + 0.102*"reception" + -0.102*"easy" + 0.101*"away" + 0.101*"waterfront" + -0.098*"trip" + -0.098*"experience" + 0.097*"every" + 0.096*"airport" + -0.096*"access" + -0.092*"window" + -0.091*"top"
+############# TOPIC 122 #############
+0.244*"weekend" + -0.192*"enjoy" + -0.179*"make" + -0.164*"expect" + 0.140*"work" + 0.139*"pleasant" + -0.136*"easy" + -0.129*"reservation" + -0.123*"basic" + 0.121*"people"
 
-####################### TOPIC 123 #######################
--0.202*"average" + -0.180*"enjoy" + -0.162*"many" + 0.147*"look" + 0.144*"water" + -0.139*"attraction" + -0.135*"food" + 0.126*"visit" + 0.125*"marriott" + -0.125*"make" + -0.117*"min" + 0.116*"like" + 0.115*"bit" + 0.104*"biltmore" + 0.104*"bug" + -0.101*"size" + 0.094*"large" + 0.093*"santa" + 0.093*"shop" + -0.093*"time"
+############# TOPIC 123 #############
+-0.223*"spacious" + -0.152*"lot" + 0.149*"fairmont" + -0.148*"downtown" + 0.145*"modern" + 0.140*"family" + 0.134*"visit" + -0.132*"big" + -0.125*"roosevelt" + 0.125*"block"
 
-####################### TOPIC 124 #######################
-0.188*"extremely" + -0.162*"area" + 0.161*"central" + 0.124*"locate" + 0.117*"weekend" + 0.114*"ok" + -0.113*"nyc" + -0.111*"bus" + 0.111*"rate" + -0.109*"attraction" + -0.106*"enjoy" + 0.105*"lot" + 0.103*"de" + -0.102*"adagio" + 0.102*"facility" + -0.102*"worth" + 0.100*"also" + -0.097*"big" + -0.096*"many" + -0.094*"train"
+############# TOPIC 124 #############
+-0.201*"visit" + -0.160*"le" + -0.149*"basic" + -0.146*"bar" + 0.142*"area" + -0.138*"pavillon" + -0.135*"center" + -0.133*"car" + 0.128*"quarter" + -0.125*"rate"
 
-####################### TOPIC 125 #######################
-0.185*"amaze" + 0.148*"motel" + 0.145*"large" + -0.140*"want" + -0.133*"modern" + 0.126*"enjoy" + -0.125*"reservation" + -0.125*"size" + -0.117*"basic" + 0.116*"comfortable" + -0.115*"people" + -0.115*"make" + -0.110*"choice" + 0.109*"big" + 0.108*"like" + -0.103*"old" + -0.103*"spacious" + -0.101*"de" + 0.098*"near" + -0.094*"tv"
+############# TOPIC 125 #############
+-0.187*"spacious" + -0.169*"istanbul" + -0.147*"always" + -0.141*"vdara" + 0.139*"every" + -0.134*"bad" + -0.127*"visit" + 0.123*"minute" + -0.120*"quite" + 0.120*"problem"
 
-####################### TOPIC 126 #######################
--0.185*"facility" + 0.167*"visit" + -0.156*"la" + -0.148*"lot" + 0.142*"internet" + -0.137*"free" + -0.135*"quite" + 0.129*"minute" + 0.125*"cottage" + 0.123*"playa" + 0.122*"spacious" + -0.119*"near" + -0.117*"happy" + 0.112*"del" + 0.104*"small" + 0.101*"u" + -0.099*"two" + -0.099*"money" + 0.098*"street" + 0.093*"bus"
+############# TOPIC 126 #############
+0.239*"near" + -0.197*"min" + -0.183*"top" + 0.152*"visit" + -0.148*"basic" + 0.137*"enough" + -0.128*"roosevelt" + 0.118*"worth" + -0.116*"first" + -0.113*"problem"
 
-####################### TOPIC 127 #######################
--0.193*"home" + -0.142*"top" + 0.135*"make" + 0.122*"big" + 0.116*"early" + -0.112*"easy" + -0.110*"right" + -0.110*"spacious" + -0.109*"noisy" + 0.108*"comfortable" + -0.106*"fabulous" + -0.096*"ask" + -0.095*"away" + 0.094*"choice" + 0.094*"th" + 0.091*"maria" + -0.090*"embassy" + 0.090*"santa" + 0.090*"villa" + -0.088*"bar"
+############# TOPIC 127 #############
+0.231*"lot" + -0.173*"well" + -0.165*"nothing" + -0.160*"problem" + -0.153*"bus" + 0.152*"people" + 0.137*"locate" + -0.128*"worth" + -0.121*"always" + -0.115*"st"
 
-####################### TOPIC 128 #######################
-0.171*"though" + 0.147*"nyc" + 0.143*"marriott" + 0.135*"even" + -0.134*"big" + 0.133*"rate" + 0.132*"near" + 0.132*"food" + -0.126*"motel" + -0.123*"hyatt" + 0.118*"look" + 0.113*"paris" + -0.110*"rock" + -0.110*"family" + -0.107*"waikiki" + -0.106*"sydney" + -0.105*"de" + -0.105*"harbour" + -0.105*"easy" + -0.103*"time"
+############# TOPIC 128 #############
+0.198*"facility" + -0.171*"pleasant" + -0.168*"kid" + 0.167*"average" + 0.158*"bad" + -0.138*"min" + 0.130*"shuttle" + 0.128*"fabulous" + -0.121*"large" + 0.118*"size"
 
-####################### TOPIC 129 #######################
-0.257*"quite" + -0.190*"min" + 0.163*"visit" + -0.148*"motel" + 0.147*"tower" + -0.143*"choice" + -0.130*"lobby" + -0.124*"return" + -0.116*"ok" + -0.115*"biltmore" + 0.112*"big" + -0.110*"convenient" + -0.103*"trip" + 0.102*"problem" + -0.102*"people" + -0.100*"year" + 0.098*"nyc" + 0.097*"coffee" + -0.095*"space" + 0.088*"amaze"
+############# TOPIC 129 #############
+-0.278*"average" + 0.273*"rate" + -0.242*"big" + -0.145*"could" + -0.138*"lobby" + 0.115*"thing" + 0.114*"car" + 0.111*"even" + 0.108*"pleasant" + 0.104*"much"
 
-####################### TOPIC 130 #######################
--0.177*"choice" + -0.177*"look" + 0.171*"basic" + -0.142*"rate" + 0.140*"expect" + 0.139*"roosevelt" + -0.130*"u" + -0.128*"modern" + 0.122*"top" + -0.121*"facility" + 0.116*"always" + 0.115*"old" + -0.114*"nyc" + -0.111*"many" + 0.108*"wyndham" + -0.106*"happy" + 0.105*"lot" + 0.103*"visit" + 0.103*"chicago" + -0.101*"downtown"
+############# TOPIC 130 #############
+-0.248*"modern" + -0.157*"marriott" + -0.154*"bad" + -0.151*"lax" + 0.149*"spacious" + -0.148*"large" + -0.135*"fairmont" + 0.117*"top" + 0.116*"biltmore" + 0.111*"roosevelt"
 
-####################### TOPIC 131 #######################
-0.197*"trip" + -0.154*"basic" + 0.152*"min" + -0.147*"car" + -0.145*"motel" + 0.144*"big" + -0.144*"adagio" + -0.144*"chicago" + -0.142*"choice" + -0.140*"lax" + -0.131*"town" + 0.129*"shop" + 0.127*"visit" + 0.119*"miami" + -0.111*"weekend" + 0.110*"pleasant" + -0.108*"biltmore" + 0.104*"park" + -0.103*"attraction" + -0.102*"roosevelt"
+############# TOPIC 131 #############
+-0.210*"min" + -0.160*"motel" + -0.153*"enough" + -0.151*"internet" + -0.145*"spacious" + 0.144*"expect" + 0.142*"free" + 0.139*"conference" + 0.137*"kid" + -0.134*"top"
 
-####################### TOPIC 132 #######################
--0.205*"roosevelt" + 0.189*"visit" + -0.167*"choice" + -0.154*"problem" + 0.140*"two" + -0.136*"fabulous" + 0.130*"central" + 0.128*"near" + 0.126*"everything" + -0.122*"vacation" + 0.117*"motel" + 0.112*"rate" + 0.108*"wait" + 0.107*"town" + 0.102*"lobby" + 0.101*"location" + 0.100*"people" + -0.097*"time" + -0.095*"book" + -0.093*"pleasant"
+############# TOPIC 132 #############
+0.175*"lot" + -0.173*"westin" + 0.170*"visit" + -0.161*"modern" + 0.146*"fairmont" + 0.145*"big" + 0.126*"spacious" + -0.123*"year" + -0.119*"apartment" + -0.117*"rate"
 
-####################### TOPIC 133 #######################
--0.153*"nyc" + 0.150*"helpful" + 0.147*"pleasant" + 0.139*"central" + -0.131*"playa" + 0.127*"bad" + 0.125*"modern" + -0.113*"min" + -0.111*"del" + 0.104*"want" + -0.100*"facility" + 0.098*"take" + -0.097*"wall" + -0.096*"people" + -0.094*"experience" + 0.093*"husband" + 0.092*"sleep" + 0.091*"center" + -0.091*"marriott" + 0.091*"miami"
+############# TOPIC 133 #############
+0.299*"big" + -0.180*"spacious" + -0.166*"near" + 0.158*"car" + 0.156*"worth" + -0.136*"kid" + 0.132*"family" + 0.122*"shuttle" + -0.119*"pleasant" + 0.113*"lounge"
 
-####################### TOPIC 134 #######################
-0.180*"always" + -0.169*"quite" + -0.139*"spacious" + 0.135*"adagio" + -0.131*"apartment" + -0.126*"year" + -0.125*"lobby" + 0.124*"sydney" + 0.122*"well" + 0.122*"florida" + 0.121*"trip" + 0.118*"rock" + 0.118*"roosevelt" + -0.115*"area" + 0.112*"spa" + 0.110*"cottage" + 0.109*"nyc" + 0.107*"facility" + 0.106*"harbour" + -0.103*"check"
+############# TOPIC 134 #############
+0.156*"weekend" + 0.156*"top" + -0.138*"basic" + -0.135*"work" + -0.133*"motel" + 0.130*"big" + 0.125*"apartment" + 0.116*"though" + 0.111*"much" + 0.109*"fabulous"
 
-####################### TOPIC 135 #######################
--0.202*"choice" + 0.180*"pleasant" + 0.168*"motel" + -0.149*"cottage" + -0.137*"well" + -0.134*"playa" + -0.132*"friendly" + -0.121*"weekend" + -0.121*"u" + -0.111*"two" + -0.111*"pretty" + 0.109*"minute" + 0.107*"rate" + -0.105*"del" + 0.105*"carter" + -0.101*"right" + -0.099*"de" + -0.097*"look" + -0.096*"lobby" + 0.094*"check"
+############# TOPIC 135 #############
+0.223*"choice" + 0.191*"apartment" + 0.169*"trip" + -0.160*"visit" + 0.155*"quite" + 0.146*"easy" + 0.134*"roosevelt" + 0.133*"lot" + -0.125*"even" + -0.120*"central"
 
-####################### TOPIC 136 #######################
--0.217*"average" + -0.198*"weekend" + 0.155*"bit" + -0.138*"problem" + -0.137*"spa" + 0.137*"nothing" + -0.137*"lobby" + -0.127*"worth" + 0.126*"roosevelt" + -0.125*"min" + -0.114*"central" + 0.112*"playa" + 0.108*"much" + 0.103*"special" + 0.102*"quiet" + 0.100*"th" + 0.099*"marriott" + -0.096*"pleasant" + -0.096*"smoke" + -0.095*"bug"
+############# TOPIC 136 #############
+0.182*"spacious" + 0.179*"sleep" + -0.179*"choice" + 0.161*"extremely" + 0.149*"small" + 0.137*"easy" + -0.132*"right" + 0.130*"visit" + 0.126*"st" + 0.126*"la"
 
-####################### TOPIC 137 #######################
-0.193*"around" + 0.175*"spacious" + 0.170*"average" + 0.143*"quite" + -0.139*"lobby" + -0.136*"enjoy" + -0.134*"bit" + -0.132*"could" + 0.128*"roosevelt" + -0.126*"modern" + 0.123*"corner" + 0.122*"husband" + -0.120*"old" + -0.118*"expect" + 0.118*"happy" + -0.108*"rate" + 0.105*"travel" + 0.105*"hour" + -0.103*"though" + -0.103*"kid"
+############# TOPIC 137 #############
+-0.209*"trip" + 0.199*"quite" + -0.159*"need" + 0.156*"near" + 0.155*"rate" + 0.144*"shuttle" + 0.142*"visit" + -0.136*"orlando" + -0.134*"enjoy" + -0.120*"book"
 
-####################### TOPIC 138 #######################
-0.147*"block" + -0.138*"easy" + 0.133*"shop" + 0.133*"basic" + -0.128*"downtown" + 0.124*"super" + 0.124*"roosevelt" + -0.116*"much" + 0.115*"though" + -0.108*"time" + 0.103*"worth" + -0.101*"vancouver" + 0.099*"even" + -0.099*"average" + 0.098*"away" + 0.098*"shuttle" + -0.096*"fairmont" + -0.096*"around" + 0.092*"work" + -0.092*"santa"
+############# TOPIC 138 #############
+0.155*"average" + -0.153*"pleasant" + 0.152*"make" + 0.146*"weekend" + -0.137*"bus" + 0.132*"visit" + 0.124*"internet" + -0.122*"ask" + -0.121*"food" + -0.112*"downtown"
 
-####################### TOPIC 139 #######################
--0.254*"spacious" + 0.211*"fabulous" + 0.147*"top" + 0.146*"miami" + 0.141*"food" + -0.126*"choice" + 0.125*"bedroom" + 0.116*"bit" + 0.108*"weekend" + -0.105*"trip" + 0.105*"pleasant" + 0.102*"surprise" + -0.101*"lot" + -0.100*"amaze" + 0.098*"villa" + 0.095*"time" + -0.094*"problem" + -0.094*"much" + 0.094*"super" + -0.092*"everything"
+############# TOPIC 139 #############
+0.209*"trip" + -0.155*"quite" + -0.152*"weekend" + -0.146*"lobby" + -0.125*"morning" + 0.117*"check" + 0.109*"tv" + -0.106*"choice" + -0.105*"super" + -0.105*"average"
 
-####################### TOPIC 140 #######################
--0.167*"first" + -0.164*"size" + -0.159*"marriott" + -0.157*"quite" + -0.144*"orlando" + 0.137*"visit" + 0.126*"roosevelt" + 0.122*"enough" + 0.115*"extremely" + 0.104*"shuttle" + 0.102*"outstanding" + -0.102*"decent" + 0.101*"wed" + -0.099*"time" + -0.099*"many" + 0.099*"mall" + 0.095*"bit" + 0.095*"bug" + 0.094*"day" + -0.089*"florida"
+############# TOPIC 140 #############
+-0.229*"trip" + 0.225*"need" + 0.193*"bad" + -0.147*"work" + 0.132*"spa" + 0.121*"buffet" + -0.120*"apartment" + 0.120*"car" + -0.118*"large" + 0.110*"every"
 
-####################### TOPIC 141 #######################
-0.208*"could" + -0.197*"day" + -0.159*"every" + 0.139*"spacious" + 0.135*"thing" + -0.126*"nyc" + 0.124*"bug" + -0.122*"kid" + 0.120*"many" + 0.116*"vancouver" + 0.112*"downtown" + -0.108*"bad" + 0.106*"cottage" + -0.105*"travel" + -0.103*"ok" + -0.102*"modern" + -0.100*"basic" + -0.100*"deal" + -0.100*"look" + 0.096*"check"
+############# TOPIC 141 #############
+-0.187*"lax" + -0.144*"helpful" + -0.142*"average" + -0.139*"extremely" + -0.137*"free" + 0.133*"roosevelt" + -0.133*"lot" + 0.125*"internet" + 0.120*"big" + 0.120*"many"
 
-####################### TOPIC 142 #######################
-0.186*"lot" + -0.150*"la" + 0.146*"need" + -0.141*"little" + -0.129*"kid" + 0.127*"size" + 0.124*"average" + 0.123*"visit" + -0.118*"large" + 0.114*"day" + 0.114*"motel" + 0.113*"marriott" + -0.103*"definitely" + -0.103*"expect" + 0.102*"bad" + 0.100*"santa" + -0.100*"outstanding" + 0.098*"maria" + -0.096*"coffee" + -0.095*"lax"
+############# TOPIC 142 #############
+-0.187*"spacious" + 0.165*"lobby" + 0.144*"roosevelt" + 0.142*"large" + 0.138*"modern" + 0.135*"nyc" + -0.133*"central" + 0.130*"pleasant" + 0.130*"downtown" + -0.127*"quite"
 
-####################### TOPIC 143 #######################
--0.242*"pleasant" + -0.172*"cottage" + -0.166*"modern" + -0.138*"lot" + -0.138*"facility" + -0.132*"playa" + 0.115*"work" + 0.115*"kid" + 0.112*"tv" + -0.112*"friend" + -0.110*"del" + 0.109*"top" + -0.108*"fabulous" + -0.104*"bug" + 0.103*"bar" + 0.101*"look" + -0.097*"surprise" + 0.096*"experience" + 0.093*"sleep" + 0.091*"problem"
+############# TOPIC 143 #############
+-0.195*"st" + 0.178*"bit" + 0.159*"look" + -0.139*"pleasant" + -0.130*"regis" + -0.125*"quite" + 0.124*"room" + -0.115*"expect" + 0.113*"though" + -0.111*"shuttle"
 
-####################### TOPIC 144 #######################
-0.155*"marriott" + -0.152*"big" + -0.139*"cottage" + -0.133*"day" + -0.133*"look" + 0.125*"work" + -0.124*"much" + 0.124*"money" + 0.122*"large" + -0.115*"bad" + 0.114*"super" + -0.114*"window" + 0.112*"husband" + -0.110*"well" + 0.109*"worth" + -0.107*"weekend" + -0.106*"need" + 0.105*"average" + 0.105*"extremely" + 0.100*"travel"
+############# TOPIC 144 #############
+-0.236*"extremely" + -0.187*"average" + 0.183*"lax" + 0.183*"bit" + 0.167*"marriott" + -0.149*"reception" + 0.139*"work" + 0.135*"u" + 0.132*"nothing" + -0.130*"basic"
 
-####################### TOPIC 145 #######################
-0.145*"basic" + 0.142*"check" + -0.131*"cottage" + 0.130*"trip" + 0.119*"shop" + -0.119*"morning" + 0.115*"nyc" + -0.113*"attraction" + -0.112*"book" + -0.112*"though" + 0.111*"look" + 0.103*"quiet" + -0.101*"people" + -0.100*"top" + -0.100*"orlando" + -0.098*"la" + -0.097*"space" + 0.097*"need" + 0.097*"bad" + 0.096*"could"
+############# TOPIC 145 #############
+-0.231*"nyc" + -0.162*"little" + 0.162*"though" + 0.152*"pleasant" + 0.151*"car" + 0.142*"top" + 0.142*"choice" + 0.133*"need" + -0.121*"trip" + 0.113*"near"
 
-####################### TOPIC 146 #######################
-0.182*"lot" + -0.160*"basic" + -0.141*"playa" + -0.133*"pleasant" + 0.130*"weekend" + 0.126*"miami" + -0.116*"include" + 0.115*"need" + 0.114*"florida" + -0.111*"del" + -0.110*"spa" + 0.110*"reception" + -0.104*"lobby" + 0.103*"money" + -0.099*"near" + -0.096*"time" + -0.093*"could" + -0.092*"roosevelt" + -0.090*"bad" + 0.090*"much"
+############# TOPIC 146 #############
+-0.195*"facility" + -0.153*"choice" + 0.151*"adagio" + 0.148*"size" + -0.133*"hyatt" + 0.133*"trip" + -0.125*"though" + 0.124*"fun" + 0.124*"lot" + 0.113*"modern"
 
-####################### TOPIC 147 #######################
-0.146*"day" + 0.145*"adagio" + -0.144*"enjoy" + 0.144*"spa" + -0.133*"big" + -0.128*"car" + -0.128*"choice" + -0.122*"first" + -0.121*"average" + 0.112*"towel" + 0.108*"metro" + -0.106*"fun" + -0.106*"class" + -0.106*"book" + 0.104*"next" + 0.104*"la" + 0.104*"make" + -0.102*"reception" + -0.098*"food" + -0.097*"welcome"
+############# TOPIC 147 #############
+-0.248*"bit" + 0.205*"quite" + -0.185*"super" + -0.128*"enough" + -0.127*"top" + 0.120*"little" + 0.113*"pleasant" + -0.113*"kid" + 0.112*"expensive" + -0.111*"hyatt"
 
-####################### TOPIC 148 #######################
-0.155*"visit" + -0.148*"maria" + -0.148*"santa" + 0.136*"kid" + -0.135*"internet" + 0.124*"pleasant" + -0.121*"return" + 0.121*"sleep" + 0.116*"lobby" + 0.114*"need" + -0.114*"fabulous" + -0.111*"cottage" + -0.110*"amaze" + 0.108*"space" + 0.106*"easy" + -0.105*"motel" + -0.105*"tower" + 0.104*"rate" + -0.104*"book" + 0.101*"never"
+############# TOPIC 148 #############
+-0.253*"top" + -0.158*"like" + -0.143*"farmer" + -0.135*"daughter" + 0.123*"lax" + 0.122*"internet" + 0.108*"well" + 0.107*"choice" + -0.105*"notch" + 0.103*"biltmore"
 
-####################### TOPIC 149 #######################
-0.206*"sleep" + -0.158*"could" + -0.158*"enough" + -0.154*"worth" + -0.153*"find" + -0.139*"spacious" + 0.139*"little" + 0.124*"nothing" + 0.119*"two" + 0.110*"internet" + -0.104*"week" + 0.104*"quite" + 0.104*"special" + -0.099*"every" + 0.098*"friendly" + 0.096*"bus" + -0.094*"home" + 0.092*"disney" + -0.090*"playa" + 0.089*"marriott"
+############# TOPIC 149 #############
+0.180*"basic" + 0.176*"size" + -0.166*"much" + 0.153*"motel" + -0.142*"nothing" + -0.142*"spacious" + -0.137*"lax" + -0.115*"around" + 0.115*"hyatt" + -0.114*"super"
 
-####################### TOPIC 150 #######################
--0.180*"near" + 0.176*"basic" + 0.176*"rate" + -0.155*"two" + 0.128*"motel" + 0.119*"average" + 0.118*"super" + 0.113*"reception" + -0.112*"pay" + -0.108*"expect" + -0.108*"car" + 0.106*"expensive" + 0.103*"train" + 0.103*"quiet" + -0.100*"central" + 0.099*"right" + 0.099*"apartment" + -0.093*"safe" + -0.093*"money" + 0.092*"day"
+############# TOPIC 150 #############
+-0.183*"expect" + 0.177*"hotel" + -0.160*"lobby" + -0.158*"choice" + -0.143*"though" + -0.141*"day" + 0.138*"pleasant" + -0.135*"find" + 0.134*"check" + -0.127*"visit"
 
-####################### TOPIC 151 #######################
-0.190*"hyatt" + -0.168*"kid" + 0.141*"waikiki" + 0.132*"apartment" + 0.127*"centre" + 0.115*"people" + -0.114*"home" + 0.109*"town" + -0.109*"english" + 0.107*"choice" + 0.106*"spacious" + -0.104*"speak" + 0.103*"bug" + 0.101*"car" + -0.099*"extremely" + 0.096*"expect" + 0.095*"friendly" + 0.094*"next" + 0.094*"fun" + 0.092*"small"
+############# TOPIC 151 #############
+-0.227*"attraction" + -0.169*"super" + -0.151*"return" + -0.148*"every" + 0.133*"lobby" + -0.132*"orlando" + -0.128*"top" + -0.121*"near" + -0.117*"boardwalk" + 0.114*"basic"
 
-####################### TOPIC 152 #######################
-0.146*"average" + 0.136*"tv" + 0.134*"nyc" + 0.132*"relax" + -0.126*"week" + 0.123*"la" + -0.119*"ever" + -0.119*"big" + -0.117*"roosevelt" + 0.113*"find" + 0.113*"downtown" + 0.111*"look" + 0.110*"english" + -0.107*"facility" + 0.105*"town" + 0.104*"friend" + -0.099*"st" + 0.097*"cottage" + 0.097*"speak" + 0.096*"even"
+############# TOPIC 152 #############
+-0.168*"hyatt" + -0.161*"orlando" + 0.159*"return" + -0.143*"apartment" + 0.143*"bit" + -0.137*"average" + -0.129*"rate" + -0.127*"facility" + -0.125*"enough" + -0.117*"say"
 
-####################### TOPIC 153 #######################
--0.175*"super" + 0.167*"kid" + -0.160*"big" + 0.160*"enough" + 0.142*"rate" + 0.129*"playa" + 0.121*"space" + -0.119*"choice" + 0.111*"relax" + 0.111*"roosevelt" + -0.110*"expensive" + 0.109*"far" + -0.103*"friend" + 0.102*"del" + 0.102*"fabulous" + -0.099*"deal" + 0.097*"fun" + -0.095*"overall" + -0.094*"mall" + -0.093*"hour"
+############# TOPIC 153 #############
+-0.199*"need" + -0.177*"istanbul" + -0.159*"size" + 0.142*"lobby" + 0.134*"every" + 0.133*"wi" + 0.133*"fi" + 0.122*"everything" + 0.109*"nothing" + 0.109*"day"
 
-####################### TOPIC 154 #######################
--0.148*"expect" + -0.143*"even" + 0.130*"bit" + 0.129*"problem" + -0.127*"return" + 0.121*"decent" + 0.119*"orlando" + -0.113*"food" + -0.106*"quite" + 0.102*"cottage" + -0.102*"motel" + 0.099*"size" + -0.099*"hyatt" + -0.098*"th" + -0.097*"weekend" + 0.095*"restaurant" + 0.093*"reception" + 0.090*"villa" + 0.089*"kid" + -0.087*"though"
+############# TOPIC 154 #############
+-0.149*"la" + -0.144*"biltmore" + 0.143*"two" + 0.135*"expect" + 0.134*"though" + 0.134*"money" + 0.121*"even" + 0.120*"worth" + 0.119*"super" + -0.118*"charge"
 
-####################### TOPIC 155 #######################
--0.252*"cottage" + -0.226*"fabulous" + 0.142*"bit" + -0.142*"tower" + 0.124*"balcony" + -0.124*"much" + 0.121*"old" + -0.116*"super" + 0.110*"well" + -0.108*"work" + 0.103*"day" + 0.101*"vancouver" + 0.100*"open" + -0.099*"expect" + 0.099*"amaze" + -0.095*"visit" + -0.094*"little" + -0.092*"around" + -0.091*"though" + -0.091*"metro"
+############# TOPIC 155 #############
+0.191*"biltmore" + -0.168*"return" + 0.144*"basic" + 0.138*"hotel" + 0.127*"vdara" + -0.122*"facility" + 0.120*"nyc" + 0.119*"quite" + 0.118*"door" + 0.117*"conference"
 
-####################### TOPIC 156 #######################
-0.198*"fabulous" + -0.150*"use" + 0.131*"train" + 0.127*"never" + -0.126*"top" + 0.125*"relax" + -0.121*"metro" + -0.117*"super" + 0.112*"la" + 0.109*"expect" + 0.107*"day" + -0.105*"help" + -0.105*"morning" + -0.104*"class" + 0.104*"need" + -0.102*"early" + 0.101*"husband" + 0.099*"motel" + -0.097*"lot" + 0.095*"amaze"
+############# TOPIC 156 #############
+-0.244*"pleasant" + 0.143*"adagio" + 0.139*"bit" + 0.127*"check" + -0.122*"top" + -0.120*"near" + -0.120*"average" + 0.115*"quality" + -0.114*"look" + -0.110*"charge"
 
-####################### TOPIC 157 #######################
--0.166*"first" + -0.137*"downtown" + -0.136*"husband" + -0.134*"choice" + -0.119*"apartment" + -0.112*"well" + -0.111*"day" + 0.110*"top" + -0.108*"class" + -0.105*"honeymoon" + -0.104*"vancouver" + -0.103*"super" + 0.101*"club" + 0.099*"carter" + -0.099*"every" + 0.098*"nyc" + -0.094*"rate" + -0.093*"come" + 0.092*"quality" + -0.092*"cottage"
+############# TOPIC 157 #############
+0.224*"basic" + -0.184*"motel" + 0.157*"roosevelt" + 0.136*"big" + 0.132*"fun" + -0.131*"la" + -0.125*"lobby" + 0.124*"room" + -0.119*"money" + 0.111*"taxi"
 
-####################### TOPIC 158 #######################
-0.194*"big" + -0.193*"super" + 0.176*"cottage" + -0.166*"nothing" + 0.134*"motel" + -0.134*"return" + -0.133*"pretty" + 0.120*"basic" + 0.117*"far" + 0.117*"never" + -0.115*"block" + 0.113*"nyc" + 0.105*"enough" + -0.105*"clean" + -0.104*"around" + 0.102*"look" + -0.100*"special" + -0.093*"could" + -0.091*"always" + 0.090*"shuttle"
+############# TOPIC 158 #############
+0.211*"return" + 0.158*"rate" + -0.155*"block" + -0.153*"extremely" + -0.141*"work" + 0.141*"food" + -0.140*"check" + 0.136*"square" + 0.136*"basic" + -0.127*"every"
 
-####################### TOPIC 159 #######################
--0.190*"way" + -0.130*"facility" + -0.129*"bar" + 0.126*"santa" + 0.122*"food" + 0.120*"maria" + -0.118*"check" + 0.114*"size" + -0.114*"cottage" + 0.103*"morning" + 0.099*"much" + -0.096*"travel" + 0.096*"super" + 0.091*"ask" + 0.090*"villa" + -0.089*"return" + -0.089*"think" + -0.089*"adagio" + -0.089*"marriott" + 0.088*"thing"
+############# TOPIC 159 #############
+0.207*"average" + 0.198*"ask" + -0.171*"nothing" + 0.157*"husband" + 0.152*"relax" + -0.150*"facility" + 0.140*"time" + -0.130*"choice" + 0.127*"expensive" + -0.125*"safe"
 
-####################### TOPIC 160 #######################
-0.203*"nyc" + -0.181*"quality" + -0.177*"cottage" + -0.146*"town" + 0.141*"outstanding" + 0.139*"work" + 0.133*"first" + -0.129*"week" + -0.118*"miami" + 0.108*"min" + 0.105*"pleasant" + -0.104*"safe" + 0.100*"istanbul" + 0.099*"car" + 0.098*"pretty" + 0.095*"morning" + 0.094*"choice" + -0.088*"facility" + -0.088*"door" + -0.086*"could"
+############# TOPIC 160 #############
+-0.203*"size" + -0.189*"fabulous" + -0.185*"look" + 0.166*"motel" + 0.136*"roosevelt" + -0.127*"decent" + -0.126*"big" + 0.120*"modern" + 0.110*"city" + -0.104*"barcelona"
 
-####################### TOPIC 161 #######################
-0.161*"find" + -0.154*"like" + 0.126*"pretty" + 0.121*"way" + -0.121*"biltmore" + 0.119*"much" + -0.117*"trip" + 0.116*"help" + -0.113*"big" + 0.113*"amsterdam" + 0.110*"also" + -0.106*"dirty" + 0.104*"fun" + 0.101*"building" + -0.100*"around" + -0.099*"vancouver" + -0.099*"next" + -0.098*"kid" + -0.096*"adagio" + 0.096*"vacation"
+############# TOPIC 161 #############
+-0.169*"near" + 0.168*"lot" + -0.148*"weekend" + 0.144*"train" + -0.132*"much" + -0.129*"expect" + -0.123*"biltmore" + 0.121*"roosevelt" + 0.118*"enough" + -0.110*"problem"
 
-####################### TOPIC 162 #######################
-0.184*"extremely" + 0.163*"size" + 0.159*"shop" + 0.135*"many" + 0.130*"even" + 0.128*"miami" + -0.128*"need" + -0.122*"say" + -0.120*"find" + -0.118*"shower" + 0.118*"though" + -0.115*"friendly" + 0.099*"hot" + 0.098*"could" + 0.096*"never" + 0.096*"around" + 0.093*"look" + 0.091*"dirty" + 0.090*"top" + 0.089*"time"
+############# TOPIC 162 #############
+0.270*"orlando" + -0.143*"hotel" + -0.134*"pleasant" + -0.128*"adagio" + 0.122*"westin" + -0.120*"shuttle" + 0.117*"convention" + -0.116*"return" + -0.113*"choice" + -0.110*"conference"
 
-####################### TOPIC 163 #######################
--0.167*"super" + -0.140*"say" + 0.138*"find" + -0.138*"rate" + 0.124*"definitely" + 0.116*"shop" + -0.113*"santa" + 0.112*"relax" + -0.111*"kid" + -0.109*"look" + 0.108*"trip" + 0.108*"home" + -0.106*"bathroom" + -0.102*"town" + 0.102*"st" + -0.101*"maria" + 0.099*"want" + -0.099*"spacious" + 0.095*"helpful" + -0.091*"return"
+############# TOPIC 163 #############
+-0.268*"choice" + 0.148*"quality" + -0.124*"decent" + 0.120*"westin" + 0.117*"attraction" + -0.112*"though" + -0.112*"husband" + -0.109*"nyc" + 0.109*"shuttle" + 0.108*"two"
 
-####################### TOPIC 164 #######################
--0.181*"short" + 0.171*"expensive" + -0.153*"expect" + -0.145*"could" + -0.141*"average" + 0.132*"vancouver" + -0.131*"town" + -0.125*"bit" + 0.124*"quality" + -0.123*"well" + 0.113*"min" + 0.107*"easy" + -0.103*"metro" + -0.097*"singapore" + 0.095*"fi" + 0.095*"wi" + 0.093*"waterfront" + -0.093*"hot" + -0.091*"internet" + 0.091*"money"
+############# TOPIC 164 #############
+-0.150*"motel" + 0.148*"first" + -0.144*"adagio" + 0.144*"lax" + 0.141*"chicago" + -0.135*"orlando" + 0.129*"guest" + -0.128*"tv" + -0.123*"find" + -0.105*"biltmore"
 
-####################### TOPIC 165 #######################
--0.222*"find" + 0.160*"nyc" + -0.138*"fun" + 0.134*"husband" + -0.133*"happy" + -0.127*"surprise" + -0.120*"safe" + -0.114*"florida" + -0.112*"hour" + 0.108*"centre" + 0.103*"overall" + 0.101*"fi" + -0.101*"need" + 0.101*"wi" + -0.100*"sleep" + 0.098*"week" + 0.094*"bug" + -0.092*"night" + -0.091*"lot" + 0.090*"pay"
+############# TOPIC 165 #############
+0.162*"look" + 0.122*"expect" + -0.122*"find" + 0.119*"balcony" + -0.117*"fi" + -0.116*"wi" + -0.113*"never" + 0.112*"bug" + 0.109*"problem" + 0.109*"say"
 
-####################### TOPIC 166 #######################
--0.158*"problem" + 0.148*"choice" + 0.140*"quite" + 0.136*"nothing" + -0.131*"fabulous" + 0.130*"people" + 0.129*"extremely" + 0.127*"basic" + -0.122*"never" + 0.122*"spa" + -0.112*"shower" + -0.110*"outstanding" + 0.108*"find" + 0.102*"small" + 0.101*"first" + 0.099*"metro" + 0.096*"say" + -0.096*"decent" + -0.095*"far" + -0.094*"stayed"
+############# TOPIC 166 #############
+-0.151*"return" + -0.146*"right" + -0.143*"food" + -0.129*"super" + 0.129*"trip" + -0.127*"find" + -0.127*"week" + -0.120*"chicago" + 0.116*"near" + 0.111*"choice"
 
-####################### TOPIC 167 #######################
-0.158*"husband" + -0.141*"also" + 0.127*"space" + -0.110*"reception" + -0.109*"well" + 0.106*"charm" + 0.105*"work" + -0.101*"people" + 0.100*"get" + 0.099*"every" + 0.097*"building" + -0.094*"go" + -0.094*"quarter" + -0.094*"carter" + 0.092*"could" + 0.091*"take" + -0.089*"trip" + -0.089*"french" + -0.089*"wi" + -0.089*"fi"
+############# TOPIC 167 #############
+0.164*"enough" + 0.158*"quality" + -0.155*"bit" + 0.147*"amsterdam" + 0.146*"husband" + 0.134*"shop" + 0.128*"though" + 0.124*"even" + -0.119*"year" + 0.111*"right"
 
-####################### TOPIC 168 #######################
-0.195*"choice" + -0.128*"far" + 0.121*"min" + 0.110*"lot" + -0.106*"adagio" + -0.104*"relax" + -0.103*"find" + -0.102*"right" + 0.102*"overall" + 0.100*"make" + 0.096*"motel" + -0.094*"book" + -0.092*"etc" + 0.090*"ask" + 0.088*"fabulous" + -0.087*"noisy" + 0.086*"quite" + 0.086*"three" + -0.086*"people" + 0.086*"open"
+############# TOPIC 168 #############
+-0.236*"bit" + -0.155*"average" + -0.151*"car" + 0.137*"roosevelt" + 0.130*"look" + -0.130*"people" + -0.129*"super" + 0.128*"strip" + -0.112*"want" + -0.107*"decent"
 
-####################### TOPIC 169 #######################
--0.187*"facility" + -0.147*"outstanding" + -0.147*"around" + 0.139*"reception" + 0.138*"lot" + 0.135*"nyc" + -0.111*"singapore" + -0.109*"see" + 0.107*"book" + 0.104*"super" + 0.104*"fun" + -0.104*"fi" + -0.104*"wi" + -0.103*"cheap" + -0.103*"guest" + -0.101*"tv" + -0.099*"relax" + 0.098*"choice" + 0.096*"vancouver" + 0.096*"sleep"
+############# TOPIC 169 #############
+-0.235*"super" + -0.190*"roosevelt" + 0.190*"pay" + 0.153*"though" + -0.151*"fabulous" + -0.136*"much" + -0.128*"right" + 0.116*"spa" + -0.114*"every" + 0.110*"nyc"
 
-####################### TOPIC 170 #######################
--0.225*"nothing" + 0.164*"bit" + -0.160*"special" + -0.153*"fabulous" + -0.146*"day" + -0.138*"towel" + 0.133*"expensive" + -0.125*"quite" + 0.125*"return" + 0.122*"outside" + 0.110*"husband" + -0.109*"enough" + 0.107*"space" + -0.101*"every" + 0.095*"free" + 0.095*"big" + 0.093*"buffet" + -0.092*"huge" + 0.088*"relax" + 0.085*"expect"
+############# TOPIC 170 #############
+-0.195*"lax" + 0.146*"want" + -0.145*"biltmore" + 0.141*"town" + -0.135*"facility" + -0.129*"expensive" + -0.123*"travel" + 0.121*"barcelona" + -0.117*"hour" + -0.112*"block"
 
-####################### TOPIC 171 #######################
-0.167*"car" + 0.155*"high" + -0.144*"never" + -0.139*"bit" + 0.138*"apartment" + 0.137*"decent" + 0.135*"husband" + -0.132*"town" + -0.128*"need" + 0.125*"quality" + -0.118*"ever" + -0.105*"bedroom" + 0.104*"dirty" + -0.103*"lot" + 0.101*"wifi" + 0.101*"always" + 0.100*"bad" + -0.096*"park" + 0.092*"standard" + 0.091*"work"
+############# TOPIC 171 #############
+0.229*"fabulous" + -0.185*"around" + 0.139*"average" + -0.136*"right" + 0.120*"motel" + 0.118*"need" + 0.115*"fi" + 0.115*"wi" + -0.115*"facility" + -0.110*"attraction"
 
-####################### TOPIC 172 #######################
--0.193*"extremely" + 0.142*"cottage" + 0.138*"like" + -0.115*"home" + -0.114*"get" + -0.102*"downtown" + 0.102*"bit" + -0.101*"choice" + -0.101*"however" + -0.098*"st" + -0.095*"family" + -0.095*"la" + 0.094*"work" + -0.092*"quite" + -0.090*"spa" + -0.090*"boston" + -0.087*"midtown" + 0.087*"disney" + 0.085*"spacious" + -0.085*"super"
+############# TOPIC 172 #############
+-0.177*"right" + -0.149*"st" + -0.135*"lot" + 0.132*"bug" + 0.130*"find" + -0.118*"weekend" + 0.114*"fine" + 0.114*"town" + -0.111*"ever" + 0.111*"husband"
 
-####################### TOPIC 173 #######################
-0.173*"de" + -0.159*"fun" + -0.139*"la" + -0.136*"pleasant" + 0.136*"even" + 0.134*"pay" + -0.125*"villa" + 0.123*"sleep" + 0.122*"happy" + 0.113*"playa" + 0.109*"though" + 0.107*"hour" + 0.101*"first" + -0.100*"book" + 0.099*"varenne" + 0.095*"find" + -0.092*"location" + 0.091*"holiday" + 0.088*"del" + 0.088*"attraction"
+############# TOPIC 173 #############
+-0.278*"super" + -0.217*"biltmore" + 0.123*"fine" + -0.118*"return" + 0.117*"look" + -0.114*"average" + 0.107*"boardwalk" + -0.107*"arizona" + 0.104*"chicago" + 0.103*"fabulous"
 
-####################### TOPIC 174 #######################
--0.195*"lot" + 0.180*"super" + 0.147*"outstanding" + 0.145*"reception" + 0.119*"people" + 0.113*"expect" + -0.110*"basic" + 0.107*"day" + 0.107*"cottage" + -0.107*"fee" + 0.103*"relax" + 0.099*"decent" + 0.096*"bad" + 0.096*"want" + 0.095*"extremely" + 0.094*"problem" + 0.094*"florida" + 0.093*"surprise" + 0.092*"noisy" + -0.091*"morning"
+############# TOPIC 174 #############
+-0.210*"westin" + 0.200*"find" + -0.136*"make" + -0.134*"car" + -0.128*"roosevelt" + -0.122*"fine" + 0.115*"ever" + 0.115*"travel" + 0.107*"coffee" + 0.106*"lax"
 
-####################### TOPIC 175 #######################
-0.153*"however" + 0.149*"space" + 0.138*"also" + 0.137*"use" + -0.127*"expect" + 0.123*"check" + -0.120*"high" + -0.114*"charge" + 0.110*"top" + -0.107*"find" + 0.105*"spacious" + 0.100*"waterfront" + -0.097*"vacation" + 0.097*"outside" + 0.094*"vancouver" + -0.093*"reception" + 0.093*"trip" + 0.092*"never" + 0.088*"marriott" + -0.087*"fine"
+############# TOPIC 175 #############
+0.181*"people" + 0.169*"pleasant" + -0.130*"door" + 0.129*"many" + 0.128*"right" + 0.127*"thing" + -0.120*"choice" + -0.120*"could" + 0.114*"shower" + 0.111*"lobby"
 
-####################### TOPIC 176 #######################
-0.192*"centre" + -0.175*"sleep" + -0.151*"villa" + 0.141*"problem" + 0.133*"need" + -0.121*"work" + -0.118*"extremely" + -0.115*"mall" + 0.115*"orlando" + -0.106*"relax" + 0.105*"bug" + -0.105*"cottage" + 0.104*"downtown" + 0.100*"decent" + 0.094*"get" + 0.094*"florida" + 0.093*"budget" + 0.092*"maroma" + 0.091*"come" + -0.090*"every"
+############# TOPIC 176 #############
+-0.181*"fine" + -0.135*"pay" + 0.131*"cheap" + 0.130*"top" + 0.122*"much" + -0.121*"facility" + 0.114*"happy" + -0.113*"relax" + -0.112*"fabulous" + -0.111*"attraction"
 
-####################### TOPIC 177 #######################
-0.156*"extremely" + -0.144*"ever" + -0.138*"centre" + 0.136*"look" + 0.132*"kid" + 0.130*"fabulous" + -0.125*"never" + -0.118*"outstanding" + -0.115*"like" + 0.110*"deal" + 0.109*"outside" + 0.109*"motel" + -0.106*"also" + 0.102*"balcony" + -0.101*"concierge" + 0.099*"reception" + 0.099*"husband" + -0.098*"helpful" + -0.098*"want" + -0.094*"ocean"
+############# TOPIC 177 #############
+0.211*"problem" + -0.169*"husband" + -0.142*"work" + -0.138*"lax" + 0.134*"metro" + 0.132*"ever" + 0.122*"westin" + 0.117*"hotel" + -0.107*"centre" + -0.107*"block"
 
-####################### TOPIC 178 #######################
-0.165*"boston" + 0.158*"midtown" + -0.157*"super" + -0.150*"enough" + -0.147*"say" + -0.126*"bit" + 0.126*"min" + -0.117*"guest" + 0.114*"shop" + -0.112*"lobby" + -0.106*"florida" + -0.104*"around" + -0.102*"dirty" + -0.100*"sleep" + -0.100*"far" + 0.099*"barcelona" + -0.098*"villa" + -0.097*"relax" + 0.097*"bad" + 0.093*"drive"
+############# TOPIC 178 #############
+-0.196*"ever" + 0.181*"wi" + 0.181*"fi" + 0.141*"reception" + 0.132*"expect" + -0.129*"tower" + -0.122*"sleep" + -0.122*"want" + -0.106*"fabulous" + -0.105*"monteleone"
 
-####################### TOPIC 179 #######################
--0.193*"decent" + 0.134*"expensive" + -0.118*"short" + 0.115*"go" + 0.115*"provide" + -0.112*"pay" + 0.109*"average" + -0.108*"lot" + 0.107*"around" + -0.100*"villa" + -0.100*"expect" + 0.098*"wall" + -0.097*"bug" + -0.097*"guest" + -0.096*"group" + -0.096*"long" + -0.095*"meeting" + -0.094*"find" + 0.093*"fabulous" + 0.090*"problem"
+############# TOPIC 179 #############
+0.171*"monteleone" + -0.145*"expect" + -0.140*"lot" + 0.132*"quality" + 0.131*"although" + 0.130*"every" + -0.125*"week" + -0.116*"problem" + 0.113*"book" + -0.108*"rate"
 
-####################### TOPIC 180 #######################
--0.149*"outstanding" + 0.141*"relax" + -0.140*"midtown" + -0.134*"downtown" + -0.128*"boston" + -0.121*"overall" + -0.121*"go" + 0.120*"shopping" + -0.117*"balcony" + 0.113*"happy" + 0.113*"ask" + 0.105*"look" + 0.100*"come" + 0.100*"year" + 0.099*"barcelona" + -0.098*"wed" + -0.096*"weekend" + -0.095*"helpful" + 0.094*"lot" + -0.093*"towel"
+############# TOPIC 180 #############
+-0.252*"adagio" + 0.166*"miami" + 0.136*"else" + 0.131*"week" + 0.129*"help" + 0.128*"balcony" + -0.116*"include" + 0.115*"look" + -0.111*"chicago" + -0.110*"want"
 
-####################### TOPIC 181 #######################
-0.140*"much" + 0.140*"pleasant" + 0.128*"welcome" + 0.128*"husband" + 0.127*"use" + -0.125*"happy" + 0.124*"english" + -0.121*"metro" + 0.120*"near" + 0.119*"people" + 0.119*"top" + -0.110*"thing" + 0.107*"speak" + 0.106*"work" + 0.101*"door" + -0.092*"take" + -0.092*"area" + 0.091*"spa" + -0.091*"like" + 0.090*"centre"
+############# TOPIC 181 #############
+-0.212*"pay" + -0.174*"motel" + -0.131*"metro" + 0.126*"say" + 0.124*"location" + 0.122*"biltmore" + -0.121*"review" + 0.116*"train" + 0.110*"lobby" + 0.109*"side"
 
-####################### TOPIC 182 #######################
--0.169*"around" + 0.154*"extremely" + -0.143*"la" + -0.134*"right" + 0.132*"boston" + -0.112*"hyatt" + 0.112*"midtown" + -0.108*"nyc" + 0.106*"say" + -0.105*"motel" + -0.104*"playa" + -0.103*"corner" + -0.101*"husband" + 0.096*"super" + -0.095*"class" + 0.092*"wifi" + 0.089*"also" + 0.089*"lax" + 0.087*"extra" + 0.086*"go"
+############# TOPIC 182 #############
+0.150*"super" + -0.149*"return" + 0.145*"although" + 0.136*"adagio" + -0.132*"fine" + 0.130*"balcony" + 0.127*"amsterdam" + 0.124*"lot" + 0.111*"budget" + 0.111*"waikiki"
 
-####################### TOPIC 183 #######################
--0.185*"fine" + -0.177*"need" + -0.157*"expensive" + -0.138*"attraction" + 0.129*"fi" + 0.129*"wi" + -0.117*"wifi" + 0.109*"buffet" + 0.108*"night" + 0.108*"near" + -0.107*"extremely" + 0.102*"car" + 0.101*"friend" + -0.100*"lot" + -0.093*"ever" + 0.093*"fabulous" + 0.093*"want" + 0.092*"lounge" + 0.091*"boston" + -0.091*"travel"
+############# TOPIC 183 #############
+0.155*"monteleone" + -0.138*"marriott" + -0.138*"miami" + -0.122*"biltmore" + -0.120*"fabulous" + 0.120*"pretty" + -0.113*"people" + -0.112*"roosevelt" + 0.112*"choice" + -0.110*"sleep"
 
-####################### TOPIC 184 #######################
-0.208*"lot" + 0.201*"decent" + -0.173*"la" + -0.163*"super" + -0.132*"outside" + -0.117*"look" + -0.103*"near" + 0.103*"like" + 0.101*"location" + -0.101*"wed" + -0.097*"definately" + 0.096*"orlando" + -0.092*"minute" + 0.090*"next" + 0.089*"cottage" + 0.088*"metro" + 0.087*"internet" + 0.087*"area" + 0.086*"de" + 0.086*"shop"
+############# TOPIC 184 #############
+-0.283*"adagio" + -0.145*"miami" + -0.145*"thing" + 0.142*"biltmore" + -0.125*"want" + -0.121*"two" + -0.112*"else" + -0.111*"happy" + -0.104*"noise" + 0.101*"time"
 
-####################### TOPIC 185 #######################
--0.152*"town" + -0.148*"quality" + 0.146*"pay" + 0.145*"offer" + -0.138*"super" + 0.130*"welcome" + 0.116*"outstanding" + 0.114*"top" + -0.113*"fabulous" + 0.112*"quite" + 0.102*"helpful" + 0.099*"another" + -0.098*"water" + 0.097*"deal" + 0.093*"thing" + -0.092*"decent" + 0.090*"lobby" + -0.086*"noise" + 0.085*"centre" + -0.084*"reasonable"
+############# TOPIC 185 #############
+-0.194*"biltmore" + 0.176*"monteleone" + 0.145*"attraction" + 0.132*"club" + 0.127*"lounge" + 0.125*"pretty" + -0.119*"sleep" + -0.119*"quarter" + -0.114*"french" + 0.114*"decorate"
 
-####################### TOPIC 186 #######################
--0.149*"use" + 0.148*"top" + -0.135*"attraction" + -0.134*"balcony" + 0.133*"work" + 0.128*"noisy" + -0.123*"fine" + -0.123*"every" + -0.116*"house" + 0.115*"villa" + 0.112*"apartment" + 0.110*"motel" + -0.109*"ny" + -0.108*"vacation" + -0.105*"problem" + -0.104*"week" + 0.104*"also" + 0.101*"lax" + -0.100*"guest" + 0.099*"happy"
+############# TOPIC 186 #############
+0.178*"space" + 0.140*"enough" + 0.140*"monteleone" + 0.140*"bit" + -0.129*"decent" + 0.125*"find" + -0.121*"standard" + 0.119*"miami" + -0.112*"bug" + -0.109*"high"
 
-####################### TOPIC 187 #######################
-0.138*"bad" + -0.138*"never" + -0.136*"worth" + 0.136*"money" + -0.134*"extremely" + 0.125*"bar" + -0.123*"decent" + 0.116*"clean" + 0.111*"facility" + 0.105*"enough" + -0.105*"every" + 0.101*"next" + -0.097*"mall" + -0.095*"wifi" + -0.094*"shopping" + -0.094*"friend" + -0.094*"happy" + -0.090*"else" + -0.089*"bug" + -0.088*"midtown"
+############# TOPIC 187 #############
+-0.187*"monteleone" + -0.158*"expensive" + 0.157*"friend" + 0.150*"casino" + 0.141*"super" + 0.124*"bit" + -0.114*"far" + 0.113*"find" + 0.110*"outside" + -0.108*"reception"
 
-####################### TOPIC 188 #######################
-0.189*"shop" + 0.131*"take" + 0.130*"meeting" + -0.124*"tower" + 0.119*"could" + -0.107*"find" + -0.105*"spa" + 0.105*"club" + 0.104*"nothing" + -0.102*"helpful" + 0.102*"two" + -0.101*"work" + -0.098*"trip" + -0.095*"welcome" + -0.095*"shopping" + 0.093*"outstanding" + 0.092*"enough" + -0.090*"bath" + -0.089*"outside" + -0.089*"think"
+############# TOPIC 188 #############
+0.235*"extremely" + 0.143*"balcony" + -0.140*"miami" + 0.126*"roosevelt" + -0.123*"noise" + -0.112*"thing" + 0.108*"outstanding" + -0.105*"overall" + -0.102*"casino" + -0.102*"wall"
 
-####################### TOPIC 189 #######################
-0.233*"town" + 0.165*"right" + -0.132*"decent" + 0.130*"pretty" + -0.117*"kid" + 0.113*"outside" + 0.111*"could" + 0.108*"fi" + 0.108*"wi" + -0.106*"friendly" + -0.105*"meeting" + -0.103*"noisy" + -0.102*"door" + -0.098*"short" + -0.096*"want" + -0.095*"space" + -0.094*"leave" + -0.092*"expect" + 0.091*"apartment" + -0.090*"bug"
+############# TOPIC 189 #############
+0.161*"choice" + 0.155*"return" + 0.138*"deal" + 0.134*"extremely" + -0.131*"could" + -0.126*"miami" + -0.119*"decent" + -0.114*"find" + 0.109*"town" + -0.105*"problem"
 
-####################### TOPIC 190 #######################
--0.200*"never" + -0.149*"vacation" + 0.133*"door" + 0.129*"attraction" + 0.116*"short" + 0.110*"say" + 0.110*"extra" + 0.109*"around" + -0.106*"wall" + 0.105*"thing" + 0.100*"also" + -0.096*"wait" + -0.095*"could" + 0.094*"bad" + 0.093*"bit" + -0.093*"like" + 0.091*"light" + 0.090*"charge" + 0.090*"balcony" + -0.089*"expensive"
+############# TOPIC 190 #############
+0.182*"short" + 0.140*"fine" + 0.131*"sleep" + 0.119*"fun" + -0.114*"strip" + 0.113*"help" + -0.112*"wifi" + -0.111*"basic" + -0.109*"street" + 0.107*"etc"
 
-####################### TOPIC 191 #######################
--0.159*"find" + 0.137*"fine" + -0.132*"side" + -0.130*"spacious" + -0.129*"fabulous" + -0.122*"tv" + 0.117*"everyone" + -0.115*"time" + -0.106*"tower" + 0.106*"need" + 0.103*"english" + 0.102*"le" + -0.102*"euro" + 0.101*"around" + 0.100*"meridien" + 0.099*"apartment" + -0.098*"never" + 0.095*"extremely" + 0.093*"go" + 0.090*"speak"
+############# TOPIC 191 #############
+0.180*"biltmore" + 0.155*"want" + 0.149*"orlando" + 0.148*"superb" + -0.148*"super" + -0.113*"overall" + 0.111*"bit" + -0.110*"ever" + 0.109*"much" + 0.104*"surprise"
 
-####################### TOPIC 192 #######################
--0.172*"many" + -0.150*"facility" + -0.147*"centre" + -0.140*"top" + -0.140*"thing" + 0.116*"main" + 0.108*"choice" + 0.101*"fun" + -0.097*"find" + -0.094*"end" + 0.094*"super" + -0.093*"charm" + 0.092*"concierge" + 0.092*"casino" + 0.090*"right" + -0.088*"money" + -0.088*"husband" + 0.087*"well" + 0.084*"ask" + -0.084*"double"
+############# TOPIC 192 #############
+0.156*"happy" + 0.153*"miami" + 0.142*"hour" + -0.118*"adagio" + 0.111*"pm" + -0.111*"monteleone" + 0.104*"fabulous" + -0.104*"first" + -0.104*"downtown" + 0.100*"pretty"
 
-####################### TOPIC 193 #######################
--0.180*"fun" + -0.146*"pay" + -0.142*"safe" + -0.135*"also" + -0.131*"relax" + 0.131*"hyatt" + 0.131*"much" + 0.128*"charge" + 0.126*"food" + 0.120*"spend" + -0.118*"centre" + -0.114*"expensive" + 0.113*"le" + 0.112*"shop" + 0.111*"guest" + -0.109*"vacation" + 0.108*"happy" + 0.107*"meridien" + 0.103*"average" + -0.093*"miami"
+############# TOPIC 193 #############
+-0.190*"super" + -0.169*"location" + -0.147*"miami" + 0.144*"wifi" + -0.129*"balcony" + 0.128*"although" + 0.126*"many" + -0.120*"outside" + 0.115*"could" + 0.114*"vacation"
 
-####################### TOPIC 194 #######################
-0.195*"pretty" + -0.140*"expect" + 0.134*"space" + 0.128*"want" + 0.126*"super" + 0.125*"much" + 0.115*"vacation" + -0.106*"clean" + -0.106*"travel" + 0.103*"amazing" + -0.099*"overall" + 0.097*"enough" + -0.094*"give" + -0.091*"roosevelt" + 0.091*"extra" + 0.090*"apartment" + -0.090*"orlando" + -0.090*"etc" + -0.089*"also" + 0.087*"motel"
+############# TOPIC 194 #############
+-0.167*"vacation" + 0.139*"book" + 0.135*"basic" + 0.131*"nyc" + -0.127*"taxi" + -0.121*"relax" + 0.119*"building" + 0.113*"around" + -0.109*"biltmore" + -0.107*"call"
 
-####################### TOPIC 195 #######################
--0.140*"people" + 0.134*"basic" + 0.128*"enough" + -0.127*"wi" + -0.126*"fi" + 0.122*"standard" + -0.121*"fine" + -0.110*"never" + -0.109*"outside" + 0.109*"wifi" + -0.108*"metro" + 0.108*"modern" + -0.107*"florida" + 0.106*"relax" + 0.104*"bus" + -0.103*"bathroom" + 0.103*"return" + -0.102*"midtown" + -0.099*"find" + 0.099*"around"
+############# TOPIC 195 #############
+0.195*"miami" + -0.146*"de" + 0.140*"shop" + 0.139*"extremely" + 0.136*"casino" + -0.125*"call" + -0.115*"around" + 0.114*"want" + 0.108*"farmer" + -0.106*"monteleone"
 
-####################### TOPIC 196 #######################
-0.185*"extremely" + -0.170*"outstanding" + -0.137*"travel" + 0.123*"space" + 0.115*"family" + -0.115*"vacation" + 0.114*"carter" + -0.113*"even" + 0.106*"decent" + 0.103*"palace" + -0.103*"hour" + 0.102*"attraction" + -0.097*"bug" + -0.096*"happy" + -0.094*"size" + 0.092*"fi" + 0.091*"wi" + -0.090*"kid" + 0.090*"orlando" + -0.089*"expectation"
+############# TOPIC 196 #############
+-0.166*"expensive" + -0.136*"metro" + 0.134*"night" + -0.124*"short" + 0.111*"problem" + -0.110*"fi" + -0.110*"wi" + 0.109*"nothing" + 0.107*"thing" + -0.104*"pretty"
 
-####################### TOPIC 197 #######################
-0.203*"week" + 0.142*"friend" + -0.135*"relax" + 0.117*"midtown" + -0.115*"expensive" + -0.110*"every" + -0.109*"complaint" + -0.109*"people" + -0.107*"decent" + 0.104*"cheap" + -0.102*"amaze" + 0.100*"boston" + -0.100*"outside" + 0.098*"around" + -0.097*"two" + 0.094*"high" + -0.093*"visit" + -0.093*"metro" + -0.089*"basic" + 0.088*"wifi"
+############# TOPIC 197 #############
+0.186*"week" + 0.167*"use" + -0.165*"many" + 0.154*"motel" + -0.143*"short" + 0.125*"main" + -0.116*"outside" + 0.111*"side" + -0.110*"noise" + -0.109*"roosevelt"
 
-####################### TOPIC 198 #######################
--0.151*"offer" + 0.140*"class" + -0.137*"reservation" + -0.136*"space" + -0.130*"outstanding" + -0.124*"friendly" + -0.117*"tower" + 0.117*"fine" + -0.116*"say" + -0.114*"surprise" + 0.113*"cheap" + 0.111*"welcome" + -0.110*"superb" + -0.108*"travel" + -0.099*"home" + -0.096*"help" + -0.095*"problem" + 0.095*"one" + 0.094*"first" + 0.093*"take"
+############# TOPIC 198 #############
+-0.175*"roosevelt" + 0.152*"expensive" + -0.139*"amsterdam" + 0.134*"many" + 0.127*"nyc" + -0.126*"however" + 0.126*"cottage" + -0.119*"want" + -0.114*"week" + -0.109*"concierge"
 
-####################### TOPIC 199 #######################
--0.150*"travel" + 0.137*"friend" + -0.135*"carter" + -0.122*"florida" + -0.115*"edgewater" + -0.114*"basic" + 0.112*"complaint" + 0.109*"outstanding" + -0.106*"fine" + 0.099*"tiny" + 0.096*"shower" + 0.095*"amsterdam" + -0.090*"special" + 0.090*"time" + 0.088*"club" + 0.088*"extra" + -0.085*"lax" + -0.085*"miami" + 0.084*"would" + 0.084*"attraction"
+############# TOPIC 199 #############
+0.190*"roosevelt" + -0.180*"lot" + -0.142*"metro" + 0.140*"bit" + 0.139*"space" + 0.123*"outstanding" + 0.122*"fabulous" + 0.112*"choice" + 0.110*"monteleone" + 0.109*"amsterdam"
 
-####################### TOPIC 200 #######################
-0.165*"expensive" + -0.143*"around" + -0.139*"fine" + 0.125*"la" + -0.120*"tower" + -0.110*"bug" + 0.110*"lot" + 0.106*"florida" + -0.105*"shower" + 0.103*"shuttle" + -0.102*"money" + -0.100*"pleasant" + -0.099*"spend" + 0.097*"friend" + -0.097*"safe" + 0.094*"smell" + 0.093*"early" + 0.093*"facility" + 0.091*"cottage" + -0.091*"airport"
+############# TOPIC 200 #############
+0.171*"vacation" + 0.167*"monteleone" + -0.158*"stayed" + 0.151*"ever" + -0.147*"miami" + -0.135*"lobby" + -0.135*"include" + -0.134*"far" + -0.132*"return" + 0.125*"biltmore"
 
-####################### TOPIC 201 #######################
--0.158*"husband" + -0.136*"ny" + -0.135*"expensive" + -0.126*"thing" + -0.111*"offer" + 0.109*"choice" + -0.099*"carter" + 0.099*"also" + -0.097*"florida" + 0.097*"problem" + 0.095*"dirty" + 0.093*"surprise" + 0.091*"extremely" + -0.088*"provide" + 0.087*"spacious" + 0.086*"far" + -0.085*"decorate" + -0.082*"villa" + 0.081*"st" + 0.081*"amsterdam"
+############# TOPIC 201 #############
+0.164*"go" + -0.162*"come" + -0.159*"around" + -0.154*"fabulous" + 0.146*"nyc" + 0.135*"big" + -0.131*"london" + 0.127*"tower" + -0.117*"centre" + -0.116*"balcony"
 
-####################### TOPIC 202 #######################
--0.187*"help" + 0.161*"far" + -0.155*"outstanding" + -0.133*"many" + -0.120*"visit" + 0.119*"shop" + -0.116*"bit" + 0.116*"home" + -0.114*"right" + 0.110*"size" + -0.109*"shopping" + 0.109*"everyone" + -0.108*"weekend" + -0.107*"noisy" + 0.102*"side" + 0.099*"euro" + -0.097*"want" + 0.095*"super" + -0.094*"centre" + 0.094*"people"
+############# TOPIC 202 #############
+0.139*"london" + 0.138*"find" + 0.121*"shop" + -0.114*"safe" + -0.112*"wait" + -0.111*"want" + -0.110*"see" + 0.109*"travel" + -0.109*"bug" + -0.107*"miami"
 
-####################### TOPIC 203 #######################
--0.138*"wifi" + 0.135*"never" + -0.133*"away" + -0.129*"right" + 0.117*"elevator" + -0.113*"expensive" + 0.111*"way" + 0.111*"outstanding" + 0.105*"spa" + 0.103*"tower" + -0.097*"fabulous" + -0.096*"expect" + -0.093*"also" + 0.092*"standard" + 0.091*"worth" + 0.091*"barcelona" + 0.090*"husband" + -0.087*"hyatt" + 0.087*"size" + 0.086*"high"
+############# TOPIC 203 #############
+-0.161*"westin" + -0.157*"fun" + 0.135*"wait" + -0.129*"away" + 0.128*"enough" + -0.125*"amsterdam" + -0.120*"lot" + 0.117*"fabulous" + 0.115*"week" + 0.114*"english"
 
-####################### TOPIC 204 #######################
-0.149*"also" + 0.138*"centre" + -0.126*"include" + 0.115*"super" + -0.111*"everyone" + -0.108*"maroma" + -0.106*"main" + -0.106*"concierge" + -0.105*"el" + -0.103*"dorado" + 0.102*"deal" + 0.100*"boston" + 0.097*"basic" + -0.096*"cheap" + -0.095*"bit" + -0.094*"outside" + 0.093*"midtown" + 0.093*"long" + -0.093*"tower" + 0.092*"la"
+############# TOPIC 204 #############
+-0.234*"strip" + 0.196*"casino" + 0.145*"pretty" + -0.143*"marriott" + 0.126*"enough" + -0.126*"window" + -0.117*"super" + 0.112*"around" + 0.112*"cottage" + -0.110*"extremely"
 
-####################### TOPIC 205 #######################
-0.147*"people" + -0.138*"decent" + -0.126*"also" + 0.122*"size" + 0.114*"window" + 0.110*"spa" + 0.108*"hyatt" + -0.105*"return" + -0.102*"ny" + -0.102*"town" + -0.102*"sleep" + -0.099*"restaurant" + 0.099*"outstanding" + -0.096*"downtown" + -0.095*"orlando" + 0.095*"mall" + -0.094*"tower" + 0.093*"trip" + -0.093*"ready" + -0.092*"class"
+############# TOPIC 205 #############
+0.161*"extremely" + 0.132*"casino" + -0.130*"lax" + -0.116*"friend" + -0.116*"reception" + -0.111*"metro" + 0.109*"bad" + 0.107*"overall" + 0.106*"biltmore" + 0.106*"nyc"
 
-####################### TOPIC 206 #######################
--0.142*"quality" + -0.134*"amazing" + -0.121*"wifi" + 0.120*"wife" + 0.117*"every" + -0.110*"although" + -0.109*"fabulous" + -0.108*"lounge" + 0.101*"go" + 0.101*"superb" + 0.099*"space" + -0.097*"two" + 0.096*"buffet" + -0.095*"tv" + 0.094*"wi" + 0.093*"fi" + 0.093*"find" + -0.091*"outstanding" + 0.091*"safe" + -0.090*"boston"
+############# TOPIC 206 #############
+0.176*"fine" + -0.161*"safe" + 0.159*"although" + -0.153*"hilton" + 0.145*"sleep" + -0.126*"monteleone" + -0.122*"expensive" + -0.113*"farmer" + 0.107*"london" + 0.106*"barcelona"
 
-####################### TOPIC 207 #######################
--0.142*"happy" + -0.128*"window" + -0.122*"friend" + -0.118*"safe" + -0.117*"sleep" + 0.116*"way" + 0.113*"guest" + 0.113*"expect" + -0.111*"villa" + 0.109*"one" + -0.108*"taxi" + 0.106*"think" + 0.101*"need" + -0.097*"tower" + -0.095*"decent" + -0.091*"rock" + 0.091*"air" + -0.088*"travel" + 0.086*"london" + 0.086*"highly"
+############# TOPIC 207 #############
+0.171*"nyc" + -0.167*"happy" + -0.125*"never" + 0.122*"outstanding" + 0.119*"charge" + -0.117*"lax" + -0.115*"town" + -0.112*"surprise" + 0.111*"marriott" + -0.107*"pay"
 
-####################### TOPIC 208 #######################
--0.166*"want" + 0.140*"find" + 0.135*"st" + 0.132*"travel" + -0.111*"expectation" + 0.110*"casino" + 0.105*"much" + 0.103*"spot" + -0.103*"money" + 0.103*"harrah" + -0.102*"spa" + 0.101*"pleasant" + 0.101*"relax" + 0.098*"napa" + -0.097*"fabulous" + -0.096*"french" + -0.094*"quarter" + -0.093*"wife" + -0.089*"easy" + 0.086*"shopping"
+############# TOPIC 208 #############
+-0.185*"happy" + -0.143*"short" + 0.143*"adagio" + 0.142*"playa" + -0.133*"barcelona" + 0.133*"de" + -0.129*"orlando" + 0.125*"del" + -0.123*"wed" + 0.122*"else"
 
-####################### TOPIC 209 #######################
--0.202*"fine" + -0.143*"every" + 0.135*"tv" + -0.113*"dirty" + 0.112*"expensive" + -0.110*"euro" + -0.108*"attraction" + 0.098*"although" + 0.097*"standard" + -0.096*"barcelona" + -0.094*"cheap" + -0.093*"quite" + -0.092*"bathroom" + -0.089*"vancouver" + 0.088*"however" + -0.088*"trip" + 0.088*"stop" + 0.088*"flat" + 0.087*"think" + -0.086*"modern"
+############# TOPIC 209 #############
+-0.149*"adagio" + -0.139*"complaint" + -0.136*"see" + -0.132*"town" + -0.132*"window" + -0.128*"charm" + -0.123*"far" + 0.114*"motel" + -0.112*"tower" + 0.111*"although"
 
-####################### TOPIC 210 #######################
-0.154*"right" + 0.128*"book" + -0.127*"boston" + -0.125*"le" + -0.119*"main" + -0.114*"meridien" + -0.109*"side" + -0.108*"hyatt" + 0.107*"high" + -0.107*"reservation" + 0.106*"never" + 0.102*"shop" + 0.102*"nyc" + 0.098*"every" + 0.097*"definately" + 0.095*"morning" + 0.092*"maroma" + -0.092*"marriott" + 0.091*"el" + 0.091*"balcony"
+############# TOPIC 210 #############
+0.210*"miami" + -0.153*"else" + -0.135*"however" + 0.134*"wife" + -0.131*"happy" + 0.122*"extremely" + 0.122*"town" + -0.121*"go" + -0.119*"standard" + 0.114*"see"
 
-####################### TOPIC 211 #######################
--0.157*"week" + 0.139*"charm" + -0.135*"fi" + -0.135*"wi" + 0.131*"florida" + -0.128*"decent" + -0.115*"balcony" + 0.115*"spacious" + 0.113*"road" + -0.111*"enough" + -0.108*"although" + 0.106*"however" + 0.097*"shuttle" + 0.096*"main" + 0.096*"trip" + 0.095*"standard" + 0.092*"leave" + 0.092*"bit" + 0.092*"facility" + -0.092*"expensive"
+############# TOPIC 211 #############
+0.266*"fabulous" + 0.189*"offer" + 0.171*"facility" + 0.144*"motel" + 0.120*"fun" + -0.112*"noisy" + 0.111*"take" + -0.111*"travel" + -0.110*"fine" + 0.100*"however"
 
-####################### TOPIC 212 #######################
--0.182*"pretty" + -0.139*"tower" + -0.139*"fine" + 0.128*"week" + -0.119*"club" + -0.119*"reception" + 0.118*"standard" + -0.116*"carter" + -0.113*"guest" + -0.106*"travel" + 0.105*"town" + 0.105*"much" + 0.104*"outstanding" + 0.103*"use" + 0.103*"palace" + -0.102*"vacation" + 0.098*"amazing" + 0.093*"side" + 0.092*"want" + 0.091*"every"
+############# TOPIC 212 #############
+-0.153*"st" + 0.146*"expect" + -0.146*"hot" + 0.138*"overall" + 0.138*"orchard" + 0.125*"take" + -0.124*"amsterdam" + 0.122*"adagio" + -0.116*"fine" + -0.115*"vacation"
 
-####################### TOPIC 213 #######################
--0.204*"fun" + -0.164*"friend" + 0.155*"carter" + 0.140*"ny" + -0.132*"nyc" + 0.125*"fabulous" + -0.119*"expensive" + 0.119*"outstanding" + -0.118*"problem" + 0.105*"leave" + -0.100*"short" + 0.098*"everyone" + 0.094*"hyatt" + -0.093*"shopping" + 0.093*"vacation" + 0.091*"bit" + 0.090*"find" + 0.089*"however" + -0.087*"tower" + 0.087*"budget"
+############# TOPIC 213 #############
+0.181*"day" + 0.155*"dirty" + -0.145*"never" + 0.143*"miami" + 0.136*"casino" + -0.129*"tower" + 0.121*"monteleone" + 0.117*"use" + -0.116*"fun" + 0.115*"helpful"
 
-####################### TOPIC 214 #######################
--0.165*"ny" + 0.161*"fabulous" + 0.150*"guest" + 0.147*"offer" + 0.129*"nyc" + 0.118*"edgewater" + 0.112*"town" + 0.111*"vacation" + -0.107*"carter" + -0.106*"enough" + -0.097*"get" + -0.093*"condo" + 0.091*"everyone" + 0.089*"ever" + 0.088*"definately" + -0.086*"could" + 0.086*"since" + 0.086*"wife" + -0.084*"quality" + -0.083*"husband"
+############# TOPIC 214 #############
+-0.215*"week" + 0.203*"miami" + 0.141*"far" + -0.125*"town" + -0.117*"marriott" + -0.117*"take" + 0.116*"extremely" + -0.114*"quality" + 0.111*"concierge" + -0.106*"hotel"
 
-####################### TOPIC 215 #######################
--0.131*"however" + 0.129*"problem" + 0.118*"embassy" + 0.117*"hilton" + -0.114*"come" + 0.114*"expectation" + -0.109*"boston" + 0.106*"nothing" + -0.106*"offer" + 0.105*"spend" + -0.103*"midtown" + -0.102*"superb" + 0.101*"much" + 0.100*"find" + 0.100*"friend" + -0.099*"overall" + 0.094*"meeting" + 0.091*"husband" + 0.091*"attraction" + -0.091*"expensive"
+############# TOPIC 215 #############
+0.192*"outstanding" + -0.149*"friend" + 0.117*"much" + -0.112*"travel" + -0.111*"want" + -0.106*"though" + -0.104*"monteleone" + -0.104*"spa" + -0.100*"expect" + 0.100*"santa"
 
-####################### TOPIC 216 #######################
-0.134*"vacation" + -0.129*"book" + -0.126*"outside" + -0.124*"quality" + -0.123*"thing" + 0.119*"everyone" + -0.116*"nyc" + -0.115*"much" + -0.114*"fine" + -0.110*"elevator" + 0.108*"morning" + 0.098*"roosevelt" + -0.095*"easy" + 0.094*"definately" + -0.094*"complaint" + -0.093*"wife" + 0.090*"come" + 0.087*"tiny" + 0.087*"special" + 0.087*"stayed"
+############# TOPIC 216 #############
+0.158*"pay" + 0.142*"quality" + -0.137*"motel" + -0.136*"reception" + 0.127*"find" + -0.126*"could" + 0.118*"wife" + 0.115*"bug" + 0.113*"room" + -0.110*"miami"
 
-####################### TOPIC 217 #######################
-0.157*"le" + 0.150*"boston" + -0.144*"outstanding" + 0.141*"midtown" + -0.138*"never" + -0.137*"take" + 0.132*"meridien" + 0.126*"short" + -0.117*"friend" + -0.117*"reception" + 0.108*"ever" + -0.108*"palace" + -0.099*"choice" + -0.098*"pm" + 0.092*"charm" + -0.089*"block" + -0.089*"fine" + -0.088*"arrive" + 0.087*"etc" + -0.086*"rate"
+############# TOPIC 217 #############
+0.162*"safe" + 0.132*"find" + -0.131*"spend" + -0.117*"balcony" + 0.107*"else" + -0.106*"like" + 0.104*"english" + 0.100*"speak" + 0.100*"side" + -0.097*"motel"
 
-####################### TOPIC 218 #######################
-0.181*"fine" + -0.132*"vacation" + -0.124*"kid" + -0.121*"like" + -0.115*"club" + -0.115*"work" + 0.114*"barcelona" + -0.113*"vancouver" + -0.107*"balcony" + 0.105*"outside" + 0.103*"come" + -0.103*"square" + -0.102*"cheap" + 0.101*"concierge" + 0.100*"time" + 0.097*"want" + 0.095*"away" + 0.093*"return" + 0.090*"think" + 0.090*"child"
+############# TOPIC 218 #############
+-0.175*"fine" + -0.174*"balcony" + -0.151*"expensive" + 0.148*"travel" + 0.118*"playa" + -0.112*"night" + 0.110*"food" + 0.106*"del" + 0.103*"feel" + -0.103*"think"
 
-####################### TOPIC 219 #######################
--0.137*"outside" + -0.129*"available" + 0.125*"much" + 0.113*"work" + -0.111*"like" + -0.107*"space" + 0.106*"overall" + 0.105*"edgewater" + 0.104*"everyone" + 0.103*"shop" + 0.102*"deal" + 0.101*"never" + -0.098*"hot" + -0.094*"amazing" + -0.090*"seem" + 0.088*"leave" + -0.085*"special" + 0.085*"side" + -0.084*"next" + -0.084*"helpful"
+############# TOPIC 219 #############
+0.178*"expensive" + -0.160*"spa" + -0.117*"hilton" + 0.114*"people" + 0.110*"short" + -0.110*"pretty" + -0.109*"cheap" + 0.107*"light" + 0.106*"facility" + 0.104*"la"
 
-####################### TOPIC 220 #######################
--0.162*"le" + 0.140*"however" + -0.137*"meridien" + -0.136*"bug" + 0.126*"offer" + -0.124*"people" + 0.120*"tower" + 0.113*"ever" + 0.112*"choice" + 0.112*"super" + 0.110*"window" + -0.105*"block" + 0.102*"one" + 0.099*"lounge" + 0.099*"ny" + 0.091*"dont" + 0.088*"alex" + -0.087*"never" + -0.086*"nyc" + -0.082*"much"
+############# TOPIC 220 #############
+-0.180*"nyc" + -0.158*"day" + 0.142*"enough" + 0.132*"shop" + -0.122*"decent" + 0.109*"definately" + 0.106*"super" + 0.101*"roosevelt" + -0.100*"help" + -0.098*"charm"
 
-####################### TOPIC 221 #######################
--0.139*"welcome" + 0.114*"carter" + -0.111*"etc" + 0.108*"balcony" + 0.108*"definately" + -0.103*"tower" + 0.103*"orlando" + -0.102*"enough" + 0.102*"charm" + -0.099*"ever" + -0.097*"block" + -0.097*"seem" + 0.092*"cottage" + -0.090*"fine" + 0.090*"everyone" + 0.090*"work" + -0.089*"le" + 0.087*"short" + -0.087*"meeting" + -0.087*"dirty"
+############# TOPIC 221 #############
+0.151*"space" + 0.151*"hyatt" + 0.116*"relax" + 0.114*"superb" + -0.112*"much" + 0.104*"monteleone" + 0.101*"hotel" + -0.101*"vacation" + -0.101*"decorate" + 0.100*"day"
 
-####################### TOPIC 222 #######################
-0.185*"outstanding" + 0.145*"include" + 0.131*"everyone" + -0.126*"ny" + 0.122*"call" + 0.104*"access" + -0.101*"vacation" + 0.101*"problem" + 0.098*"request" + 0.096*"comfy" + -0.096*"hot" + 0.096*"help" + 0.094*"dirty" + -0.091*"hilton" + 0.091*"flight" + -0.090*"make" + -0.090*"try" + 0.090*"barcelona" + -0.089*"never" + -0.089*"wait"
+############# TOPIC 222 #############
+-0.147*"friend" + 0.136*"adagio" + 0.130*"happy" + 0.125*"noisy" + 0.121*"palace" + -0.121*"cottage" + -0.119*"extremely" + 0.118*"expensive" + -0.116*"charm" + 0.113*"many"
 
-####################### TOPIC 223 #######################
--0.131*"one" + -0.124*"villa" + -0.116*"palace" + -0.111*"ny" + 0.110*"take" + -0.110*"taxi" + 0.110*"although" + 0.110*"standard" + 0.109*"vacation" + 0.102*"pay" + 0.101*"find" + 0.100*"alex" + 0.097*"le" + -0.094*"first" + -0.094*"cost" + 0.093*"louvre" + -0.093*"extra" + 0.093*"offer" + 0.091*"every" + 0.091*"many"
+############# TOPIC 223 #############
+0.165*"fabulous" + 0.152*"lax" + -0.141*"main" + -0.136*"adagio" + -0.131*"stayed" + 0.125*"balcony" + 0.118*"carter" + -0.117*"worth" + 0.116*"budget" + -0.106*"westin"
 
-####################### TOPIC 224 #######################
-0.151*"thing" + -0.147*"leave" + 0.129*"relax" + -0.117*"house" + -0.114*"see" + 0.108*"basic" + 0.106*"ask" + 0.101*"give" + -0.100*"last" + -0.100*"also" + 0.099*"standard" + 0.099*"get" + 0.098*"amazing" + 0.098*"group" + 0.097*"kind" + -0.094*"complaint" + 0.092*"hyatt" + 0.092*"modern" + 0.090*"try" + 0.089*"cottage"
+############# TOPIC 224 #############
+0.150*"vacation" + -0.148*"budget" + 0.146*"santa" + 0.141*"part" + 0.140*"outside" + 0.135*"maria" + -0.111*"friend" + 0.107*"miami" + -0.107*"like" + -0.105*"however"
 
-####################### TOPIC 225 #######################
--0.166*"le" + -0.144*"meridien" + 0.128*"however" + 0.122*"balcony" + 0.118*"say" + 0.110*"enough" + -0.108*"ever" + -0.105*"tram" + -0.104*"amsterdam" + 0.104*"honeymoon" + 0.099*"shower" + 0.098*"week" + -0.098*"amenity" + 0.096*"help" + -0.095*"edgewater" + 0.094*"kong" + 0.094*"hong" + -0.092*"special" + 0.090*"wine" + 0.089*"overall"
+############# TOPIC 225 #############
+-0.261*"cottage" + 0.150*"standard" + -0.146*"people" + -0.133*"take" + -0.133*"kong" + -0.132*"hong" + -0.131*"deal" + 0.115*"friend" + 0.105*"work" + 0.104*"around"
 
-####################### TOPIC 226 #######################
-0.151*"balcony" + 0.133*"although" + 0.126*"villa" + 0.121*"hilton" + -0.121*"want" + -0.119*"problem" + -0.110*"shower" + -0.108*"two" + -0.104*"metro" + 0.103*"work" + -0.101*"relax" + 0.101*"time" + 0.097*"renovate" + 0.096*"call" + 0.096*"ever" + 0.092*"sure" + -0.089*"however" + -0.088*"elevator" + 0.087*"fun" + -0.087*"motel"
+############# TOPIC 226 #############
+-0.151*"take" + -0.146*"decent" + -0.140*"extremely" + -0.133*"centre" + 0.130*"wait" + -0.118*"spa" + 0.116*"expectation" + -0.115*"superb" + 0.113*"helpful" + -0.112*"friendly"
 
-####################### TOPIC 227 #######################
--0.173*"orlando" + -0.158*"charm" + 0.119*"florida" + 0.110*"shop" + -0.109*"happy" + -0.107*"elevator" + 0.103*"noisy" + 0.102*"etc" + -0.099*"far" + 0.098*"disney" + -0.096*"short" + -0.096*"courteous" + 0.096*"way" + -0.095*"book" + -0.090*"shopping" + -0.087*"everyone" + 0.087*"nyc" + 0.087*"food" + -0.087*"wed" + -0.085*"enough"
+############# TOPIC 227 #############
+0.171*"superb" + 0.158*"cottage" + -0.150*"nyc" + 0.122*"monteleone" + 0.115*"tower" + -0.114*"spa" + 0.112*"reception" + 0.111*"playa" + -0.110*"de" + 0.109*"barcelona"
 
-####################### TOPIC 228 #######################
-0.143*"attraction" + 0.134*"kong" + 0.133*"hong" + 0.132*"ny" + -0.121*"shopping" + 0.117*"relax" + -0.109*"club" + -0.107*"travel" + -0.105*"want" + -0.098*"pretty" + 0.098*"everyone" + -0.098*"house" + -0.094*"tub" + -0.093*"vacation" + -0.093*"decent" + 0.091*"overall" + -0.089*"marina" + 0.088*"bug" + 0.088*"water" + -0.087*"seem"
+############# TOPIC 228 #############
+-0.158*"outside" + 0.158*"decent" + -0.147*"super" + 0.143*"dirty" + -0.131*"use" + -0.131*"miami" + 0.129*"charm" + -0.126*"balcony" + -0.123*"friend" + -0.112*"room"
 
-####################### TOPIC 229 #######################
--0.174*"decent" + 0.160*"short" + 0.146*"complaint" + -0.121*"noisy" + -0.118*"see" + -0.114*"hyatt" + 0.114*"boston" + -0.108*"friend" + 0.091*"two" + 0.091*"around" + 0.090*"de" + 0.089*"people" + 0.087*"amsterdam" + -0.087*"expectation" + 0.086*"florida" + -0.086*"reception" + 0.084*"every" + -0.083*"kong" + -0.083*"hong" + 0.081*"euro"
+############# TOPIC 229 #############
+-0.186*"cottage" + 0.156*"space" + -0.133*"provide" + 0.127*"use" + 0.125*"pretty" + -0.124*"decent" + -0.111*"expect" + 0.110*"deal" + 0.106*"never" + 0.105*"town"
 
-####################### TOPIC 230 #######################
-0.156*"space" + -0.134*"take" + 0.134*"tiny" + -0.117*"see" + -0.115*"balcony" + -0.114*"morning" + -0.108*"apartment" + -0.103*"renovate" + -0.103*"ny" + 0.102*"hour" + 0.097*"cheap" + -0.094*"many" + 0.094*"reasonable" + 0.093*"worth" + -0.093*"tower" + -0.091*"provide" + -0.089*"spa" + -0.089*"food" + -0.088*"although" + -0.086*"nicely"
+############# TOPIC 230 #############
+-0.181*"travel" + 0.155*"facility" + 0.125*"find" + -0.122*"budget" + 0.121*"husband" + -0.119*"take" + 0.114*"outstanding" + 0.110*"people" + -0.109*"pay" + -0.106*"offer"
 
-####################### TOPIC 231 #######################
-0.165*"meeting" + -0.151*"barcelona" + -0.150*"also" + -0.147*"carter" + 0.109*"orlando" + -0.105*"decent" + -0.104*"amsterdam" + 0.104*"le" + 0.102*"check" + 0.098*"double" + 0.097*"expensive" + -0.096*"wait" + 0.093*"far" + -0.093*"balcony" + -0.092*"expectation" + 0.091*"ritz" + 0.089*"edgewater" + -0.089*"long" + 0.088*"madrid" + 0.087*"find"
+############# TOPIC 231 #############
+0.194*"outstanding" + 0.160*"spa" + -0.124*"noisy" + -0.122*"ask" + 0.121*"cottage" + -0.121*"decent" + 0.114*"standard" + 0.112*"hilton" + 0.111*"see" + -0.111*"dirty"
 
-####################### TOPIC 232 #######################
--0.246*"ocean" + -0.187*"although" + 0.151*"short" + -0.128*"shopping" + -0.120*"thing" + 0.115*"enough" + 0.114*"also" + -0.108*"carter" + -0.106*"see" + 0.097*"superb" + 0.095*"wife" + 0.092*"surprise" + 0.090*"tower" + -0.089*"however" + 0.088*"pretty" + 0.088*"noisy" + 0.085*"bug" + -0.084*"provide" + 0.082*"high" + 0.082*"travel"
+############# TOPIC 232 #############
+-0.173*"provide" + -0.137*"fun" + -0.135*"although" + 0.125*"main" + -0.114*"westin" + 0.112*"cottage" + 0.107*"complaint" + 0.105*"barcelona" + 0.105*"outside" + -0.102*"night"
 
-####################### TOPIC 233 #######################
-0.170*"budget" + 0.154*"cheap" + -0.134*"hyatt" + -0.126*"happy" + -0.116*"decent" + -0.112*"feel" + -0.110*"building" + 0.107*"vacation" + 0.104*"centre" + -0.103*"alex" + 0.103*"edgewater" + 0.099*"carter" + -0.096*"go" + -0.095*"include" + -0.094*"problem" + 0.093*"condo" + -0.093*"euro" + -0.092*"basic" + 0.089*"ideal" + 0.088*"long"
+############# TOPIC 233 #############
+-0.159*"santa" + -0.150*"maria" + 0.147*"friend" + -0.146*"fine" + -0.135*"never" + -0.130*"offer" + -0.110*"relax" + -0.110*"class" + -0.108*"fun" + -0.103*"westin"
 
-####################### TOPIC 234 #######################
--0.196*"week" + -0.135*"although" + 0.120*"home" + 0.119*"guest" + 0.114*"club" + 0.111*"doubletree" + 0.101*"call" + -0.100*"pretty" + -0.093*"relax" + 0.092*"get" + 0.090*"wed" + -0.089*"amenity" + -0.088*"ny" + 0.087*"end" + 0.086*"extremely" + 0.086*"poor" + -0.085*"decent" + -0.085*"way" + 0.084*"hot" + -0.082*"ask"
+############# TOPIC 234 #############
+-0.210*"use" + -0.140*"dirty" + -0.139*"problem" + 0.122*"relax" + 0.118*"else" + 0.117*"adagio" + -0.117*"expectation" + 0.110*"helpful" + -0.110*"restaurant" + -0.103*"town"
 
-####################### TOPIC 235 #######################
-0.160*"think" + 0.142*"florida" + 0.115*"shop" + -0.108*"wait" + 0.107*"dirty" + -0.104*"husband" + 0.103*"triton" + -0.100*"mall" + -0.099*"orlando" + -0.094*"bug" + -0.094*"provide" + 0.092*"stayed" + -0.092*"dont" + 0.091*"everyone" + -0.085*"want" + -0.084*"average" + 0.083*"many" + 0.083*"motel" + 0.083*"every" + -0.082*"overall"
+############# TOPIC 235 #############
+-0.141*"friend" + 0.137*"wife" + 0.126*"english" + -0.121*"husband" + 0.121*"westin" + -0.118*"marriott" + 0.115*"motel" + 0.112*"speak" + 0.108*"comfy" + 0.106*"balcony"
 
-####################### TOPIC 236 #######################
-0.180*"fun" + -0.171*"stayed" + -0.128*"although" + 0.125*"guest" + 0.114*"euro" + -0.111*"short" + 0.104*"per" + -0.104*"safe" + -0.103*"use" + 0.101*"amazing" + 0.098*"long" + -0.097*"never" + 0.093*"cost" + -0.092*"relax" + -0.090*"spend" + 0.089*"everyone" + -0.086*"amaze" + 0.084*"hilton" + 0.083*"pearl" + -0.082*"deal"
+############# TOPIC 236 #############
+-0.140*"budget" + 0.138*"three" + 0.132*"centre" + 0.121*"wifi" + 0.118*"de" + 0.104*"take" + 0.101*"expensive" + -0.101*"part" + 0.098*"ever" + -0.092*"metro"
 
-####################### TOPIC 237 #######################
-0.144*"way" + -0.126*"sure" + -0.118*"overall" + -0.117*"kong" + -0.117*"hong" + -0.113*"standard" + 0.112*"wife" + 0.104*"extremely" + -0.104*"find" + 0.102*"choice" + -0.098*"orlando" + 0.093*"concierge" + -0.092*"shopping" + -0.089*"phoenix" + -0.089*"four" + -0.088*"also" + 0.088*"hyatt" + -0.087*"enough" + 0.086*"warm" + -0.083*"reception"
+############# TOPIC 237 #############
+-0.153*"bug" + 0.143*"cottage" + 0.133*"monteleone" + -0.116*"building" + -0.114*"outstanding" + -0.114*"spend" + -0.111*"hotel" + 0.109*"pretty" + -0.104*"outside" + -0.103*"decent"
 
-####################### TOPIC 238 #######################
-0.146*"thing" + 0.125*"provide" + 0.119*"ny" + -0.118*"feel" + -0.107*"le" + -0.105*"see" + 0.104*"fun" + 0.103*"madrid" + -0.099*"week" + -0.091*"around" + -0.091*"attraction" + 0.090*"comfy" + -0.087*"meridien" + -0.087*"offer" + 0.086*"away" + -0.085*"restaurant" + -0.084*"doubletree" + 0.084*"etc" + 0.084*"edgewater" + -0.083*"hilton"
+############# TOPIC 238 #############
+-0.123*"absolutely" + 0.121*"light" + 0.119*"pretty" + 0.117*"problem" + -0.112*"safe" + 0.106*"available" + 0.103*"far" + -0.102*"florida" + 0.097*"reservation" + -0.096*"restaurant"
 
-####################### TOPIC 239 #######################
--0.151*"ever" + 0.122*"relax" + 0.113*"le" + 0.110*"lot" + -0.108*"sheraton" + -0.106*"ocean" + -0.104*"boston" + -0.104*"expect" + -0.101*"thing" + 0.099*"hyatt" + 0.097*"lax" + 0.097*"anyone" + -0.096*"shower" + -0.095*"point" + 0.093*"horrible" + 0.089*"reservation" + 0.089*"guest" + -0.087*"everyone" + 0.086*"meridien" + -0.085*"issue"
+############# TOPIC 239 #############
+0.158*"people" + 0.144*"side" + 0.121*"short" + -0.118*"orlando" + -0.114*"renovate" + 0.112*"decent" + 0.106*"cottage" + -0.106*"book" + -0.103*"centre" + -0.100*"bug"
 
-####################### TOPIC 240 #######################
-0.131*"orlando" + -0.128*"hyatt" + -0.116*"far" + -0.113*"friend" + -0.109*"offer" + -0.107*"balcony" + 0.106*"villa" + -0.105*"budget" + -0.103*"orleans" + -0.103*"arrive" + -0.100*"cottage" + 0.100*"ocean" + -0.099*"outstanding" + 0.098*"travel" + -0.098*"disney" + -0.096*"husband" + 0.095*"size" + -0.095*"shopping" + 0.093*"much" + -0.089*"overall"
+############# TOPIC 240 #############
+-0.210*"cottage" + 0.195*"outstanding" + -0.153*"town" + -0.144*"include" + -0.139*"miami" + 0.128*"condo" + -0.118*"noisy" + 0.113*"friend" + 0.112*"want" + 0.111*"outside"
 
-####################### TOPIC 241 #######################
-0.184*"le" + 0.151*"meridien" + 0.148*"balcony" + 0.144*"carter" + 0.142*"long" + -0.121*"bathroom" + 0.120*"never" + -0.110*"la" + 0.106*"ny" + -0.100*"take" + -0.096*"edgewater" + -0.095*"care" + 0.093*"bath" + -0.093*"give" + 0.090*"wife" + 0.089*"super" + -0.088*"budget" + 0.087*"help" + 0.087*"offer" + -0.087*"overall"
+############# TOPIC 241 #############
+0.126*"square" + -0.125*"smell" + -0.121*"singapore" + 0.105*"balcony" + 0.104*"feel" + 0.101*"guest" + -0.101*"playa" + 0.099*"vancouver" + -0.097*"edgewater" + 0.096*"fine"
 
-####################### TOPIC 242 #######################
--0.154*"friend" + 0.142*"edgewater" + -0.135*"dinner" + -0.126*"balcony" + -0.111*"fine" + 0.111*"meeting" + -0.107*"ever" + -0.107*"pleasant" + 0.099*"wait" + 0.098*"offer" + 0.095*"amazing" + 0.095*"different" + 0.094*"phoenix" + -0.093*"deal" + 0.092*"ocean" + -0.091*"square" + 0.091*"leave" + 0.091*"bug" + -0.089*"second" + 0.089*"next"
+############# TOPIC 242 #############
+0.159*"cottage" + 0.155*"although" + -0.128*"honeymoon" + -0.114*"smell" + -0.113*"problem" + 0.113*"never" + 0.112*"guest" + -0.112*"people" + -0.111*"amenity" + -0.106*"like"
 
-####################### TOPIC 243 #######################
-0.178*"carter" + -0.129*"wife" + 0.120*"surprise" + -0.113*"include" + -0.112*"review" + 0.107*"get" + -0.107*"balcony" + 0.106*"spa" + 0.097*"pleasantly" + 0.096*"shower" + -0.096*"sure" + 0.095*"trip" + 0.093*"outstanding" + 0.093*"also" + -0.092*"luxury" + -0.090*"super" + -0.089*"superb" + 0.089*"away" + -0.089*"food" + 0.088*"fun"
+############# TOPIC 243 #############
+0.153*"offer" + -0.130*"relax" + 0.121*"maroma" + -0.118*"amsterdam" + 0.115*"centre" + 0.112*"dorado" + 0.111*"although" + 0.106*"second" + 0.103*"el" + -0.102*"group"
 
-####################### TOPIC 244 #######################
-0.172*"stayed" + -0.169*"however" + 0.138*"wall" + 0.135*"pretty" + -0.127*"budget" + 0.126*"although" + 0.116*"extremely" + 0.116*"carter" + -0.113*"courteous" + -0.113*"fee" + -0.108*"le" + -0.103*"upgrade" + -0.099*"professional" + 0.097*"edgewater" + 0.093*"reasonable" + 0.093*"want" + 0.091*"reservation" + 0.091*"cottage" + -0.088*"light" + -0.088*"meridien"
+############# TOPIC 244 #############
+-0.192*"florida" + -0.144*"week" + 0.141*"complaint" + -0.123*"disney" + -0.111*"although" + -0.110*"main" + -0.109*"farmer" + 0.105*"adagio" + -0.102*"singapore" + -0.100*"see"
 
-####################### TOPIC 245 #######################
-0.168*"dirty" + 0.154*"wed" + -0.110*"amsterdam" + 0.107*"superb" + -0.106*"midtown" + -0.105*"cottage" + 0.105*"ask" + -0.104*"carter" + -0.101*"overall" + 0.101*"convention" + -0.092*"use" + -0.092*"never" + -0.090*"welcome" + 0.090*"next" + -0.090*"start" + -0.089*"thing" + 0.088*"friend" + 0.088*"take" + 0.087*"help" + -0.085*"manager"
+############# TOPIC 245 #############
+-0.167*"short" + 0.126*"however" + -0.125*"offer" + 0.109*"superb" + -0.106*"high" + 0.105*"town" + -0.103*"see" + -0.103*"call" + -0.101*"long" + 0.098*"outstanding"
 
-####################### TOPIC 246 #######################
--0.147*"amazing" + -0.128*"way" + -0.120*"barcelona" + -0.111*"kid" + 0.109*"cheap" + 0.108*"superb" + 0.105*"amaze" + -0.103*"centre" + 0.103*"per" + -0.102*"kong" + -0.101*"balcony" + -0.101*"hong" + -0.099*"complimentary" + -0.099*"fee" + -0.095*"building" + -0.095*"restaurant" + -0.094*"marina" + -0.094*"offer" + 0.090*"luggage" + 0.086*"give"
+############# TOPIC 246 #############
+-0.143*"wife" + -0.129*"book" + -0.127*"condo" + 0.124*"deal" + -0.124*"balcony" + -0.121*"santa" + 0.113*"huge" + -0.113*"maria" + 0.110*"carter" + 0.109*"outside"
 
-####################### TOPIC 247 #######################
--0.189*"however" + 0.128*"complaint" + 0.127*"shopping" + -0.122*"etc" + 0.100*"outstanding" + -0.099*"amsterdam" + -0.098*"short" + 0.097*"expect" + 0.097*"ocean" + -0.095*"say" + -0.094*"garden" + -0.093*"cheap" + 0.092*"far" + 0.090*"alex" + 0.088*"else" + 0.086*"child" + -0.086*"plus" + -0.084*"varenne" + -0.084*"people" + 0.083*"guest"
+############# TOPIC 247 #############
+0.190*"cottage" + -0.148*"expect" + 0.141*"else" + 0.136*"side" + 0.128*"standard" + 0.111*"edgewater" + 0.110*"everyone" + -0.109*"complaint" + 0.109*"shopping" + -0.109*"nyc"
 
-####################### TOPIC 248 #######################
-0.181*"ny" + -0.136*"boston" + 0.130*"also" + -0.127*"complaint" + -0.111*"villa" + 0.110*"however" + 0.106*"balcony" + 0.104*"friend" + 0.101*"alex" + 0.098*"kong" + 0.097*"hong" + -0.097*"charge" + 0.091*"big" + -0.090*"pm" + 0.089*"metro" + -0.089*"charm" + 0.087*"far" + -0.087*"always" + 0.087*"help" + -0.086*"point"
+############# TOPIC 248 #############
+0.131*"superb" + 0.130*"florida" + 0.129*"orchard" + -0.116*"request" + 0.114*"vancouver" + -0.111*"relax" + -0.109*"fabulous" + 0.107*"expensive" + 0.102*"food" + -0.100*"special"
 
-####################### TOPIC 249 #######################
-0.158*"stayed" + 0.136*"ever" + -0.117*"deal" + -0.115*"phoenix" + -0.115*"three" + -0.101*"stop" + 0.100*"two" + 0.097*"worldquest" + 0.095*"pretty" + 0.095*"tub" + 0.094*"wife" + 0.090*"concierge" + -0.089*"light" + -0.087*"plenty" + -0.086*"disney" + 0.085*"shopping" + 0.084*"problem" + 0.082*"carter" + 0.082*"use" + 0.081*"pay"
+############# TOPIC 249 #############
+-0.201*"santa" + -0.192*"maria" + -0.141*"however" + -0.132*"hyatt" + 0.110*"pretty" + 0.108*"taxi" + 0.108*"else" + -0.103*"especially" + -0.094*"wine" + -0.093*"side"
 
-####################### TOPIC 250 #######################
--0.129*"leave" + 0.121*"wait" + -0.117*"think" + -0.116*"able" + 0.110*"site" + -0.106*"budget" + 0.103*"travel" + 0.101*"problem" + -0.098*"never" + 0.098*"sure" + -0.095*"efficient" + -0.092*"end" + -0.091*"around" + -0.091*"reception" + -0.091*"strip" + -0.090*"reservation" + 0.090*"bath" + 0.086*"fee" + 0.086*"say" + -0.085*"st"
+############# TOPIC 250 #############
+0.198*"cottage" + 0.169*"ocean" + -0.123*"centre" + -0.113*"charm" + -0.113*"waikiki" + -0.112*"could" + 0.105*"think" + 0.103*"town" + 0.103*"light" + 0.098*"strip"
 
-####################### TOPIC 251 #######################
-0.142*"noisy" + 0.136*"st" + -0.124*"centre" + 0.122*"absolutely" + -0.114*"far" + -0.111*"try" + -0.110*"palace" + -0.110*"comfy" + 0.102*"amazing" + 0.102*"honeymoon" + -0.102*"four" + -0.098*"week" + -0.097*"expectation" + -0.097*"stayed" + 0.097*"etc" + 0.096*"reasonable" + -0.094*"clean" + 0.093*"duval" + 0.090*"include" + -0.088*"location"
+############# TOPIC 251 #############
+0.167*"outstanding" + -0.159*"offer" + 0.136*"budget" + -0.132*"stayed" + 0.129*"vancouver" + 0.123*"get" + -0.120*"overall" + 0.114*"many" + -0.113*"amsterdam" + -0.108*"go"
 
-####################### TOPIC 252 #######################
--0.143*"balcony" + 0.137*"decent" + -0.135*"dirty" + 0.117*"offer" + -0.109*"nearby" + 0.107*"extremely" + 0.103*"bedroom" + -0.103*"kong" + -0.102*"hong" + -0.101*"want" + -0.100*"pearl" + 0.096*"much" + 0.095*"away" + 0.094*"still" + -0.092*"go" + -0.088*"child" + -0.086*"shower" + -0.086*"attraction" + -0.083*"stayed" + 0.082*"size"
+############# TOPIC 252 #############
+0.189*"cottage" + 0.167*"offer" + -0.161*"palace" + -0.141*"relax" + -0.132*"centre" + -0.119*"elevator" + -0.115*"tower" + 0.108*"noisy" + -0.105*"customer" + 0.104*"smell"
 
-####################### TOPIC 253 #######################
--0.161*"week" + 0.139*"daughter" + -0.135*"decent" + -0.118*"honeymoon" + -0.114*"stayed" + 0.110*"budget" + -0.107*"cheap" + 0.104*"say" + -0.102*"fun" + 0.101*"far" + 0.096*"elevator" + -0.096*"charm" + 0.095*"site" + 0.094*"orlando" + -0.094*"sleep" + 0.092*"holiday" + 0.092*"try" + -0.092*"offer" + 0.091*"amazing" + 0.090*"comfy"
+############# TOPIC 253 #############
+-0.127*"budget" + -0.123*"offer" + -0.120*"space" + 0.116*"cottage" + -0.115*"include" + -0.115*"think" + 0.110*"wait" + 0.107*"elevator" + 0.103*"find" + -0.101*"safe"
 
-####################### TOPIC 254 #######################
-0.150*"pearl" + -0.143*"madrid" + 0.126*"charm" + 0.119*"superb" + -0.117*"per" + -0.115*"problem" + 0.109*"overall" + -0.106*"guest" + -0.102*"tiny" + 0.097*"issue" + 0.097*"concierge" + 0.097*"alex" + -0.094*"tour" + -0.092*"surprise" + -0.091*"many" + 0.091*"budget" + 0.089*"friend" + 0.087*"park" + -0.085*"special" + 0.085*"house"
+############# TOPIC 254 #############
+0.161*"outstanding" + 0.146*"definately" + -0.137*"everyone" + -0.131*"cheap" + 0.127*"standard" + 0.123*"carter" + 0.117*"pretty" + 0.112*"florida" + 0.110*"hyatt" + 0.107*"amsterdam"
 
-####################### TOPIC 255 #######################
--0.137*"stayed" + -0.125*"priceline" + 0.122*"vacation" + 0.121*"next" + -0.115*"else" + 0.112*"madrid" + 0.112*"carter" + 0.109*"pearl" + 0.108*"ask" + -0.106*"balcony" + -0.103*"edgewater" + -0.099*"travel" + -0.099*"issue" + -0.095*"fun" + 0.094*"charm" + -0.094*"like" + -0.093*"somewhere" + -0.091*"absolutely" + -0.091*"shopping" + 0.090*"offer"
+############# TOPIC 255 #############
+0.174*"florida" + -0.150*"expect" + 0.142*"give" + 0.139*"ocean" + 0.132*"surprise" + -0.119*"palace" + -0.112*"deal" + -0.108*"mall" + 0.107*"carter" + 0.107*"bug"
 
-####################### TOPIC 256 #######################
-0.137*"taxi" + 0.120*"site" + 0.120*"arrive" + 0.112*"pay" + -0.106*"main" + 0.098*"give" + 0.095*"condo" + 0.095*"travel" + -0.095*"boston" + 0.093*"come" + 0.090*"every" + -0.090*"centre" + 0.090*"stayed" + 0.089*"le" + -0.086*"provide" + 0.083*"subway" + 0.083*"bad" + -0.082*"palace" + -0.081*"pretty" + 0.081*"daughter"
+############# TOPIC 256 #############
+0.172*"carter" + -0.158*"cottage" + 0.138*"site" + 0.134*"tower" + 0.114*"per" + -0.111*"way" + 0.111*"window" + -0.097*"cheap" + 0.097*"bardessono" + -0.096*"relax"
 
-####################### TOPIC 257 #######################
-0.155*"branson" + 0.145*"edgewater" + -0.142*"ocean" + -0.120*"hyatt" + 0.120*"tour" + 0.119*"charm" + 0.115*"phoenix" + 0.111*"give" + -0.110*"short" + -0.109*"issue" + -0.105*"seattle" + 0.105*"part" + -0.104*"child" + 0.102*"say" + 0.099*"take" + -0.097*"reception" + 0.095*"group" + 0.092*"building" + 0.090*"away" + -0.090*"alex"
+############# TOPIC 257 #############
+-0.202*"fine" + 0.157*"farmer" + 0.139*"think" + -0.138*"vega" + 0.131*"bellagio" + 0.110*"way" + -0.108*"shopping" + -0.106*"absolutely" + 0.104*"extremely" + -0.099*"convention"
 
-####################### TOPIC 258 #######################
-0.160*"want" + -0.131*"superb" + -0.130*"hilton" + 0.124*"ny" + -0.123*"leave" + -0.120*"ocean" + 0.108*"say" + 0.105*"alex" + 0.102*"find" + 0.099*"able" + -0.094*"barcelona" + -0.094*"courteous" + -0.093*"stayed" + -0.091*"noisy" + -0.090*"villa" + -0.090*"kind" + -0.090*"hour" + -0.088*"far" + 0.086*"triton" + 0.084*"site"
+############# TOPIC 258 #############
+-0.159*"child" + -0.136*"monteleone" + 0.127*"elevator" + -0.123*"thing" + -0.122*"bellagio" + 0.119*"edgewater" + 0.113*"vdara" + -0.112*"option" + 0.109*"lax" + -0.106*"aria"
 
-####################### TOPIC 259 #######################
--0.138*"amsterdam" + 0.128*"per" + -0.124*"hilton" + 0.118*"amazing" + -0.116*"courteous" + -0.113*"edgewater" + -0.107*"madrid" + 0.106*"window" + -0.096*"one" + 0.095*"spot" + 0.093*"keep" + 0.091*"lax" + 0.091*"pm" + -0.091*"thing" + 0.088*"extra" + 0.087*"pleasant" + 0.085*"barcelona" + 0.085*"seattle" + -0.084*"point" + 0.084*"short"
+############# TOPIC 259 #############
+-0.168*"de" + 0.149*"decent" + -0.140*"overall" + 0.129*"vega" + -0.120*"however" + -0.107*"orchard" + -0.107*"bellagio" + -0.105*"english" + -0.099*"outstanding" + -0.097*"centre"
 
-####################### TOPIC 260 #######################
-0.133*"point" + 0.133*"barcelona" + 0.118*"husband" + -0.108*"pleasant" + 0.108*"charm" + -0.104*"group" + -0.103*"lax" + -0.101*"complimentary" + -0.099*"apartment" + -0.095*"deal" + 0.093*"one" + -0.092*"thing" + 0.092*"b" + -0.091*"especially" + 0.091*"go" + 0.091*"alex" + -0.090*"garden" + -0.087*"seem" + 0.083*"way" + 0.083*"pay"
+############# TOPIC 260 #############
+0.140*"condo" + 0.127*"friend" + -0.119*"definately" + -0.118*"think" + 0.115*"stayed" + 0.115*"decent" + -0.112*"cottage" + -0.112*"husband" + 0.110*"welcome" + 0.110*"relax"
 
-####################### TOPIC 261 #######################
-0.151*"child" + -0.138*"far" + 0.136*"everyone" + 0.133*"pearl" + -0.118*"available" + 0.113*"centre" + -0.106*"buffet" + 0.103*"building" + -0.102*"hilton" + -0.099*"daughter" + 0.095*"wife" + 0.092*"space" + -0.091*"however" + 0.089*"noisy" + 0.089*"another" + -0.085*"else" + -0.085*"midtown" + 0.083*"elevator" + -0.082*"definately" + -0.081*"embassy"
+############# TOPIC 261 #############
+-0.187*"standard" + 0.145*"palace" + -0.145*"complaint" + 0.141*"give" + -0.141*"welcome" + 0.133*"casino" + 0.128*"thing" + -0.113*"absolutely" + 0.109*"monteleone" + -0.106*"provide"
 
-####################### TOPIC 262 #######################
--0.151*"kong" + -0.150*"hong" + -0.125*"quality" + -0.119*"madrid" + -0.116*"wall" + 0.112*"amsterdam" + 0.102*"shopping" + 0.098*"shop" + 0.098*"find" + -0.093*"sheraton" + 0.092*"orlando" + 0.092*"loud" + 0.090*"towel" + 0.088*"three" + -0.088*"carter" + 0.087*"cheap" + -0.086*"able" + 0.085*"balcony" + 0.083*"nicely" + -0.083*"happy"
+############# TOPIC 262 #############
+0.132*"midtown" + 0.130*"call" + 0.113*"welcome" + -0.109*"definately" + 0.106*"short" + 0.100*"fun" + 0.100*"wait" + 0.098*"boston" + -0.098*"playa" + -0.098*"drive"
 
-####################### TOPIC 263 #######################
--0.180*"amazing" + -0.120*"guest" + 0.115*"problem" + -0.113*"surprise" + 0.113*"courteous" + -0.107*"provide" + 0.106*"offer" + -0.103*"pearl" + 0.101*"include" + -0.100*"centre" + -0.098*"able" + -0.097*"welcome" + -0.093*"kong" + -0.093*"hong" + -0.092*"absolutely" + 0.092*"try" + 0.086*"also" + -0.085*"phoenix" + 0.084*"come" + 0.083*"location"
+############# TOPIC 263 #############
+0.168*"customer" + -0.154*"stayed" + -0.146*"vancouver" + 0.132*"cottage" + -0.128*"elevator" + 0.121*"fun" + 0.119*"opus" + 0.116*"thing" + 0.114*"lobby" + 0.113*"three"
 
-####################### TOPIC 264 #######################
-0.147*"taxi" + -0.140*"double" + 0.135*"wall" + 0.120*"site" + -0.107*"call" + -0.104*"etc" + 0.101*"welcome" + 0.100*"kong" + 0.100*"hong" + 0.096*"thin" + -0.089*"week" + -0.089*"wifi" + -0.088*"madrid" + -0.087*"poor" + 0.086*"meeting" + -0.086*"door" + 0.086*"thing" + -0.085*"world" + -0.085*"location" + -0.085*"stayed"
+############# TOPIC 264 #############
+-0.138*"embassy" + 0.131*"carter" + 0.128*"however" + 0.122*"guest" + -0.117*"reception" + -0.113*"else" + 0.112*"dirty" + 0.110*"marriott" + -0.108*"renovate" + -0.107*"stayed"
 
-####################### TOPIC 265 #######################
--0.137*"way" + -0.127*"ocean" + -0.123*"absolutely" + 0.120*"amazing" + -0.114*"decorate" + -0.114*"complaint" + 0.113*"never" + 0.106*"tower" + 0.103*"child" + -0.102*"spot" + -0.102*"triton" + 0.100*"extra" + -0.100*"dont" + 0.099*"every" + 0.095*"happy" + 0.092*"wife" + -0.090*"bardessono" + -0.090*"side" + 0.087*"holiday" + -0.083*"plus"
+############# TOPIC 265 #############
+-0.208*"superb" + 0.154*"club" + -0.140*"de" + 0.135*"friend" + -0.133*"milford" + 0.127*"palace" + 0.124*"warm" + -0.122*"farmer" + 0.112*"vancouver" + -0.111*"edgewater"
 
-####################### TOPIC 266 #######################
-0.126*"amazing" + -0.126*"rude" + -0.121*"hyatt" + 0.110*"club" + 0.108*"smell" + -0.104*"phoenix" + 0.103*"upgrade" + -0.100*"ground" + 0.099*"fee" + 0.097*"welcome" + -0.094*"concierge" + -0.094*"daughter" + -0.093*"definately" + 0.092*"pretty" + 0.092*"wed" + 0.089*"even" + -0.089*"friend" + 0.089*"quality" + -0.086*"alex" + 0.084*"call"
+############# TOPIC 266 #############
+-0.149*"club" + 0.141*"carter" + 0.125*"fun" + 0.122*"westin" + 0.115*"outstanding" + -0.113*"surprise" + -0.111*"side" + -0.106*"doubletree" + -0.105*"smell" + -0.105*"lax"
 
-####################### TOPIC 267 #######################
--0.127*"side" + 0.119*"leave" + -0.115*"upgrade" + 0.112*"pearl" + 0.100*"dont" + -0.100*"outside" + -0.100*"charm" + 0.099*"light" + -0.094*"bug" + -0.094*"around" + -0.093*"extra" + -0.093*"casino" + 0.092*"hilton" + 0.091*"pm" + -0.090*"palace" + 0.088*"doubletree" + 0.086*"far" + -0.085*"thing" + 0.085*"double" + 0.083*"condo"
+############# TOPIC 267 #############
+-0.144*"edgewater" + -0.128*"orchard" + 0.127*"nyc" + -0.126*"offer" + -0.114*"waterfront" + -0.111*"vancouver" + -0.111*"side" + 0.106*"concierge" + -0.103*"outstanding" + 0.101*"centre"
 
-####################### TOPIC 268 #######################
-0.131*"dirty" + 0.125*"cheap" + -0.121*"especially" + 0.120*"arrive" + 0.116*"madrid" + -0.109*"etc" + 0.103*"offer" + 0.103*"ocean" + 0.101*"think" + 0.095*"helpful" + -0.094*"decor" + 0.093*"tour" + -0.092*"centre" + -0.092*"carter" + -0.091*"extremely" + 0.088*"maui" + -0.085*"royal" + -0.083*"money" + -0.082*"couple" + -0.080*"site"
+############# TOPIC 268 #############
+-0.152*"tiny" + -0.131*"bellagio" + 0.126*"vdara" + -0.125*"carter" + 0.125*"hyatt" + -0.109*"guest" + 0.107*"dirty" + 0.104*"vancouver" + 0.097*"boston" + -0.096*"ocean"
 
-####################### TOPIC 269 #######################
--0.144*"madrid" + 0.137*"overall" + -0.128*"pretty" + 0.111*"gym" + -0.109*"pay" + 0.107*"book" + -0.104*"give" + 0.102*"worth" + -0.102*"end" + 0.102*"vacation" + -0.101*"part" + 0.100*"doubletree" + -0.094*"casino" + -0.092*"decorate" + -0.092*"early" + 0.091*"since" + 0.088*"professional" + 0.087*"although" + -0.087*"site" + -0.087*"never"
+############# TOPIC 269 #############
+-0.316*"carter" + 0.168*"florida" + 0.123*"palace" + -0.119*"mall" + -0.116*"expectation" + 0.101*"far" + 0.100*"light" + 0.100*"happy" + 0.099*"expect" + 0.095*"shop"
 
-####################### TOPIC 270 #######################
--0.136*"light" + 0.121*"customer" + 0.117*"extra" + 0.112*"spot" + -0.110*"meeting" + -0.104*"even" + 0.103*"sight" + 0.100*"everyone" + 0.099*"smell" + -0.097*"side" + -0.095*"branson" + -0.094*"short" + -0.092*"think" + 0.091*"wifi" + -0.086*"anyone" + -0.086*"per" + 0.085*"tower" + -0.085*"site" + 0.085*"alex" + 0.085*"want"
+############# TOPIC 270 #############
+-0.172*"florida" + -0.131*"disney" + 0.131*"sea" + -0.123*"travel" + 0.118*"week" + 0.115*"leave" + 0.113*"world" + -0.112*"waikiki" + -0.107*"quality" + -0.106*"side"
 
-####################### TOPIC 271 #######################
--0.136*"three" + -0.125*"ask" + 0.118*"per" + 0.114*"one" + -0.113*"worldquest" + -0.110*"many" + -0.107*"amazing" + 0.102*"person" + -0.098*"luxury" + 0.097*"world" + -0.095*"end" + -0.093*"triton" + -0.091*"part" + -0.089*"b" + 0.089*"quest" + 0.087*"bath" + -0.087*"complaint" + -0.087*"week" + 0.085*"alex" + 0.084*"provide"
+############# TOPIC 271 #############
+0.219*"midtown" + 0.186*"boston" + 0.160*"bellagio" + -0.146*"vancouver" + 0.139*"wife" + 0.134*"feel" + 0.132*"stayed" + 0.111*"huge" + 0.108*"florida" + 0.104*"opus"
 
-####################### TOPIC 272 #######################
-0.155*"pearl" + 0.147*"get" + 0.129*"montmartre" + -0.120*"superb" + 0.112*"standard" + -0.111*"take" + -0.108*"site" + -0.107*"dont" + -0.096*"reception" + 0.095*"moulin" + -0.094*"give" + -0.094*"carter" + 0.093*"rouge" + -0.091*"two" + -0.088*"seem" + 0.087*"side" + 0.085*"sheraton" + 0.083*"condo" + -0.078*"bathroom" + -0.077*"cab"
+############# TOPIC 272 #############
+0.153*"cottage" + 0.136*"provide" + -0.121*"budget" + 0.118*"embassy" + -0.113*"outside" + 0.109*"charm" + -0.102*"de" + -0.098*"superb" + -0.098*"enough" + -0.095*"tell"
 
-####################### TOPIC 273 #######################
--0.187*"stayed" + -0.143*"three" + 0.128*"pay" + 0.128*"cheap" + 0.118*"enough" + 0.111*"villa" + -0.110*"ocean" + -0.107*"get" + 0.099*"hyatt" + 0.099*"want" + 0.099*"ny" + -0.097*"end" + -0.094*"cost" + -0.094*"amsterdam" + -0.094*"big" + 0.092*"huge" + -0.090*"welcome" + -0.088*"reasonable" + 0.087*"offer" + 0.086*"part"
+############# TOPIC 273 #############
+-0.129*"honeymoon" + 0.124*"noisy" + 0.123*"palace" + 0.121*"everyone" + 0.117*"edgewater" + 0.114*"de" + -0.111*"thing" + 0.110*"budget" + 0.109*"ocean" + -0.109*"club"
 
-####################### TOPIC 274 #######################
-0.205*"hilton" + 0.137*"fun" + 0.126*"tour" + 0.117*"dirty" + 0.112*"garden" + 0.109*"meeting" + 0.104*"phoenix" + 0.100*"condo" + 0.098*"site" + 0.096*"though" + 0.095*"budget" + 0.092*"bardessono" + -0.090*"change" + -0.087*"edgewater" + -0.086*"triton" + -0.086*"pm" + 0.085*"give" + -0.082*"wait" + -0.080*"still" + -0.077*"eat"
+############# TOPIC 274 #############
+0.222*"boston" + 0.208*"midtown" + 0.128*"welcome" + 0.118*"golf" + -0.118*"maria" + -0.116*"santa" + 0.114*"bug" + -0.108*"nyc" + 0.108*"noisy" + 0.100*"embassy"
 
-####################### TOPIC 275 #######################
--0.119*"ny" + -0.115*"duval" + -0.108*"charge" + 0.105*"pearl" + -0.104*"shower" + -0.103*"fine" + -0.102*"hilton" + 0.097*"daughter" + 0.096*"enough" + 0.093*"amenity" + -0.093*"take" + -0.093*"amazing" + 0.089*"disney" + 0.087*"madrid" + 0.087*"hot" + -0.086*"montmartre" + -0.085*"wife" + 0.084*"part" + -0.084*"cab" + -0.082*"standard"
+############# TOPIC 275 #############
+-0.221*"edgewater" + -0.146*"milford" + -0.143*"nyc" + -0.139*"cottage" + -0.128*"centre" + -0.121*"plaza" + 0.104*"three" + -0.098*"think" + -0.096*"class" + -0.095*"didnt"
 
-####################### TOPIC 276 #######################
-0.165*"phoenix" + -0.122*"offer" + 0.105*"provide" + -0.104*"noisy" + -0.100*"spend" + -0.100*"daughter" + 0.098*"building" + -0.092*"centre" + 0.091*"nearby" + 0.091*"ny" + 0.088*"plenty" + -0.086*"side" + -0.086*"plus" + -0.086*"one" + 0.085*"standard" + -0.084*"day" + 0.084*"barcelona" + -0.082*"london" + -0.082*"restaurant" + -0.082*"wait"
+############# TOPIC 276 #############
+0.146*"lax" + -0.135*"bug" + -0.132*"edgewater" + 0.127*"pretty" + 0.124*"carter" + -0.122*"four" + 0.121*"orchard" + -0.118*"palace" + 0.113*"wall" + 0.106*"available"
 
-####################### TOPIC 277 #######################
--0.157*"noisy" + -0.118*"pearl" + -0.112*"ever" + -0.109*"want" + -0.108*"pay" + 0.105*"triton" + -0.104*"definately" + 0.101*"carter" + 0.097*"also" + 0.093*"long" + 0.092*"worth" + 0.092*"friend" + -0.087*"ny" + 0.087*"orlando" + 0.085*"upgrade" + 0.084*"manager" + -0.081*"villa" + -0.080*"travel" + -0.079*"would" + -0.079*"available"
+############# TOPIC 277 #############
+-0.171*"carter" + -0.147*"dallas" + -0.132*"comfy" + -0.116*"condo" + -0.112*"tower" + -0.112*"else" + 0.108*"monteleone" + 0.104*"alex" + -0.104*"huge" + 0.101*"meeting"
 
-####################### TOPIC 278 #######################
--0.191*"cheap" + -0.123*"didnt" + -0.120*"child" + -0.113*"expectation" + -0.106*"side" + 0.104*"although" + 0.098*"quality" + 0.095*"provide" + -0.093*"market" + 0.091*"leave" + 0.090*"house" + 0.088*"may" + -0.088*"waterfront" + -0.088*"overall" + -0.087*"dont" + -0.086*"like" + 0.084*"ritz" + -0.084*"wife" + 0.082*"valet" + 0.081*"fun"
+############# TOPIC 278 #############
+-0.144*"club" + 0.124*"huge" + -0.121*"ny" + 0.117*"locanda" + -0.117*"varenne" + 0.114*"window" + 0.113*"edgewater" + -0.108*"carter" + -0.108*"palace" + -0.108*"didnt"
 
-####################### TOPIC 279 #######################
--0.200*"shopping" + -0.154*"alex" + 0.137*"nearby" + -0.115*"friend" + -0.105*"size" + 0.102*"travel" + -0.097*"worldquest" + -0.097*"include" + -0.095*"let" + 0.094*"thing" + 0.093*"everyone" + -0.092*"b" + 0.090*"give" + -0.090*"floor" + 0.089*"golf" + -0.089*"spend" + 0.088*"standard" + 0.087*"deal" + -0.085*"feel" + 0.084*"want"
+############# TOPIC 279 #############
+0.215*"carter" + 0.143*"boston" + 0.113*"standard" + -0.103*"york" + 0.102*"midtown" + 0.101*"orleans" + -0.096*"peanut" + 0.095*"far" + -0.095*"spend" + -0.092*"butter"
 
-####################### TOPIC 280 #######################
--0.141*"cheap" + 0.129*"budget" + -0.126*"pearl" + -0.118*"barcelona" + -0.109*"sheraton" + -0.108*"especially" + 0.107*"way" + 0.104*"montmartre" + -0.098*"use" + 0.096*"doubletree" + -0.095*"worth" + -0.094*"group" + 0.091*"sure" + -0.090*"garden" + -0.088*"nicely" + -0.086*"short" + -0.084*"break" + 0.083*"take" + -0.080*"also" + -0.080*"ny"
+############# TOPIC 280 #############
+-0.178*"boston" + -0.171*"midtown" + -0.145*"edgewater" + 0.141*"however" + -0.123*"dallas" + -0.123*"embassy" + 0.116*"wine" + -0.104*"absolutely" + 0.104*"ocean" + -0.103*"drive"
 
-####################### TOPIC 281 #######################
-0.152*"alex" + 0.134*"couple" + -0.119*"cost" + 0.110*"spend" + -0.108*"definately" + -0.106*"shopping" + 0.100*"part" + 0.094*"standard" + 0.093*"valet" + 0.092*"wall" + -0.091*"courteous" + -0.090*"point" + 0.089*"ocean" + -0.088*"outstanding" + 0.087*"balcony" + -0.085*"call" + 0.084*"amsterdam" + 0.083*"wyndham" + 0.082*"say" + -0.082*"dont"
+############# TOPIC 281 #############
+-0.132*"waikiki" + -0.130*"circle" + 0.127*"florida" + -0.123*"everyone" + 0.120*"bug" + -0.117*"dirty" + -0.107*"customer" + 0.107*"plaza" + -0.106*"edgewater" + 0.105*"milford"
 
-####################### TOPIC 282 #######################
-0.181*"budget" + 0.148*"bath" + 0.143*"meeting" + 0.127*"cab" + -0.118*"guest" + -0.111*"ocean" + -0.110*"spa" + 0.108*"available" + -0.105*"leave" + -0.105*"taxi" + -0.102*"superb" + 0.094*"shop" + -0.091*"bathroom" + -0.090*"smell" + -0.089*"montmartre" + -0.088*"friend" + 0.082*"warm" + 0.082*"try" + -0.081*"charm" + 0.081*"although"
+############# TOPIC 282 #############
+0.144*"embassy" + 0.127*"vancouver" + 0.125*"bellagio" + -0.121*"ritz" + 0.114*"fine" + 0.114*"florida" + 0.113*"sea" + -0.110*"opus" + -0.108*"boston" + -0.099*"vdara"
 
-####################### TOPIC 283 #######################
-0.154*"think" + 0.131*"try" + 0.121*"pearl" + -0.119*"far" + 0.113*"noise" + 0.107*"casino" + -0.105*"superb" + 0.101*"louvre" + -0.100*"madrid" + -0.098*"since" + 0.097*"keep" + 0.095*"balcony" + 0.094*"stop" + -0.092*"vacation" + -0.091*"dirty" + 0.090*"many" + 0.088*"ever" + -0.087*"absolutely" + -0.086*"outside" + -0.083*"end"
+############# TOPIC 283 #############
+-0.145*"ny" + -0.141*"four" + 0.121*"travel" + 0.115*"friend" + -0.114*"locanda" + -0.114*"point" + 0.114*"eden" + 0.109*"concierge" + -0.106*"wall" + -0.104*"agostin"
 
-####################### TOPIC 284 #######################
--0.148*"bathroom" + -0.125*"priceline" + -0.121*"although" + 0.120*"smell" + 0.116*"casino" + -0.115*"cost" + 0.114*"light" + -0.109*"ocean" + -0.106*"phoenix" + -0.104*"madrid" + 0.101*"include" + -0.098*"doubletree" + -0.098*"noisy" + 0.094*"decent" + -0.093*"concierge" + -0.092*"westin" + 0.091*"vancouver" + 0.091*"provide" + -0.090*"pretty" + 0.089*"far"
+############# TOPIC 284 #############
+-0.177*"outside" + 0.125*"meeting" + -0.123*"carter" + -0.119*"palace" + -0.119*"york" + 0.119*"deal" + 0.109*"many" + -0.105*"quality" + -0.103*"monteleone" + -0.100*"rock"
 
-####################### TOPIC 285 #######################
--0.131*"standard" + -0.122*"deal" + -0.118*"horrible" + 0.115*"edgewater" + 0.110*"amazing" + -0.104*"couple" + -0.104*"extra" + 0.103*"thing" + 0.103*"triton" + -0.102*"fly" + -0.101*"light" + -0.096*"comfy" + 0.093*"alex" + -0.093*"say" + -0.089*"etc" + 0.089*"think" + 0.086*"provide" + 0.080*"adequate" + -0.079*"embassy" + 0.078*"arrival"
+############# TOPIC 285 #############
+0.202*"never" + 0.154*"carter" + 0.140*"edgewater" + -0.139*"noisy" + 0.118*"golf" + 0.113*"huge" + 0.108*"bellagio" + -0.104*"phoenix" + 0.103*"cheap" + -0.099*"tiny"
 
-####################### TOPIC 286 #######################
-0.120*"end" + -0.111*"deal" + -0.108*"drive" + 0.107*"give" + -0.101*"ritz" + -0.099*"wall" + -0.099*"huge" + 0.098*"still" + -0.098*"diocleziano" + 0.095*"shopping" + -0.092*"everyone" + 0.090*"bardessono" + 0.089*"euro" + -0.088*"short" + 0.086*"accommodation" + -0.086*"website" + 0.083*"felt" + -0.083*"tour" + -0.083*"plenty" + 0.083*"include"
+############# TOPIC 286 #############
+0.237*"stayed" + 0.171*"carter" + 0.144*"fun" + -0.119*"aria" + 0.111*"see" + -0.110*"huge" + -0.107*"relax" + -0.105*"absolutely" + 0.103*"vdara" + -0.100*"standard"
 
-####################### TOPIC 287 #######################
--0.129*"meeting" + 0.123*"st" + -0.113*"although" + -0.108*"smell" + -0.104*"ny" + 0.103*"phoenix" + -0.101*"hilton" + -0.100*"branson" + 0.099*"cost" + 0.097*"high" + -0.097*"pearl" + 0.092*"rude" + 0.092*"didnt" + -0.092*"everyone" + 0.092*"especially" + 0.090*"budget" + 0.090*"dont" + 0.090*"horrible" + -0.089*"priceline" + -0.085*"centre"
+############# TOPIC 287 #############
+0.188*"ny" + -0.152*"boston" + -0.137*"midtown" + -0.132*"carter" + 0.127*"outstanding" + -0.126*"concert" + -0.121*"florida" + -0.117*"think" + 0.094*"shopping" + -0.091*"extra"
 
-####################### TOPIC 288 #######################
--0.139*"else" + -0.131*"another" + -0.121*"noisy" + -0.116*"quality" + 0.111*"expect" + -0.110*"balcony" + 0.106*"varenne" + 0.104*"amsterdam" + 0.094*"nearby" + -0.091*"somewhere" + 0.091*"toilet" + 0.090*"honeymoon" + -0.087*"deal" + 0.082*"issue" + 0.082*"without" + -0.082*"golf" + -0.081*"group" + 0.081*"ground" + 0.077*"casino" + 0.076*"horrible"
+############# TOPIC 288 #############
+-0.246*"ny" + -0.126*"plaza" + 0.110*"concert" + -0.110*"milford" + 0.105*"sea" + -0.104*"couple" + -0.103*"light" + -0.102*"circle" + -0.099*"montmartre" + -0.097*"wifi"
 
-####################### TOPIC 289 #######################
-0.126*"superb" + -0.124*"amazing" + 0.117*"house" + -0.115*"offer" + 0.115*"budget" + 0.113*"light" + 0.108*"day" + -0.107*"nearby" + -0.107*"recently" + 0.103*"smell" + 0.098*"next" + 0.097*"although" + 0.090*"everyone" + 0.089*"happy" + 0.088*"montmartre" + -0.088*"deal" + -0.088*"connect" + -0.087*"dirty" + -0.086*"river" + 0.084*"plus"
+############# TOPIC 289 #############
+-0.234*"madrid" + 0.166*"ny" + -0.149*"triton" + 0.126*"adagio" + -0.119*"everyone" + 0.110*"concert" + 0.100*"london" + -0.099*"elevator" + -0.095*"pearl" + 0.095*"tram"
 
-####################### TOPIC 290 #######################
-0.151*"part" + -0.123*"reasonable" + 0.115*"charge" + -0.112*"montmartre" + -0.104*"overall" + 0.099*"though" + 0.097*"four" + 0.096*"westin" + -0.096*"think" + -0.091*"even" + 0.085*"available" + -0.085*"card" + -0.085*"thing" + 0.084*"courteous" + -0.083*"ny" + 0.079*"concierge" + 0.078*"hilton" + -0.078*"warm" + -0.078*"couple" + 0.077*"know"
+############# TOPIC 290 #############
+0.190*"bellagio" + 0.168*"phoenix" + -0.137*"vdara" + 0.105*"aria" + -0.104*"boston" + -0.100*"farmer" + -0.098*"biltmore" + 0.097*"offer" + 0.096*"condo" + 0.093*"doubletree"
 
-####################### TOPIC 291 #######################
-0.176*"alex" + 0.136*"still" + 0.121*"seem" + -0.111*"house" + 0.110*"see" + 0.101*"stayed" + -0.100*"reservation" + -0.100*"bermuda" + -0.094*"ritz" + -0.093*"terrible" + 0.092*"doubletree" + 0.086*"arrive" + -0.085*"birthday" + -0.085*"use" + -0.084*"point" + -0.083*"kind" + 0.083*"huge" + 0.083*"another" + 0.082*"shower" + -0.078*"complaint"
+############# TOPIC 291 #############
+0.143*"kahala" + 0.124*"four" + -0.120*"lax" + 0.116*"main" + 0.111*"madrid" + -0.107*"phoenix" + -0.100*"elevator" + 0.099*"plaza" + 0.098*"edgewater" + -0.094*"rude"
 
-####################### TOPIC 292 #######################
--0.141*"last" + 0.136*"spend" + -0.120*"amazing" + -0.118*"overall" + 0.118*"standard" + -0.111*"charm" + -0.109*"casino" + 0.102*"decorate" + -0.095*"want" + 0.090*"ground" + 0.089*"part" + 0.089*"elevator" + 0.084*"holiday" + -0.084*"phoenix" + -0.084*"provide" + 0.082*"ask" + 0.080*"hilton" + -0.080*"shopping" + -0.079*"use" + 0.077*"cafe"
+############# TOPIC 292 #############
+-0.156*"guest" + -0.147*"tower" + 0.140*"ask" + -0.134*"especially" + 0.129*"vega" + 0.118*"peanut" + 0.113*"butter" + 0.113*"carter" + -0.111*"orchard" + -0.108*"bellagio"
 
-####################### TOPIC 293 #######################
--0.166*"seem" + 0.131*"shopping" + 0.127*"wait" + 0.126*"give" + 0.101*"another" + -0.100*"although" + 0.097*"bernard" + -0.096*"know" + -0.096*"tell" + 0.096*"claude" + -0.089*"long" + 0.088*"sheet" + 0.086*"please" + -0.084*"child" + 0.083*"superb" + 0.082*"maui" + -0.082*"highly" + -0.081*"hot" + 0.080*"worth" + 0.079*"three"
+############# TOPIC 293 #############
+-0.149*"locanda" + 0.143*"peanut" + -0.137*"agostin" + -0.134*"sant" + 0.132*"butter" + -0.131*"etc" + 0.122*"jelly" + 0.122*"bathroom" + 0.113*"charm" + 0.108*"spa"
 
-####################### TOPIC 294 #######################
-0.156*"change" + 0.116*"arrival" + 0.113*"busy" + 0.101*"diocleziano" + -0.099*"pm" + 0.095*"tower" + 0.095*"feel" + 0.094*"upon" + 0.093*"neighborhood" + -0.093*"lot" + -0.092*"felt" + -0.088*"edgewater" + -0.087*"still" + 0.085*"terrible" + 0.085*"though" + 0.085*"reservation" + -0.084*"concierge" + -0.084*"metro" + -0.082*"tiny" + 0.080*"upgrade"
+############# TOPIC 294 #############
+-0.140*"charm" + -0.129*"dallas" + 0.129*"sea" + -0.126*"outside" + 0.125*"madrid" + 0.116*"bathroom" + -0.114*"surprise" + 0.110*"clean" + 0.108*"locanda" + 0.105*"courteous"
 
-####################### TOPIC 295 #######################
-0.174*"alex" + 0.162*"ritz" + -0.134*"worldquest" + 0.113*"safe" + -0.102*"never" + -0.102*"real" + 0.096*"club" + 0.094*"world" + 0.094*"light" + 0.093*"reservation" + -0.091*"especially" + 0.090*"neighborhood" + -0.087*"side" + -0.086*"strip" + 0.085*"quest" + 0.085*"leave" + -0.083*"barcelona" + 0.083*"eat" + -0.082*"outside" + 0.079*"thing"
+############# TOPIC 295 #############
+-0.187*"embassy" + 0.165*"concert" + -0.128*"kahala" + -0.117*"locanda" + 0.117*"happy" + -0.114*"wine" + 0.110*"pretty" + 0.110*"upgrade" + -0.105*"agostin" + -0.103*"sant"
 
-####################### TOPIC 296 #######################
-0.122*"maui" + 0.121*"travel" + 0.116*"seem" + -0.115*"st" + -0.110*"branson" + 0.107*"montmartre" + -0.103*"ideal" + 0.099*"condo" + 0.096*"palace" + 0.094*"b" + 0.093*"comfy" + -0.091*"ny" + -0.090*"reservation" + -0.089*"club" + 0.089*"terrible" + 0.081*"amazing" + 0.080*"lounge" + -0.080*"tip" + -0.078*"drive" + -0.078*"change"
+############# TOPIC 296 #############
+0.138*"villa" + 0.137*"concert" + -0.136*"sea" + -0.135*"fee" + -0.134*"alex" + 0.133*"ny" + -0.124*"kahala" + 0.112*"expectation" + 0.111*"madrid" + -0.110*"duval"
 
-####################### TOPIC 297 #######################
-0.129*"house" + -0.121*"last" + 0.117*"main" + -0.114*"enough" + -0.111*"phoenix" + -0.105*"know" + -0.096*"montmartre" + 0.096*"hilton" + 0.096*"money" + 0.095*"bermuda" + -0.095*"reasonable" + 0.094*"budget" + 0.093*"way" + 0.093*"wed" + 0.091*"overall" + -0.090*"try" + -0.089*"still" + 0.086*"hyatt" + -0.085*"upgrade" + -0.083*"club"
+############# TOPIC 297 #############
+-0.201*"alex" + -0.186*"shopping" + 0.128*"london" + 0.118*"side" + -0.106*"window" + 0.106*"villa" + -0.103*"grand" + -0.102*"boutique" + -0.100*"use" + 0.100*"bug"
 
-####################### TOPIC 298 #######################
--0.212*"westin" + 0.132*"triton" + 0.124*"spot" + -0.119*"gaslamp" + -0.098*"hyatt" + 0.095*"pm" + 0.095*"pillow" + -0.092*"eat" + 0.090*"balcony" + 0.089*"wait" + -0.088*"extra" + 0.086*"cab" + 0.085*"budget" + -0.084*"doubletree" + -0.084*"priceline" + 0.081*"concierge" + 0.081*"building" + -0.080*"decent" + 0.079*"think" + 0.078*"renovate"
+############# TOPIC 298 #############
+0.161*"club" + -0.130*"short" + 0.120*"circle" + 0.112*"world" + 0.107*"boutique" + -0.106*"offer" + -0.106*"ny" + 0.103*"concert" + -0.101*"manager" + 0.097*"customer"
 
-####################### TOPIC 299 #######################
--0.135*"extra" + 0.132*"ritz" + -0.128*"provide" + 0.128*"available" + 0.118*"amenity" + -0.113*"spend" + 0.105*"somewhere" + 0.101*"see" + 0.101*"else" + 0.098*"couple" + -0.097*"enjoyed" + -0.093*"maui" + -0.091*"phoenix" + -0.091*"pm" + -0.090*"tell" + 0.088*"wifi" + 0.088*"efficient" + 0.088*"access" + -0.084*"week" + -0.083*"able"
+############# TOPIC 299 #############
+-0.151*"ny" + 0.147*"concert" + -0.120*"kahala" + -0.112*"especially" + 0.107*"wife" + -0.107*"manager" + 0.102*"everyone" + 0.101*"locanda" + 0.099*"definately" + 0.097*"hotel"
+
+
+
+****************** KEY WORDS ******************
+1-th keyword: <cottage,21>
+2-th keyword: <roosevelt,20>
+3-th keyword: <monteleone,20>
+4-th keyword: <ok,19>
+5-th keyword: <always,18>
+6-th keyword: <carter,18>
+7-th keyword: <miami,18>
+8-th keyword: <super,18>
+9-th keyword: <biltmore,17>
+10-th keyword: <little,17>
+11-th keyword: <choice,16>
+12-th keyword: <large,16>
+13-th keyword: <awesome,16>
+14-th keyword: <nyc,16>
+15-th keyword: <lax,16>
+16-th keyword: <expect,16>
+17-th keyword: <really,16>
+18-th keyword: <fabulous,16>
+19-th keyword: <palace,16>
+20-th keyword: <adagio,16>
+21-th keyword: <property,16>
+22-th keyword: <nice,16>
+23-th keyword: <enjoy,15>
+24-th keyword: <visit,15>
+25-th keyword: <excellent,15>
+26-th keyword: <vancouver,15>
+27-th keyword: <motel,15>
+28-th keyword: <place,15>
+29-th keyword: <wonderful,15>
+30-th keyword: <outstanding,15>
+31-th keyword: <convenient,15>
+32-th keyword: <vdara,15>
+33-th keyword: <quiet,15>
+34-th keyword: <business,15>
+35-th keyword: <love,14>
+36-th keyword: <family,14>
+37-th keyword: <beautiful,14>
+38-th keyword: <beach,14>
+39-th keyword: <floridays,14>
+40-th keyword: <quite,14>
+41-th keyword: <pleasant,14>
+42-th keyword: <florida,14>
+43-th keyword: <city,14>
+44-th keyword: <service,14>
+45-th keyword: <spacious,14>
+46-th keyword: <extremely,14>
+47-th keyword: <average,14>
+48-th keyword: <fine,14>
+49-th keyword: <find,14>
+50-th keyword: <resort,14>
+51-th keyword: <decent,14>
+52-th keyword: <basic,14>
+53-th keyword: <value,14>
+54-th keyword: <near,14>
+55-th keyword: <lot,14>
+56-th keyword: <weekend,14>
+57-th keyword: <apartment,13>
+58-th keyword: <small,13>
+59-th keyword: <downtown,13>
+60-th keyword: <return,13>
+61-th keyword: <friend,13>
+62-th keyword: <modern,13>
+63-th keyword: <price,13>
+64-th keyword: <pretty,13>
+65-th keyword: <conference,13>
+66-th keyword: <edgewater,13>
+67-th keyword: <central,13>
+68-th keyword: <facility,13>
+69-th keyword: <area,13>
+70-th keyword: <bus,13>
+71-th keyword: <balcony,13>
+72-th keyword: <pool,13>
+73-th keyword: <amaze,12>
+74-th keyword: <minute,12>
+75-th keyword: <experience,12>
+76-th keyword: <relax,12>
+77-th keyword: <town,12>
+78-th keyword: <want,12>
+79-th keyword: <good,12>
+80-th keyword: <park,12>
+81-th keyword: <outside,12>
+82-th keyword: <best,12>
+83-th keyword: <enough,12>
+84-th keyword: <expensive,12>
+85-th keyword: <fun,12>
+86-th keyword: <lobby,12>
+87-th keyword: <rome,12>
+88-th keyword: <location,12>
+89-th keyword: <big,12>
+90-th keyword: <orlando,12>
+91-th keyword: <opus,12>
+92-th keyword: <bug,12>
+93-th keyword: <problem,12>
+94-th keyword: <star,12>
+95-th keyword: <paris,11>
+96-th keyword: <suite,11>
+97-th keyword: <rate,11>
+98-th keyword: <cruise,11>
+99-th keyword: <top,11>
+100-th keyword: <comfortable,11>

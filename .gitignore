@@ -21,3 +21,5 @@ tripadvisor/summary.json
 *.lda
 
 *.state
+
+*.swp
