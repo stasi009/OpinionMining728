@@ -11,3 +11,13 @@ tripadvisor/summary.json
 *.index
 
 *.dict
+
+*.lsi
+
+*.projection
+
+*.npy
+
+*.lda
+
+*.state

@@ -1,0 +1,300 @@
+
+####################### TOPIC 0 #######################
+0.045*outstanding + 0.036*truly + 0.031*staff + 0.024*incredible + 0.021*din + 0.020*immaculate + 0.017*make + 0.017*stay + 0.016*team + 0.016*hotel
+
+####################### TOPIC 1 #######################
+0.163*beach + 0.034*ocean + 0.024*pool + 0.015*go + 0.014*swim + 0.011*snorkel + 0.011*view + 0.011*room + 0.011*day + 0.011*waikiki
+
+####################### TOPIC 2 #######################
+0.125*property + 0.048*inn + 0.047*club + 0.041*holiday + 0.039*marriott + 0.033*wyndham + 0.016*room + 0.009*springhill + 0.009*appetizer + 0.009*v
+
+####################### TOPIC 3 #######################
+0.042*taxi + 0.030*hotel + 0.018*driver + 0.018*u + 0.017*recommended + 0.014*november + 0.014*arrange + 0.014*helpfull + 0.013*hawaii + 0.013*uk
+
+####################### TOPIC 4 #######################
+0.053*location + 0.047*hotel + 0.029*stay + 0.029*distance + 0.028*walk + 0.027*nice + 0.026*worth + 0.025*great + 0.021*within + 0.020*room
+
+####################### TOPIC 5 #######################
+0.051*room + 0.024*hotel + 0.017*stay + 0.016*carpet + 0.013*dirty + 0.013*bed + 0.012*place + 0.012*bad + 0.011*sheet + 0.009*worn
+
+####################### TOPIC 6 #######################
+0.031*apart + 0.031*break + 0.030*alternative + 0.025*draw + 0.023*point + 0.023*chain + 0.022*fortunately + 0.018*therefore + 0.017*valuable + 0.015*picture
+
+####################### TOPIC 7 #######################
+0.023*reservation + 0.020*go + 0.017*pool + 0.015*make + 0.015*would + 0.013*room + 0.012*day + 0.012*excursion + 0.012*get + 0.011*hotel
+
+####################### TOPIC 8 #######################
+0.050*london + 0.023*hotel + 0.015*meet + 0.015*tourist + 0.014*luis + 0.014*tube + 0.014*cater + 0.012*room + 0.012*would + 0.010*language
+
+####################### TOPIC 9 #######################
+0.045*room + 0.026*great + 0.021*stay + 0.021*enjoy + 0.020*staff + 0.019*friendly + 0.018*hotel + 0.016*comfortable + 0.015*shopping + 0.015*nice
+
+####################### TOPIC 10 #######################
+0.035*room + 0.018*would + 0.016*reception + 0.012*book + 0.012*one + 0.011*hotel + 0.009*get + 0.009*stay + 0.009*go + 0.009*lift
+
+####################### TOPIC 11 #######################
+0.029*condo + 0.018*room + 0.017*bagel + 0.016*coffee + 0.015*stay + 0.015*muffin + 0.013*hotel + 0.012*breakfast + 0.011*club + 0.010*internet
+
+####################### TOPIC 12 #######################
+0.045*bedroom + 0.037*pool + 0.029*suite + 0.029*area + 0.024*kitchen + 0.020*large + 0.019*two + 0.017*separate + 0.015*room + 0.015*stay
+
+####################### TOPIC 13 #######################
+0.048*lazy + 0.023*funky + 0.020*art + 0.015*transit + 0.015*peace + 0.011*sage + 0.010*though + 0.009*wallet + 0.009*hotel + 0.009*hook
+
+####################### TOPIC 14 #######################
+0.114*service + 0.032*hotel + 0.022*customer + 0.022*make + 0.020*top + 0.020*stay + 0.018*guest + 0.016*class + 0.016*experience + 0.013*desk
+
+####################### TOPIC 15 #######################
+0.036*hospital + 0.035*terrace + 0.025*continue + 0.022*year + 0.019*absolute + 0.016*ignore + 0.015*eve + 0.015*spending + 0.014*orient + 0.013*black
+
+####################### TOPIC 16 #######################
+0.035*room + 0.032*check + 0.032*u + 0.024*get + 0.017*arrive + 0.016*would + 0.016*go + 0.014*hotel + 0.014*back + 0.014*one
+
+####################### TOPIC 17 #######################
+0.069*desert + 0.045*canada + 0.034*ridge + 0.021*dry + 0.016*white + 0.015*plate + 0.014*restaurant + 0.010*cold + 0.010*like + 0.010*impressive
+
+####################### TOPIC 18 #######################
+0.033*friday + 0.032*saturday + 0.029*throw + 0.029*control + 0.023*stone + 0.023*remote + 0.018*entry + 0.016*studio + 0.015*side + 0.015*monday
+
+####################### TOPIC 19 #######################
+0.092*always + 0.051*staff + 0.045*smile + 0.034*personal + 0.028*hotel + 0.025*business + 0.023*appreciate + 0.020*sidney + 0.020*time + 0.019*friendly
+
+####################### TOPIC 20 #######################
+0.041*hotel + 0.019*room + 0.017*book + 0.017*card + 0.016*charge + 0.016*would + 0.014*call + 0.013*stay + 0.012*never + 0.011*credit
+
+####################### TOPIC 21 #######################
+0.084*great + 0.071*hotel + 0.053*staff + 0.051*location + 0.032*stay + 0.029*friendly + 0.029*helpful + 0.020*room + 0.016*clean + 0.015*would
+
+####################### TOPIC 22 #######################
+0.050*convention + 0.036*price + 0.030*room + 0.023*priceline + 0.022*rate + 0.021*beat + 0.016*neat + 0.015*bike + 0.015*fair + 0.014*average
+
+####################### TOPIC 23 #######################
+0.037*stay + 0.031*arizona + 0.027*hotel + 0.023*good + 0.020*would + 0.018*expectation + 0.017*really + 0.016*price + 0.013*room + 0.013*place
+
+####################### TOPIC 24 #######################
+0.113*vancouver + 0.023*room + 0.020*golf + 0.016*maria + 0.016*west + 0.015*peaceful + 0.014*tasty + 0.011*prompt + 0.011*u + 0.010*pool
+
+####################### TOPIC 25 #######################
+0.043*hotel + 0.033*room + 0.032*square + 0.030*location + 0.027*block + 0.021*walk + 0.020*stay + 0.016*time + 0.014*clean + 0.014*central
+
+####################### TOPIC 26 #######################
+0.048*hotel + 0.028*airport + 0.013*italy + 0.013*get + 0.012*room + 0.012*take + 0.011*book + 0.009*transfer + 0.009*stay + 0.008*would
+
+####################### TOPIC 27 #######################
+0.116*park + 0.048*car + 0.045*fee + 0.044*valet + 0.030*parking + 0.022*construction + 0.018*get + 0.017*hotel + 0.017*pay + 0.013*girl
+
+####################### TOPIC 28 #######################
+0.058*hotel + 0.057*star + 0.025*venice + 0.020*room + 0.018*would + 0.017*rating + 0.017*santa + 0.013*night + 0.010*get + 0.010*day
+
+####################### TOPIC 29 #######################
+0.078*hotel + 0.071*great + 0.070*new + 0.056*stay + 0.031*york + 0.030*location + 0.022*value + 0.018*clean + 0.016*best + 0.015*room
+
+####################### TOPIC 30 #######################
+0.076*lax + 0.020*pizza + 0.016*terminal + 0.015*bustle + 0.013*gift + 0.012*day + 0.011*gas + 0.011*steakhouse + 0.011*get + 0.011*tend
+
+####################### TOPIC 31 #######################
+0.086*chicago + 0.034*albert + 0.022*plentiful + 0.021*rouge + 0.017*tray + 0.016*room + 0.014*comfy + 0.014*hotel + 0.012*ambulance + 0.012*adjoin
+
+####################### TOPIC 32 #######################
+0.027*room + 0.025*get + 0.018*night + 0.013*hotel + 0.012*wing + 0.012*go + 0.012*stay + 0.010*even + 0.009*one + 0.009*valley
+
+####################### TOPIC 33 #######################
+0.033*room + 0.032*hotel + 0.031*conference + 0.022*free + 0.018*well + 0.016*internet + 0.014*center + 0.014*fitness + 0.014*also + 0.013*business
+
+####################### TOPIC 34 #######################
+0.033*every + 0.024*security + 0.016*year + 0.014*select + 0.013*regency + 0.013*pocket + 0.012*guard + 0.012*winery + 0.011*waikiki + 0.011*count
+
+####################### TOPIC 35 #######################
+0.060*hotel + 0.030*bus + 0.026*walk + 0.023*station + 0.021*get + 0.020*metro + 0.017*take + 0.017*stop + 0.017*train + 0.016*city
+
+####################### TOPIC 36 #######################
+0.071*dog + 0.028*reward + 0.026*pet + 0.026*sky + 0.017*regret + 0.017*news + 0.015*room + 0.013*platinum + 0.012*hotel + 0.012*seek
+
+####################### TOPIC 37 #######################
+0.045*hotel + 0.030*biltmore + 0.022*airport + 0.020*triton + 0.019*room + 0.017*stay + 0.014*free + 0.013*san + 0.011*nice + 0.011*downtown
+
+####################### TOPIC 38 #######################
+0.039*coffee + 0.029*room + 0.025*hotel + 0.024*tea + 0.014*small + 0.012*breakfast + 0.011*would + 0.010*bathroom + 0.010*shower + 0.010*hot
+
+####################### TOPIC 39 #######################
+0.053*villa + 0.035*incredibly + 0.032*kimpton + 0.024*hotel + 0.022*destination + 0.022*stay + 0.016*ideally + 0.014*wedding + 0.014*usual + 0.012*well
+
+####################### TOPIC 40 #######################
+0.041*disney + 0.025*room + 0.015*x + 0.014*dock + 0.011*hotel + 0.010*napa + 0.010*stay + 0.009*get + 0.009*shower + 0.008*ipod
+
+####################### TOPIC 41 #######################
+0.032*empire + 0.021*room + 0.021*agent + 0.020*building + 0.017*daily + 0.015*various + 0.015*floor + 0.015*state + 0.013*ground + 0.011*th
+
+####################### TOPIC 42 #######################
+0.031*charge + 0.026*say + 0.026*u + 0.021*manager + 0.018*day + 0.016*get + 0.016*go + 0.014*want + 0.013*pay + 0.012*per
+
+####################### TOPIC 43 #######################
+0.064*fabulous + 0.047*birthday + 0.041*thanks + 0.033*future + 0.030*hope + 0.027*staff + 0.025*hotel + 0.023*friend + 0.020*absolutely + 0.016*enjoyable
+
+####################### TOPIC 44 #######################
+0.041*apartment + 0.029*stylish + 0.016*tropical + 0.015*fab + 0.013*personnel + 0.013*staff + 0.012*honestly + 0.011*hide + 0.011*personality + 0.011*room
+
+####################### TOPIC 45 #######################
+0.048*room + 0.020*bathroom + 0.019*shower + 0.017*floor + 0.015*look + 0.015*smell + 0.014*hotel + 0.013*door + 0.010*get + 0.009*one
+
+####################### TOPIC 46 #######################
+0.071*min + 0.041*del + 0.033*playa + 0.019*plaza + 0.018*hotel + 0.017*walk + 0.017*mins + 0.016*bug + 0.015*bed + 0.015*english
+
+####################### TOPIC 47 #######################
+0.024*forward + 0.024*look + 0.024*hotel + 0.022*unique + 0.021*cool + 0.016*great + 0.014*stay + 0.014*trendy + 0.012*rick + 0.012*room
+
+####################### TOPIC 48 #######################
+0.043*breakfast + 0.028*cereal + 0.026*fruit + 0.026*toast + 0.021*hotel + 0.019*egg + 0.017*good + 0.016*room + 0.015*sausage + 0.015*pleasantly
+
+####################### TOPIC 49 #######################
+0.402*resort + 0.011*accomodations + 0.011*room + 0.009*sand + 0.008*theme + 0.007*well + 0.007*get + 0.007*self + 0.006*time + 0.006*maroma
+
+####################### TOPIC 50 #######################
+0.119*beautiful + 0.052*pool + 0.028*gorgeous + 0.024*ground + 0.023*love + 0.018*absolutely + 0.018*room + 0.017*bay + 0.016*private + 0.015*outdoor
+
+####################### TOPIC 51 #######################
+0.044*ritz + 0.033*place + 0.030*stanley + 0.020*stay + 0.018*amsterdam + 0.017*hostel + 0.016*carlton + 0.015*country + 0.012*would + 0.012*college
+
+####################### TOPIC 52 #######################
+0.030*employee + 0.020*wife + 0.018*stay + 0.017*ferry + 0.015*time + 0.014*year + 0.013*kept + 0.012*go + 0.012*past + 0.012*ground
+
+####################### TOPIC 53 #######################
+0.018*istanbul + 0.015*tram + 0.014*bridge + 0.012*hotel + 0.010*room + 0.009*day + 0.009*u + 0.009*blue + 0.007*fisherman + 0.007*also
+
+####################### TOPIC 54 #######################
+0.048*shuttle + 0.035*group + 0.031*free + 0.028*hotel + 0.028*downtown + 0.022*airport + 0.020*stay + 0.017*nice + 0.015*room + 0.015*great
+
+####################### TOPIC 55 #######################
+0.061*motel + 0.051*victoria + 0.044*miami + 0.027*relaxation + 0.019*girlfriend + 0.019*room + 0.016*stay + 0.012*hotel + 0.011*typically + 0.011*milk
+
+####################### TOPIC 56 #######################
+0.018*hotel + 0.014*room + 0.012*didnt + 0.009*one + 0.008*ham + 0.007*build + 0.007*like + 0.007*wasnt + 0.007*building + 0.006*breakfast
+
+####################### TOPIC 57 #######################
+0.059*good + 0.054*hotel + 0.045*room + 0.024*location + 0.023*breakfast + 0.020*excellent + 0.016*clean + 0.013*small + 0.012*staff + 0.012*value
+
+####################### TOPIC 58 #######################
+0.066*smoke + 0.062*non + 0.036*smoking + 0.019*room + 0.018*air + 0.016*edge + 0.015*beside + 0.015*hotel + 0.012*excuse + 0.012*ugly
+
+####################### TOPIC 59 #######################
+0.042*stay + 0.038*marriott + 0.038*review + 0.027*read + 0.023*hotel + 0.022*room + 0.017*would + 0.016*july + 0.013*great + 0.012*scottsdale
+
+####################### TOPIC 60 #######################
+0.064*spa + 0.051*hotel + 0.034*lovely + 0.026*stay + 0.023*room + 0.021*would + 0.020*recommend + 0.015*fantastic + 0.015*night + 0.015*good
+
+####################### TOPIC 61 #######################
+0.042*hotel + 0.031*hyatt + 0.030*room + 0.009*small + 0.009*stair + 0.008*night + 0.007*siren + 0.007*would + 0.007*lobby + 0.006*stay
+
+####################### TOPIC 62 #######################
+0.019*bar + 0.015*walk + 0.014*hotel + 0.012*excellent + 0.012*wave + 0.012*oasis + 0.011*restaurant + 0.011*interesting + 0.011*minute + 0.010*sauna
+
+####################### TOPIC 63 #######################
+0.029*sheraton + 0.026*bite + 0.020*b + 0.019*suite + 0.015*c + 0.015*hotel + 0.012*expect + 0.012*star + 0.011*one + 0.009*however
+
+####################### TOPIC 64 #######################
+0.033*great + 0.031*restaurant + 0.025*food + 0.024*hotel + 0.021*pool + 0.020*place + 0.016*stay + 0.015*across + 0.013*eat + 0.013*street
+
+####################### TOPIC 65 #######################
+0.047*hotel + 0.042*paris + 0.025*room + 0.019*walk + 0.018*stay + 0.018*location + 0.016*street + 0.016*de + 0.015*great + 0.014*breakfast
+
+####################### TOPIC 66 #######################
+0.032*drink + 0.025*food + 0.025*bar + 0.017*time + 0.017*nice + 0.016*go + 0.016*one + 0.015*service + 0.015*dinner + 0.015*dorado
+
+####################### TOPIC 67 #######################
+0.032*room + 0.015*garage + 0.014*hotel + 0.014*get + 0.013*like + 0.011*stay + 0.011*could + 0.010*night + 0.010*old + 0.010*one
+
+####################### TOPIC 68 #######################
+0.038*room + 0.020*hotel + 0.017*connect + 0.014*kong + 0.014*hong + 0.013*floor + 0.013*wifi + 0.013*internet + 0.012*level + 0.011*kimpton
+
+####################### TOPIC 69 #######################
+0.053*frank + 0.051*gold + 0.019*degree + 0.018*diamond + 0.017*starwood + 0.016*hilton + 0.015*member + 0.014*hotel + 0.014*room + 0.013*power
+
+####################### TOPIC 70 #######################
+0.028*room + 0.023*check + 0.016*baby + 0.016*mother + 0.014*day + 0.013*equipment + 0.012*hotel + 0.012*overly + 0.011*stay + 0.010*mom
+
+####################### TOPIC 71 #######################
+0.193*cruise + 0.042*package + 0.038*port + 0.031*hotel + 0.023*stay + 0.022*night + 0.021*w + 0.019*prior + 0.010*breakfast + 0.010*ride
+
+####################### TOPIC 72 #######################
+0.062*room + 0.019*night + 0.017*bed + 0.015*hotel + 0.013*would + 0.013*noise + 0.012*stay + 0.012*door + 0.011*floor + 0.011*one
+
+####################### TOPIC 73 #######################
+0.035*florida + 0.029*express + 0.018*room + 0.018*carter + 0.017*hotel + 0.010*gear + 0.010*stay + 0.009*tacky + 0.009*opportunity + 0.009*approach
+
+####################### TOPIC 74 #######################
+0.094*home + 0.036*make + 0.036*thank + 0.030*like + 0.023*beyond + 0.023*memorable + 0.017*everyone + 0.016*treat + 0.014*ambiance + 0.012*trip
+
+####################### TOPIC 75 #######################
+0.080*nice + 0.050*stay + 0.048*great + 0.042*room + 0.042*pool + 0.027*clean + 0.022*staff + 0.022*place + 0.017*friendly + 0.016*comfortable
+
+####################### TOPIC 76 #######################
+0.093*relax + 0.056*vacation + 0.039*center + 0.027*trip + 0.021*meridien + 0.020*plan + 0.020*heron + 0.019*hill + 0.018*magnificent + 0.017*business
+
+####################### TOPIC 77 #######################
+0.028*place + 0.026*go + 0.020*massage + 0.019*people + 0.019*stay + 0.018*money + 0.018*night + 0.017*get + 0.016*hotel + 0.016*like
+
+####################### TOPIC 78 #######################
+0.032*architecture + 0.028*section + 0.024*stun + 0.021*chef + 0.013*create + 0.013*room + 0.012*hotel + 0.011*today + 0.010*collection + 0.010*factor
+
+####################### TOPIC 79 #######################
+0.091*el + 0.029*western + 0.023*photo + 0.017*infinity + 0.016*hike + 0.016*web + 0.014*n + 0.013*disappointing + 0.012*site + 0.011*room
+
+####################### TOPIC 80 #######################
+0.066*rome + 0.045*hotel + 0.024*breakfast + 0.021*room + 0.018*terminus + 0.015*station + 0.012*termini + 0.012*stay + 0.010*train + 0.010*day
+
+####################### TOPIC 81 #######################
+0.036*manhattan + 0.032*impeccable + 0.031*mexican + 0.027*secure + 0.022*process + 0.018*feb + 0.018*airline + 0.013*admit + 0.012*room + 0.012*granite
+
+####################### TOPIC 82 #######################
+0.148*fairmont + 0.048*world + 0.023*sea + 0.023*dish + 0.021*position + 0.019*layout + 0.017*az + 0.015*master + 0.015*quest + 0.011*everybody
+
+####################### TOPIC 83 #######################
+0.036*tour + 0.035*hotel + 0.023*meeting + 0.022*francisco + 0.017*san + 0.016*staff + 0.013*event + 0.011*day + 0.010*meet + 0.010*visit
+
+####################### TOPIC 84 #######################
+0.033*hotel + 0.026*room + 0.017*stay + 0.015*get + 0.014*bad + 0.013*rude + 0.012*poor + 0.011*need + 0.010*would + 0.010*one
+
+####################### TOPIC 85 #######################
+0.048*wonderful + 0.044*best + 0.029*year + 0.028*stay + 0.022*staff + 0.022*experience + 0.020*hotel + 0.018*return + 0.015*special + 0.014*service
+
+####################### TOPIC 86 #######################
+0.176*view + 0.071*great + 0.041*hotel + 0.037*balcony + 0.036*room + 0.033*service + 0.022*top + 0.018*location + 0.017*floor + 0.015*amaze
+
+####################### TOPIC 87 #######################
+0.068*room + 0.066*bed + 0.027*size + 0.023*double + 0.020*king + 0.020*stay + 0.019*hotel + 0.019*small + 0.014*night + 0.014*ship
+
+####################### TOPIC 88 #######################
+0.042*patio + 0.041*amazing + 0.037*inclusive + 0.032*honeymoon + 0.027*beer + 0.024*love + 0.019*garden + 0.015*room + 0.014*perfect + 0.014*gracious
+
+####################### TOPIC 89 #######################
+0.051*con + 0.030*macy + 0.030*pier + 0.025*pro + 0.017*seaport + 0.016*milk + 0.015*updated + 0.015*action + 0.012*charm + 0.012*jam
+
+####################### TOPIC 90 #######################
+0.060*wed + 0.056*anniversary + 0.036*champagne + 0.034*roy + 0.033*celebrate + 0.028*cloud + 0.026*husband + 0.023*dessert + 0.017*deliver + 0.017*th
+
+####################### TOPIC 91 #######################
+0.047*hotel + 0.029*seattle + 0.026*great + 0.025*fly + 0.024*stay + 0.022*room + 0.021*staff + 0.020*airport + 0.019*terminal + 0.017*friendly
+
+####################### TOPIC 92 #######################
+0.096*kid + 0.049*family + 0.046*child + 0.032*four + 0.029*adult + 0.028*season + 0.027*gate + 0.023*rent + 0.022*car + 0.020*rental
+
+####################### TOPIC 93 #######################
+0.066*phoenix + 0.035*mile + 0.030*north + 0.023*island + 0.022*south + 0.016*pool + 0.015*westin + 0.015*nightlife + 0.013*activity + 0.013*desire
+
+####################### TOPIC 94 #######################
+0.130*wine + 0.036*ice + 0.035*favorite + 0.024*cream + 0.018*charm + 0.017*sushi + 0.017*house + 0.015*detail + 0.014*attention + 0.013*dinner
+
+####################### TOPIC 95 #######################
+0.038*hotel + 0.037*stay + 0.036*staff + 0.023*great + 0.022*helpful + 0.019*breakfast + 0.016*u + 0.016*room + 0.015*would + 0.013*perfect
+
+####################### TOPIC 96 #######################
+0.176*full + 0.085*showreview + 0.018*hotel + 0.018*colorful + 0.014*e + 0.013*vista + 0.012*marco + 0.011*confortable + 0.011*derek + 0.010*competitive
+
+####################### TOPIC 97 #######################
+0.026*desk + 0.023*front + 0.021*call + 0.019*ask + 0.014*room + 0.012*go + 0.011*say + 0.011*day + 0.011*would + 0.009*someone
+
+####################### TOPIC 98 #######################
+0.063*budget + 0.046*luxury + 0.034*accommodation + 0.021*meurice + 0.021*hotel + 0.019*price + 0.019*hk + 0.017*italian + 0.016*place + 0.016*affordable
+
+####################### TOPIC 99 #######################
+0.096*waterfront + 0.055*fairmont + 0.028*view + 0.025*nyc + 0.022*great + 0.021*food + 0.020*room + 0.017*stay + 0.013*time + 0.013*water
