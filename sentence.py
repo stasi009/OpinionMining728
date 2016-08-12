@@ -52,7 +52,6 @@ class AspectSentence(object):
         if len(aspects_matched) == 0: # no match
             self.aspect = None
         else:
-
             top_aspect,top_match = aspects_matched.most_common(1)[0]
             assert top_match > 0
             self.aspect = top_aspect
