@@ -47,7 +47,7 @@ class Sentence(object):
         ############### remove stopwords
         if stop_words is None:
             stop_words = set(stopwords.words("english"))
-        words = [w for w in words if w not in stop_words]
+        words = [w for w in words if len(w)>1 and w not in stop_words]
 
         ############### lemmatize
         self.words = utility.lemmatize_with_pos(Sentence.Lemmatizer,words)
