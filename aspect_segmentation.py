@@ -3,9 +3,41 @@ import heapq
 from collections import Counter
 import nltk
 from nltk.corpus import stopwords
+from sentence import Sentence
 # from tqdm import tqdm
-from aspect_sentence import AspectSentence
 # import ipdb
+
+class AspectSentence(Sentence):
+    def __init__(self,raw_sentence,stopwords):
+        super(AspectSentence,self).__init__(raw_sentence,stopwords)
+
+        # overwrite the type, from list to dictionary
+        self.words = Counter(self.words)
+
+        # it is possible that one sentence can have two sub-sentences, and each sub-sentence has its own aspect
+        # although it possible, but I think's it is rather rare
+        # also, even we want to consider such rare case, store multiple possible aspects won't help much in later calculation
+        self.aspect = None
+
+    def match(self,aspects_keywords):
+        """
+        aspects_keywords must be a dictionary
+        key: a string representing the aspect
+        value: a set which contains the key words for that aspect
+        """
+        aspects_matched = Counter()
+
+        for w,c in self.words.iteritems():
+            for aspect,keywords in aspects_keywords.iteritems():
+                if w in keywords:
+                    aspects_matched[aspect] += c
+
+        if len(aspects_matched) == 0: # no match
+            self.aspect = None
+        else:
+            top_aspect,top_match = aspects_matched.most_common(1)[0]
+            assert top_match > 0
+            self.aspect = top_aspect
 
 class AspectSegmentation(object):
 
