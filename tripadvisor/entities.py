@@ -1,15 +1,21 @@
 
 from __future__ import absolute_import
 import json
+import re
 import common
 
 class Review(object):
+
+    CleanPattern = re.compile(r"showReview\((\d)+, 'full'\);",re.IGNORECASE)
+
     def __init__(self,d):
         self.id = d["ReviewID"]
         self.title =  d["Title"].encode("ascii","ignore") if "Title" in d else ""
         self.author = d["Author"]
-        self.content = d["Content"].encode("ascii","ignore")
         self.date = d["Date"]
+
+        content = d["Content"].encode("ascii","ignore")
+        self.content = Review.CleanPattern.sub('',content)
 
         self.ratings = {}
         raw_ratings = d["Ratings"]
