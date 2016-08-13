@@ -29,8 +29,16 @@ class Sentence(object):
     ReplacePatterns = [(re.compile(regex,re.IGNORECASE),replacewith)  for regex,replacewith in ReplacePatterns]
     Lemmatizer = nltk.WordNetLemmatizer()
 
-    def __init__(self,sentence,stop_words = None):
-        self.raw = sentence
+    def __init__(self,raw = None,words = None):
+        self.raw = raw
+        self.words = words
+
+    def dump_json(self,indent=None):
+        return json.dumps({"raw":self.raw,"words":self.words},indent=indent)
+
+    @staticmethod
+    def from_raw(sentence,stop_words = None):
+        sent = Sentence(sentence)
 
         ############### expand contraction and abbrevations
         for (pattern, replacewith) in Sentence.ReplacePatterns:
@@ -57,11 +65,12 @@ class Sentence(object):
         ############### remove stopwords
         if stop_words is None:
             stop_words = set(stopwords.words("english"))
-        self.words = [w for w in words if len(w)>1 and w not in stop_words]
+        words = [w for w in words if len(w)>1 and w not in stop_words]
 
-    def dump_json(self,indent=None):
-        return json.dumps({"raw":self.raw,"words":self.words},indent=indent)
+        #
+        sent.words = words
+        return sent
 
-    def load_json(self,d):
-        self.raw = d["raw"]
-        self.words = d["words"]
+    @staticmethod
+    def from_json(d):
+        return Sentence(d["raw"],d["words"])
