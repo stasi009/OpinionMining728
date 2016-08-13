@@ -7,12 +7,10 @@ from sentence import Sentence
 # from tqdm import tqdm
 # import ipdb
 
-class AspectSentence(Sentence):
-    def __init__(self,raw_sentence,stopwords):
-        super(AspectSentence,self).__init__(raw_sentence,stopwords)
-
-        # overwrite the type, from list to dictionary
-        self.words = Counter(self.words)
+class AspectSentence(object):
+    def __init__(self,raw_sentence,words):
+        self.raw = raw_sentence
+        self.words = Counter(words)
 
         # it is possible that one sentence can have two sub-sentences, and each sub-sentence has its own aspect
         # although it possible, but I think's it is rather rare
@@ -41,19 +39,12 @@ class AspectSentence(Sentence):
 
 class AspectSegmentation(object):
 
-    # only load once, faster than call 'sent_tokenize' each time
-    SentTokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
-
-    def __init__(self,reviews,seed_aspect_keywords,extra_stop_words = None):
+    def __init__(self,sentences,seed_aspect_keywords):
         """
         seed_aspect_keywords: dictionary
         key: aspect, string
         value: a set which holds the initial seed keywords
         """
-        stop_words = set(stopwords.words("english"))
-        if extra_stop_words is not None:
-            stop_words |= set(extra_stop_words)
-
         self._sentences = []
         self._vocabulary = set()
         self._aspect_keywords = seed_aspect_keywords
@@ -64,9 +55,8 @@ class AspectSegmentation(object):
         # number of sentences which NOT contain word 'w'
         self.word_exclude_sents = Counter()
 
-        iter_sentences = (sent for review in reviews for sent in AspectSegmentation.SentTokenizer.tokenize(review))
-        for index, sent in enumerate(iter_sentences):
-            aspect_sent = AspectSentence(sent,stop_words)
+        for index, sent in enumerate(sentences):
+            aspect_sent = AspectSentence(sent.raw,sent.words)
             self._sentences.append(aspect_sent)
             self.word_total_occurs += aspect_sent.words
 
@@ -76,13 +66,9 @@ class AspectSegmentation(object):
                 ##### count the number of sentence which include word 'w'
                 self.word_exclude_sents[w] +=1
 
-            print "{}-th sentence finish preprocessing".format(index+1)
-
         n_sentences = len(self._sentences)
         for w in self._vocabulary:
             self.word_exclude_sents[w] = n_sentences  - self.word_exclude_sents[w]
-
-        # ipdb.set_trace()
 
     def __count(self):
         # C1 has key <word,aspect>
