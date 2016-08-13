@@ -120,7 +120,7 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
     hotel_files = select_hotels(500)
-    extra_stopwords = ["hotel","room","great","also"]
+    extra_stopwords = ["hotel","room","great","also","place"]
 
     build_dictionary(hotel_files,extra_stopwords)
     save_bow(hotel_files,extra_stopwords)

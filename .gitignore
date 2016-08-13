@@ -23,3 +23,5 @@ tripadvisor/summary.json
 *.state
 
 *.swp
+
+tripadvisor/sentences.json
