@@ -1,5 +1,6 @@
 
 import re
+import json
 from collections import Counter
 import nltk
 from nltk.corpus import stopwords
@@ -44,10 +45,23 @@ class Sentence(object):
         ############### tokenize into words
         words = nltk.word_tokenize( sentence )
 
+        ############### lemmatize
+        # !!! Notice the order is important
+        # !!! given ["the","parking","is","crazy"], nltk.pos_tag can recognize "parking" as Noun,
+        # !!! lemmatize will return "parking"
+        # !!! however, if we remove stopwords first, given ["parking","crazy"],
+        # !!! nltk.pos_tag will think "parking" as Verb
+        # !!! and lemmatize return "park"
+        words = utility.lemmatize_with_pos(Sentence.Lemmatizer,words)
+
         ############### remove stopwords
         if stop_words is None:
             stop_words = set(stopwords.words("english"))
-        words = [w for w in words if len(w)>1 and w not in stop_words]
+        self.words = [w for w in words if len(w)>1 and w not in stop_words]
 
-        ############### lemmatize
-        self.words = utility.lemmatize_with_pos(Sentence.Lemmatizer,words)
+    def dump_json(self,indent=None):
+        return json.dumps({"raw":self.raw,"words":self.words},indent=indent)
+
+    def load_json(self,d):
+        self.raw = d["raw"]
+        self.words = d["words"]
