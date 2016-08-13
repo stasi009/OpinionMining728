@@ -25,3 +25,5 @@ tripadvisor/summary.json
 *.swp
 
 tripadvisor/sentences.json
+
+tripadvisor/aspect_tagged_sentences.json

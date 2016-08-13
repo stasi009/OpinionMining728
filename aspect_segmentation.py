@@ -39,6 +39,8 @@ class AspectSentence(object):
 
 class AspectSegmentation(object):
 
+    STATUS_UPDATE_INTERVAL = 1000
+
     def __init__(self,sentences,seed_aspect_keywords):
         """
         seed_aspect_keywords: dictionary
@@ -55,7 +57,11 @@ class AspectSegmentation(object):
         # number of sentences which NOT contain word 'w'
         self.word_exclude_sents = Counter()
 
+        print "begin counting word_total_occurs and update vocabulary, ......"
         for index, sent in enumerate(sentences):
+            if index % AspectSegmentation.STATUS_UPDATE_INTERVAL == 0:
+                print "\t{} sentences processed".format(index)
+
             aspect_sent = AspectSentence(sent.raw,sent.words)
             self._sentences.append(aspect_sent)
             self.word_total_occurs += aspect_sent.words
@@ -69,6 +75,7 @@ class AspectSegmentation(object):
         n_sentences = len(self._sentences)
         for w in self._vocabulary:
             self.word_exclude_sents[w] = n_sentences  - self.word_exclude_sents[w]
+        print "AspectSegmentation fully initialized"
 
     def __count(self):
         # C1 has key <word,aspect>
@@ -82,7 +89,10 @@ class AspectSegmentation(object):
         # how many sentences in each aspect
         n_sents_each_aspects = Counter()
 
-        for sent in self._sentences:
+        for index,sent in enumerate(self._sentences):
+            if index % AspectSegmentation.STATUS_UPDATE_INTERVAL == 0:
+                print "\t{} sentences counted".format(index)
+
             if sent.aspect is not None:
                 n_sents_each_aspects[sent.aspect] += 1
 
@@ -143,7 +153,11 @@ class AspectSegmentation(object):
 
     def run_once(self,top_k=5,watchlist=None):
         # *********************************** MATCH
-        for sent in self._sentences:
+        print "begin match each sentence to aspects, ......"
+        for index,sent in enumerate(self._sentences):
+            if index % AspectSegmentation.STATUS_UPDATE_INTERVAL == 0:
+                print "\t{} sentences matched aspects".format(index)
+
             sent.match(self._aspect_keywords)
         print "all sentences re-matched, begin counting"
 
@@ -154,15 +168,20 @@ class AspectSegmentation(object):
 
         # *********************************** COUNT
         C1,C3 = self.__count()
-        print "finish counting"
 
         # *********************************** CHI-SQUARE
+        print "finish counting, begin calculating CHI-SQUARE, ......"
         keywords_updated = False
         for aspect in self._aspect_keywords.iterkeys():
+            print "calculating CHI-SQUARE for aspect<{}>, ...".format(aspect)
+
             current_keywords = self._aspect_keywords[aspect]
             top_new_keywords = []
 
-            for w in self._vocabulary:
+            for index,w in enumerate(self._vocabulary):
+                if index % AspectSegmentation.STATUS_UPDATE_INTERVAL == 0:
+                    print "\t{} words' CHI-SQUARE calculated".format(index)
+
                 debugprint = False if watchlist is None else (w,aspect) in watchlist
                 chisquare = self.__chi_square(w,aspect,C1,C3,debugprint)
 
@@ -173,14 +192,14 @@ class AspectSegmentation(object):
             for score,new_keyword in top_new_keywords:
                 if new_keyword not in current_keywords:
                     current_keywords.add(new_keyword)
-                    print "new keyword '%s' added into aspect '%s'"%(new_keyword,aspect )
+                    print "!!! new keyword '%s' added into aspect '%s'"%(new_keyword,aspect )
                     keywords_updated = True
 
         return keywords_updated
 
     def run(self,top_k=5,n_iters=10):
         for index in xrange(n_iters):
-            print "start {}-th iteration, ......".format(index+1)
+            print "################# start {}-th iteration, ......".format(index+1)
 
             keywords_updated = self.run_once(top_k)
             if not keywords_updated:
