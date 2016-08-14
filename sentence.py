@@ -29,7 +29,7 @@ class Sentence(object):
     ReplacePatterns = [(re.compile(regex,re.IGNORECASE),replacewith)  for regex,replacewith in ReplacePatterns]
     Lemmatizer = nltk.WordNetLemmatizer()
 
-    def __init__(self,raw = None,words = None, aspect=None, sentiment=None):
+    def __init__(self,raw = None,words = None, aspect=common.AspectUnknown, sentiment=common.SentimentUnknown):
         self.raw = raw
         self.words = words
         self.aspect = aspect
@@ -75,4 +75,5 @@ class Sentence(object):
 
     @staticmethod
     def from_dict(d):
-        return Sentence(d.get("raw",None),d.get("words",None),d.get("aspect",None),d.get("sentiment",None))
+        return Sentence(d.get("raw",None),d.get("words",None),\
+        d.get("aspect",common.AspectUnknown),d.get("sentiment",common.SentimentUnknown))

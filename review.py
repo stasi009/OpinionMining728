@@ -9,6 +9,7 @@ class Review(object):
 
     def __init__(self):
         # HotelId for TripAdvisor, or RoomId for Airbnb
+        self.id = None
         self.business_id = None
         self.ratings = None
 
@@ -16,16 +17,23 @@ class Review(object):
         self.sentences = [ Sentence.from_raw(raw_sentence,stop_words) for raw_sentence in Review.SentTokenizer.tokenize(text) ]
 
     def to_dict(self):
-        return {"business_id":self.business_id,\
+        d = {"business_id":self.business_id,\
         "ratings":self.ratings,\
         "sentences":[sent.to_dict() for sent in self.sentences]}
 
+        if self.id is not None:
+            d["_id"] = self.id
+
+        return d
+
     @staticmethod
-    def from_dict(self,d):
-        self.business_id = d["business_id"]
-        self.ratings = d.get("ratings",None)
-        sent_dicts = d["sentences"]
-        self.sentences = [Sentence.from_dict(sent_dict) for sent_dict in sent_dicts]
+    def from_dict(d):
+        r = Review()
+        r.id = d.get("_id",None)
+        r.business_id = d["business_id"]
+        r.ratings = d.get("ratings",None)
+        r.sentences = [Sentence.from_dict(sent_dict) for sent_dict in d["sentences"]]
+        return r
 
 class ReviewsDal(object):
 
@@ -41,3 +49,28 @@ class ReviewsDal(object):
     def list_ids(self):
         cursor = self._reviews.find({},{"_id":1})
         return [d["_id"] for d in cursor]
+
+    def find_by_review_id(self,reviewid,include_words = False):
+        cursor = None
+        if not include_words:
+            # exclude from sending back 'words', save time and bandwidth
+            cursor = self._reviews.find({"_id":reviewid},{"sentences.words":0})
+        else:
+            cursor = self._reviews.find({"_id":reviewid})
+
+        reviews = list(cursor)
+        if len(reviews) == 0:
+            return None # no match
+        elif len(reviews) == 1:
+            return Review.from_dict(reviews[0])
+        else:
+            raise Exception("reviewid is unique, can only return 0 or 1")
+
+    def update_aspects_sentiments(self,reviewid,new_aspects_sentiments):
+        update_content = {}
+        for sent_index,new_aspect,new_sentiment in new_aspects_sentiments:
+            update_content["sentences.{}.aspect".format(sent_index)] = new_aspect
+            update_content["sentences.{}.sentiment".format(sent_index)] = new_sentiment
+
+        result = self._reviews.update_one({"_id":reviewid},{"$set":update_content})
+        return result.modified_count == 1

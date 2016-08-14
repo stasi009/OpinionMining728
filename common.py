@@ -11,13 +11,13 @@ AspectService = "Service"
 AspectValue = "Value"
 AspectCheckin = "Check in"
 AspectSleep = "Sleep Quality"
+AsepctNothing = "Nothing"
 AspectUnknown = "Unknown"
-AsepctNone = "None"
 
 SentimentPositive = "Positive"
 SentimentNegative = "Negative"
-SentimentUnknown = "Unknown"
 SentimentNeutral = "Neutral"
+SentimentUnknown = "Unknown"
 
 def pprint_json(infilename,outfilename):
     with open(infilename,"rt") as inf:
