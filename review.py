@@ -34,6 +34,10 @@ class ReviewsDal(object):
         db = self._client[dbname]
         self._reviews = db[colname]
 
-    def insert(self,reviews):
+    def insert_many(self,reviews):
         # cannot be iterator, but a concrete list
         self._reviews.insert_many([r.to_dict() for r in reviews])
+
+    def list_ids(self):
+        cursor = self._reviews.find({},{"_id":1})
+        return [d["_id"] for d in cursor]

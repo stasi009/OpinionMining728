@@ -5,6 +5,7 @@ from tripadvisor.entities import TaHotel
 from review import Review,ReviewsDal
 
 StopWords = frozenset(stopwords.words("english"))
+DbName = "tripadvisor"
 
 def get_reviews(hotel_file):
     hotel = TaHotel(hotel_file)
@@ -24,11 +25,16 @@ def test_review_to_dict():
         print review.to_dict()
 
 def test_insert_db():
-    datafile = "tripadvisor/data/2514286.json"
-    dal = ReviewsDal('tripadvisor')
-    dal.insert(get_reviews(datafile))
+    datafile = "tripadvisor/data/536101.json"
+    dal = ReviewsDal(DbName)
+    dal.insert_many(get_reviews(datafile))
     print "INSERTED INTO DATABASE"
+
+def test_list_all_ids():
+    dal = ReviewsDal(DbName)
+    print dal.list_ids()
 
 if __name__ == "__main__":
     # test_review_to_dict()
-    test_insert_db()
+    # test_insert_db()
+    test_list_all_ids()
