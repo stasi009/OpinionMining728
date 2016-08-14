@@ -1,7 +1,16 @@
 
 import nltk
 import json
-# import ipdb
+
+AspectBusiness = "Business Service"
+AspectClean = "Cleanliness"
+AspectLocation = "Location"
+AspectOverall = "Overall"
+AspectRoom = "Rooms"
+AspectService = "Service"
+AspectValue = "Value"
+AspectCheckin = "Check in"
+AspectSleep = "Sleep Quality"
 
 def pprint_json(infilename,outfilename):
     with open(infilename,"rt") as inf:
