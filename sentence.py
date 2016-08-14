@@ -4,7 +4,7 @@ import json
 from collections import Counter
 import nltk
 from nltk.corpus import stopwords
-import utility
+import common
 
 ReplacePatterns = [
                     (r'won\'t', 'will not'),
@@ -60,7 +60,7 @@ class Sentence(object):
         # !!! however, if we remove stopwords first, given ["parking","crazy"],
         # !!! nltk.pos_tag will think "parking" as Verb
         # !!! and lemmatize return "park"
-        words = utility.lemmatize_with_pos(Sentence.Lemmatizer,words)
+        words = common.lemmatize_with_pos(Sentence.Lemmatizer,words)
 
         ############### remove stopwords
         if stop_words is None:

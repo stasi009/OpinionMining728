@@ -4,6 +4,10 @@ import json
 import re
 import common
 
+def normalize_ratings(dest_ratings,dest_label,src_ratings,src_label):
+    if src_label in src_ratings:
+        dest_ratings[dest_label] = float(src_ratings[src_label])
+
 class Review(object):
 
     CleanPattern = re.compile(r"showReview\((\d)+, 'full'\);",re.IGNORECASE)
@@ -20,15 +24,15 @@ class Review(object):
         self.ratings = {}
         raw_ratings = d["Ratings"]
 
-        common.normalize_ratings(self.ratings,common.AspectBusiness,raw_ratings,"Business service (e.g., internet access)")
-        common.normalize_ratings(self.ratings,common.AspectCheckin ,raw_ratings,"Check in / front desk")
-        common.normalize_ratings(self.ratings,common.AspectClean ,raw_ratings,common.AspectClean)
-        common.normalize_ratings(self.ratings,common.AspectLocation ,raw_ratings,common.AspectLocation)
-        common.normalize_ratings(self.ratings,common.AspectOverall ,raw_ratings,common.AspectOverall)
-        common.normalize_ratings(self.ratings,common.AspectRoom ,raw_ratings,common.AspectRoom)
-        common.normalize_ratings(self.ratings,common.AspectService ,raw_ratings,common.AspectService)
-        common.normalize_ratings(self.ratings,common.AspectValue ,raw_ratings,common.AspectValue)
-        common.normalize_ratings(self.ratings,common.AspectSleep ,raw_ratings,common.AspectSleep)
+        normalize_ratings(self.ratings,common.AspectBusiness,raw_ratings,"Business service (e.g., internet access)")
+        normalize_ratings(self.ratings,common.AspectCheckin ,raw_ratings,"Check in / front desk")
+        normalize_ratings(self.ratings,common.AspectClean ,raw_ratings,common.AspectClean)
+        normalize_ratings(self.ratings,common.AspectLocation ,raw_ratings,common.AspectLocation)
+        normalize_ratings(self.ratings,common.AspectOverall ,raw_ratings,common.AspectOverall)
+        normalize_ratings(self.ratings,common.AspectRoom ,raw_ratings,common.AspectRoom)
+        normalize_ratings(self.ratings,common.AspectService ,raw_ratings,common.AspectService)
+        normalize_ratings(self.ratings,common.AspectValue ,raw_ratings,common.AspectValue)
+        normalize_ratings(self.ratings,common.AspectSleep ,raw_ratings,common.AspectSleep)
 
 class Hotel(object):
     def __init__(self,filename):
