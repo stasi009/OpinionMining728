@@ -27,3 +27,5 @@ tripadvisor/summary.json
 tripadvisor/sentences.json
 
 tripadvisor/aspect_tagged_sentences.json
+
+mongodb
