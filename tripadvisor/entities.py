@@ -2,13 +2,13 @@
 from __future__ import absolute_import
 import json
 import re
-import common
+import common# in parent folder
 
 def normalize_ratings(dest_ratings,dest_label,src_ratings,src_label):
     if src_label in src_ratings:
         dest_ratings[dest_label] = float(src_ratings[src_label])
 
-class Review(object):
+class TaReview(object):
 
     CleanPattern = re.compile(r"showReview\((\d)+, 'full'\);",re.IGNORECASE)
 
@@ -34,7 +34,7 @@ class Review(object):
         normalize_ratings(self.ratings,common.AspectValue ,raw_ratings,common.AspectValue)
         normalize_ratings(self.ratings,common.AspectSleep ,raw_ratings,common.AspectSleep)
 
-class Hotel(object):
+class TaHotel(object):
     def __init__(self,filename):
         with open(filename,"rt") as inputf:
             d = json.load(inputf)
@@ -44,7 +44,7 @@ class Hotel(object):
         self.name = info.get("Name","Hotel#{}".format(self.id))
         self.price = info["Price"]
 
-        self.reviews = [ Review(review_d) for review_d in d["Reviews"]]
+        self.reviews = [ TaReview(review_d) for review_d in d["Reviews"]]
 
 if __name__ == "__main__":
     path = "data/262451.json"

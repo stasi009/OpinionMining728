@@ -1,7 +1,7 @@
 
 import logging
 import nltk
-import utility
+import common
 from sentence import Sentence
 from aspect_segmentation import AspectSegmentation
 
