@@ -19,7 +19,7 @@ class TaReview(object):
         self.date = d["Date"]
 
         content = d["Content"].encode("ascii","ignore")
-        self.content = Review.CleanPattern.sub('',content)
+        self.content = TaReview.CleanPattern.sub('',content)
 
         self.ratings = {}
         raw_ratings = d["Ratings"]
@@ -33,6 +33,9 @@ class TaReview(object):
         normalize_ratings(self.ratings,common.AspectService ,raw_ratings,common.AspectService)
         normalize_ratings(self.ratings,common.AspectValue ,raw_ratings,common.AspectValue)
         normalize_ratings(self.ratings,common.AspectSleep ,raw_ratings,common.AspectSleep)
+
+    def entire_content(self):
+        return self.title + ". " + self.content if len(self.title)>0 else self.content
 
 class TaHotel(object):
     def __init__(self,filename):

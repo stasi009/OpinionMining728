@@ -29,12 +29,14 @@ class Sentence(object):
     ReplacePatterns = [(re.compile(regex,re.IGNORECASE),replacewith)  for regex,replacewith in ReplacePatterns]
     Lemmatizer = nltk.WordNetLemmatizer()
 
-    def __init__(self,raw = None,words = None):
+    def __init__(self,raw = None,words = None, aspect=None, sentiment=None):
         self.raw = raw
         self.words = words
+        self.aspect = aspect
+        self.sentiment = sentiment
 
-    def dump_json(self,indent=None):
-        return json.dumps({"raw":self.raw,"words":self.words},indent=indent)
+    def to_dict(self):
+        return {"raw":self.raw,"words":self.words,"aspect":self.aspect,"sentiment":self.sentiment}
 
     @staticmethod
     def from_raw(sentence,stop_words = None):
@@ -72,5 +74,5 @@ class Sentence(object):
         return sent
 
     @staticmethod
-    def from_json(d):
-        return Sentence(d["raw"],d["words"])
+    def from_dict(d):
+        return Sentence(d.get("raw",None),d.get("words",None),d.get("aspect",None),d.get("sentiment",None))
