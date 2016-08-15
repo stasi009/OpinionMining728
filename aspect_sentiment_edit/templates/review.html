@@ -23,25 +23,27 @@
                 {% endfor %}
             </ul>
         </p>
+        <form method="post">
 
-        <table  >
-            <tr>
-            <th>No. </th>
-            <th>Sentence</th>
-            <th>Aspect</th>
-            <th>Sentiment</th>
-            </tr>
-
-            {% for sentence in review.sentences %}
+            <table  >
                 <tr>
-                    <td> {{ loop.index }} </td>
-                    <td> {{sentence.raw}} </td>
-                    <td> {{sentence.aspect}} </td>
-                    <td> {{sentence.sentiment}} </td>
+                <th>No. </th>
+                <th>Sentence</th>
+                <th>Aspect</th>
+                <th>Sentiment</th>
                 </tr>
-            {% endfor %}
 
-        </table>
+                {% for sentence in review.sentences %}
+                    <tr>
+                        <td> {{ loop.index }} </td>
+                        <td> {{sentence.raw}} </td>
+                        <td> {{sentence.aspect}} </td>
+                        <td> {{sentence.sentiment}} </td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </form>
 
     </body>
 </html>

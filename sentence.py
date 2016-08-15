@@ -32,8 +32,8 @@ class Sentence(object):
     def __init__(self,raw = None,words = None, aspect=common.AspectUnknown, sentiment=common.SentimentUnknown):
         self.raw = raw
         self.words = words
-        self.aspect = aspect
-        self.sentiment = sentiment
+        self.aspect = common.AspectUnknown if aspect is None else aspect
+        self.sentiment = common.SentimentUnknown if sentiment is None else sentiment
 
     def to_dict(self):
         return {"raw":self.raw,"words":self.words,"aspect":self.aspect,"sentiment":self.sentiment}
