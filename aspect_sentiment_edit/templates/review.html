@@ -26,6 +26,7 @@
 
         <table  >
             <tr>
+            <th>No. </th>
             <th>Sentence</th>
             <th>Aspect</th>
             <th>Sentiment</th>
@@ -33,6 +34,7 @@
 
             {% for sentence in review.sentences %}
                 <tr>
+                    <td> {{ loop.index }} </td>
                     <td> {{sentence.raw}} </td>
                     <td> {{sentence.aspect}} </td>
                     <td> {{sentence.sentiment}} </td>
