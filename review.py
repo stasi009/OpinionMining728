@@ -1,4 +1,5 @@
 
+
 import nltk
 from pymongo import MongoClient
 from sentence import Sentence
@@ -14,7 +15,11 @@ class Review(object):
         self.ratings = None
 
     def assign_content(self,text,stop_words):
-        self.sentences = [ Sentence.from_raw(raw_sentence,stop_words) for raw_sentence in Review.SentTokenizer.tokenize(text) ]
+        self.sentences = []
+        for raw_sentence in Review.SentTokenizer.tokenize(text):
+            sent = Sentence.from_raw(raw_sentence,stop_words)
+            if len(sent.words) >0:
+                self.sentences.append(sent)
 
     def to_dict(self):
         d = {"business_id":self.business_id,\
