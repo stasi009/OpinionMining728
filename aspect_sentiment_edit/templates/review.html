@@ -37,6 +37,7 @@
                     <tr>
                         <td> {{ loop.index }} </td>
                         <td> {{sentence.raw}} </td>
+
                         <td>
                             <select name = 'aspect_{{loop.index0}}'>
                                 {% for aspect_option in aspect_options %}
@@ -48,7 +49,18 @@
                                 {% endfor %}
                             </select>
                         </td>
-                        <td> {{sentence.sentiment}} </td>
+
+                        <td>
+                            <select name = 'sentiment_{{loop.index0}}'>
+                                {% for sentiment_option in sentiment_options %}
+                                    {% if sentiment_option == sentence.sentiment %}
+                                        <option value='{{sentiment_option}}' selected>{{sentiment_option}}</option>
+                                    {% else %}
+                                        <option value='{{sentiment_option}}'>{{sentiment_option}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </td>
                     </tr>
                 {% endfor %}
 
