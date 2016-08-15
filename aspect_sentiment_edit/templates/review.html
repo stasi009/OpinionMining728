@@ -3,9 +3,43 @@
     <head>
         <meta charset="utf-8">
         <title>Review # {{review.id}}</title>
-
+        <style type="text/css">
+            table
+            {
+                border-collapse:collapse;
+            }
+            table, td, th
+            {
+                border:1px solid black;
+            }
+        </style>
     </head>
     <body>
-        
+        <h2>Review # {{review.id}}</h2>
+        <p>
+            <ul>
+                {% for k,v in review.ratings.iteritems() %}
+                    <li>{{k}}: {{v}}</li>
+                {% endfor %}
+            </ul>
+        </p>
+
+        <table  >
+            <tr>
+            <th>Sentence</th>
+            <th>Aspect</th>
+            <th>Sentiment</th>
+            </tr>
+
+            {% for sentence in review.sentences %}
+                <tr>
+                    <td> {{sentence.raw}} </td>
+                    <td> {{sentence.aspect}} </td>
+                    <td> {{sentence.sentiment}} </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
     </body>
 </html>
