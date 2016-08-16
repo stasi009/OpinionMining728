@@ -21,9 +21,14 @@ SentimentOptions = [    common.SentimentPositive,\
 
 @app.route('/')
 def home():
-    return redirect(url_for('next_random_review'))
+    return render_template("index.html")
 
 @app.route('/randomreview')
 def next_random_review():
-    review = app.mongoproxy.next_random_review()
+    review_id = app.mongoproxy.next_random_review_id()
+    return redirect(url_for("show_review",review_id = review_id))
+
+@app.route('/review/<review_id>')
+def show_review(review_id):
+    review = app.mongoproxy.find_review_by_id(review_id)
     return render_template("review.html",review = review,aspect_options = AspectOptions,sentiment_options = SentimentOptions)
