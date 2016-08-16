@@ -15,6 +15,7 @@
         </style>
     </head>
     <body>
+        <a href="{{url_for('next_random_review')}}" style='font-size:1.2em;font-weight:bold'>Next Random Review<a>
         <h2>Review # {{review.id}}</h2>
         <p>
             <ul>
@@ -24,6 +25,8 @@
             </ul>
         </p>
         <form method="post">
+
+            <button type="submit" style="background-color:gold;font-size:1.2em;font-weight:bold">Update Review</button>
 
             <table  >
                 <tr>

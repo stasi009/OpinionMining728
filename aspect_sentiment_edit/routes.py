@@ -28,7 +28,14 @@ def next_random_review():
     review_id = app.mongoproxy.next_random_review_id()
     return redirect(url_for("show_review",review_id = review_id))
 
-@app.route('/review/<review_id>')
+@app.route('/review/<review_id>',methods=['GET', 'POST'])
 def show_review(review_id):
-    review = app.mongoproxy.find_review_by_id(review_id)
-    return render_template("review.html",review = review,aspect_options = AspectOptions,sentiment_options = SentimentOptions)
+    if request.method == 'GET':
+        review = app.mongoproxy.find_review_by_id(review_id)
+        return render_template("review.html",review = review,aspect_options = AspectOptions,sentiment_options = SentimentOptions)
+    elif request.method == 'POST':
+        print "========================= in POST review ============="
+        print "review_id: {}".format(review_id)
+        return "<h2>testing POST</h2>"
+    else:
+        return "<h2>invalid request</h2>"
