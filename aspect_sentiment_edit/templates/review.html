@@ -4,19 +4,50 @@
         <meta charset="utf-8">
         <title>Review # {{review.id}}</title>
         <style type="text/css">
-            table
-            {
-                border-collapse:collapse;
-            }
-            table, td, th
-            {
-                border:1px solid black;
-            }
+            table { border-collapse:collapse; }
+            table, td, th   {   border:1px solid black;      }
+
+            .Cleanliness        { background-color: cyan;  }
+            .Service            { background-color: lightsalmon;     }
+            .Rooms              { background-color: wheat;     }
+            .BusinessService    { background-color: lightpink;     }
+            .Location           { background-color: greenyellow;     }
+            .Nothing            { background-color: lightgrey;     }
+            .Overall            { background-color: gold;     }
+            .Value              { background-color: skyblue;     }
+
+            .Positive           { background-color: green;     }
+            .Negative           { background-color: red;    }
+            .Neutral            { background-color: lightgrey;     }
+
+            .Unknown            { background-color: white;  }
         </style>
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+        <script type="text/javascript">
+            function on_select_changed(event) {
+                var target = event.target;
+                segments = target.name.split('_');
+
+                prefix = "";
+                switch (segments[0]) {
+                    case "aspect":     prefix = "#td_sentence_";      break;
+                    case "sentiment":  prefix = "#td_no_";            break;
+                    default:           throw new Error("unknown prefix");
+                }
+                id = segments[1];
+
+                $(prefix+id).attr('class',$(target).val());
+                $(target).attr('class',$(target).val());
+            }
+            $(function () {
+                $(".aspect_select").change(on_select_changed);
+                $(".sentiment_select").change(on_select_changed);
+            });
+        </script>
     </head>
     <body>
         <a href="{{url_for('next_random_review')}}" style='font-size:1.2em;font-weight:bold'>Next Random Review<a>
-            
+
         <h2>Review # {{review.id}}</h2>
         <p>
             <ul>
@@ -27,7 +58,7 @@
         </p>
         <form method="post">
 
-            <button type="submit" style="background-color:gold;font-size:1.2em;font-weight:bold">Update Review</button>
+            <button type="submit" style="background-color:orange;font-size:1.2em;font-weight:bold">Update Review</button>
 
             <table  >
                 <tr>
@@ -39,11 +70,11 @@
 
                 {% for sentence in review.sentences %}
                     <tr>
-                        <td> {{ loop.index }} </td>
-                        <td> {{sentence.raw}} </td>
+                        <td id="td_no_{{loop.index0}}"> {{ loop.index }} </td>
+                        <td id="td_sentence_{{loop.index0}}"> {{sentence.raw}} </td>
 
                         <td>
-                            <select name = 'aspect_{{loop.index0}}'>
+                            <select name = 'aspect_{{loop.index0}}' class="aspect_select">
                                 {% for aspect_option in aspect_options %}
                                     {% if aspect_option == sentence.aspect %}
                                         <option value='{{aspect_option}}' selected>{{aspect_option}}</option>
@@ -55,7 +86,7 @@
                         </td>
 
                         <td>
-                            <select name = 'sentiment_{{loop.index0}}'>
+                            <select name = 'sentiment_{{loop.index0}}' class="sentiment_select">
                                 {% for sentiment_option in sentiment_options %}
                                     {% if sentiment_option == sentence.sentiment %}
                                         <option value='{{sentiment_option}}' selected>{{sentiment_option}}</option>
