@@ -72,11 +72,11 @@
 
                 {% for sentence in review.sentences %}
                     <tr>
-                        <td id="td_no_{{loop.index0}}"> {{ loop.index }} </td>
-                        <td id="td_sentence_{{loop.index0}}"> {{sentence.raw}} </td>
+                        <td id="td_no_{{loop.index0}}" class="{{sentence.sentiment}}"> {{ loop.index }} </td>
+                        <td id="td_sentence_{{loop.index0}}" class="{{sentence.aspect}}"> {{sentence.raw}} </td>
 
                         <td>
-                            <select name = 'aspect_{{loop.index0}}' class="aspect_select">
+                            <select name = 'aspect_{{loop.index0}}' class="aspect_select {{sentence.aspect}}">
                                 {% for aspect_option in aspect_options %}
                                     {% if aspect_option == sentence.aspect %}
                                         <option value='{{aspect_option}}' selected>{{aspect_option}}</option>
@@ -88,7 +88,7 @@
                         </td>
 
                         <td>
-                            <select name = 'sentiment_{{loop.index0}}' class="sentiment_select">
+                            <select name = 'sentiment_{{loop.index0}}' class="sentiment_select {{sentence.sentiment}}">
                                 {% for sentiment_option in sentiment_options %}
                                     {% if sentiment_option == sentence.sentiment %}
                                         <option value='{{sentiment_option}}' selected>{{sentiment_option}}</option>

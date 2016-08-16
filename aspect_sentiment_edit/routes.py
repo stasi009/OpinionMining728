@@ -34,8 +34,12 @@ def show_review(review_id):
         review = app.mongoproxy.find_review_by_id(review_id)
         return render_template("review.html",review = review,aspect_options = AspectOptions,sentiment_options = SentimentOptions)
     elif request.method == 'POST':
-        print "========================= in POST review ============="
-        print "review_id: {}".format(review_id)
-        return "<h2>testing POST</h2>"
+        success = app.mongoproxy.update_review(review_id,request.form)
+        if success:
+            # if 'check_after_update' is on, then just reload current review again
+            next_review_id = review_id if 'check_after_update' in request.form else app.mongoproxy.next_review_id()
+            return redirect(url_for("show_review",review_id = next_review_id))
+        else:
+            return "<h2 color='red'>!!! Update Failed !!!</h2>"
     else:
         return "<h2>invalid request</h2>"
