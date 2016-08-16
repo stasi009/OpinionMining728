@@ -46,7 +46,7 @@
         </script>
     </head>
     <body>
-        <h2>Review # {{review.id}}</h2>
+        <h2>[{{dbname}}]: Review # {{review.id}}</h2>
         <p>
             <ul>
                 {% for k,v in review.ratings.iteritems() %}
@@ -61,7 +61,6 @@
                 <button type="submit" style="background-color:orange;font-size:1.2em;font-weight:bold">Update Review</button>
                 <input type="checkbox" name="check_after_update"  />Check After Update<br />
             </p>
-
 
             <table  >
                 <tr>

@@ -7,6 +7,7 @@ import random
 class ReviewsMongoProxy(object):
 
     def __init__(self,dbname):
+        self.dbname = dbname
         self.dal = ReviewsDal(dbname)
         # we only store the string format, which is more convenient in web app
         self.all_ids = [str(id) for id in self.dal.list_ids()]

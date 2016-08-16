@@ -21,7 +21,7 @@ SentimentOptions = [    common.SentimentPositive,\
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("index.html",dbname = app.mongoproxy.dbname)
 
 @app.route('/randomreview')
 def next_random_review():
@@ -32,7 +32,11 @@ def next_random_review():
 def show_review(review_id):
     if request.method == 'GET':
         review = app.mongoproxy.find_review_by_id(review_id)
-        return render_template("review.html",review = review,aspect_options = AspectOptions,sentiment_options = SentimentOptions)
+        return render_template("review.html",
+                                review = review,
+                                dbname = app.mongoproxy.dbname,
+                                aspect_options = AspectOptions,
+                                sentiment_options = SentimentOptions)
     elif request.method == 'POST':
         success = app.mongoproxy.update_review(review_id,request.form)
         if success:
