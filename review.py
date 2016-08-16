@@ -34,7 +34,7 @@ class Review(object):
     def from_dict(d):
         r = Review()
         r.id = d.get("_id",None)
-        r.business_id = d["business_id"]
+        r.business_id = d.get("business_id",None)# sometimes, we just don't care business_id
         r.ratings = d.get("ratings",None)
         r.sentences = [Sentence.from_dict(sent_dict) for sent_dict in d["sentences"]]
         return r
@@ -78,3 +78,15 @@ class ReviewsDal(object):
 
         result = self._reviews.update_one({"_id":reviewid},{"$set":update_content})
         return result.modified_count == 1
+
+    def sentences_stream_by_aspect(self,aspect):
+        cursor = self._reviews.find({"sentences.aspect":aspect},{"ratings":1,"sentences":1})
+        for d in cursor:
+            review = Review.from_dict(d)
+            actual_rating = review.ratings.get(aspect,None)
+
+            for sentence in review.sentences:
+                if sentence.aspect == aspect:
+                    if actual_rating is not None:
+                        sentence.sentiment = actual_rating# use 'actual_rating', a number, replace 'Positive/Negative'
+                    yield sentence

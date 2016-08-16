@@ -64,9 +64,17 @@ def test_update_aspect_sentiment():
     print "=========================== after update"
     print_review_by_review_id(reviewid)
 
+def test_list_sentences_by_aspect():
+    aspect = "Service"
+    dal = ReviewsDal(DbName)
+    for index,sentence in enumerate(dal.sentences_stream_by_aspect(aspect)):
+        print "\n********** [{}] {}: {}".format(index+1,sentence.aspect,sentence.sentiment)
+        print sentence.raw
+
 if __name__ == "__main__":
     # test_review_to_dict()
     # test_insert_db()
     # test_list_all_ids()
     # print_review_by_review_id(ObjectId("57b0030160c0ff0f9b37a8fc"))
-    test_update_aspect_sentiment()
+    # test_update_aspect_sentiment()
+    test_list_sentences_by_aspect()
