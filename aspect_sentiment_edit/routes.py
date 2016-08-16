@@ -37,7 +37,7 @@ def show_review(review_id):
         success = app.mongoproxy.update_review(review_id,request.form)
         if success:
             # if 'check_after_update' is on, then just reload current review again
-            next_review_id = review_id if 'check_after_update' in request.form else app.mongoproxy.next_review_id()
+            next_review_id = review_id if 'check_after_update' in request.form else app.mongoproxy.next_random_review_id()
             return redirect(url_for("show_review",review_id = next_review_id))
         else:
             return "<h2 color='red'>!!! Update Failed !!!</h2>"
