@@ -46,8 +46,6 @@
         </script>
     </head>
     <body>
-        <a href="{{url_for('next_random_review')}}" style='font-size:1.2em;font-weight:bold'>Next Random Review<a>
-
         <h2>Review # {{review.id}}</h2>
         <p>
             <ul>
@@ -58,9 +56,12 @@
         </p>
         <form method="post">
             <p>
+                <a href="{{url_for('next_random_review')}}" style='font-size:1.2em;font-weight:bold'>Next Random Review<a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" style="background-color:orange;font-size:1.2em;font-weight:bold">Update Review</button>
                 <input type="checkbox" name="check_after_update"  />Check After Update<br />
             </p>
+
 
             <table  >
                 <tr>
