@@ -72,7 +72,7 @@ class ReviewsDal(object):
 
     def update_aspects_sentiments(self,reviewid,new_aspects_sentiments):
         update_content = {}
-        for sent_index,new_aspect,new_sentiment in new_aspects_sentiments:
+        for sent_index,(new_aspect,new_sentiment) in new_aspects_sentiments.iteritems():
             update_content["sentences.{}.aspect".format(sent_index)] = new_aspect
             update_content["sentences.{}.sentiment".format(sent_index)] = new_sentiment
 

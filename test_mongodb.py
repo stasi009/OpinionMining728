@@ -55,8 +55,8 @@ def test_update_aspect_sentiment():
     # update
     dal = ReviewsDal(DbName)
     new_aspects_sentiments = {
-        (5,"Value","Positive"),
-        (6,"Service","Negative")
+        3:("Value","Positive"),
+        8:("Service","Negative")
     }
     success = dal.update_aspects_sentiments(reviewid,new_aspects_sentiments)
     print "update successful? {}".format(success)
