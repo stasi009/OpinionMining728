@@ -2,7 +2,7 @@
 import nltk
 import json
 
-AspectBusiness = "Business Service"
+AspectBusiness = "BusinessService"
 AspectClean = "Cleanliness"
 AspectLocation = "Location"
 AspectOverall = "Overall"

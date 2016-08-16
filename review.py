@@ -1,5 +1,4 @@
 
-
 import nltk
 from pymongo import MongoClient
 from sentence import Sentence
