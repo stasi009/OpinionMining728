@@ -13,7 +13,7 @@ class Review(object):
         self.business_id = None
         self.ratings = None
 
-    def assign_content(self,text,stop_words):
+    def assign_comment(self,text,stop_words):
         self.sentences = []
         for raw_sentence in Review.SentTokenizer.tokenize(text):
             sent = Sentence.from_raw(raw_sentence,stop_words)
@@ -47,8 +47,9 @@ class ReviewsDal(object):
         self._reviews = db[colname]
 
     def insert_many(self,reviews):
-        # cannot be iterator, but a concrete list
-        self._reviews.insert_many([r.to_dict() for r in reviews])
+        # cannot be iterator, but an non-empty list
+        if len(reviews)>0:
+            self._reviews.insert_many([r.to_dict() for r in reviews])
 
     def list_ids(self):
         cursor = self._reviews.find({},{"_id":1})

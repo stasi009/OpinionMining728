@@ -11,7 +11,6 @@ DbName = "tripadvisor"
 def get_reviews(hotel_file):
     hotel = TaHotel(hotel_file)
 
-    reviews = []
     for index,tareview in enumerate( hotel.reviews):
         review = Review()
         review.business_id = hotel.id
