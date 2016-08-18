@@ -64,8 +64,8 @@ def test_update_aspect_sentiment():
     print_review_by_review_id(reviewid)
 
 def test_list_sentences_by_aspect():
-    aspect = "Service"
-    dal = ReviewsDal(DbName)
+    aspect = "Value"
+    dal = ReviewsDal("tripadvisor_train")
     for index,sentence in enumerate(dal.sentences_stream_by_aspect(aspect)):
         print "\n********** [{}] {}: {}".format(index+1,sentence.aspect,sentence.sentiment)
         print sentence.raw

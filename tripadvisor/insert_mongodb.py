@@ -63,8 +63,8 @@ class SaveMongoAgent(threading.Thread):
             self.queue.task_done()
 
 if __name__ == "__main__":
-    datafolder = "data/train1"
-    dbname = "tripadvisor_train"
+    datafolder = "data/test1"
+    dbname = "tripadvisor_test"
     queue = Queue()
 
     parse_agent = ParseJsonAgent(datafolder,queue)
