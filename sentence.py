@@ -5,6 +5,7 @@ from collections import Counter
 import nltk
 from nltk.corpus import stopwords
 import common
+from negation_suffix import NegationSuffixAdder
 
 ReplacePatterns = [
                     (r'won\'t', 'will not'),
@@ -28,6 +29,7 @@ class Sentence(object):
     """
     ReplacePatterns = [(re.compile(regex,re.IGNORECASE),replacewith)  for regex,replacewith in ReplacePatterns]
     Lemmatizer = nltk.WordNetLemmatizer()
+    NegationSuffixer = NegationSuffixAdder()
 
     def __init__(self,raw = None,words = None, aspect=common.AspectUnknown, sentiment=common.SentimentUnknown):
         self.raw = raw
@@ -46,8 +48,8 @@ class Sentence(object):
         for (pattern, replacewith) in Sentence.ReplacePatterns:
             sentence = re.sub(pattern, replacewith, sentence)
 
-        ############### only keep letters
-        sentence = re.sub("[^a-zA-Z]", " ", sentence)
+        ############### remove numbers, but need to keep punctuations, which is required in negation marking
+        sentence = re.sub(r"\d", " ", sentence)
 
         ############### normalize to lower case
         sentence = sentence.lower()
@@ -64,9 +66,17 @@ class Sentence(object):
         # !!! and lemmatize return "park"
         words = common.lemmatize_with_pos(Sentence.Lemmatizer,words)
 
+        ############### add negation suffix
+        words = Sentence.NegationSuffixer.add_negation_suffixes(words)
+
         ############### remove stopwords
         if stop_words is None:
             stop_words = set(stopwords.words("english"))
+
+        # all stopwords' Negation Suffixed forms should also be stopwords
+        stop_words.update([stopword + NegationSuffixAdder.NEG_SUFFIX for stopword in stop_words])
+
+        # condition "len(w)>1" will remove punctuations    
         words = [w for w in words if len(w)>1 and w not in stop_words]
 
         #

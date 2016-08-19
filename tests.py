@@ -4,6 +4,7 @@ import nltk
 import common
 from sentence import Sentence
 from aspect_segmentation import AspectSegmentation
+from negation_suffix import NegationSuffixAdder
 
 def test_sentence():
     texts = [   "can't is a contraction",
@@ -44,9 +45,19 @@ def test_aspect_segmentation():
     for aspect,keywords in segmenter._aspect_keywords.iteritems():
         print "\nAspect<{}> has keywords: \n{}\n".format(aspect,keywords)
 
+def test_negation_suffix():
+    sentences = [   "I don't like Beijing 123, because it's too expensive", "I cannot 4 run away 56, since I am a grown man",    
+                    "never ever come back again, I swear to god","without any problem","I don't think I will enjoy it: it might be too spicy" ]
+    for index,raw_sent in enumerate(sentences):
+        sentence = Sentence.from_raw(raw_sent)
+        print "\n=========================== [{}]".format(index+1)
+        print sentence.raw
+        print sentence.words
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
 
     # test_sentence()
     # test_lemmatize_with_pos()
-    test_aspect_segmentation()
+    # test_aspect_segmentation()
+    test_negation_suffix()
