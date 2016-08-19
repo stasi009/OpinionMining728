@@ -2,8 +2,10 @@
 import re
 import json
 from collections import Counter
+
 import nltk
 from nltk.corpus import stopwords
+
 import common
 from negation_suffix import NegationSuffixAdder
 
@@ -40,8 +42,14 @@ class Sentence(object):
     def to_dict(self):
         return {"raw":self.raw,"words":self.words,"aspect":self.aspect,"sentiment":self.sentiment}
 
+    def words_no_negsuffix(self):
+        return [w.rstrip(NegationSuffixAdder.NEG_SUFFIX) for w in self.words]
+
     @staticmethod
-    def from_raw(sentence,stop_words = None):
+    def from_raw(sentence,stop_words):
+        if not ( isinstance(stop_words,set) or isinstance(stop_words,frozenset) ):
+            raise TypeError("stop_words pass in must be set or frozenset")
+
         sent = Sentence(sentence)
 
         ############### expand contraction and abbrevations
@@ -70,13 +78,7 @@ class Sentence(object):
         words = Sentence.NegationSuffixer.add_negation_suffixes(words)
 
         ############### remove stopwords
-        if stop_words is None:
-            stop_words = set(stopwords.words("english"))
-
-        # all stopwords' Negation Suffixed forms should also be stopwords
-        stop_words.update([stopword + NegationSuffixAdder.NEG_SUFFIX for stopword in stop_words])
-
-        # condition "len(w)>1" will remove punctuations    
+        # condition "len(w)>1" will remove punctuations
         words = [w for w in words if len(w)>1 and w not in stop_words]
 
         #
