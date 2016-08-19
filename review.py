@@ -46,6 +46,9 @@ class ReviewsDal(object):
         db = self._client[dbname]
         self._reviews = db[colname]
 
+    def close(self):
+        self._client.close()
+
     def insert_many(self,reviews):
         # cannot be iterator, but an non-empty list
         if len(reviews)>0:
