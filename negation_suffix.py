@@ -28,14 +28,16 @@ class NegationSuffixAdder(object):
     NEGATION_RE = re.compile("""(?x)(?:
     ^(?:never|no|nothing|nowhere|noone|none|not|
         havent|hasnt|hadnt|cant|couldnt|shouldnt|
-        wont|wouldnt|dont|doesnt|didnt|isnt|arent|aint
+        wont|wouldnt|dont|doesnt|didnt|isnt|arent|aint|without
      )$
     )
     |
     n't""")
 
     # regex to match punctuation tokens
-    PUNCT_RE = re.compile("^[.:;!?]$")
+    PUNCT_RE = re.compile("^[,.:;!?]$")
+
+    NEG_SUFFIX = "_neg"# lower-case suffix makes things easier
 
     def __init__(self):
         pass
@@ -62,7 +64,7 @@ class NegationSuffixAdder(object):
             # Do or do not append suffix, depending
             # on state of 'append_neg'
             if append_neg:
-                neg_tokens.append(token + "_NEG")
+                neg_tokens.append(token + NegationSuffixAdder.NEG_SUFFIX)
             else:
                 neg_tokens.append(token)
 
