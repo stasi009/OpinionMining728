@@ -11,6 +11,8 @@ from Queue import Queue
 
 import nltk
 from nltk.corpus import stopwords
+from pymongo import MongoClient
+
 from entities import TaHotel
 from review import Review,ReviewsDal
 
@@ -62,9 +64,7 @@ class SaveMongoAgent(threading.Thread):
             print "[SAVER]: {}-th batch, {} reviews inserted".format(self.counter,len(reviews))
             self.queue.task_done()
 
-if __name__ == "__main__":
-    datafolder = "data/test1"
-    dbname = "tripadvisor_test"
+def insert_into_db(datafolder,dbname):
     queue = Queue()
 
     parse_agent = ParseJsonAgent(datafolder,queue)
@@ -75,3 +75,17 @@ if __name__ == "__main__":
 
     queue.join()
     print "!!! ALL DONE !!!"
+
+def export_from_db(dbname,filename):
+    dal = ReviewsDal(dbname)
+
+    aspect = "Location"
+    for index,sentence in enumerate( dal.sentences_stream_by_aspect(aspect) ):
+        print "\n************** [{}]".format(index+1)
+        print "Aspect = '{}', Sentiment = {}".format(sentence.aspect,sentence.sentiment)
+        print sentence.raw
+        print "[{}]".format(" ".join(sentence.words))
+
+if __name__ == "__main__":
+    # insert_into_db("data/test1","tripadvisor_test")
+    export_from_db("tripadvisor_train","")
