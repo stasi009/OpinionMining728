@@ -17,7 +17,7 @@ class ReviewsMongoProxy(object):
 
     def find_review_by_id(self,idstring):
         id = ObjectId(idstring)
-        return self.dal.find_by_review_id(id)
+        return self.dal.find_by_review_id(id,True)
 
     def update_review(self,review_id,contents):
         """
