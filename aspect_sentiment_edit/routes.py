@@ -32,6 +32,10 @@ def next_random_review():
 def show_review(review_id):
     if request.method == 'GET':
         review = app.mongoproxy.find_review_by_id(review_id)
+
+        if app.classifier is not None:
+            app.classifier.classify(review)
+
         return render_template("review.html",
                                 review = review,
                                 dbname = app.mongoproxy.dbname,

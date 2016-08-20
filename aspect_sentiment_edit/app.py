@@ -12,6 +12,7 @@ if parentpath not in sys.path:
     sys.path.append(parentpath)
 
 from reviews_proxy import ReviewsMongoProxy
+from classifier import Classifier
 
 from flask import Flask
 app = Flask(__name__)
@@ -30,6 +31,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--debug",action="store_true")
+    parser.add_argument("-c","--classify",action="store_true")
     parser.add_argument("-n","--dbname",required=True)
     args = parser.parse_args()
 
@@ -37,4 +39,6 @@ if __name__ == '__main__':
     # laster, we should read dbname from configuration
     app.mongoproxy = ReviewsMongoProxy(args.dbname)
     app.debug= args.debug
+    app.classifier = Classifier("../tripadvisor/aspect_nltk_nb.pkl") if args.classify else None
+
     app.run(HOST, PORT)
