@@ -4,6 +4,13 @@ import csv
 import nltk
 from nltk.classify import NaiveBayesClassifier
 from nltk.classify.util import accuracy
+import common
+
+def get_samples_stream(filename):
+    with open(filename,"rt") as inf:
+        reader = csv.reader(inf)
+        for row in reader:
+            yield (row[0],row[1].split() )
 
 def binary_bow_feature(samples):
     # samples is a list, where each cell is a tuple
@@ -30,6 +37,9 @@ def print_errors(classifier,samples):
 def naivebayes_classify(filename):
     raw_sample_stream = get_samples_stream(filename)
     all_samples = list( binary_bow_feature(raw_sample_stream) )
+
+    # filter out two classes of outliers
+    all_samples = [(features,aspect) for features,aspect in all_samples if aspect != common.AspectNothing and aspect != common.AspectBusiness]
 
     test_sample_ratio = 0.25
     train_samples,test_samples = split_samples(all_samples,test_sample_ratio)
