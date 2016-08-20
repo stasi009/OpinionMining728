@@ -7,7 +7,9 @@ import argparse
 # only need to change sys.path only once
 # since sys.path is shared global variable
 import os,sys
-sys.path.append(os.path.abspath(".."))
+parentpath = os.path.abspath("..")
+if parentpath not in sys.path:
+    sys.path.append(parentpath)
 
 from reviews_proxy import ReviewsMongoProxy
 
