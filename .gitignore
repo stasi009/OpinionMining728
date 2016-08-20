@@ -31,3 +31,5 @@ tripadvisor/aspect_tagged_sentences.json
 mongodb
 
 tripadvisor/aspects_train.csv
+
+*.pkl

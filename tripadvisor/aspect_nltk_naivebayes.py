@@ -1,9 +1,12 @@
 
 import random
 import csv
+import cPickle
+
 import nltk
 from nltk.classify import NaiveBayesClassifier
 from nltk.classify.util import accuracy
+
 import common
 
 def get_samples_stream(filename):
@@ -27,18 +30,27 @@ def split_samples(all_samples,test_sample_ratio):
     test_samples,train_samples = all_samples[:test_size],all_samples[test_size:]
     return train_samples,test_samples
 
-def print_errors(classifier,samples):
-    for features,real_label in samples:
-        result_label = classifier.classify(features)
-        if result_label != real_label:
-            print "\n ############# {}".format(features)
-            print "real_label: {}, my result: {}".format(real_label,result_label)
+def classify_multi_labels(classifer,features,confidence=0.8):
+    """
+    one sentence may talk about multiple aspect
+    we just return multiple aspects whose total probability exceeds the confidence
+    """
+    prob_dist = classifier.prob_classify(features)
+    label_probs = [(label,prob_dist[label]) for label in classifer.labels()]
+    label_probs.sort(lambda t: t[1],reversed=True)
+
+    raise NotImplemented()
+
+def multilabel_check_accuracy(classifier,samples,confidence = 0.8):
+    pass
 
 def naivebayes_classify(filename):
     raw_sample_stream = get_samples_stream(filename)
     all_samples = list( binary_bow_feature(raw_sample_stream) )
 
     # filter out two classes of outliers
+    # these two categories contain too few examples, so the word frequency in these two categories
+    # cannot reflect the true probability
     all_samples = [(features,aspect) for features,aspect in all_samples if aspect != common.AspectNothing and aspect != common.AspectBusiness]
 
     test_sample_ratio = 0.25
@@ -52,9 +64,10 @@ def naivebayes_classify(filename):
     print "test accuracy: {}".format(accuracy(classifier,test_samples))
     classifier.show_most_informative_features(n=10)
 
-    print_errors(classifier,all_samples)
-
     return classifier
 
 if __name__ == "__main__":
-    naivebayes_classify("aspects_train.csv")
+    classifier = naivebayes_classify("aspects_train.csv")
+    with open("aspect_nltk_naivebayes.pkl","wb") as outf:
+        cPickle.dump(classifier,outf)
+    print "classifier trained and saved"
