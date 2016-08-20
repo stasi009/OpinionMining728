@@ -11,7 +11,7 @@ AspectService = "Service"
 AspectValue = "Value"
 AspectCheckin = "Check in"
 AspectSleep = "Sleep Quality"
-AsepctNothing = "Nothing"
+AspectNothing = "Nothing"
 AspectUnknown = "Unknown"
 
 SentimentPositive = "Positive"

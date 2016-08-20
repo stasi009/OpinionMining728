@@ -11,7 +11,7 @@ AspectOptions = [   common.AspectOverall,\
                     common.AspectRoom,\
                     common.AspectService,\
                     common.AspectValue,\
-                    common.AsepctNothing,\
+                    common.AspectNothing,\
                     common.AspectBusiness,\
                     common.AspectUnknown]
 SentimentOptions = [    common.SentimentPositive,\
