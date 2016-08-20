@@ -29,7 +29,6 @@ def sample_move(numfiles,destfolder):
 
 def make_stop_words():
     stop_words = stopwords.words("english")
-    stop_words.append("hotel")
 
     stop_neg_suffixed = [ stopword + NegationSuffixAdder.NEG_SUFFIX for stopword in stop_words ]
     stop_words.extend(stop_neg_suffixed)
