@@ -103,17 +103,28 @@ def update_add_neg_suffix(dbname):
 
     dal.close()
 
-def export_from_db(dbname,filename):
-    dal = ReviewsDal(dbname)
+def get_all_known_aspect_sentences(dbname):
+    client = MongoClient()
+    review_collection = client[dbname]["reviews"]
 
-    aspect = "Location"
-    for index,sentence in enumerate( dal.sentences_stream_by_aspect(aspect) ):
-        print "\n************** [{}]".format(index+1)
-        print "Aspect = '{}', Sentiment = {}".format(sentence.aspect,sentence.sentiment)
-        print sentence.raw
-        print "[{}]".format(" ".join(sentence.words))
+
+    query_condition = {"sentences": {'$elemMatch': {'aspect': {'$ne':'Unknown'}}   }   }
+    cursor = review_collection.find(query_condition,{"sentences":1})
+    for d in cursor:
+        review = Review.from_dict(d)
+        for sentence in review.sentences:
+            if sentence.aspect != "Unknown":
+                yield sentence
+
+    client.close()
+
+def export_from_db(dbname,filename):
+    sentence_stream = get_all_known_aspect_sentences(dbname)
+    with open(filename,"wt") as outf:
+        for sent in sentence_stream:
+            outf.write("{},{}\n".format(sent.aspect, " ".join(sent.words_no_negsuffix()  )  )  )
 
 if __name__ == "__main__":
     # insert_into_db("data/test1","tripadvisor_test")
-    # export_from_db("tripadvisor_train","")
-    update_add_neg_suffix("tripadvisor_train")
+    export_from_db("tripadvisor_train","aspects_train.csv")
+    # update_add_neg_suffix("tripadvisor_train")

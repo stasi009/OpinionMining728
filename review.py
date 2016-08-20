@@ -91,6 +91,6 @@ class ReviewsDal(object):
 
             for sentence in review.sentences:
                 if sentence.aspect == aspect:
-                    if actual_rating is not None:
+                    if actual_rating is not None and float(actual_rating)>0:
                         sentence.sentiment = actual_rating# use 'actual_rating', a number, replace 'Positive/Negative'
                     yield sentence
