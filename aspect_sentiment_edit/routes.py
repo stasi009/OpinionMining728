@@ -28,8 +28,12 @@ def next_random_review():
     review_id = app.mongoproxy.next_random_review_id()
     return redirect(url_for("show_review",review_id = review_id))
 
-@app.route('/review/<review_id>',methods=['GET', 'POST'])
-def show_review(review_id):
+@app.route('/review',methods=['GET', 'POST'])
+def show_review():
+    review_id = request.args.get("review_id")
+    classify = request.args.get("classify")
+    print "############ classify =".format(classify)
+
     if request.method == 'GET':
         review = app.mongoproxy.find_review_by_id(review_id)
 
