@@ -20,20 +20,13 @@ from entities import TaHotel
 from negation_suffix import NegationSuffixAdder
 from sentence import Sentence
 from review import Review,ReviewsDal
+import common
 
 def sample_move(numfiles,destfolder):
     allfiles = glob.glob("*.json")
     files = random.sample(allfiles,numfiles)
     for fname in files:
         shutil.move(fname,destfolder)
-
-def make_stop_words():
-    stop_words = stopwords.words("english")
-
-    stop_neg_suffixed = [ stopword + NegationSuffixAdder.NEG_SUFFIX for stopword in stop_words ]
-    stop_words.extend(stop_neg_suffixed)
-
-    return frozenset(stop_words)
 
 class ParseJsonAgent(object):
     def __init__(self,datafolder,queue):
@@ -86,26 +79,33 @@ def insert_into_db(datafolder,dbname):
     queue.join()
     print "!!! ALL DONE !!!"
 
-def update_add_neg_suffix(dbname):
-    stop_words = make_stop_words()
+def update_add_neg_suffix(dbname,query_condition):
+    stop_words = common.make_stop_words()
+    client = MongoClient()
+    review_collection = client[dbname]['reviews']
 
-    dal = ReviewsDal(dbname)
-    review = dal.find_by_review_id(ObjectId("57b3c78460c0ff08b16350a8"),True)
-    for index,sent in enumerate(review.sentences):
-        print "-------------------- {}".format(index+1)
-        print sent.raw
-        print sent.words
+    cursor = review_collection.find(query_condition,{"sentences.raw":1,"sentences.words":1})
+    for rindex,rd in enumerate(cursor):
+        review = Review.from_dict(rd)
 
-        new_sent = Sentence.from_raw(sent.raw,stop_words)
-        if set(new_sent.words) != set(sent.words):
-            print new_sent.words
+        update_content = {}
+        for sindex,sent in enumerate(review.sentences):
+            new_sent = Sentence.from_raw(sent.raw,stop_words)
+            if set(new_sent.words) != set(sent.words):
+                update_content["sentences.{}.words".format(sindex)] = new_sent.words
 
-    dal.close()
+        if len(update_content)>0:
+            result = review_collection.update_one({"_id":review.id},{"$set":update_content})
+            if result.modified_count != 1:
+                raise Exception("failed to update review<{}>".format(review.id))
+
+        print "{}-th review updated {} sentences".format(rindex+1,len(update_content))
+
+    client.close()
 
 def get_all_known_aspect_sentences(dbname):
     client = MongoClient()
     review_collection = client[dbname]["reviews"]
-
 
     query_condition = {"sentences": {'$elemMatch': {'aspect': {'$ne':'Unknown'}}   }   }
     cursor = review_collection.find(query_condition,{"sentences":1})
@@ -125,5 +125,6 @@ def export_from_db(dbname,filename):
 
 if __name__ == "__main__":
     # insert_into_db("data/test1","tripadvisor_test")
-    export_from_db("tripadvisor_train","aspects_train.csv")
-    # update_add_neg_suffix("tripadvisor_train")
+    # export_from_db("tripadvisor_train","aspects_train.csv")
+    # update_add_neg_suffix("tripadvisor_train",{'_id':ObjectId("57b3c96560c0ff08b163a0b3")})
+    update_add_neg_suffix("tripadvisor_test",{})
