@@ -1,5 +1,6 @@
 
 import re
+import common
 
 class NegationSuffixAdder(object):
     """
@@ -37,8 +38,6 @@ class NegationSuffixAdder(object):
     # regex to match punctuation tokens
     PUNCT_RE = re.compile("^[,.:;!?]$")
 
-    NEG_SUFFIX = "_neg"# lower-case suffix makes things easier
-
     def __init__(self):
         pass
 
@@ -64,7 +63,7 @@ class NegationSuffixAdder(object):
             # Do or do not append suffix, depending
             # on state of 'append_neg'
             if append_neg:
-                neg_tokens.append(token + NegationSuffixAdder.NEG_SUFFIX)
+                neg_tokens.append(token + common.NEG_SUFFIX)
             else:
                 neg_tokens.append(token)
 

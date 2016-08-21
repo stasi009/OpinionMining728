@@ -1,6 +1,9 @@
 
 import nltk
+from nltk.corpus import stopwords
 import json
+
+NEG_SUFFIX = "_neg"# lower-case suffix makes things easier
 
 AspectBusiness = "BusinessService"
 AspectClean = "Cleanliness"
@@ -44,3 +47,13 @@ def lemmatize_with_pos(lemmatizer,words):
     """
     pos_tagged_words = nltk.pos_tag(words)
     return [lemmatizer.lemmatize(w,pos = Fine2CoarsePosTags.get(pos,'n')) for w,pos in pos_tagged_words]
+
+def make_stop_words():
+    stop_words = stopwords.words("english")
+    # below words have been processed in "negation marking" process
+    stop_words.extend(["never","without"])
+
+    stop_neg_suffixed = [ stopword + NEG_SUFFIX for stopword in stop_words ]
+    stop_words.extend(stop_neg_suffixed)
+
+    return frozenset(stop_words)
