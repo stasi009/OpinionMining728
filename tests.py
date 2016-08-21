@@ -46,10 +46,11 @@ def test_aspect_segmentation():
         print "\nAspect<{}> has keywords: \n{}\n".format(aspect,keywords)
 
 def test_negation_suffix():
-    sentences = [   "I don't like Beijing 123, because it's too expensive", "I cannot 4 run away 56, since I am a grown man",    
+    stopwords = common.make_stop_words()
+    sentences = [   "I don't like Beijing 123, because it's too expensive", "I cannot 4 run away 56, since I am a grown man",
                     "never ever come back again, I swear to god","without any problem","I don't think I will enjoy it: it might be too spicy" ]
     for index,raw_sent in enumerate(sentences):
-        sentence = Sentence.from_raw(raw_sent)
+        sentence = Sentence.from_raw(raw_sent,stopwords)
         print "\n=========================== [{}]".format(index+1)
         print sentence.raw
         print sentence.words
