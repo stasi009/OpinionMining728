@@ -1,8 +1,6 @@
 
-import json
 from flask import Flask,url_for,request,render_template,redirect
 from app import app
-from review import Review,ReviewsDal
 import common
 
 AspectOptions = [   common.AspectOverall,\
@@ -32,12 +30,17 @@ def next_random_review():
 def show_review():
     review_id = request.args.get("review_id")
     classify = request.args.get("classify")
-    print "############ classify =".format(classify)
+    if classify is None:
+        # if not given "classify" parameter
+        # then 'classify' is true, if classifier has been set
+        classify = app.classifier is not None
+    else:
+        classify = True if int(classify) >0 else False
 
     if request.method == 'GET':
         review = app.mongoproxy.find_review_by_id(review_id)
 
-        if app.classifier is not None:
+        if classify and app.classifier is not None:
             app.classifier.classify(review)
 
         return render_template("review.html",
@@ -50,7 +53,8 @@ def show_review():
         if success:
             # if 'check_after_update' is on, then just reload current review again
             next_review_id = review_id if 'check_after_update' in request.form else app.mongoproxy.next_random_review_id()
-            return redirect(url_for("show_review",review_id = next_review_id))
+            classify = 0 if 'check_after_update' in request.form else 1
+            return redirect(url_for("show_review",review_id = next_review_id, classify = classify))
         else:
             return "<h2 color='red'>!!! Update Failed !!!</h2>"
     else:
