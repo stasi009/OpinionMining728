@@ -4,8 +4,6 @@ import json
 from collections import Counter
 
 import nltk
-from nltk.corpus import stopwords
-
 import common
 from negation_suffix import NegationSuffixAdder
 
@@ -32,7 +30,7 @@ class Sentence(object):
     ReplacePatterns = [(re.compile(regex,re.IGNORECASE),replacewith)  for regex,replacewith in ReplacePatterns]
     Lemmatizer = nltk.WordNetLemmatizer()
     NegationSuffixer = NegationSuffixAdder()
-    NegSuffixPattern = re.compile(r"{}$".format(NegationSuffixAdder.NEG_SUFFIX))
+    NegSuffixPattern = re.compile(r"{}$".format(common.NEG_SUFFIX))
 
     def __init__(self,raw = None,words = None, aspect=common.AspectUnknown, sentiment=common.SentimentUnknown):
         self.raw = raw
@@ -58,7 +56,7 @@ class Sentence(object):
             sentence = re.sub(pattern, replacewith, sentence)
 
         ############### remove numbers, but need to keep punctuations, which is required in negation marking
-        sentence = re.sub(r"[0-9\\\/]", " ", sentence)
+        sentence = re.sub(r"[0-9\\\/\-\(\)]", " ", sentence)
 
         ############### normalize to lower case
         sentence = sentence.lower()
