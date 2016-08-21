@@ -49,15 +49,3 @@ class TaHotel(object):
 
         self.reviews = [ TaReview(review_d) for review_d in d["Reviews"]]
 
-if __name__ == "__main__":
-    path = "data/262451.json"
-    h = Hotel(path)
-    print "Hotel-{}:{}".format(h.id,h.name)
-
-    for index, review in  enumerate( h.reviews):
-        print "************** REVIEW [{}] **************".format(index+1)
-        for k,v in review.ratings.viewitems():
-            print "{}: {}".format(k,v)
-
-        print "Title: {}".format(review.title)
-        print review.content
