@@ -32,7 +32,7 @@ class ParseJsonAgent(object):
     def __init__(self,datafolder,queue):
         self.allfiles = glob.glob(os.path.join(datafolder,"*.json"))
         self.queue = queue
-        self.stopwords = make_stop_words()
+        self.stopwords = common.make_stop_words()
 
     def run(self):
         for index,fname in enumerate(self.allfiles):
