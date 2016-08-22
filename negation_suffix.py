@@ -36,7 +36,7 @@ class NegationSuffixAdder(object):
     n't""")
 
     # regex to match punctuation tokens
-    PUNCT_RE = re.compile("^[,.:;!?]$")
+    PUNCT_RE = re.compile("^[,.:;!?-]$")
 
     def __init__(self):
         pass
