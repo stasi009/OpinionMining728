@@ -1,5 +1,6 @@
+import os
+import sys
 
-import os,sys
 parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
     sys.path.append(parentpath)
@@ -11,13 +12,9 @@ import shutil
 import threading
 from Queue import Queue
 
-import nltk
-from nltk.corpus import stopwords
 from pymongo import MongoClient
-from bson.objectid import ObjectId
 
 from entities import TaHotel
-from negation_suffix import NegationSuffixAdder
 from sentence import Sentence
 from review import Review,ReviewsDal
 import common
@@ -125,6 +122,6 @@ def export_from_db(dbname,filename):
 
 if __name__ == "__main__":
     # insert_into_db("data/test1","tripadvisor_test")
-    # export_from_db("tripadvisor_train","aspects_train.csv")
+    export_from_db("tripadvisor_train","aspects_train.csv")
     # update_add_neg_suffix("tripadvisor_train",{'_id':ObjectId("57b3c96560c0ff08b163a0b3")})
-    update_add_neg_suffix("tripadvisor_test",{})
+    # update_add_neg_suffix("tripadvisor_test",{})
