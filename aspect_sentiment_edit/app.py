@@ -10,8 +10,10 @@ import os,sys
 parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
     sys.path.append(parentpath)
+    sys.path.append(r"/Users/stasi/Documents/github/OpinionMining728/tripadvisor")
 
 from reviews_proxy import ReviewsMongoProxy
+from aspect_nltk_nb import ImprovedNbClassifier
 from classifier import Classifier
 
 from flask import Flask

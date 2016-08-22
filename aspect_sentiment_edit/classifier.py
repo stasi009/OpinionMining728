@@ -11,4 +11,4 @@ class Classifier(object):
     def classify(self,review):
         for sentence in review.sentences:
             features = {}.fromkeys(sentence.words_no_negsuffix(),True)
-            sentence.aspect = self.classifier.classify(features)
+            sentence.aspect = self.classifier.classify(features,0.75)
