@@ -1,4 +1,3 @@
-from __future__ import print_function
 
 import os,sys
 parentpath = os.path.abspath("..")
@@ -8,49 +7,58 @@ if parentpath not in sys.path:
 import cPickle
 from pymongo import MongoClient
 from bson.objectid import ObjectId
-
+import common
+from sentence import  Sentence
 from review import Review,ReviewsDal
+from aspect_nltk_nb import ImprovedNbClassifier
 
-dbname = "tripadvisor_train"
-reviewid = "57b3c3e460c0ff08b162bd9d"
+def review_to_sentences(review,classifier):
+    composed_sentences = {aspect: (rating,[],[]) for aspect,rating in review.ratings.iteritems() if rating>0}
 
-dal = ReviewsDal(dbname)
-reviewid = "57b3bf2360c0ff08b161ff1e"
-review = dal.find_by_review_id(ObjectId(reviewid),True)
+    for sentence in review.sentences:
+        aspect = None
+        if sentence.aspect != common.AspectUnknown:
+            aspect = sentence.aspect # has been manually tagged
+        else:
+            features = {}.fromkeys(sentence.words_no_negsuffix(), True)
+            aspect = classifier.classify(features)
 
+        if aspect != common.AspectUnknown and aspect in composed_sentences:
+            comp_sentence = composed_sentences[aspect]
+            comp_sentence[1].append(sentence.raw)
+            comp_sentence[2].extend(sentence.words)
 
-def print_review(review):
-    print("************ REVIEW <{}> ************".format(review.id))
-    print("business_id: {}".format(review.business_id))
-    print("ratings: {}".format(review.ratings))
-
-    for index,sentence in enumerate( review.sentences):
-        print ("\t[{}]: {}".format(index + 1, sentence.raw))
-        if sentence.words is not None:
-            print ("\t{}".format(sentence.words))
-        print ("\t ##### aspect: {}".format(sentence.aspect))
-        print ("\t ##### sentiment: {}".format(sentence.sentiment))
+    for aspect, comp_sentence in composed_sentences.iteritems():
+        if len(comp_sentence[2]) >0:
+            composed_raw_sent = " ".join(comp_sentence[1])
+            yield Sentence(raw = composed_raw_sent,words = comp_sentence[2],aspect=aspect,sentiment=comp_sentence[0])
 
 
 def load_classifier(pklname):
     with open(pklname,"rb") as inf:
         return cPickle.load(inf)
 
-classifier = load_classifier("aspect_nltk_nb.pkl")
+def load_reviews_save_sentiment_sentences(dbname,classifier):
+    client = MongoClient()
+    db = client[dbname]
+    reviews_collection = db["reviews"]
+    sentisent_collection = db["sentiment_sentences"]
 
-def temp_print_review(reviewid):
-    review = dal.find_by_review_id(ObjectId(reviewid), True)
-    for index,sentence in enumerate(review.sentences):
-        print ("********* {}-th sentence: ".format(index + 1))
-        print (sentence.raw)
+    review_cursor = reviews_collection.find({})
+    for index,rd in enumerate(review_cursor):
+        review = Review.from_dict(rd)
 
-        features = {}.fromkeys(sentence.words_no_negsuffix(), True)
-        probabilites = classifier.prob_classify(features)
+        sentence_dicts  = [ s.to_dict() for s in review_to_sentences(review,classifier) ]
+        if len(sentence_dicts)>0:
+            sentisent_collection.insert_many(sentence_dicts)
 
-        probabilites = [(label,probabilites.prob(label)) for label in classifier.labels()]
-        probabilites.sort(key = lambda  t: -t[1])# sort in descending order
-        for label, prob in probabilites:
-            print ("\t[{}]:{:.2f}".format(label, prob))
+        print "{}-th review extract {} sentences and saved".format(index+1,len(sentence_dicts))
+
+    client.close()
+
+if __name__ == "__main__":
+    classifier = load_classifier("aspect_nltk_nb.pkl")
+    load_reviews_save_sentiment_sentences("tripadvisor_train",classifier)
 
 
 
