@@ -56,9 +56,25 @@ def load_reviews_save_sentiment_sentences(dbname,classifier):
 
     client.close()
 
+def load_sentences():
+    dbname = "tripadvisor_train"
+    client = MongoClient()
+    db = client[dbname]
+    sentisent_collection = db["sentiment_sentences"]
+
+    cursor = sentisent_collection.find({'sentiment':{'$lte':2}}).skip(99).limit(120)
+    for index,sentd in enumerate(cursor):
+        sent = Sentence.from_dict(sentd)
+        print "\n[{}] Aspect: {}, Sentiment: {}".format(index+1,sent.aspect,sent.sentiment)
+        print sent.raw
+        print sent.words
+
+    client.close()
+
 if __name__ == "__main__":
-    classifier = load_classifier("aspect_nltk_nb.pkl")
-    load_reviews_save_sentiment_sentences("tripadvisor_train",classifier)
+    # classifier = load_classifier("aspect_nltk_nb.pkl")
+    # load_reviews_save_sentiment_sentences("tripadvisor_train",classifier)
+    load_sentences()
 
 
 
