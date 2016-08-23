@@ -4,9 +4,12 @@ parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
     sys.path.append(parentpath)
 
+import random
 import cPickle
 from pymongo import MongoClient
-from bson.objectid import ObjectId
+from sklearn.feature_extraction.text import CountVectorizer
+import nltk
+
 import common
 from sentence import  Sentence
 from review import Review,ReviewsDal
@@ -62,22 +65,70 @@ def load_sentences():
     db = client[dbname]
     sentisent_collection = db["sentiment_sentences"]
 
-    cursor = sentisent_collection.find({'sentiment':{'$lte':2}}).skip(99).limit(120)
+    # cursor = sentisent_collection.find({'sentiment':{'$lte':2}}).skip(99).limit(120)
+    cursor = sentisent_collection.aggregate([ {'$match':{'sentiment':3}},
+                                              { '$sample': { 'size': 120 } } ])
     for index,sentd in enumerate(cursor):
         sent = Sentence.from_dict(sentd)
-        print "\n[{}] Aspect: {}, Sentiment: {}".format(index+1,sent.aspect,sent.sentiment)
+        print "\n\n[{}] Aspect: {}, Sentiment: {}".format(index+1,sent.aspect,sent.sentiment)
         print sent.raw
+        print "--------------"
         print sent.words
 
     client.close()
 
 def sample_split(dbname,num_train,num_validate,num_test):
-    pass
+    client = MongoClient()
+    db = client[dbname]
+    sentisent_collection = db.sentiment_sentences
+
+    ################## load and count
+    aspect_dist = nltk.FreqDist()
+    sentiment_dist = nltk.FreqDist()
+
+    all_samples = []
+    cursor = sentisent_collection.aggregate([ { '$sample': { 'size': num_train + num_validate + num_test } } ])
+    for index,d in enumerate(cursor):
+        sent = Sentence.from_dict(d)
+        all_samples.append( (sent.words,sent.sentiment) )
+
+        aspect_dist[sent.aspect] +=1
+        sentiment_dist[int(sent.sentiment)] +=1
+    client.close()
+
+    ################## show statistics
+    for k in aspect_dist:
+        print '[{}]: {}'.format(k,aspect_dist.freq(k))
+
+    for k in sentiment_dist:
+        print '[{}]: {}'.format(k,sentiment_dist.freq(k))
+
+    ################## shuffle
+    random.shuffle(all_samples)
+
+    ################## split
+    def __dump(filename,data):
+        with open(filename,"wb") as outf:
+            cPickle.dump(data,outf)
+
+    __dump("sentidata_train_raw.pkl",all_samples[:num_train])
+    __dump("sentidata_validate_raw.pkl",all_samples[num_train:num_train+num_validate])
+    __dump("sentidata_test_raw.pkl",all_samples[num_train+num_validate:])
+
+def test_count_vectorizer():
+    inputs = ['hello hello world', "i don't care", 'what should I do next what','I regret']
+    inputs = [s.split() for s in inputs]
+
+    vectorizer = CountVectorizer(analyzer=lambda x: x)
+    matrix = vectorizer.fit_transform(inputs)
+    vectorizer.vocabulary_
+
 
 if __name__ == "__main__":
     # classifier = load_classifier("aspect_nltk_nb.pkl")
     # load_reviews_save_sentiment_sentences("tripadvisor_train",classifier)
-    load_sentences()
+    # load_sentences()
+    sample_split("tripadvisor_train",15000,6000,6000)
 
 
 
