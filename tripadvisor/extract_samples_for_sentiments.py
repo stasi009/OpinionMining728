@@ -77,7 +77,7 @@ def load_sentences():
 
     client.close()
 
-def sample_split(dbname,num_train,num_validate,num_test):
+def sample_split(dbname,num_train,num_test):
     client = MongoClient()
     db = client[dbname]
     sentisent_collection = db.sentiment_sentences
@@ -87,7 +87,7 @@ def sample_split(dbname,num_train,num_validate,num_test):
     sentiment_dist = nltk.FreqDist()
 
     all_samples = []
-    cursor = sentisent_collection.aggregate([ { '$sample': { 'size': num_train + num_validate + num_test } } ])
+    cursor = sentisent_collection.aggregate([ { '$sample': { 'size': num_train  + num_test } } ])
     for index,d in enumerate(cursor):
         sent = Sentence.from_dict(d)
         all_samples.append( (sent.words,sent.sentiment) )
@@ -112,8 +112,7 @@ def sample_split(dbname,num_train,num_validate,num_test):
             cPickle.dump(data,outf)
 
     __dump("sentidata_train_raw.pkl",all_samples[:num_train])
-    __dump("sentidata_validate_raw.pkl",all_samples[num_train:num_train+num_validate])
-    __dump("sentidata_test_raw.pkl",all_samples[num_train+num_validate:])
+    __dump("sentidata_test_raw.pkl",all_samples[num_train:])
 
 def test_count_vectorizer():
     inputs = ['hello hello world', "i don't care", 'what should I do next what','I regret']
@@ -128,7 +127,7 @@ if __name__ == "__main__":
     # classifier = load_classifier("aspect_nltk_nb.pkl")
     # load_reviews_save_sentiment_sentences("tripadvisor_train",classifier)
     # load_sentences()
-    sample_split("tripadvisor_train",15000,6000,6000)
+    sample_split("tripadvisor_train",21000,6000)
 
 
 
