@@ -1,4 +1,5 @@
 
+
 import os,sys
 parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
@@ -7,10 +8,10 @@ if parentpath not in sys.path:
 import numpy as np
 import cPickle
 import nltk
+from sklearn.svm import LinearSVC
 from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
 from sklearn.grid_search import GridSearchCV,RandomizedSearchCV
 from sklearn.cross_validation import PredefinedSplit
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 
@@ -42,7 +43,7 @@ def print_label_frequency(y):
     for k in freqdist.iterkeys():
         print "\tLabel[{}]: {:.2f}%".format(k,freqdist.freq(k) * 100)
 
-def make_train_validate_split(total,validate_ratio=0.3):
+def make_train_validate_split(total,validate_ratio=0.333):
     # when using a validation set,
     # set the test_fold to 0 for all samples that are part of the validation set,
     # and to -1 for all other samples.
@@ -58,7 +59,14 @@ def do_nothing(x):
         I have to create this stupid wrap function to let the task can be parallelized """
     return x
 
-def search_best_rf():
+def print_classification_report(title,ytrue,ypredict):
+    print "\n******************* {} *******************".format(title)
+    print "Accuracy: {}\n".format(accuracy_score(y_true=ytrue,y_pred=ypredict))
+    print classification_report(y_true=ytrue,y_pred=ypredict)
+    print ""
+    print confusion_matrix(y_true=ytrue,y_pred=ypredict)
+
+def search_best_svc():
     Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
     print "training data loaded"
     print_label_frequency(ytrain_raw)
@@ -67,79 +75,45 @@ def search_best_rf():
     pipeline = Pipeline([
         ('vect', CountVectorizer(analyzer=do_nothing)),
         ('tfidf', TfidfTransformer()),
-        ('rf', RandomForestClassifier(oob_score=True, verbose=1)),
+        ('svc', LinearSVC(dual=False, verbose=1)),# dual=False when #samples>#features
     ])
 
     ############# initialize the search
     parameters = {
         'vect__max_features': (2000,3000,4000),
-        'rf__n_estimators': range(300,1500,100),
-        'rf__criterion':['gini','entropy'],
-        'rf__max_depth': range(10,100,10),
-        'rf__min_samples_split': range(10,100,10),
+        'svc__C': [0.001,0.01,0.1,1,10,100,1000],
+        'svc__penalty': ['l1','l2'],
+        #'svc__class_weight': [None,'balanced']
     }
-    validate_split = PredefinedSplit(test_fold=make_train_validate_split(len(ytrain_raw)))
 
-    searchcv = RandomizedSearchCV(estimator=pipeline,
-                                param_distributions=parameters,
-                                n_iter=200,
-                                n_jobs=-1,
-                                verbose=1,
-                                cv = validate_split)
+    scoring_method = "roc_auc"
+    validate_split = PredefinedSplit(test_fold=make_train_validate_split(len(ytrain_raw)))
+    searchcv = GridSearchCV(estimator=pipeline,
+                            param_grid=parameters,
+                            scoring=scoring_method,
+                            n_jobs=-1,
+                            verbose=1,
+                            cv = validate_split)
 
     ############# search
     print "#################### search cv begins"
     searchcv.fit(Xtrain_raw, ytrain_raw)
     print "#################### search cv ends"
-    print "best score: ", searchcv.best_score_
+    print "best {}: {}".format(scoring_method, searchcv.best_score_)
     print "best parameters: ", searchcv.best_params_
 
     ############# check the best model
     bestpipeline = searchcv.best_estimator_
-    common.dump_predictor("pipeline_rf.pkl",bestpipeline)
+    common.dump_predictor("pipeline_svc.pkl",bestpipeline)
 
-    rf = bestpipeline.steps[-1][1]
-    print "RF's OOB score: {}".format(rf.oob_score_)
+    ############# training error analysis
+    ytrain_predict = bestpipeline.predict(Xtrain_raw)
+    print_classification_report('Training Data',ytrain_raw,ytrain_predict)
 
-    words = bestpipeline.steps[0][1].get_feature_names()
-    feat_importances = zip(words, rf.feature_importances_)
-    feat_importances.sort(key=lambda t: -t[1])
-    print feat_importances
-
-def test_one_rf():
-    Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
-    print "training data loaded"
-    print_label_frequency(ytrain_raw)
-
-    ############# create the pipeline
-    pipeline = Pipeline([
-        ('vect', CountVectorizer(analyzer=lambda x:x,max_features=3000)),
-        ('tfidf', TfidfTransformer()),
-        ('rf', RandomForestClassifier(n_estimators=500,
-                                      max_depth=200,
-                                      min_samples_split=10,
-                                      oob_score=True,
-                                      n_jobs=-1,verbose=1,class_weight='balanced')),
-    ])
-
-    ############# train
-    pipeline.fit(Xtrain_raw,ytrain_raw)
-
-    ############# check result
-    rf = pipeline.steps[-1][1]
-    rf.oob_score_
-
-    ############# training error
-    ytrain_predict = pipeline.predict(Xtrain_raw)
-    print classification_report(y_true=ytrain_raw,y_pred=ytrain_predict)
-    print confusion_matrix(y_true=ytrain_raw,y_pred=ytrain_predict)
-
-    ############# testing error
+    ############# test error analysis
     Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
-    ytest_predict = pipeline.predict(Xtest_raw)
-    accuracy_score(y_true=ytest_raw,y_pred=ytest_predict)
-    print classification_report(y_true=ytest_raw,y_pred=ytest_predict)
-
+    ytest_predict = bestpipeline.predict(Xtest_raw)
+    print_classification_report('Testing Data',ytest_raw,ytest_predict)
 
 if __name__ == "__main__":
-    search_best_rf()
+    search_best_svc()
