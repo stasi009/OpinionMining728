@@ -1,4 +1,9 @@
 
+import os,sys
+parentpath = os.path.abspath("..")
+if parentpath not in sys.path:
+    sys.path.append(parentpath)
+
 import numpy as np
 import cPickle
 import nltk
@@ -7,6 +12,9 @@ from sklearn.grid_search import GridSearchCV,RandomizedSearchCV
 from sklearn.cross_validation import PredefinedSplit
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
+from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
+
+import common
 
 def load_raw_data(filename):
     with open(filename,"rb") as inf:
@@ -46,22 +54,11 @@ def make_train_validate_split(total,validate_ratio=0.3):
     return folds_flag
 
 def do_nothing(x):
+    """ since lamba cannot pickled and distributed among multiple process
+        I have to create this stupid wrap function to let the task can be parallelized """
     return x
 
-def dump_predictor(filename,learner):
-    with open(filename, 'wb') as outfile:
-        cPickle.dump(learner,outfile)
-
-def load_predictor(filename):
-    with open(filename,"rb") as infile:
-        return cPickle.load(infile)
-
-#################
-ps = PredefinedSplit(test_fold=make_train_validate_split(10))
-for train_index, test_index in ps:
-    print("TRAIN:", train_index, "TEST:", test_index)
-
-if __name__ == "__main__":
+def search_best_rf():
     Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
     print "training data loaded"
     print_label_frequency(ytrain_raw)
@@ -99,7 +96,7 @@ if __name__ == "__main__":
 
     ############# check the best model
     bestpipeline = searchcv.best_estimator_
-    dump_predictor("pipeline_rf.pkl",bestpipeline)
+    common.dump_predictor("pipeline_rf.pkl",bestpipeline)
 
     rf = bestpipeline.steps[-1][1]
     print "RF's OOB score: {}".format(rf.oob_score_)
@@ -108,3 +105,41 @@ if __name__ == "__main__":
     feat_importances = zip(words, rf.feature_importances_)
     feat_importances.sort(key=lambda t: -t[1])
     print feat_importances
+
+def test_one_rf():
+    Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
+    print "training data loaded"
+    print_label_frequency(ytrain_raw)
+
+    ############# create the pipeline
+    pipeline = Pipeline([
+        ('vect', CountVectorizer(analyzer=lambda x:x,max_features=3000)),
+        ('tfidf', TfidfTransformer()),
+        ('rf', RandomForestClassifier(n_estimators=500,
+                                      max_depth=200,
+                                      min_samples_split=10,
+                                      oob_score=True,
+                                      n_jobs=-1,verbose=1,class_weight='balanced')),
+    ])
+
+    ############# train
+    pipeline.fit(Xtrain_raw,ytrain_raw)
+
+    ############# check result
+    rf = pipeline.steps[-1][1]
+    rf.oob_score_
+
+    ############# training error
+    ytrain_predict = pipeline.predict(Xtrain_raw)
+    print classification_report(y_true=ytrain_raw,y_pred=ytrain_predict)
+    print confusion_matrix(y_true=ytrain_raw,y_pred=ytrain_predict)
+
+    ############# testing error
+    Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
+    ytest_predict = pipeline.predict(Xtest_raw)
+    accuracy_score(y_true=ytest_raw,y_pred=ytest_predict)
+    print classification_report(y_true=ytest_raw,y_pred=ytest_predict)
+
+
+if __name__ == "__main__":
+    search_best_rf()

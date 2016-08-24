@@ -1,4 +1,5 @@
 
+import cPickle
 import nltk
 from nltk.corpus import stopwords
 import json
@@ -57,3 +58,11 @@ def make_stop_words():
     stop_words.extend(stop_neg_suffixed)
 
     return frozenset(stop_words)
+
+def dump_predictor(filename,learner):
+    with open(filename, 'wb') as outfile:
+        cPickle.dump(learner,outfile)
+
+def load_predictor(filename):
+    with open(filename,"rb") as infile:
+        return cPickle.load(infile)
