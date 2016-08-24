@@ -57,7 +57,7 @@ def print_classification_report(title,ytrue,ypredict):
 
 def run_naive_bayes(use_tfidf):
     Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
-    print "training data loaded"
+    print "\ntraining data loaded"
     print_label_frequency(ytrain_raw)
 
     ############# create the pipeline
@@ -83,6 +83,9 @@ def run_naive_bayes(use_tfidf):
 
     ############# test error analysis
     Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
+    print "\ntest data distribution"
+    print_label_frequency(ytest_raw)
+
     ytest_predict = pipeline.predict(Xtest_raw)
     print_classification_report('Testing Data',ytest_raw,ytest_predict)
 
