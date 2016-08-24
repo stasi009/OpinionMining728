@@ -111,10 +111,19 @@ def search_best_rf():
     rf = bestpipeline.steps[-1][1]
     print "RF's OOB score: {}".format(rf.oob_score_)
 
-    words = bestpipeline.steps[0][1].get_feature_names()
-    feat_importances = zip(words, rf.feature_importances_)
-    feat_importances.sort(key=lambda t: -t[1])
-    print feat_importances
+    # words = bestpipeline.steps[0][1].get_feature_names()
+    # feat_importances = zip(words, rf.feature_importances_)
+    # feat_importances.sort(key=lambda t: -t[1])
+    # print feat_importances
+
+    ############# training error analysis
+    ytrain_predict = bestpipeline.predict(Xtrain_raw)
+    print_classification_report('Training Data', ytrain_raw, ytrain_predict)
+
+    ############# test error analysis
+    Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
+    ytest_predict = bestpipeline.predict(Xtest_raw)
+    print_classification_report('Testing Data', ytest_raw, ytest_predict)
 
 def test_one_rf():
     Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
