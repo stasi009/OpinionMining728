@@ -9,6 +9,7 @@ import numpy as np
 import cPickle
 import nltk
 from sklearn.linear_model import LogisticRegression
+from sklearn.decomposition import PCA,TruncatedSVD
 from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
 from sklearn.grid_search import GridSearchCV,RandomizedSearchCV
 from sklearn.cross_validation import PredefinedSplit
@@ -75,12 +76,15 @@ def search_best_lr():
     pipeline = Pipeline([
         ('vect', CountVectorizer(analyzer=do_nothing)),
         ('tfidf', TfidfTransformer()),
+        ('svd',TruncatedSVD()),
         ('lr', LogisticRegression(dual=False, verbose=1)),# dual=False when #samples>#features
     ])
 
     ############# initialize the search
     parameters = {
-        'vect__max_features': (2000,3000,4000),
+        'vect__max_features': (3000,4000),
+        'svd__n_components': (500,1000,2000),
+        # 'pca__whiten': (False,True),
         'lr__C': [0.001,0.01,0.1,1,10,100,1000],
     }
 
@@ -102,7 +106,7 @@ def search_best_lr():
 
     ############# check the best model
     bestpipeline = searchcv.best_estimator_
-    common.dump_predictor("pipeline_lr.pkl",bestpipeline)
+    common.dump_predictor("pipeline_pca_lr.pkl",bestpipeline)
 
     ############# training error analysis
     ytrain_predict = bestpipeline.predict(Xtrain_raw)
