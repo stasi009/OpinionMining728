@@ -72,12 +72,12 @@ def make_dmatrix(max_words):
     #
     return dmatrix_train,dmatrix_validate,dmatrix_test
 
-def predict(bst,dmatrix,title):
+def predict(title,bst,dmatrix,prob_cutoff=0.5):
     true_label = dmatrix.get_label()
 
     probas = bst.predict(dmatrix, ntree_limit=bst.best_iteration)
     # probas is the probability for label=1
-    predict_label = np.where(probas > 0.5, 1, 0)
+    predict_label = np.where(probas > prob_cutoff, 1, 0)
 
     print "================= {} =================".format(title)
     print "Accuracy: {}".format(accuracy_score(true_label,predict_label))
@@ -107,19 +107,21 @@ def train(param,dmatrix_train,dmatrix_validate):
 param = {}
 param["num_rounds"] = 200
 param["early_stop_rounds"] = 15
-param['max_depth'] = 10
-param['eta'] = 0.1
 
+param['max_depth'] = 6
+param['eta'] = 0.05
 param["subsample"] = 0.75
 param["colsample_bytree"] = 0.75
 
 dmatrix_train,dmatrix_validate,dmatrix_test = make_dmatrix(4000)
+
 bst = train(param,dmatrix_train,dmatrix_validate)
 
 # check performance
-predict(bst, dmatrix_train, "train")
-predict(bst, dmatrix_validate, "validate")
-predict(bst, dmatrix_test, "test")
+prob_cutoff=0.5
+predict("train",bst, dmatrix_train,prob_cutoff )
+predict("validate",bst, dmatrix_validate,prob_cutoff)
+predict("test",bst, dmatrix_test,prob_cutoff)
 
 
 
