@@ -35,3 +35,5 @@ tripadvisor/aspects_train.csv
 *.pkl
 
 .idea/workspace.xml
+
+*.dmatrix
