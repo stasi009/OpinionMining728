@@ -59,10 +59,13 @@ def make_stop_words():
 
     return frozenset(stop_words)
 
-def dump_predictor(filename,learner):
+def simple_dump(filename, obj):
+    """ dump single object into binary file """
     with open(filename, 'wb') as outfile:
-        cPickle.dump(learner,outfile)
+        cPickle.dump(obj, outfile)
 
-def load_predictor(filename):
-    with open(filename,"rb") as infile:
+
+def simple_load(filename):
+    """ load single object from binary file """
+    with open(filename, "rb") as infile:
         return cPickle.load(infile)
