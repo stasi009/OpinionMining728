@@ -6,33 +6,6 @@ import xgboost as xgb
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 
-def print_label_frequency(title,y):
-    freqdist = nltk.FreqDist()
-    for l in y:
-        freqdist[l] +=1
-
-    print "[{}] totally {} labels".format(title,freqdist.N())
-    for k in freqdist.iterkeys():
-        print "\tLabel[{}]: {:.2f}%".format(k,freqdist.freq(k) * 100)
-
-def load_raw_data(filename):
-    with open(filename,"rb") as inf:
-        raw_data = cPickle.load(inf)
-
-    X_raw = []
-    y_raw = []
-    for words,rating in raw_data:
-        # ignore the edge case when rating == 3
-        if rating <=2:
-            X_raw.append(words)
-            # negative, since 'negative' is less frequent, we make 'negative' our primal focus
-            y_raw.append(1)
-        elif rating >= 4:
-            X_raw.append(words)
-            y_raw.append(0)# positive
-
-    return X_raw,y_raw
-
 def make_dmatrix(max_words):
     # Xtrain_raw is list of list, each element is a list of words
     Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
