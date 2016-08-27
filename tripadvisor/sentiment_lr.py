@@ -48,7 +48,7 @@ def search_best_lr():
 
     ############# save the best model
     bestpipeline = searchcv.best_estimator_
-    common.simple_dump("pipeline_lr.pkl", bestpipeline)
+    common.simple_dump("sentimodel_lr.pkl", bestpipeline)
 
     ############# training error analysis
     ytrain_predict = bestpipeline.predict(Xtrain_all)
@@ -61,6 +61,16 @@ def search_best_lr():
     ytest_predict = bestpipeline.predict(Xtest)
     tac.print_classification_report('Testing Data', ytest, ytest_predict)
 
+def crossval_generate_meta_features():
+    Xtrain_all, ytrain_all = tac.load_raw_data("sentidata_train_raw.pkl")
+
+    pipeline = common.simple_load("sentimodel_lr.pkl",1)[0]
+    yvalidates = tac.crossval_predict("lr",pipeline,Xtrain_all,ytrain_all,"probability")
+
+    tac.print_classification_report("validation",ytrue=ytrain_all,ypredict=yvalidates["lr_label"])
+    yvalidates.to_csv("lr_meta_features.csv")
+
 
 if __name__ == "__main__":
-    search_best_lr()
+    # search_best_lr()
+    crossval_generate_meta_features()

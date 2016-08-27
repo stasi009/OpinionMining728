@@ -50,7 +50,7 @@ def search_best_svc():
 
     ############# save the best model
     bestpipeline = searchcv.best_estimator_
-    common.simple_dump("pipeline_svc.pkl",bestpipeline)
+    common.simple_dump("sentimodel_svc.pkl",bestpipeline)
 
     ############# training error analysis
     print "************************* Training Data *************************"
@@ -68,7 +68,7 @@ def search_best_svc():
 def crossval_generate_meta_features():
     Xtrain_all, ytrain_all = tac.load_raw_data("sentidata_train_raw.pkl")
 
-    pipeline = common.simple_load("pipeline_svc.pkl",1)[0]
+    pipeline = common.simple_load("sentimodel_svc.pkl",1)[0]
     yvalidates = tac.crossval_predict("svc",pipeline,Xtrain_all,ytrain_all,"label")
 
     tac.print_classification_report("validation",ytrue=ytrain_all,ypredict=yvalidates["svc_label"])

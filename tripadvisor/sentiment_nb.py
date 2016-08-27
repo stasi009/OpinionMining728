@@ -1,117 +1,88 @@
+import os
+import sys
 
-
-
-import os,sys
 parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
     sys.path.append(parentpath)
 
-import numpy as np
-import cPickle
 import itertools
 
-import nltk
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 
 import common
-
-def load_raw_data(filename):
-    with open(filename,"rb") as inf:
-        raw_data = cPickle.load(inf)
-
-    X_raw = []
-    y_raw = []
-    for words,rating in raw_data:
-        # ignore the edge case when rating == 3
-        if rating <=2:
-            X_raw.append(words)
-            y_raw.append(1)# negative
-        elif rating >= 4:
-            X_raw.append(words)
-            y_raw.append(0)# positive
-
-    return X_raw,y_raw
+import ta_common as tac
 
 def nltk_features(words_list,labels):
     return [ ( {}.fromkeys(words,True), label) for words,label in itertools.izip(words_list,labels)]
 
-def print_label_frequency(y):
-    freqdist = nltk.FreqDist()
-    for l in y:
-        freqdist[l] +=1
-
-    print "totally {} labels".format(freqdist.N())
-    for k in freqdist.iterkeys():
-        print "\tLabel[{}]: {:.2f}%".format(k,freqdist.freq(k) * 100)
-
-
-def print_classification_report(title,ytrue,ypredict):
-    print "\n******************* {} *******************".format(title)
-    print "Accuracy: {}\n".format(accuracy_score(y_true=ytrue,y_pred=ypredict))
-    print classification_report(y_true=ytrue,y_pred=ypredict)
-    print ""
-    print confusion_matrix(y_true=ytrue,y_pred=ypredict)
 
 def run_naive_bayes(use_tfidf):
-    Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
-    print "\ntraining data loaded"
-    print_label_frequency(ytrain_raw)
+    Xtrain_all, ytrain_all = tac.load_raw_data("sentidata_train_raw.pkl")
+    tac.print_label_frequency("Train",ytrain_all)
 
     ############# create the pipeline
-    pipeline = None
     if use_tfidf:
         pipeline = Pipeline([
-            ('vect', CountVectorizer(analyzer=lambda x:x)),
+            ('vect', CountVectorizer(analyzer=tac.do_nothing)),
             ('tfidf', TfidfTransformer()),
             ('nb', MultinomialNB())
         ])
     else:
         pipeline = Pipeline([
-            ('vect', CountVectorizer(analyzer=lambda x: x)),
+            ('vect', CountVectorizer(analyzer=tac.do_nothing)),
             ('nb', MultinomialNB())
         ])
 
     ############# fit
-    pipeline.fit(Xtrain_raw, ytrain_raw)
+    pipeline.fit(Xtrain_all, ytrain_all)
+    common.simple_dump("sentimodel_nb.pkl",pipeline)
 
     ############# training error analysis
-    ytrain_predict = pipeline.predict(Xtrain_raw)
-    print_classification_report('Training Data',ytrain_raw,ytrain_predict)
+    ytrain_predict = pipeline.predict(Xtrain_all)
+    tac.print_classification_report('Training Data',ytrain_all,ytrain_predict)
 
     ############# test error analysis
-    Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
-    print "\ntest data distribution"
-    print_label_frequency(ytest_raw)
+    Xtest, ytest = tac.load_raw_data("sentidata_test_raw.pkl")
+    tac.print_label_frequency("Test",ytest)
 
-    ytest_predict = pipeline.predict(Xtest_raw)
-    print_classification_report('Testing Data',ytest_raw,ytest_predict)
+    ytest_predict = pipeline.predict(Xtest)
+    tac.print_classification_report('Testing Data',ytest,ytest_predict)
 
-def nltk_nb():
-    Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
-    print "\ntraining data distribution"
-    print_label_frequency(ytrain_raw)
+# def nltk_nb():
+#     Xtrain_raw, ytrain_raw = load_raw_data("sentidata_train_raw.pkl")
+#     print "\ntraining data distribution"
+#     print_label_frequency(ytrain_raw)
+#
+#     train_features = nltk_features(Xtrain_raw,ytrain_raw)
+#     classifier = nltk.NaiveBayesClassifier.train(train_features)
+#
+#     # training errors
+#     ytrain_predict = classifier.classify_many([t[0] for t in train_features])
+#     print_classification_report('Training Data', ytrain_raw, ytrain_predict)
+#
+#     # test error
+#     Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
+#     print "\ntest data distribution"
+#     print_label_frequency(ytest_raw)
+#
+#     test_features = nltk_features(Xtest_raw,ytest_raw)
+#
+#     ytest_predict = classifier.classify_many([t[0] for t in test_features])
+#     print_classification_report('Testing Data', ytest_raw, ytest_predict)
 
-    train_features = nltk_features(Xtrain_raw,ytrain_raw)
-    classifier = nltk.NaiveBayesClassifier.train(train_features)
+def crossval_generate_meta_features():
+    Xtrain_all, ytrain_all = tac.load_raw_data("sentidata_train_raw.pkl")
 
-    # training errors
-    ytrain_predict = classifier.classify_many([t[0] for t in train_features])
-    print_classification_report('Training Data', ytrain_raw, ytrain_predict)
+    pipeline = common.simple_load("sentimodel_nb.pkl",1)[0]
+    yvalidates = tac.crossval_predict("nb",pipeline,Xtrain_all,ytrain_all,"probability")
 
-    # test error
-    Xtest_raw, ytest_raw = load_raw_data("sentidata_test_raw.pkl")
-    print "\ntest data distribution"
-    print_label_frequency(ytest_raw)
-
-    test_features = nltk_features(Xtest_raw,ytest_raw)
-
-    ytest_predict = classifier.classify_many([t[0] for t in test_features])
-    print_classification_report('Testing Data', ytest_raw, ytest_predict)
+    tac.print_classification_report("validation",ytrue=ytrain_all,ypredict=yvalidates["nb_label"])
+    yvalidates.to_csv("nb_meta_features.csv")
 
 
 if __name__ == "__main__":
-    run_naive_bayes(False)
+    # run_naive_bayes(False)
     # nltk_nb()
+    crossval_generate_meta_features()
