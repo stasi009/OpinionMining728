@@ -63,13 +63,16 @@ def make_stop_words():
     return frozenset(stop_words)
 
 
-def simple_dump(filename, obj):
+def simple_dump(filename, *objects):
     """ dump single object into binary file """
     with open(filename, 'wb') as outfile:
-        cPickle.dump(obj, outfile)
+        for obj in objects:
+            cPickle.dump(obj, outfile)
 
-
-def simple_load(filename):
+def simple_load(filename,n_objs):
     """ load single object from binary file """
+    objects = []
     with open(filename, "rb") as infile:
-        return cPickle.load(infile)
+        for index in xrange(n_objs):
+            objects.append(cPickle.load(infile))
+        return objects
