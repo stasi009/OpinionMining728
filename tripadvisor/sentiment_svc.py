@@ -1,6 +1,6 @@
+import os
+import sys
 
-
-import os,sys
 parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
     sys.path.append(parentpath)
@@ -8,7 +8,6 @@ if parentpath not in sys.path:
 import numpy as np
 from sklearn.svm import LinearSVC
 from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
-from sklearn.metrics import accuracy_score
 from sklearn.grid_search import GridSearchCV
 from sklearn.pipeline import Pipeline
 

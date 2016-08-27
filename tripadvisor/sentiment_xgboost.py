@@ -2,6 +2,7 @@ import numpy as np
 import xgboost as xgb
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.pipeline import Pipeline
 
 import common
 import ta_common as tac
@@ -45,13 +46,13 @@ def make_dmatrix(max_words):
     #
     return tfidf_vectorizer,dmatrix_train, dmatrix_validate, dmatrix_test
 
-def train(param, dmatrix_train, dmatrix_validate):
-    param['silent'] = 1
-    param['objective'] = 'binary:logistic'  # output probabilities
-    param['eval_metric'] = 'auc'
+def train(params, dmatrix_train, dmatrix_validate):
+    params['silent'] = 1
+    params['objective'] = 'binary:logistic'  # output probabilities
+    params['eval_metric'] = 'auc'
 
-    num_rounds = param["num_rounds"]
-    early_stopping_rounds = param["early_stop_rounds"]
+    num_rounds = params["num_rounds"]
+    early_stopping_rounds = params["early_stop_rounds"]
 
     # early stop will check on the last dataset
     watchlist = [(dmatrix_train, 'train'), (dmatrix_validate, 'validate')]
@@ -61,7 +62,7 @@ def train(param, dmatrix_train, dmatrix_validate):
     print "best {}: {:.2f}".format(param["eval_metric"], bst.best_score)
     print "best_iteration: %d" % (bst.best_iteration)
 
-    return bst
+    return params,bst
 
 def predict(title, bst, dmatrix, prob_cutoff=0.5):
     true_label = dmatrix.get_label()
@@ -78,25 +79,22 @@ def predict(title, bst, dmatrix, prob_cutoff=0.5):
     print confusion_matrix(y_true=true_label, y_pred=predict_label)
 
 
-
-
-
 tfidf_vectorizer,dmatrix_train, dmatrix_validate, dmatrix_test = make_dmatrix(4000)
 prob_cutoff = 0.5
 
-param = {}
-param["num_rounds"] = 800
-param["early_stop_rounds"] = 10
-param['max_depth'] = 9
-param['eta'] = 0.05
-param["subsample"] = 0.75
-param["colsample_bytree"] = 0.75
+params = {}
+params["num_rounds"] = 800
+params["early_stop_rounds"] = 10
+params['max_depth'] = 9
+params['eta'] = 0.05
+params["subsample"] = 0.75
+params["colsample_bytree"] = 0.75
 
-param = {}
-param["num_rounds"] = 200
-param["early_stop_rounds"] = 10
+params = {}
+params["num_rounds"] = 200
+params["early_stop_rounds"] = 10
 
-bst = train(param, dmatrix_train, dmatrix_validate)
+param,bst = train(params, dmatrix_train, dmatrix_validate)
 predict("train", bst, dmatrix_train, prob_cutoff)
 predict("validate", bst, dmatrix_validate, prob_cutoff)
 predict("test", bst, dmatrix_test, prob_cutoff)
