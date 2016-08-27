@@ -1,6 +1,5 @@
 import os
 import sys
-
 parentpath = os.path.abspath("..")
 if parentpath not in sys.path:
     sys.path.append(parentpath)
@@ -9,6 +8,7 @@ import itertools
 
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
+from sklearn.grid_search import GridSearchCV
 from sklearn.pipeline import Pipeline
 
 import common
@@ -35,8 +35,30 @@ def run_naive_bayes(use_tfidf):
             ('nb', MultinomialNB())
         ])
 
-    ############# fit
-    pipeline.fit(Xtrain_all, ytrain_all)
+    ############# search and fit
+    # parameters = {
+    #     'vect__max_features': (None,),
+    #     # 'vect__max_features': (1000, 2000, 3000, 4000, 50000, None),
+    # }
+    # scoring_method = "roc_auc"
+    # validate_split = tac.make_train_validate_split(len(ytrain_all))
+    # searchcv = GridSearchCV(estimator=pipeline,
+    #                         param_grid=parameters,
+    #                         scoring=scoring_method,
+    #                         n_jobs=-1,
+    #                         verbose=1,
+    #                         cv=validate_split)
+    #
+    # ############# search
+    # print "#################### search cv begins"
+    # searchcv.fit(Xtrain_all, ytrain_all)
+    # print "#################### search cv ends"
+    # print "best {}: {}".format(scoring_method, searchcv.best_score_)
+    # print "best parameters: ", searchcv.best_params_
+    #
+    # ############# save
+    # pipeline = searchcv.best_estimator_
+    pipeline.fit(Xtrain_all,ytrain_all)
     common.simple_dump("sentimodel_nb.pkl",pipeline)
 
     ############# training error analysis
